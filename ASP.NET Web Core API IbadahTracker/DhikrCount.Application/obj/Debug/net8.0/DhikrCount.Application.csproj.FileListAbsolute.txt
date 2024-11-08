@@ -1,0 +1,16 @@
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.csproj.AssemblyReference.cache
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.AssemblyInfoInputs.cache
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.AssemblyInfo.cs
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.csproj.CoreCompileInputs.cache
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.sourcelink.json
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\bin\Debug\net8.0\DhikrCount.Application.deps.json
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\bin\Debug\net8.0\DhikrCount.Application.dll
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\bin\Debug\net8.0\DhikrCount.Application.pdb
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\bin\Debug\net8.0\DhikrCount.Domain.dll
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\bin\Debug\net8.0\DhikrCount.Domain.pdb
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCou.1A88F88C.Up2Date
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.dll
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\refint\DhikrCount.Application.dll
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\DhikrCount.Application.pdb
+C:\Users\AM5\Documents\GitHub\DhikrCount\ASP.NET Web Core API\DhikrCount Clean Architecture Trevoir Williams\DhikrCount\DhikrCount.Application\obj\Debug\net8.0\ref\DhikrCount.Application.dll
