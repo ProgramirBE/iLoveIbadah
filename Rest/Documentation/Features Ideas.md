@@ -7,7 +7,13 @@ speach recognizion to don't click any button for dhikr incrementation but only l
 
 adding to speach recognition, to combine multiple dhikrs types by letting ai transcribe and increment in appropriate dhikr type count!
 
-Islamic Finder free api to know prayer times to send notification when prayer time comes.
+Islamic Finder free api to know prayer times to send notification when prayer time comes. (for future salah tracker implementation)
+
+Daily/Montly Goals! 100 or 33 times dhikr per day objective!
+
+Heatmap of Activity (color to show goals completion per day) :
+![image](https://github.com/user-attachments/assets/a4bde5aa-4b70-49d3-a707-6ecc31f721e4)
+
 
 # Out of Scope
 
