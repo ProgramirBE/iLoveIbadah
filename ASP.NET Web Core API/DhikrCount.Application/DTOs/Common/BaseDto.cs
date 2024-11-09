@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.DTOs.Common
+namespace IbadahLover.Application.DTOs.Common
 {
     public abstract class BaseDto
     {

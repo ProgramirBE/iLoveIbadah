@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{27FF9F39-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{25FD3D6B-A70D-4FC4-8AF8-42A55F5269E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DhikrCount.Domain", "DhikrCount.Domain\DhikrCount.Domain.csproj", "{14EF73EC-6265-40F9-8A4E-AF4F25EC7106}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IbadahLover.Domain", "DhikrCount.Domain\IbadahLover.Domain.csproj", "{14EF73EC-6265-40F9-8A4E-AF4F25EC7106}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DhikrCount.Application", "DhikrCount.Application\DhikrCount.Application.csproj", "{F1ECC64E-9510-43B1-8D0D-70DD4F806E8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IbadahLover.Application", "DhikrCount.Application\IbadahLover.Application.csproj", "{F1ECC64E-9510-43B1-8D0D-70DD4F806E8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

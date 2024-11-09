@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.DTOs.UserAccount.Validators
+namespace IbadahLover.Application.DTOs.UserAccount.Validators
 {
     public class CreateUserAccountDtoValidator : AbstractValidator<CreateUserAccountDto>
     {

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DhikrCount.Domain\DhikrCount.Domain.csproj" />
+    <ProjectReference Include="..\DhikrCount.Domain\IbadahLover.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

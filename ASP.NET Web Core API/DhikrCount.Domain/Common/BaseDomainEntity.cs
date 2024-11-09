@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Domain.Common
+namespace IbadahLover.Domain.Common
 {
     //For All Database Tables 
     public class BaseDomainEntity

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using DhikrCount.Application.Features.UserAccounts.Requests.Commands;
-using DhikrCount.Application.Persistence.Contracts;
+using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
+using IbadahLover.Application.Persistence.Contracts;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.Features.UserAccounts.Handlers.Commands
+namespace IbadahLover.Application.Features.UserAccounts.Handlers.Commands
 {
     public class UpdateUserAccountCommandHandler : IRequestHandler<UpdateUserAccountCommand, Unit>
     {

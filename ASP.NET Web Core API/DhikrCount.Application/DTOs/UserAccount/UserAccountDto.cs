@@ -1,12 +1,12 @@
-﻿using DhikrCount.Application.DTOs.Common;
-using DhikrCount.Application.DTOs.Enums;
+﻿using IbadahLover.Application.DTOs.Common;
+using IbadahLover.Application.DTOs.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.DTOs.UserAccount
+namespace IbadahLover.Application.DTOs.UserAccount
 {
     public class UserAccountDto : BaseDto
     {

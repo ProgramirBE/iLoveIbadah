@@ -1,4 +1,4 @@
-﻿using DhikrCount.Application.DTOs.UserAccount;
+﻿using IbadahLover.Application.DTOs.UserAccount;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.Features.UserAccounts.Requests.Commands
+namespace IbadahLover.Application.Features.UserAccounts.Requests.Commands
 {
     public class CreateUserAccountCommand : IRequest<int>
     {

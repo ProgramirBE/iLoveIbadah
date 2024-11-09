@@ -1,12 +1,12 @@
-﻿using DhikrCount.Domain.Common;
-using DhikrCount.Domain.Enums;
+﻿using IbadahLover.Domain.Common;
+using IbadahLover.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Domain
+namespace IbadahLover.Domain
 {
     //Database Table UserAccount
     public class UserAccount : BaseDomainEntity

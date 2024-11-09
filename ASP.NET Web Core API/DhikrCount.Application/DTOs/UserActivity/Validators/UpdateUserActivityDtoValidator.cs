@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.DTOs.UserActivity.Validators
+namespace IbadahLover.Application.DTOs.UserActivity.Validators
 {
     public class UpdateUserActivityDtoValidator : AbstractValidator<UpdateUserActivityDto>
     {

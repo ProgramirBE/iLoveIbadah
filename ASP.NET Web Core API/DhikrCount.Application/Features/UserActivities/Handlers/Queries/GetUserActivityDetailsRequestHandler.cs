@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using DhikrCount.Application.DTOs.UserAccount;
-using DhikrCount.Application.DTOs.UserActivity;
-using DhikrCount.Application.Features.UserAccounts.Requests.Queries;
-using DhikrCount.Application.Features.UserActivities.Requests.Queries;
-using DhikrCount.Application.Persistence.Contracts;
+using IbadahLover.Application.DTOs.UserAccount;
+using IbadahLover.Application.DTOs.UserActivity;
+using IbadahLover.Application.Features.UserAccounts.Requests.Queries;
+using IbadahLover.Application.Features.UserActivities.Requests.Queries;
+using IbadahLover.Application.Persistence.Contracts;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.Features.UserActivities.Handlers.Queries
+namespace IbadahLover.Application.Features.UserActivities.Handlers.Queries
 {
     // Backend Handler of Request to get Details of User Activity
     public class GetUserActivityDetailsRequestHandler : IRequestHandler<GetUserActivityDetailsRequest, UserActivityDto>

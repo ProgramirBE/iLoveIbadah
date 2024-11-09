@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using DhikrCount.Application.Features.UserAccounts.Requests.Commands;
-using DhikrCount.Application.Features.UserActivities.Requests.Commands;
-using DhikrCount.Application.Persistence.Contracts;
-using DhikrCount.Domain;
+using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
+using IbadahLover.Application.Features.UserActivities.Requests.Commands;
+using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Domain;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.Features.UserActivities.Handlers.Commands
+namespace IbadahLover.Application.Features.UserActivities.Handlers.Commands
 {
     public class UpdateUserActivityCommandHandler : IRequestHandler<UpdateUserActivityCommand, Unit>
     {

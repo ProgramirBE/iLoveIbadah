@@ -1,5 +1,5 @@
-﻿using DhikrCount.Application.DTOs.UserAccount;
-using DhikrCount.Application.Features.Enums;
+﻿using IbadahLover.Application.DTOs.UserAccount;
+using IbadahLover.Application.Features.Enums;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.Features.UserAccounts.Requests.Queries
+namespace IbadahLover.Application.Features.UserAccounts.Requests.Queries
 {
     // Application User Request to get Details of User Account
     public class GetUserAccountDetailsRequest : IRequest<UserAccountDto>
