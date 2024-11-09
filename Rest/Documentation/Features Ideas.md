@@ -1,7 +1,7 @@
 user activity gelinkt met nieuw tabbel Session
 met session duration, aantal session. session datum
 
-go from DhikrCount to AfterSalah! to IbadahTracker!
+go from DhikrCount to AfterSalah! to IbadahTracker! to IbadahLover???
 
 speach recognizion to don't click any button for dhikr incrementation but only listen to audio and increment while doing dhikr out loud (gladia free tier api)
 
