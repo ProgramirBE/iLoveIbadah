@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DhikrCount.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3a55500acece3027cb24a543ef9ffd899258a06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9eef553871ca7c3cb6af642e719c1834afe3c05e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DhikrCount.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DhikrCount.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

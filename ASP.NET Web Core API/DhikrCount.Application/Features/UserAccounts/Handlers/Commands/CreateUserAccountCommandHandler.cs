@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using DhikrCount.Application.DTOs.UserAccount;
-using DhikrCount.Application.DTOs.UserAccount.Validators;
-using DhikrCount.Application.Features.UserAccounts.Requests.Commands;
-using DhikrCount.Application.Persistence.Contracts;
-using DhikrCount.Domain;
+using IbadahLover.Application.DTOs.UserAccount;
+using IbadahLover.Application.DTOs.UserAccount.Validators;
+using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
+using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Domain;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.Features.UserAccounts.Handlers.Commands
+namespace IbadahLover.Application.Features.UserAccounts.Handlers.Commands
 {
     public class CreateUserAccountCommandHandler : IRequestHandler<CreateUserAccountCommand, int>
     {

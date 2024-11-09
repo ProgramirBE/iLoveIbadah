@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using DhikrCount.Application.DTOs.DhikrType;
-using DhikrCount.Application.Features.DhikrTypes.Requests.Queries;
-using DhikrCount.Application.Persistence.Contracts;
+using IbadahLover.Application.DTOs.DhikrType;
+using IbadahLover.Application.Features.DhikrTypes.Requests.Queries;
+using IbadahLover.Application.Persistence.Contracts;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application.Features.DhikrTypes.Handlers.Queries
+namespace IbadahLover.Application.Features.DhikrTypes.Handlers.Queries
 {
     // Backend Handler of Request to get Details of Dhikr Type
     public class GetDhikrTypeDetailsRequestHandler : IRequestHandler<GetDhikrTypeDetailsRequest, DhikrTypeDto>

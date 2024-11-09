@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Domain.Enums
+namespace IbadahLover.Domain.Enums
 {
     //For Database Table UserAccount Column OAuthProvider
     public enum OAuthProviderType

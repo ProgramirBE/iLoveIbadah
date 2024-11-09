@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhikrCount.Application
+namespace IbadahLover.Application
 {
     public static class ApplicationServicesRegistration
     {
