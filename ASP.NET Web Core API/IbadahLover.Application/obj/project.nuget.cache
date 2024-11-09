@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WWmgtR0eZqk=",
+  "dgSpecHash": "l6G86gvu+Uk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Application\\IbadahLover.Application.csproj",
+  "projectFilePath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\IbadahLover.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amir. A\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Amir. A\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

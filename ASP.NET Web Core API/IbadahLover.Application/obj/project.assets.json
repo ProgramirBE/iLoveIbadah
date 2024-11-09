@@ -497,11 +497,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Application\\IbadahLover.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\IbadahLover.Application.csproj",
       "projectName": "IbadahLover.Application",
-      "projectPath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Application\\IbadahLover.Application.csproj",
+      "projectPath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\IbadahLover.Application.csproj",
       "packagesPath": "C:\\Users\\Amir. A\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Application\\obj\\",
+      "outputPath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
