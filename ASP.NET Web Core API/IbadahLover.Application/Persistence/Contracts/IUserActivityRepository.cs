@@ -12,5 +12,6 @@ namespace IbadahLover.Application.Persistence.Contracts
     {
         Task<UserActivity> GetUserActivityWithDetails(int id);
         Task<List<UserActivity>> GetUserActivitiesWithDetails();
+        Task UpdateUserActivity(UserActivity userActivity);
     }
 }
