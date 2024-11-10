@@ -478,8 +478,8 @@
     },
     "IbadahLover.Domain/1.0.0": {
       "type": "project",
-      "path": "../DhikrCount.Domain/IbadahLover.Domain.csproj",
-      "msbuildProject": "../DhikrCount.Domain/IbadahLover.Domain.csproj"
+      "path": "../IbadahLover.Domain/IbadahLover.Domain.csproj",
+      "msbuildProject": "../IbadahLover.Domain/IbadahLover.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -525,6 +525,9 @@
           "projectReferences": {
             "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj": {
               "projectPath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj"
+            },
+            "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\IbadahLover.Domain.csproj": {
+              "projectPath": "C:\\Users\\Amir. A\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\IbadahLover.Domain.csproj"
             }
           }
         }
