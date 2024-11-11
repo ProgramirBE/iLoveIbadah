@@ -11,13 +11,14 @@ namespace IbadahLover.Application.DTOs.UserActivity.Validators
     {
         public UpdateUserActivityDtoValidator()
         {
-            RuleFor(p => p.Id)
+            RuleFor(p => p.UserAccountId)
                 .NotEmpty();
 
-            RuleFor(p => p.TotalDhikrPerformed)
-                .NotEmpty()
-                .GreaterThan(0)
-                .LessThan(2);
+            RuleFor(p => p.DhikrTypeId)
+                .NotEmpty();
+
+            RuleFor(p => p.PerformedAt)
+                .NotEmpty();
         }
     }
 }

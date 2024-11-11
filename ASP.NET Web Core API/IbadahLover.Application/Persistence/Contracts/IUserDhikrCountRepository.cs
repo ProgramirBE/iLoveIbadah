@@ -12,6 +12,5 @@ namespace IbadahLover.Application.Persistence.Contracts
     {
         Task<UserDhikrCount> GetUserDhikrCountWithDetails(int id);
         Task<List<UserDhikrCount>> GetUserDhikrCountsWithDetails();
-        Task UpdateDhikrCount(UserDhikrCount userDhikrCount);
     }
 }

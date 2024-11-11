@@ -9,6 +9,7 @@ namespace IbadahLover.Application.DTOs.UserDhikrCount
 {
     public class UpdateUserDhikrCountDto : BaseDto
     {
-        public int TotalPerformed { get; set; }
+        public int UserAccountId { get; set; }
+        public int DhikrTypeId { get; set; }
     }
 }

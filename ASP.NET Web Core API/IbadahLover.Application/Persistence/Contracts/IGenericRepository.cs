@@ -11,6 +11,7 @@ namespace IbadahLover.Application.Persistence.Contracts
     {
         Task<T> GetById(int id);
         Task<IReadOnlyList<T>> GetAll();
+        Task<bool> Exists(int id);
         Task<T> Create(T entity);
         Task<T> Update(T entity);
         Task<T> Delete(T entity);
