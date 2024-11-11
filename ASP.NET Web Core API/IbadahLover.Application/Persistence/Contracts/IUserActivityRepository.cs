@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Domain;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace IbadahLover.Application.Persistence.Contracts
     {
         Task<UserActivity> GetUserActivityWithDetails(int id);
         Task<List<UserActivity>> GetUserActivitiesWithDetails();
-        Task UpdateUserActivity(UserActivity userActivity);
+        [DataType(DataType.Date)]
+        Task<bool> PerformedAtExists(DateTime performedAt);
     }
 }
