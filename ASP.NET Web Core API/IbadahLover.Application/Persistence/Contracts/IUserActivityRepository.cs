@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace IbadahLover.Application.Persistence.Contracts
 {
     // Repository of All SQL Methods for UserActivity Entity
-    public interface IUserActivityRepository : IGenericRepository<UserActivity>
+    public interface IUserActivityRepository : IGenericRepository<UserDhikrActivity>
     {
-        Task<UserActivity> GetUserActivityWithDetails(int id);
-        Task<List<UserActivity>> GetUserActivitiesWithDetails();
+        Task<UserDhikrActivity> GetUserActivityWithDetails(int id);
+        Task<List<UserDhikrActivity>> GetUserActivitiesWithDetails();
         [DataType(DataType.Date)]
         Task<bool> PerformedAtExists(DateTime performedAt);
     }
