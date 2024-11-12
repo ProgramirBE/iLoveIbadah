@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace IbadahLover.Domain
 {
     //Database Table UserActivity
-    public class UserActivity : BaseDomainEntity
+    public class UserDhikrActivity : BaseDomainEntity
     {
         public int UserAccountId { get; set; }
 

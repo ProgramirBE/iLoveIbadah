@@ -19,7 +19,7 @@ namespace IbadahLover.Application.profiles
         {
             CreateMap<DhikrType, DhikrTypeDto>().ReverseMap();
             CreateMap<UserAccount, UserAccountDto>().ReverseMap();
-            CreateMap<UserActivity, UserActivityDto>().ReverseMap();
+            CreateMap<UserDhikrActivity, UserActivityDto>().ReverseMap();
             CreateMap<UserDhikrCount, UserDhikrCountDto>().ReverseMap();
         }
     }
