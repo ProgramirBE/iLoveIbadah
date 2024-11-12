@@ -24,22 +24,24 @@ CREATE TABLE User_Account (
 GO
 CREATE TABLE Dhikr_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
-    full_name NVARCHAR(255) NOT NULL,
+    full_name NVARCHAR(255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by NVARCHAR(25) NOT NULL
+	last_modified_by NVARCHAR(25) NOT NULL,
 
 	CONSTRAINT UQ_Dhikr_Type_full_name UNIQUE (full_name) -- Ensures a unique record per dhikr type.
 );
 GO
 CREATE TABLE Salah_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
-    full_name NVARCHAR(255) NOT NULL,
+    full_name NVARCHAR(255) NOT NULL, -- fajr, sobh, dohr, maghreb, isha, witr etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by NVARCHAR(25) NOT NULL
+	last_modified_by NVARCHAR(25) NOT NULL,
+
+	CONSTRAINT UQ_Salah_Type_full_name UNIQUE (full_name) -- Ensures a unique record per Salah type.
 );
 GO
 CREATE TABLE User_Dhikr_Activity (
@@ -83,7 +85,7 @@ GO
 CREATE TABLE User_Dhikr_Overview (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
-    total_dhikr_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
+    total_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
     last_performed_on DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
     
     CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
@@ -100,7 +102,6 @@ CREATE TABLE User_Dhikr_Overview (
 --    CONSTRAINT FK_User_Ibadah_Overview_Dhikr_Type_id FOREIGN KEY (Dhikr_Type_id) REFERENCES Dhikr_Type(id) ON DELETE CASCADE,
 --    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
 --);
-GO
 
 --GO
 --CREATE TABLE User_Salah_Overview (
@@ -121,20 +122,60 @@ GO
     
 --    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
 --);
-GO
-CREATE TABLE User_Ibadah_Overview (
-    id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
-    User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
-	Dhikr_Type_id BIGINT NOT NULL, -- Foreign key to Users table
-    total_dhikr_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
---    average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
---    last_updated DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
+--GO
+--CREATE TABLE User_Ibadah_Overview (
+--    id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
+--    User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
+--	Dhikr_Type_id BIGINT NOT NULL, -- Foreign key to Users table
+--    total_dhikr_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
+----    average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
+----    last_updated DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
 
-    CONSTRAINT FK_User_Ibadah_Overview_Dhikr_Type_id FOREIGN KEY (Dhikr_Type_id) REFERENCES Dhikr_Type(id) ON DELETE CASCADE,
-    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
-);
+--    CONSTRAINT FK_User_Ibadah_Overview_Dhikr_Type_id FOREIGN KEY (Dhikr_Type_id) REFERENCES Dhikr_Type(id) ON DELETE CASCADE,
+--    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
+--);
 GO
+CREATE TRIGGER Trigger_Update_Dhikr_Overview
+AFTER INSERT, UPDATE ON User_Dhikr_Activity
+FOR EACH ROW
+BEGIN
+    UPDATE User_Dhikr_Overview
+    SET total_performed += 1;
+END;
+GO
+CREATE TRIGGER Trigger_Update_Salah_Day_Overview
+AFTER INSERT, UPDATE ON User_Salah_Activity
+FOR EACH ROW
+BEGIN
+    DECLARE @userId INT = NEW.User_Account_id;
+    DECLARE @date DATE = NEW.performed_at;
 
+    -- Calculate the average punctuality for the day using a CTE
+    WITH SalahPunctuality AS (
+        SELECT punctuality_percentage
+        FROM User_Salah_Activity
+        WHERE User_Account_id = @userId
+        AND performed_at = @date
+    )
+    UPDATE User_Salah_Day_Overview
+    SET average_punctuality_percentage = (
+        SELECT AVG(punctuality_percentage)
+        FROM SalahPunctuality
+    )
+    WHERE User_Account_id = @userId
+    AND performed_at = @date;
+
+    -- Insert a new record if it doesn't exist
+    IF @@ROWCOUNT = 0
+    BEGIN
+        INSERT INTO User_Salah_Day_Overview (User_Account_id, performed_at, average_punctuality_percentage)
+        SELECT @userId, @date, AVG(punctuality_percentage)
+        FROM User_Salah_Activity
+        WHERE User_Account_id = @userId
+        AND performed_at = @date;
+    END;
+END;
+GO
 ALTER DATABASE IbadahLoverDB SET READ_WRITE
 GO
 USE IbadahLoverDB
