@@ -61,11 +61,14 @@ CREATE TABLE User_Salah_Activity (
     Salah_Type_id BIGINT NOT NULL, -- Foreign key to Dhikr table
     performed_at DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
     punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
+	average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
+
     
     CONSTRAINT FK_User_Salah_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
     CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type(id) ON DELETE CASCADE,
     CONSTRAINT UQ_User_Salah_Activity_User_Account_id_performed_at UNIQUE (User_Account_id, performed_at) -- Ensures a unique record per user per day
 );
+
 GO
 CREATE TABLE User_Salah_Day_Overview (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
@@ -98,6 +101,40 @@ CREATE TABLE User_Dhikr_Overview (
 --    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
 --);
 GO
+
+--GO
+--CREATE TABLE User_Salah_Overview (
+--    id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
+--    User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
+--    average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
+--    last_updated DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
+    
+--    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
+--);
+--GO
+--CREATE TABLE User_Dhikr_Overview (
+--    id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
+--    User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
+--    total_dhikr_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
+--    average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
+--    last_updated DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
+    
+--    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
+--);
+GO
+CREATE TABLE User_Ibadah_Overview (
+    id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
+    User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
+	Dhikr_Type_id BIGINT NOT NULL, -- Foreign key to Users table
+    total_dhikr_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
+--    average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
+--    last_updated DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
+
+    CONSTRAINT FK_User_Ibadah_Overview_Dhikr_Type_id FOREIGN KEY (Dhikr_Type_id) REFERENCES Dhikr_Type(id) ON DELETE CASCADE,
+    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
+);
+GO
+
 ALTER DATABASE IbadahLoverDB SET READ_WRITE
 GO
 USE IbadahLoverDB
