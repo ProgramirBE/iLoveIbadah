@@ -10,8 +10,8 @@ CREATE TABLE User_Account (
     email NVARCHAR(50) NOT NULL UNIQUE, -- Ensuring email is unique
 	profile_picture IMAGE NULL, -- Base64 encryption for Project!
     password_hash NVARCHAR(255) NULL,
-	o_auth_provider NVARCHAR(20) NULL,
-	o_auth_id NVARCHAR(255) NULL,
+	oauth_provider NVARCHAR(20) NULL,
+	oauth_id NVARCHAR(255) NULL,
 	email_confirmed BIT DEFAULT 0 NOT NULL,
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL,
@@ -19,13 +19,16 @@ CREATE TABLE User_Account (
 	last_modified_by NVARCHAR(25) NOT NULL,
 
 	CONSTRAINT UQ_User_Account_email_password_hash UNIQUE (email, password_hash),
-	CONSTRAINT CK_User_Account_password_hash_o_auth_id CHECK (password_hash IS NOT NULL OR o_auth_id IS NOT NULL)  -- At least one must be non-NULL
+	CONSTRAINT UQ_User_Account_email_oauth_id UNIQUE (email, oauth_id),
+	CONSTRAINT CK_User_Account_password_hash_oauth_id CHECK (password_hash IS NOT NULL OR oauth_id IS NOT NULL)  -- At least one must be non-NULL
 );
 GO
 CREATE TABLE Role_Type (
 	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User')
-    details NVARCHAR(255) NULL -- Description of the role
+    details NVARCHAR(255) NULL, -- Description of the role
+
+	CONSTRAINT UQ_Role_Type_full_name UNIQUE (full_name)
 );
 GO
 CREATE TABLE Permission (
@@ -55,19 +58,27 @@ CREATE TABLE User_Account_Role_Type (
 );
 GO
 CREATE TABLE Ban_Type (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    number_of_warnings INT NOT NULL,
-    ban_duration INT NOT NULL, -- Duration in days (e.g., 7 for one week)
-    is_permanent BOOLEAN NOT NULL
+    id INT PRIMARY KEY IDENTITY(1,1),
+    warning_threshold INT NOT NULL,
+    ban_duration INT NULL, -- Duration in days (e.g., 7 for one week)
+    is_permanent BIT DEFAULT 0 NULL,
+
+	CONSTRAINT CK_Ban_Type_ban_duration_is_permanent CHECK (ban_duration IS NOT NULL OR is_permanent IS NOT NULL)  -- At least one must be non-NULL
 );
 GO
 CREATE TABLE User_Account_Ban_Type (
-    user_id INT PRIMARY KEY,
-    warnings INT DEFAULT ,
-    ban_status_id INT,
-    ban_start DATETIME,
-    FOREIGN KEY (user_id) REFERENCES User_Account(id),
-    FOREIGN KEY (ban_status_id) REFERENCES ban_status(id)
+    id INT PRIMARY KEY IDENTITY(1,1),
+	User_Account_id BIGINT NOT NULL,
+    Ban_Type_id INT NOT NULL,
+    banstart DATETIME NOT NULL,
+	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_by NVARCHAR(25) NOT NULL,
+	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_by NVARCHAR(25) NOT NULL,
+
+    CONSTRAINT FK_User_Account_Ban_Type_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id),
+    CONSTRAINT FK_User_Account_Ban_Type_Ban_Type_id FOREIGN KEY (Ban_Type_id) REFERENCES Ban_Type(id),
+	CONSTRAINT UQ_User_Account_Ban_Type_User_Account_id_Ban_Type_id UNIQUE (User_Account_id, Ban_Type_id)
 );
 GO
 CREATE TABLE Dhikr_Type (
@@ -75,7 +86,7 @@ CREATE TABLE Dhikr_Type (
     full_name NVARCHAR(255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
---	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
 	CONSTRAINT UQ_Dhikr_Type_full_name UNIQUE (full_name) -- Ensures a unique record per dhikr type.
@@ -86,7 +97,7 @@ CREATE TABLE Salah_Type (
     full_name NVARCHAR(255) NOT NULL, -- fajr, sobh, dohr, maghreb, isha, witr etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
---	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
 	CONSTRAINT UQ_Salah_Type_full_name UNIQUE (full_name) -- Ensures a unique record per Salah type.
@@ -102,7 +113,7 @@ CREATE TABLE User_Dhikr_Activity (
     
     CONSTRAINT FK_User_Dhikr_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
     CONSTRAINT FK_User_Dhikr_Activity_Dhikr_Type_id FOREIGN KEY (Dhikr_Type_id) REFERENCES Dhikr_Type(id) ON DELETE CASCADE,
-    CONSTRAINT UQ_User_Dhikr_Activity_User_Account_id_performed_at UNIQUE (User_Account_id, performed_at) -- Ensures a unique record per user per day
+    CONSTRAINT UQ_User_Dhikr_Activity_User_Account_id_Dhikr_Type_id_performed_at UNIQUE (User_Account_id, Dhikr_Type_id, performed_on) -- Ensures a unique record per user per day per dhikr
 );
 GO
 CREATE TABLE User_Salah_Activity (
@@ -182,69 +193,69 @@ CREATE TABLE User_Dhikr_Overview (
 --    CONSTRAINT FK_User_Ibadah_Overview_Dhikr_Type_id FOREIGN KEY (Dhikr_Type_id) REFERENCES Dhikr_Type(id) ON DELETE CASCADE,
 --    CONSTRAINT FK_User_Ibadah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
 --);
-GO
+
 --Chatgpt4o mini
 
-CREATE TRIGGER Trigger_Insert_Dhikr_Overview on User_Dhikr_Activity
-	AFTER UPDATE
-AS
-BEGIN
-	SET NOCOUNT ON;
-	DECLARE @User_Account_id BIGINT
-	DECLARE @total_performed BIGINT
-    SELECT @User_Account_id = INSERTED.User_Account_id
-	FROM INERTED
+--CREATE TRIGGER Trigger_Insert_Dhikr_Overview on User_Dhikr_Activity
+--	AFTER UPDATE
+--AS
+--BEGIN
+--	SET NOCOUNT ON;
+--	DECLARE @User_Account_id BIGINT
+--	DECLARE @total_performed BIGINT
+--    SELECT @User_Account_id = INSERTED.User_Account_id
+--	FROM INERTED
 
-	IF UPDATE(total_performed)
-		SET total_performed += 1
+--	IF UPDATE(total_performed)
+--		SET total_performed += 1
     
-	WHERE User_Account_id = NEW.User_Account_id;
-END;
-GO
+--	WHERE User_Account_id = NEW.User_Account_id;
+--END;
+--GO
 
-CREATE TRIGGER Trigger_Update_Dhikr_Overview on User_Dhikr_Activity
-AFTER UPDATE
-FOR EACH ROW
-BEGIN
-    UPDATE User_Dhikr_Overview
-    SET total_performed += 1
-    WHERE User_Account_id = NEW.User_Account_id;
-END;
-GO
+--CREATE TRIGGER Trigger_Update_Dhikr_Overview on User_Dhikr_Activity
+--AFTER UPDATE
+--FOR EACH ROW
+--BEGIN
+--    UPDATE User_Dhikr_Overview
+--    SET total_performed += 1
+--    WHERE User_Account_id = NEW.User_Account_id;
+--END;
+--GO
 
-CREATE TRIGGER Trigger_Update_Salah_Day_Overview
-ON User_Salah_Activity
-AFTER INSERT, UPDATE
-AS
-BEGIN
-    -- Update the average punctuality percentage
-    UPDATE User_Salah_Day_Overview
-    SET average_punctuality_percentage = (
-        SELECT AVG(punctuality_percentage)
-        FROM User_Salah_Activity
-        WHERE User_Account_id = inserted.User_Account_id
-        AND performed_at = inserted.performed_at
-    )
-    FROM User_Salah_Day_Overview
-    WHERE User_Account_id = inserted.User_Account_id
-    AND performed_at = inserted.performed_at;
+--CREATE TRIGGER Trigger_Update_Salah_Day_Overview
+--ON User_Salah_Activity
+--AFTER INSERT, UPDATE
+--AS
+--BEGIN
+--    -- Update the average punctuality percentage
+--    UPDATE User_Salah_Day_Overview
+--    SET average_punctuality_percentage = (
+--        SELECT AVG(punctuality_percentage)
+--        FROM User_Salah_Activity
+--        WHERE User_Account_id = inserted.User_Account_id
+--        AND performed_at = inserted.performed_at
+--    )
+--    FROM User_Salah_Day_Overview
+--    WHERE User_Account_id = inserted.User_Account_id
+--    AND performed_at = inserted.performed_at;
 
-    -- Insert a new record if it did not exist before
-    IF NOT EXISTS (
-        SELECT 1
-        FROM User_Salah_Day_Overview
-        WHERE User_Account_id = inserted.User_Account_id
-        AND performed_at = inserted.performed_at
-    )
-    BEGIN
-        INSERT INTO User_Salah_Day_Overview (User_Account_id, performed_at, average_punctuality_percentage)
-        SELECT User_Account_id, performed_at, AVG(punctuality_percentage)
-        FROM User_Salah_Activity
-        WHERE User_Account_id = inserted.User_Account_id
-        AND performed_at = inserted.performed_at
-        GROUP BY User_Account_id, performed_at;
-    END
-END;
+--    -- Insert a new record if it did not exist before
+--    IF NOT EXISTS (
+--        SELECT 1
+--        FROM User_Salah_Day_Overview
+--        WHERE User_Account_id = inserted.User_Account_id
+--        AND performed_at = inserted.performed_at
+--    )
+--    BEGIN
+--        INSERT INTO User_Salah_Day_Overview (User_Account_id, performed_at, average_punctuality_percentage)
+--        SELECT User_Account_id, performed_at, AVG(punctuality_percentage)
+--        FROM User_Salah_Activity
+--        WHERE User_Account_id = inserted.User_Account_id
+--        AND performed_at = inserted.performed_at
+--        GROUP BY User_Account_id, performed_at;
+--    END
+--END;
 
 --GEMINI
 --CREATE TRIGGER Trigger_Update_Dhikr_Overview
