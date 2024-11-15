@@ -13,19 +13,22 @@ CREATE TABLE User_Account (
 	oauth_provider NVARCHAR(20) NULL,
 	oauth_id NVARCHAR(255) NULL,
 	email_confirmed BIT DEFAULT 0 NOT NULL,
+	current_location NVARCHAR(255) NULL,
+	total_warnings INT DEFAULT 0 NOT NULL,
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL,
 	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
+	CONSTRAINT UQ_User_Account_email UNIQUE (email),
 	CONSTRAINT UQ_User_Account_email_password_hash UNIQUE (email, password_hash),
 	CONSTRAINT UQ_User_Account_email_oauth_id UNIQUE (email, oauth_id),
 	CONSTRAINT CK_User_Account_password_hash_oauth_id CHECK (password_hash IS NOT NULL OR oauth_id IS NOT NULL)  -- At least one must be non-NULL
 );
 GO
 CREATE TABLE Role_Type (
-	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
-	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User')
+	id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
+	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User') or for later functionality of groups of people, gorup id + admin
     details NVARCHAR(255) NULL, -- Description of the role
 
 	CONSTRAINT UQ_Role_Type_full_name UNIQUE (full_name)
@@ -35,11 +38,13 @@ CREATE TABLE Permission (
 	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User')
     details NVARCHAR(255) NULL -- Description of the role
+
+	CONSTRAINT UQ_Permission_full_name UNIQUE (full_name)
 );
 GO
 CREATE TABLE Role_Type_Permission (
 	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
-	Role_Type_id INT NOT NULL,
+	Role_Type_id BIGINT NOT NULL,
 	Permission_id INT NOT NULL,
 
     CONSTRAINT FK_Role_Type_Permission_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type(id) ON DELETE CASCADE,
@@ -50,7 +55,7 @@ GO
 CREATE TABLE User_Account_Role_Type (
 	id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	User_Account_id BIGINT NOT NULL,
-	Role_Type_id INT NOT NULL,
+	Role_Type_id BIGINT NOT NULL,
 
 	CONSTRAINT FK_User_Account_Role_Type_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
     CONSTRAINT FK_User_Account_Role_Type_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type(id) ON DELETE CASCADE,
@@ -59,10 +64,11 @@ CREATE TABLE User_Account_Role_Type (
 GO
 CREATE TABLE Ban_Type (
     id INT PRIMARY KEY IDENTITY(1,1),
-    warning_threshold INT NOT NULL,
+    total_warnings INT NOT NULL,
     ban_duration INT NULL, -- Duration in days (e.g., 7 for one week)
     is_permanent BIT DEFAULT 0 NULL,
 
+	CONSTRAINT UQ_Ban_Type_total_warnings UNIQUE (total_warnings),
 	CONSTRAINT CK_Ban_Type_ban_duration_is_permanent CHECK (ban_duration IS NOT NULL OR is_permanent IS NOT NULL)  -- At least one must be non-NULL
 );
 GO
@@ -70,9 +76,8 @@ CREATE TABLE User_Account_Ban_Type (
     id INT PRIMARY KEY IDENTITY(1,1),
 	User_Account_id BIGINT NOT NULL,
     Ban_Type_id INT NOT NULL,
-    banstart DATETIME NOT NULL,
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
-	created_by NVARCHAR(25) NOT NULL,
+	banned_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	banned_by NVARCHAR(25) NOT NULL,
 	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
@@ -120,25 +125,25 @@ CREATE TABLE User_Salah_Activity (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
     Salah_Type_id BIGINT NOT NULL, -- Foreign key to Dhikr table
-    performed_at DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
+    performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
     punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
-	average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
 
     
     CONSTRAINT FK_User_Salah_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
     CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type(id) ON DELETE CASCADE,
-    CONSTRAINT UQ_User_Salah_Activity_User_Account_id_performed_at UNIQUE (User_Account_id, performed_at) -- Ensures a unique record per user per day
+    CONSTRAINT UQ_User_Salah_Activity_User_Account_id_performed_on UNIQUE (User_Account_id, performed_on) -- Ensures a unique record per user per day
 );
 
 GO
 CREATE TABLE User_Salah_Day_Overview (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
-	performed_at DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
+	performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
     average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
 	total_performed INT DEFAULT 1 NOT NULL, -- Total of salah records for the day taken into account for the average punctuality percentage
     
-    CONSTRAINT FK_User_Salah_Day_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
+    CONSTRAINT FK_User_Salah_Day_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
+	CONSTRAINT UQ_User_Salah_Day_Overview_User_Account_id_performed_on UNIQUE (User_Account_id, performed_on) -- Ensures a unique record per user per day
 );
 GO
 CREATE TABLE User_Dhikr_Overview (
