@@ -100,7 +100,7 @@
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserActivity\\Validators\\UpdateUserActivityDtoValidator.cs",
               "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserActivity\\Validators\\UpdateUserActivityDtoValidator.cs",
               "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserActivity\\Validators\\UpdateUserActivityDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T14:38:36.118Z",
               "EditorCaption": ""
@@ -163,8 +163,7 @@
               "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserActivity\\Validators\\CreateUserActivityDtoValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T16:57:58.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T16:57:58.473Z"
             },
             {
               "$type": "Document",
@@ -176,8 +175,7 @@
               "RelativeToolTip": "IbadahLover.Application\\Persistence\\Contracts\\IUserActivityRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T18:11:18.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T18:11:18.923Z"
             },
             {
               "$type": "Document",
