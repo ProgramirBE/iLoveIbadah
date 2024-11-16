@@ -1,0 +1,6 @@
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Application\obj\Debug\net8.0\IbadahLover.Application.csproj.AssemblyReference.cache
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Application\obj\Debug\net8.0\IbadahLover.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Application\obj\Debug\net8.0\IbadahLover.Application.AssemblyInfoInputs.cache
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Application\obj\Debug\net8.0\IbadahLover.Application.AssemblyInfo.cs
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Application\obj\Debug\net8.0\IbadahLover.Application.csproj.CoreCompileInputs.cache
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Application\obj\Debug\net8.0\IbadahLover.Application.sourcelink.json

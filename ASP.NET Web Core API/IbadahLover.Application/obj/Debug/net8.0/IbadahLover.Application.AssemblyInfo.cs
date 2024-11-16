@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IbadahLover.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89ec74fd41563380dccb4768001dae7428be865d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34e73392b87138c1879574ceef1d1fb540be09ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("IbadahLover.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IbadahLover.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

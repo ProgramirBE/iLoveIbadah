@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "xmiYaw2MrSI=",
-  "success": false,
+  "dgSpecHash": "YmopRA8T8NU=",
+  "success": true,
   "projectFilePath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\IbadahLover.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AM5\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -17,15 +17,5 @@
     "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\AM5\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Projet 'C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
-      "libraryId": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

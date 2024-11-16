@@ -13,15 +13,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DhikrCount.Domain\IbadahLover.Domain.csproj" />
     <ProjectReference Include="..\IbadahLover.Domain\IbadahLover.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Features\DhikrTypes\Handlers\Commands\" />
     <Folder Include="Features\DhikrTypes\Requests\Commands\" />
-    <Folder Include="Features\UserDhikrCounts\Handlers\Commands\" />
-    <Folder Include="Features\UserDhikrCounts\Handlers\Queries\" />
+    <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
+    <Folder Include="Features\UserDhikrOverviews\Handlers\Queries\" />
   </ItemGroup>
 
 </Project>
