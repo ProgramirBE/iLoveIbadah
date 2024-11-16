@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Domain
 {
-    //Database Table UserActivity
-    public class UserDhikrActivity : BaseDomainEntity
+    //Database Table UserDhikrActivity
+    public class UserDhikrActivity
     {
+        public int Id { get; set; }
         public int UserAccountId { get; set; }
 
         public int DhikrTypeId { get; set; }
-        public DateTime PerformedAt { get; set; }
-        public int TotalDhikrPerformed { get; set; }
+        public DateTime PerformedOn { get; set; }
+        public DateTime LastPerformedAt { get; set; }
+        public int TotalPerformed { get; set; }
     }
 }

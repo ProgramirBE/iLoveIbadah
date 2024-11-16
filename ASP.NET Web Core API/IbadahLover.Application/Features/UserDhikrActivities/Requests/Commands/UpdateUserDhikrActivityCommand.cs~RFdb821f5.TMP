@@ -1,0 +1,15 @@
+﻿using IbadahLover.Application.DTOs.UserActivity;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IbadahLover.Application.Features.UserActivities.Requests.Commands
+{
+    public class UpdateUserDhikrActivityCommand : IRequest<Unit>
+    {
+        public UpdateUserDhikrActivityDto UserActivityDto { get; set; }
+    }
+}

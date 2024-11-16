@@ -485,7 +485,6 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
-      "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj",
       "FluentValidation.DependencyInjectionExtensions >= 11.10.0",
       "IbadahLover.Domain >= 1.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0"
@@ -524,9 +523,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj": {
-              "projectPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj"
-            },
             "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\IbadahLover.Domain.csproj": {
               "projectPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\IbadahLover.Domain.csproj"
             }
@@ -580,16 +576,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Projet 'C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj' introuvable. Vérifiez que la référence de projet est valide et que le fichier projet existe.",
-      "libraryId": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\DhikrCount.Domain\\IbadahLover.Domain.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

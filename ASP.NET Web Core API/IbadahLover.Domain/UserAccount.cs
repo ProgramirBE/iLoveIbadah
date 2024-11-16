@@ -18,5 +18,7 @@ namespace IbadahLover.Domain
         public OAuthProviderType? OAuthProvider { get; set; }
         public string? OAuthId { get; set; }
         public bool EmailConfirmed { get; set; }
+        public string? CurrentLocation { get; set; }
+        public int? TotalWarnings { get; set; }
     }
 }
