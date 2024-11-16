@@ -17,7 +17,7 @@ CREATE TABLE User_Account (
 	total_warnings INT DEFAULT 0 NOT NULL,
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL,
-	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
 	CONSTRAINT UQ_User_Account_email UNIQUE (email),
@@ -78,7 +78,7 @@ CREATE TABLE User_Account_Ban_Type (
     Ban_Type_id INT NOT NULL,
 	banned_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	banned_by NVARCHAR(25) NOT NULL,
-	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
     CONSTRAINT FK_User_Account_Ban_Type_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id),
@@ -91,7 +91,7 @@ CREATE TABLE Dhikr_Type (
     full_name NVARCHAR(255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
 	CONSTRAINT UQ_Dhikr_Type_full_name UNIQUE (full_name) -- Ensures a unique record per dhikr type.
@@ -102,7 +102,7 @@ CREATE TABLE Salah_Type (
     full_name NVARCHAR(255) NOT NULL, -- fajr, sobh, dohr, maghreb, isha, witr etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_at DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
 	last_modified_by NVARCHAR(25) NOT NULL,
 
 	CONSTRAINT UQ_Salah_Type_full_name UNIQUE (full_name) -- Ensures a unique record per Salah type.
@@ -150,7 +150,7 @@ CREATE TABLE User_Dhikr_Overview (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
     total_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
-    last_performed_on DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
+    last_performed_at DATETIME DEFAULT GETDATE() NOT NULL, -- Timestamp for when the overview was last updated
     
     CONSTRAINT FK_User_Dhikr_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
 );
