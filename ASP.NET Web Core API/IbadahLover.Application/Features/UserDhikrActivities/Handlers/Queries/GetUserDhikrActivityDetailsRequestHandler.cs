@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IbadahLover.Application.Features.UserActivities.Handlers.Queries
+namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Queries
 {
     // Backend Handler of Request to get Details of User Activity
     public class GetUserDhikrActivityDetailsRequestHandler : IRequestHandler<GetUserDhikrActivityDetailsRequest, UserDhikrActivityDto>
