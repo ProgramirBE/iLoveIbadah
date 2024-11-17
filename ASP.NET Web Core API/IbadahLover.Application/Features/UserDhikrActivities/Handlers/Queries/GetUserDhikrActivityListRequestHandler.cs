@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IbadahLover.Application.Features.UserActivities.Handlers.Queries
+namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Queries
 {
     public class GetUserDhikrActivityListRequestHandler : IRequestHandler<GetUserDhikrActivityListRequest, List<UserDhikrActivityListDto>>
     {

@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitydetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitydetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitylistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitylistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\updateuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\updateuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitylistrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitylistrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitydetailsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitydetailsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\updateuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\updateuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\createuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\createuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\useraccounts\\handlers\\commands\\createuseraccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\useraccounts\\handlers\\commands\\createuseraccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\userdhikractivity\\validators\\updateuserdhikractivitydtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\userdhikractivity\\validators\\updateuserdhikractivitydtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuseractivitycommand.cs~rfdaf9bb4.tmp||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuseractivitycommand.cs~rfdaf9bb4.tmp||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,18 +91,6 @@
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\persistence\\userdhikroverviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\updateuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\updateuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitylistrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitylistrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\persistence\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\persistence\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -91,28 +119,12 @@
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\ibadahlover.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitydetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitydetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\userdhikractivity\\validators\\createuserdhikractivitydtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\userdhikractivity\\validators\\createuserdhikractivitydtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuserdhikractivitycommand.cs~rfdb9dff0.tmp||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\createuserdhikractivitycommand.cs~rfdb9dff0.tmp||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\updateuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\updateuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\createuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\commands\\createuserdhikractivitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\userdhikractivity\\validators\\updateuserdhikractivitydtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\userdhikractivity\\validators\\updateuserdhikractivitydtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\userdhikractivity\\validators\\createuserdhikractivitydtovalidator.cs~rfdc08d79.tmp||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -139,10 +151,6 @@
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\userdhikractivity\\createuserdhikractivitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitylistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitylistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E05E2945-A9F2-4C77-9195-821C303C5F15}|IbadahLover.Domain\\IbadahLover.Domain.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.domain\\common\\basedomainentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E05E2945-A9F2-4C77-9195-821C303C5F15}|IbadahLover.Domain\\IbadahLover.Domain.csproj|solutionrelative:ibadahlover.domain\\common\\basedomainentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -167,188 +175,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UpdateUserDhikrOverviewCommand.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T18:53:30.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetUserDhikrOverviewDetailsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T18:46:39.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetUserDhikrOverviewListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T18:50:46.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserDhikrOverviewRepository.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T18:17:57.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "RelativeToolTip": "IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:40:38.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "GetUserDhikrActivityDetailsRequestHandler.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityDetailsRequestHandler.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityDetailsRequestHandler.cs",
               "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityDetailsRequestHandler.cs",
               "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityDetailsRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T17:15:23.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UpdateUserDhikrOverviewDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T11:49:28.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDhikrOverviewListDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T18:07:57.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDhikrOverviewDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T18:05:02.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-16T18:38:43.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UpdateUserDhikrOverviewDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T19:03:53.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserDhikrOverviewRepository.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T12:43:47.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CreateUserDhikrActivityCommand.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T16:51:27.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UpdateUserDhikrActivityCommand.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:08:48.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
               "Title": "GetUserDhikrActivityListRequestHandler.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityListRequestHandler.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityListRequestHandler.cs",
@@ -361,7 +200,261 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateUserDhikrActivityCommand.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T16:51:27.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateUserDhikrActivityCommand.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T17:08:48.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetUserDhikrActivityListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T17:05:45.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetUserDhikrActivityDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T17:10:43.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateUserDhikrActivityCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T17:05:13.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateUserDhikrActivityCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T16:53:34.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateUserAccountCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Handlers\\Commands\\CreateUserAccountCommandHandler.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Handlers\\Commands\\CreateUserAccountCommandHandler.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Handlers\\Commands\\CreateUserAccountCommandHandler.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Handlers\\Commands\\CreateUserAccountCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T17:40:31.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateUserActivityCommand.cs~RFdaf9bb4.TMP",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserActivityCommand.cs~RFdaf9bb4.TMP",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserActivityCommand.cs~RFdaf9bb4.TMP",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserActivityCommand.cs~RFdaf9bb4.TMP",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserActivityCommand.cs~RFdaf9bb4.TMP",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-17T17:35:52.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateUserDhikrActivityDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T14:38:36.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "RelativeToolTip": "IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T17:40:38.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUserDhikrOverviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrOverviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T18:17:57.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetUserDhikrOverviewListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T18:50:46.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetUserDhikrOverviewDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T18:46:39.461Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "UpdateUserDhikrOverviewCommand.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Commands\\UpdateUserDhikrOverviewCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T18:53:30.777Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UpdateUserDhikrOverviewDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\Validators\\UpdateUserDhikrOverviewDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T11:49:28.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserDhikrOverviewListDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T18:07:57.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserDhikrOverviewDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UserDhikrOverviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T18:05:02.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs~RFdf5fe04.TMP",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-16T18:38:43.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UpdateUserDhikrOverviewDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrOverview\\UpdateUserDhikrOverviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T19:03:53.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserDhikrOverviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Persistence\\UserDhikrOverviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T12:43:47.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\Contracts\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Persistence\\Contracts\\IGenericRepository.cs",
@@ -369,12 +462,11 @@
               "RelativeToolTip": "IbadahLover.Application\\Persistence\\Contracts\\IGenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T13:08:14.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T13:08:14.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "IUserAccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\Contracts\\IUserAccountRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Persistence\\Contracts\\IUserAccountRepository.cs",
@@ -382,12 +474,11 @@
               "RelativeToolTip": "IbadahLover.Application\\Persistence\\Contracts\\IUserAccountRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T18:18:23.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T18:18:23.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "IUserDhikrActivityRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrActivityRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Persistence\\Contracts\\IUserDhikrActivityRepository.cs",
@@ -400,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "UserDhikrOverview.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\UserDhikrOverview.cs",
               "RelativeDocumentMoniker": "IbadahLover.Domain\\UserDhikrOverview.cs",
@@ -408,12 +499,11 @@
               "RelativeToolTip": "IbadahLover.Domain\\UserDhikrOverview.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:55:54.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T17:55:54.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "IbadahLover.Application.csproj",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\IbadahLover.Application.csproj",
               "RelativeDocumentMoniker": "IbadahLover.Application\\IbadahLover.Application.csproj",
@@ -421,12 +511,11 @@
               "RelativeToolTip": "IbadahLover.Application\\IbadahLover.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-16T17:44:47.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T17:44:47.919Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "UserAccount.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\UserAccount.cs",
               "RelativeDocumentMoniker": "IbadahLover.Domain\\UserAccount.cs",
@@ -439,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "UserDhikrActivity.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\UserDhikrActivity.cs",
               "RelativeDocumentMoniker": "IbadahLover.Domain\\UserDhikrActivity.cs",
@@ -451,24 +540,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "GetUserDhikrActivityDetailsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:10:43.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "CreateUserDhikrActivityDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
@@ -480,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "CreateUserDhikrActivityCommand.cs~RFdb9dff0.TMP",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs~RFdb9dff0.TMP",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\CreateUserDhikrActivityCommand.cs~RFdb9dff0.TMP",
@@ -492,43 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UpdateUserDhikrActivityCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\UpdateUserDhikrActivityCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:05:13.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CreateUserDhikrActivityCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserDhikrActivityCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T16:53:34.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "UpdateUserDhikrActivityDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\UpdateUserDhikrActivityDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T14:38:36.118Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "CreateUserDhikrActivityDtoValidator.cs~RFdc08d79.TMP",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs~RFdc08d79.TMP",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs~RFdc08d79.TMP",
@@ -540,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "UserDhikrActivityListDto.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityListDto.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityListDto.cs",
@@ -552,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "UserDhikrActivityDto.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityDto.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityDto.cs",
@@ -564,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "UpdateUserDhikrActivityDto.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\UpdateUserDhikrActivityDto.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\UpdateUserDhikrActivityDto.cs",
@@ -576,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "CreateUserDhikrActivityDto.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
@@ -588,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "CreateUserActivityCommandHandler.cs~RFdb37405.TMP",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserActivityCommandHandler.cs~RFdb37405.TMP",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserActivityCommandHandler.cs~RFdb37405.TMP",
@@ -596,23 +633,12 @@
               "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\CreateUserActivityCommandHandler.cs~RFdb37405.TMP",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-16T17:12:44.487Z"
+              "WhenOpened": "2024-11-16T17:12:44.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "GetUserDhikrActivityListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:05:45.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "BaseDomainEntity.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\Common\\BaseDomainEntity.cs",
               "RelativeDocumentMoniker": "IbadahLover.Domain\\Common\\BaseDomainEntity.cs",
@@ -624,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "UpdateUserAccountDtoValidatorForOAuthUsers.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidatorForOAuthUsers.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidatorForOAuthUsers.cs",
@@ -636,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "UpdateUserAccountDtoValidatorForFormUsers.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidatorForFormUsers.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidatorForFormUsers.cs",

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IbadahLover.Application.Features.UserActivities.Requests.Queries
+namespace IbadahLover.Application.Features.UserDhikrActivities.Requests.Queries
 {
     // Application User Request to get Details of User Activity
     public class GetUserDhikrActivityDetailsRequest : IRequest<UserDhikrActivityDto>
