@@ -125,7 +125,7 @@ CREATE TABLE User_Salah_Activity (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
     Salah_Type_id BIGINT NOT NULL, -- Foreign key to Dhikr table
-    performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
+    performed_at DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
     punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
 
     
