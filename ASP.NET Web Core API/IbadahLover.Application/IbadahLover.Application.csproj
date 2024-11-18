@@ -20,7 +20,6 @@
     <Folder Include="Features\DhikrTypes\Handlers\Commands\" />
     <Folder Include="Features\DhikrTypes\Requests\Commands\" />
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
-    <Folder Include="Features\UserDhikrOverviews\Handlers\Queries\" />
   </ItemGroup>
 
 </Project>

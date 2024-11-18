@@ -10,7 +10,9 @@ namespace IbadahLover.Application.Features.UserDhikrOverviews.Requests.Queries
 {
     public class GetUserDhikrOverviewDetailsRequest : IRequest<UserDhikrOverviewDto>
     {
+        public int Id { get; set; }
         public int UserAccountId { get; set; }
         public int TotalPerformed { get; set; }
+        public DateTime LastPerformedAt { get; set; }
     }
 }
