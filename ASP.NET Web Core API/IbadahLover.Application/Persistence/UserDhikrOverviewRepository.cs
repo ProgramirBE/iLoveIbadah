@@ -35,12 +35,12 @@ namespace IbadahLover.Application.Persistence
             throw new NotImplementedException();
         }
 
-        public Task<List<UserDhikrOverview>> GetUserDhikrOverviewsWithDetails()
+        public Task<UserDhikrOverview> GetUserDhikrOverviewWithDetails(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<UserDhikrOverview> GetUserDhikrOverviewWithDetails(int id)
+        public Task<List<UserDhikrOverview>> GetUserDhikrOverviewsWithDetails()
         {
             throw new NotImplementedException();
         }

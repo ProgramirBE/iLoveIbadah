@@ -1,4 +1,4 @@
-﻿using IbadahLover.Application.DTOs.DhikrType;
+﻿using IbadahLover.Application.DTOs.SalahType;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IbadahLover.Application.Features.DhikrTypes.Requests.Queries
+namespace IbadahLover.Application.Features.SalahTypes.Requests.Queries
 {
-    public class GetDhikrTypeListRequest : IRequest<List<DhikrTypeListDto>>
+    public class GetSalahTypeListRequest : IRequest<List<SalahTypeListDto>>
     {
         public string FullName { get; set; }
         public string CreatedBy { get; set; }
