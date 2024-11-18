@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using IbadahLover.Application.DTOs.UserAccount.Validators;
 using IbadahLover.Application.DTOs.UserDhikrActivity.Validators;
-using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Persistence.Contracts;
 using IbadahLover.Domain;
@@ -27,7 +25,7 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
 
         public async Task<int> Handle(CreateUserDhikrActivityCommand request, CancellationToken cancellationToken)
         {
-            var validator = new CreateUserDhikrActivityDtoValidator();
+            var validator = new CreateUserDhikrActivityDtoValidator(); //need to give the 3 repositories as parameter as in dto
             var validationResult = await validator.ValidateAsync(request.UserDhikrActivityDto);
 
             //var validationResult = await validator.ValidateAsync(new CreateUserAccountDto
