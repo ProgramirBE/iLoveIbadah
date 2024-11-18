@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IbadahLover.Application.DTOs.DhikrType
+namespace IbadahLover.Application.DTOs.SalahType
 {
-    public class DhikrTypeListDto : BaseDto
+    public class SalahTypeDto : BaseDto
     {
         public string FullName { get; set; }
     }

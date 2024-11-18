@@ -8,6 +8,8 @@ namespace IbadahLover.Application.DTOs.UserDhikrOverview
 {
     public class UserDhikrOverviewListDto
     {
-
+        public int UserAccountId { get; set; }
+        public int TotalPerformed { get; set; }
+        public DateTime LastPerformedAt { get; set; }
     }
 }

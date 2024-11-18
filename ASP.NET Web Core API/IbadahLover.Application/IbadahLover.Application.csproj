@@ -17,8 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DTOs\SalahType\Validators\" />
     <Folder Include="Features\DhikrTypes\Handlers\Commands\" />
     <Folder Include="Features\DhikrTypes\Requests\Commands\" />
+    <Folder Include="Features\SalahTypes\Handlers\Commands\" />
+    <Folder Include="Features\SalahTypes\Requests\Commands\" />
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
   </ItemGroup>
 

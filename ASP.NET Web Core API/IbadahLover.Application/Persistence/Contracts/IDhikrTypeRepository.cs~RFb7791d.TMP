@@ -11,6 +11,6 @@ namespace IbadahLover.Application.Persistence.Contracts
     public interface IDhikrTypeRepository : IGenericRepository<DhikrType>
     {
         Task<DhikrType> GetDhikrTypeWithDetails(int id);
-        Task<List<DhikrType>> GetDhikrTypesWithDetails();
+        Task<List<UserAccount>> GetDhikrTypesWithDetails();
     }
 }

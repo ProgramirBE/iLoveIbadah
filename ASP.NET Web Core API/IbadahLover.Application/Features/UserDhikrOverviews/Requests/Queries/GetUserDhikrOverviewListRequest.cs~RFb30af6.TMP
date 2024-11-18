@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserDhikrOverviews.Requests.Queries
 {
-    public class GetUserDhikrOverviewListRequest : IRequest<List<UserDhikrOverviewListDto>>
+    public class GetUserDhikrOverviewListRequest : IRequest<List<UserDhikrOverviewDto>>
     {
         public int UserAccountId { get; set; }
         public int DhikrTypeId { get; set; }
