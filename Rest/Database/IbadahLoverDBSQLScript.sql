@@ -200,32 +200,32 @@ CREATE TABLE User_Dhikr_Overview (
 --);
 
 --Chatgpt4o mini
+GO
+CREATE TRIGGER Trigger_Insert_Dhikr_Overview on User_Dhikr_Activity
+	AFTER UPDATE
+AS
+BEGIN
+	SET NOCOUNT ON;
+	DECLARE @User_Account_id BIGINT
+	DECLARE @total_performed BIGINT
+    SELECT @User_Account_id = INSERTED.User_Account_id
+	FROM INERTED
 
---CREATE TRIGGER Trigger_Insert_Dhikr_Overview on User_Dhikr_Activity
---	AFTER UPDATE
---AS
---BEGIN
---	SET NOCOUNT ON;
---	DECLARE @User_Account_id BIGINT
---	DECLARE @total_performed BIGINT
---    SELECT @User_Account_id = INSERTED.User_Account_id
---	FROM INERTED
-
---	IF UPDATE(total_performed)
---		SET total_performed += 1
+	IF UPDATE(total_performed)
+		SET total_performed += 1
     
---	WHERE User_Account_id = NEW.User_Account_id;
---END;
---GO
+	WHERE User_Account_id = NEW.User_Account_id;
+END;
+GO
 
---CREATE TRIGGER Trigger_Update_Dhikr_Overview on User_Dhikr_Activity
---AFTER UPDATE
---FOR EACH ROW
---BEGIN
---    UPDATE User_Dhikr_Overview
---    SET total_performed += 1
---    WHERE User_Account_id = NEW.User_Account_id;
---END;
+CREATE TRIGGER Trigger_Update_Dhikr_Overview on User_Dhikr_Activity
+AFTER UPDATE
+FOR EACH ROW
+BEGIN
+    UPDATE User_Dhikr_Overview
+    SET total_performed += 1
+    WHERE User_Account_id = NEW.User_Account_id;
+END;
 --GO
 
 --CREATE TRIGGER Trigger_Update_Salah_Day_Overview
