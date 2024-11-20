@@ -23,6 +23,9 @@
     <Folder Include="Features\SalahTypes\Handlers\Commands\" />
     <Folder Include="Features\SalahTypes\Requests\Commands\" />
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
+    <Folder Include="Features\UserSalahActivities\Handlers\Commands\" />
+    <Folder Include="Features\UserSalahActivities\Handlers\Queries\" />
+    <Folder Include="Features\UserSalahActivities\Requests\Queries\" />
   </ItemGroup>
 
 </Project>
