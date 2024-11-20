@@ -125,9 +125,8 @@ CREATE TABLE User_Salah_Activity (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
     Salah_Type_id BIGINT NOT NULL, -- Foreign key to Dhikr table
-    performed_at DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
+    performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
     punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
-
     
     CONSTRAINT FK_User_Salah_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
     CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type(id) ON DELETE CASCADE,
@@ -135,15 +134,13 @@ CREATE TABLE User_Salah_Activity (
 );
 
 GO
-CREATE TABLE User_Salah_Day_Overview (
+CREATE TABLE User_Salah_Overview (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
-	performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
-    average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
-	total_performed INT DEFAULT 1 NOT NULL, -- Total of salah records for the day taken into account for the average punctuality percentage
+    --average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
+	total_tracked INT DEFAULT 1 NOT NULL, -- Total of salah records taken into account for the average punctuality percentage
     
-    CONSTRAINT FK_User_Salah_Day_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
-	CONSTRAINT UQ_User_Salah_Day_Overview_User_Account_id_performed_on UNIQUE (User_Account_id, performed_on) -- Ensures a unique record per user per day
+    CONSTRAINT FK_User_Salah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE
 );
 GO
 CREATE TABLE User_Dhikr_Overview (
