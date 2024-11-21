@@ -1,4 +1,4 @@
-﻿using IbadahLover.Application.DTOs.UserSalahActivity;
+﻿using IbadahLover.Application.DTOs.UserDhikrActivity;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserSalahActivities.Requests.Commands
 {
-    public class CreateUserSalahActivityCommand : IRequest<int>
+    public class UpdateUserSalahActivityCommand : IRequest<Unit>
     {
-        public CreateUserSalahActivityDto UserSalahActivityDto { get; set; }
+        public UpdateUserDhikrActivityDto UserDhikrActivityDto { get; set; }
     }
 }

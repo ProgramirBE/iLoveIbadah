@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserSalahActivities.Requests.Commands
 {
-    public class CreateUserSalahActivityCommand : IRequest<int>
+    public class UpdateUserSalahActivityCommand : IRequest<Unit>
     {
-        public CreateUserSalahActivityDto UserSalahActivityDto { get; set; }
+        public UpdateUserSalahActivityDto UserSalahActivityDto { get; set; }
     }
 }

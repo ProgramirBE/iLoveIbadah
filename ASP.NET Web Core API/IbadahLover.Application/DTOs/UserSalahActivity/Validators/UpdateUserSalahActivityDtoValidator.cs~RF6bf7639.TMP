@@ -44,7 +44,7 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity.Validators
                 .MustAsync(async (dto, performedOn, token) =>
                 {
                     var userSalahActivityPerformedAtExists = await _userSalahActivityRepository.PerformedOnExists(dto.UserAccountId, performedOn);
-                    return !userSalahActivityPerformedAtExists; // il doit! exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste create allowed
+                    return !userSalahActivityPerformedAtExists; // il doit! exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste update allowed
                 });
         }
     }
