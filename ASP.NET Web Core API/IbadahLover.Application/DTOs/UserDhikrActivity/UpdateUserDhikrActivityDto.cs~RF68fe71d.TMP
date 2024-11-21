@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.UserDhikrActivity
 {
-    public class UserDhikrActivityDto
+    public class UpdateUserDhikrActivityDto
     {
-        public int Id { get; set; }
         public int UserAccountId { get; set; }
         public int DhikrTypeId { get; set; }
         [DataType(DataType.Date)]

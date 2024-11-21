@@ -15,21 +15,17 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
     public class CreateUserDhikrActivityCommandHandler : IRequestHandler<CreateUserDhikrActivityCommand, int>
     {
         private readonly IUserDhikrActivityRepository _userDhikrActivityRepository;
-        private readonly IUserAccountRepository _userAccountRepository;
-        private readonly IDhikrTypeRepository _dhikrTypeRepository;
         private readonly IMapper _mapper;
 
-        public CreateUserDhikrActivityCommandHandler(IUserDhikrActivityRepository userDhikrActivityRepository, IUserAccountRepository userAccountRepository, IDhikrTypeRepository dhikrTypeRepository, IMapper mapper)
+        public CreateUserDhikrActivityCommandHandler(IUserDhikrActivityRepository userDhikrActivityRepository, IMapper mapper)
         {
             _userDhikrActivityRepository = userDhikrActivityRepository;
-            _userAccountRepository = userAccountRepository;
-            _dhikrTypeRepository = dhikrTypeRepository;
             _mapper = mapper;
         }
 
         public async Task<int> Handle(CreateUserDhikrActivityCommand request, CancellationToken cancellationToken)
         {
-            var validator = new CreateUserDhikrActivityDtoValidator(_userDhikrActivityRepository, _userAccountRepository, _dhikrTypeRepository); //need to give the 3 repositories as parameter as in dto
+            var validator = new CreateUserDhikrActivityDtoValidator(); //need to give the 3 repositories as parameter as in dto
             var validationResult = await validator.ValidateAsync(request.UserDhikrActivityDto);
 
             //var validationResult = await validator.ValidateAsync(new CreateUserAccountDto

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +15,6 @@ namespace IbadahLover.Application.DTOs.UserAccount.Validators
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
                 .MaximumLength(25).WithMessage("{PropertyName} must not exceed 25 characters.");
-        }
+        }je ne suis pas d'accord avec le fait que le monde doit être un endroit meilleur et plus sûr pour les enfants
     }
 }
