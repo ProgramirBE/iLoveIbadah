@@ -16,10 +16,12 @@ CREATE TABLE User_Account (
 	current_location NVARCHAR(255) NULL,
 	total_warnings INT DEFAULT 0 NOT NULL,
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
-	created_by NVARCHAR(25) NOT NULL,
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by NVARCHAR(25) NOT NULL,
+	--CHECK HERE UNDER!!!!!
+	last_modified_by BIGINT NOT NULL, --HOW TO LET CREATED ID IN HERE??? TRIGGER?????
 
+	--CHeck foreign key contstraiint!!!!!
+	CONSTRAINT FK_User_Account_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id), -- SAAME HERE!!! check:!!!
 	CONSTRAINT UQ_User_Account_email UNIQUE (email),
 	CONSTRAINT UQ_User_Account_email_password_hash UNIQUE (email, password_hash),
 	CONSTRAINT UQ_User_Account_email_oauth_id UNIQUE (email, oauth_id),
@@ -77,10 +79,12 @@ CREATE TABLE User_Account_Ban_Type (
 	User_Account_id BIGINT NOT NULL,
     Ban_Type_id INT NOT NULL,
 	banned_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
-	banned_by NVARCHAR(25) NOT NULL,
+	banned_by BIGINT NOT NULL,
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by NVARCHAR(25) NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
+	CONSTRAINT FK_User_Account_Ban_Type_banned_by FOREIGN KEY (banned_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_User_Account_Ban_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
     CONSTRAINT FK_User_Account_Ban_Type_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id),
     CONSTRAINT FK_User_Account_Ban_Type_Ban_Type_id FOREIGN KEY (Ban_Type_id) REFERENCES Ban_Type(id),
 	CONSTRAINT UQ_User_Account_Ban_Type_User_Account_id_Ban_Type_id UNIQUE (User_Account_id, Ban_Type_id)
@@ -90,10 +94,12 @@ CREATE TABLE Dhikr_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     full_name NVARCHAR(255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
-	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by NVARCHAR(25) NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
+	CONSTRAINT FK_Dhikr_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Dhikr_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
 	CONSTRAINT UQ_Dhikr_Type_full_name UNIQUE (full_name) -- Ensures a unique record per dhikr type.
 );
 GO
@@ -101,11 +107,26 @@ CREATE TABLE Salah_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     full_name NVARCHAR(255) NOT NULL, -- fajr, sobh, dohr, maghreb, isha, witr etc...
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
-	created_by NVARCHAR(25) NOT NULL, -- So user can create his own personal dhirk types just for him
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by NVARCHAR(25) NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
+	CONSTRAINT FK_Salah_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Salah_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
 	CONSTRAINT UQ_Salah_Type_full_name UNIQUE (full_name) -- Ensures a unique record per Salah type.
+);
+GO
+CREATE TABLE Profile_Picture_Type (
+    id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
+    base64_code NVARCHAR(255) NOT NULL, -- fajr, sobh, dohr, maghreb, isha, witr etc...
+	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_by BIGINT NOT NULL,
+
+	CONSTRAINT FK_Profile_Picture_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Profile_Picture_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
+	CONSTRAINT UQ_Profile_Picture_Type_base64_code UNIQUE (base64_code) -- Ensures a unique record per Salah type.
 );
 GO
 CREATE TABLE User_Dhikr_Activity (
@@ -132,7 +153,7 @@ CREATE TABLE User_Salah_Activity (
     CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type(id) ON DELETE CASCADE,
     CONSTRAINT UQ_User_Salah_Activity_User_Account_id_performed_on UNIQUE (User_Account_id, performed_on) -- Ensures a unique record per user per day
 );
-
+l
 GO
 CREATE TABLE User_Salah_Overview (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
