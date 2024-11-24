@@ -12,7 +12,7 @@ namespace IbadahLover.Application.DTOs.Common
         public int Id { get; set; }
         [DataType(DataType.Date)]
         public DateTime CreatedOn { get; set; }
-        public string CreatedBy { get; set; }
+        public int CreatedBy { get; set; }
         [DataType(DataType.Date)]
         public DateTime LastModifiedOn { get; set; }
         public string LastModifiedBy { get; set; }

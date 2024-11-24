@@ -1,4 +1,4 @@
-﻿using IbadahLover.Application.DTOs.DhikrType;
+﻿using IbadahLover.Application.DTOs.ProfilePictureType;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IbadahLover.Application.Features.DhikrTypes.Requests.Queries
+namespace IbadahLover.Application.Features.ProfilePictureTypes.Requests.Queries
 {
-    public class GetDhikrTypeDetailsRequest : IRequest<DhikrTypeDto>
+    public class GetProfilePictureTypeDetailsRequest : IRequest<ProfilePictureTypeDto>
     {
         public int Id { get; set; }
-        public string FullName { get; set; }
+        public byte[] Base64Code { get; set; }
         public DateTime CreatedOn { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
         public DateTime LastModifiedOn { get; set; }
         public string LastModifiedBy { get; set; }
     }

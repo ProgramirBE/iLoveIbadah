@@ -11,6 +11,6 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Commands
 {
     public class UpdateUserAccountCommand : IRequest<Unit>
     {
-        public UpdateUserAccountDto UserAccountDto { get; set; }
+        public UpdateUserAccountForFormUsersDto UserAccountDto { get; set; }
     }
 }

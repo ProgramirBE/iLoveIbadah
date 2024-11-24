@@ -17,15 +17,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DTOs\ProfilePictureType\Validators\" />
     <Folder Include="DTOs\SalahType\Validators\" />
     <Folder Include="Features\DhikrTypes\Handlers\Commands\" />
     <Folder Include="Features\DhikrTypes\Requests\Commands\" />
+    <Folder Include="Features\ProfilePictureTypes\Handlers\Commands\" />
+    <Folder Include="Features\ProfilePictureTypes\Handlers\Queries\" />
+    <Folder Include="Features\ProfilePictureTypes\Requests\Commands\" />
     <Folder Include="Features\SalahTypes\Handlers\Commands\" />
     <Folder Include="Features\SalahTypes\Requests\Commands\" />
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
-    <Folder Include="Features\UserSalahActivities\Handlers\Commands\" />
-    <Folder Include="Features\UserSalahActivities\Handlers\Queries\" />
-    <Folder Include="Features\UserSalahActivities\Requests\Queries\" />
   </ItemGroup>
 
 </Project>
