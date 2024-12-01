@@ -1,3 +1,22 @@
 <ion-app>
+  <!--Header-->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ currentPageTitle }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button routerLink="/home">
+          <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+        </ion-button>
+        <ion-button routerLink="/dhikr">
+          <ion-icon slot="icon-only" name="book-outline"></ion-icon>
+        </ion-button>
+        <ion-button routerLink="/leaderboard">
+          <ion-icon slot="icon-only" name="trophy-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-router-outlet></ion-router-outlet>
+    <!--Footer-->
 </ion-app>
+
