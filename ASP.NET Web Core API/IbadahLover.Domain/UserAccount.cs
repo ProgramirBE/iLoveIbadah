@@ -13,7 +13,7 @@ namespace IbadahLover.Domain
     {
         public string FullName { get; set; }
         public string Email { get; set; }
-        public byte[]? ProfilePicture { get; set; }
+        public int? ProfilePictureTypeId { get; set; }
         public string? PasswordHash { get; set; }
         public OAuthProviderType? OAuthProvider { get; set; }
         public string? OAuthId { get; set; }

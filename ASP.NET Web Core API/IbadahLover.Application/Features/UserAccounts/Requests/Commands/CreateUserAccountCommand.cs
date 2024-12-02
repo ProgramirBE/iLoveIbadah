@@ -10,6 +10,6 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Commands
 {
     public class CreateUserAccountCommand : IRequest<int>
     {
-        public UserAccountDto UserAccountDto { get; set; }
+        public CreateUserAccountDto UserAccountDto { get; set; }
     }
 }

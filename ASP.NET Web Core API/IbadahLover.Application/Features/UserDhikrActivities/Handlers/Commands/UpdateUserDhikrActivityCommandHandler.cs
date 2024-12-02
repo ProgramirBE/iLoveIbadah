@@ -31,6 +31,13 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
         public async Task<Unit> Handle(UpdateUserDhikrActivityCommand request, CancellationToken cancellationToken)
         {
             var validator = new UpdateUserDhikrActivityDtoValidator(_userDhikrActivityRepository, _userAccountRepository, _dhikrTypeRepository); //need to give the 3 repositories as parameter as in dto
+            var validationResult = await validator.ValidateAsync(request.UserDhikrActivityDto);
+
+            if (!validationResult.IsValid)
+            {
+                throw new Exception();
+            }
+
             var userDhikrActivity = await _userDhikrActivityRepository.GetById(request.UserDhikrActivityDto.Id);
 
             _mapper.Map(request.UserDhikrActivityDto, userDhikrActivity);
