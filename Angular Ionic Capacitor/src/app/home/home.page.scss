@@ -1,27 +1,122 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+/* Algemene reset voor marges en padding */
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-#container a {
-  text-decoration: none;
+/* Algemene instellingen voor de pagina */
+body {
+  background-color: #101010; /* Donkere achtergrondkleur */
+  color: #fff; /* Witte tekstkleur */
+  min-height: 100vh; /* Minimale hoogte is het volledige scherm */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Lettertype */
+  display: flex; /* Flexbox om inhoud te centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+}
+
+/* Stijl voor paragrafen */
+p {
+  font-size: 0.75rem; /* Kleine lettergrootte voor tekst */
+}
+
+/* Stijl voor titels */
+h1, h2, h3 {
+  background: linear-gradient(to right, white 10%, #e60597 70%); /* Lineaire kleurovergang */
+  -webkit-background-clip: text; /* Alleen tekst krijgt de achtergrondkleur */
+  -webkit-text-fill-color: transparent; /* Maak de tekst transparant voor de achtergrondkleur */
+  text-align: center; /* Tekst in het midden */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 colonnes */
+  grid-template-rows: repeat(4, auto); /* 4 rangées */
+  gap: 1rem; /* Espacement entre les éléments */
+  padding: 1rem;
+
+  /* Dimensions et centrage */
+  max-width: 800px; /* Limite la largeur totale */
+  height: auto; /* Hauteur automatique pour s'adapter au contenu */
+  margin: auto; /* Centre le conteneur verticalement et horizontalement */
+  position: relative;
+  top: 50%; /* Positionne à 50% de la hauteur */
+  transform: translateY(-50%); /* Centre précisément verticalement */
+  border-radius: 3rem;
+  border: 10px solid #4b0082; /* Donkerpaarse rand */
+}
+
+/* Algemene stijl voor grid-items */
+.grid-item {
+  background-color: #444; /* Donkergrijze achtergrond */
+  color: #fff; /* Witte tekstkleur */
+  padding: 1rem; /* Binnenruimte */
+  text-align: center; /* Tekst gecentreerd */
+  border-radius: 0.75rem; /* Afgeronde hoeken */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animatie bij hover */
+}
+
+/* Specifieke grootte en positie van elk item in de grid */
+.grid-item-1 {
+  grid-column: span 4; /* Beslaat 4 kolommen */
+  grid-row: span 2; /* Beslaat 2 rijen */
+}
+
+.grid-item-2,
+.grid-item-3 {
+  grid-column: span 1; /* Beslaat 1 kolom */
+  grid-row: span 2; /* Beslaat 2 rijen */
+}
+
+.grid-item-4 {
+  grid-column: span 6; /* Beslaat alle 6 kolommen */
+  grid-row: span 1; /* Beslaat 1 rij */
+}
+
+.grid-item-5 {
+  grid-column: span 4; /* Beslaat 4 kolommen */
+  grid-row: span 1; /* Beslaat 1 rij */
+}
+
+.grid-item-6,
+.grid-item-7 {
+  grid-column: span 1; /* Beslaat 1 kolom */
+  grid-row: span 1; /* Beslaat 1 rij */
+}
+
+/* Hover-effect voor de grid-items */
+.grid-item:hover {
+  transform: translateY(-5px); /* Verplaats iets omhoog */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Sterkere schaduw bij hover */
+}
+
+/* Specifieke kleuren voor elk item */
+.grid-item-1 {
+  background-color: #6a0dad; /* Donkerpaars */
+}
+
+.grid-item-2 {
+  background-color: #8a2be2; /* Lichtpaars */
+}
+
+.grid-item-3 {
+  background-color: #c53ccf; /* Donkerroze */
+}
+
+.grid-item-4 {
+  background-color: #9b30ff; /* Helder paars */
+}
+
+.grid-item-5 {
+  background-color: #7d3cb5; /* Blauwpaars */
+}
+
+.grid-item-6 {
+  background-color: #512d89; /* Donker indigo */
+}
+
+.grid-item-7 {
+  background-color: #654cbb; /* Licht indigo */
 }
