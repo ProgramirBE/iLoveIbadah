@@ -33,7 +33,7 @@ CREATE TABLE Role_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_Role_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -47,7 +47,7 @@ CREATE TABLE Permission_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -61,7 +61,7 @@ CREATE TABLE Role_Type_Permission_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_Role_Type_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_Role_Type_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -77,7 +77,7 @@ CREATE TABLE User_Account_Role_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_User_Account_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_User_Account_Role_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -94,7 +94,7 @@ CREATE TABLE Ban_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_Ban_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_Ban_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -109,7 +109,7 @@ CREATE TABLE User_Account_Ban_Type (
 	banned_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	banned_by BIGINT NOT NULL,
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_User_Account_Ban_Type_banned_by FOREIGN KEY (banned_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_User_Account_Ban_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -124,7 +124,7 @@ CREATE TABLE Dhikr_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_Dhikr_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_Dhikr_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -137,7 +137,7 @@ CREATE TABLE Salah_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_Salah_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_Salah_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -150,7 +150,7 @@ CREATE TABLE Profile_Picture_Type (
 	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
 	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
-	last_modified_by BIGINT NOT NULL,
+	last_modified_by BIGINT NULL,
 
 	CONSTRAINT FK_Profile_Picture_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_Profile_Picture_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
