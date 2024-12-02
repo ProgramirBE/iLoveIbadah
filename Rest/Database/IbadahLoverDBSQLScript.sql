@@ -30,33 +30,57 @@ CREATE TABLE Role_Type (
 	id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User') or for later functionality of groups of people, gorup id + admin
     details NVARCHAR(255) NULL, -- Description of the role
+	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
+	CONSTRAINT FK_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Role_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
 	CONSTRAINT UQ_Role_Type_full_name UNIQUE (full_name)
 );
 GO
-CREATE TABLE Permission (
+CREATE TABLE Permission_Type (
 	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User')
-    details NVARCHAR(255) NULL -- Description of the role
+    details NVARCHAR(255) NULL, -- Description of the role
+	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
-	CONSTRAINT UQ_Permission_full_name UNIQUE (full_name)
+	CONSTRAINT FK_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
+	CONSTRAINT UQ_Permission_Type_full_name UNIQUE (full_name)
 );
 GO
-CREATE TABLE Role_Type_Permission (
+CREATE TABLE Role_Type_Permission_Type (
 	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	Role_Type_id BIGINT NOT NULL,
-	Permission_id INT NOT NULL,
+	Permission_Type_id INT NOT NULL,
+	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
-    CONSTRAINT FK_Role_Type_Permission_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type(id) ON DELETE CASCADE,
-    CONSTRAINT FK_Role_Type_Permission_Permission_id FOREIGN KEY (Permission_id) REFERENCES Permission(id) ON DELETE CASCADE,
-	CONSTRAINT UQ_Role_Type_Permission_Role_Type_id_Permission_id UNIQUE (Role_Type_id, Permission_id)
+	CONSTRAINT FK_Role_Type_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Role_Type_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
+    CONSTRAINT FK_Role_Type_Permission_Type_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type(id) ON DELETE CASCADE,
+    CONSTRAINT FK_Role_Type_Permission_Type_Permission_id FOREIGN KEY (Permission_Type_id) REFERENCES Permission_Type(id) ON DELETE CASCADE,
+	CONSTRAINT UQ_Role_Type_Permission_Type_Role_Type_id_Permission_id UNIQUE (Role_Type_id, Permission_Type_id)
 );
 GO
 CREATE TABLE User_Account_Role_Type (
 	id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	User_Account_id BIGINT NOT NULL,
 	Role_Type_id BIGINT NOT NULL,
+	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
+	CONSTRAINT FK_User_Account_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_User_Account_Role_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
 	CONSTRAINT FK_User_Account_Role_Type_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
     CONSTRAINT FK_User_Account_Role_Type_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type(id) ON DELETE CASCADE,
     CONSTRAINT UQ_User_Account_Role_Type_User_Account_id_Role_Type_id UNIQUE (User_Account_id, Role_Type_id)
@@ -67,7 +91,13 @@ CREATE TABLE Ban_Type (
     total_warnings INT NOT NULL,
     ban_duration INT NULL, -- Duration in days (e.g., 7 for one week)
     is_permanent BIT DEFAULT 0 NULL,
+	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_by BIGINT NOT NULL,
 
+	CONSTRAINT FK_Ban_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Ban_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
 	CONSTRAINT UQ_Ban_Type_total_warnings UNIQUE (total_warnings),
 	CONSTRAINT CK_Ban_Type_ban_duration_is_permanent CHECK (ban_duration IS NOT NULL OR is_permanent IS NOT NULL)  -- At least one must be non-NULL
 );
