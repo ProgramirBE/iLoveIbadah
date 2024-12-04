@@ -15,8 +15,8 @@ CREATE TABLE User_Account (
 	email_confirmed BIT DEFAULT 0 NOT NULL,
 	current_location NVARCHAR(255) NULL,
 	total_warnings INT DEFAULT 0 NOT NULL,
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NULL, --do i add TRIGGER?????
 
 	CONSTRAINT FK_User_Account_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
@@ -30,9 +30,9 @@ CREATE TABLE Role_Type (
 	id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User') or for later functionality of groups of people, gorup id + admin
     details NVARCHAR(255) NULL, -- Description of the role
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -44,9 +44,9 @@ CREATE TABLE Permission_Type (
 	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	full_name NVARCHAR(50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User')
     details NVARCHAR(255) NULL, -- Description of the role
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -58,9 +58,9 @@ CREATE TABLE Role_Type_Permission_Type (
 	id INT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	Role_Type_id BIGINT NOT NULL,
 	Permission_Type_id INT NOT NULL,
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_Role_Type_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -74,9 +74,9 @@ CREATE TABLE User_Account_Role_Type (
 	id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
 	User_Account_id BIGINT NOT NULL,
 	Role_Type_id BIGINT NOT NULL,
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_User_Account_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -91,9 +91,9 @@ CREATE TABLE Ban_Type (
     total_warnings INT NOT NULL,
     ban_duration INT NULL, -- Duration in days (e.g., 7 for one week)
     is_permanent BIT DEFAULT 0 NULL,
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_Ban_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -106,9 +106,9 @@ CREATE TABLE User_Account_Ban_Type (
     id INT PRIMARY KEY IDENTITY(1,1),
 	User_Account_id BIGINT NOT NULL,
     Ban_Type_id INT NOT NULL,
-	banned_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	banned_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	banned_by BIGINT NOT NULL,
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_User_Account_Ban_Type_banned_by FOREIGN KEY (banned_by) REFERENCES User_Account(id),
@@ -121,9 +121,9 @@ GO
 CREATE TABLE Dhikr_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     full_name NVARCHAR(255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_Dhikr_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -134,9 +134,9 @@ GO
 CREATE TABLE Salah_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     full_name NVARCHAR(255) NOT NULL, -- fajr, sobh, dohr, maghreb, isha, witr etc...
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_Salah_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -147,9 +147,9 @@ GO
 CREATE TABLE Profile_Picture_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     base64_code IMAGE NOT NULL, -- it takes to much space but i allow this instead of just link to image storing because restricted to limited amount of image to not deal with censoring because it is a religious app it must be heavily heavily heavily censorized (leaderboard system!) and i can't use gravatar service for exemple because they and all other services that i know don't censor the way it islamicly must!
-	created_on DATE DEFAULT GETDATE() NOT NULL, -- Automatically sets to the current date
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
 	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-	last_modified_on DATE DEFAULT GETDATE() NOT NULL,
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
 	last_modified_by BIGINT NOT NULL,
 
 	CONSTRAINT FK_Profile_Picture_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
@@ -175,7 +175,7 @@ CREATE TABLE User_Salah_Activity (
     User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
     Salah_Type_id BIGINT NOT NULL, -- Foreign key to Dhikr table
     performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
-    punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
+    punctuality_percentage DECIMAL(4,2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
     
     CONSTRAINT FK_User_Salah_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
     CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type(id) ON DELETE CASCADE,

@@ -12,18 +12,17 @@ namespace IbadahLover.Application.DTOs.UserDhikrOverview.Validators
     public class UpdateUserDhikrOverviewDtoValidator : AbstractValidator<UpdateUserDhikrOverviewDto>
     {
         private readonly IUserAccountRepository _userAccountRepository;
-        private readonly IDhikrTypeRepository _dhikrTypeRepository;
-        public UpdateUserDhikrOverviewDtoValidator(IUserAccountRepository userAccountRepository, IDhikrTypeRepository dhikrTypeRepository)
+        public UpdateUserDhikrOverviewDtoValidator(IUserAccountRepository userAccountRepository)
         {
             _userAccountRepository = userAccountRepository;
-            _dhikrTypeRepository = dhikrTypeRepository;
 
             RuleFor(p => p.UserAccountId)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
+                .NotNull()
                 .MustAsync(async (id, token) =>
                 {
-                    var dhikrTypeExists = await _dhikrTypeRepository.Exists(id);
-                    return !dhikrTypeExists;
+                    var userAccountExists = await _userAccountRepository.Exists(id);
+                    return !userAccountExists;
                 });
 
             RuleFor(p => p.TotalPerformed)

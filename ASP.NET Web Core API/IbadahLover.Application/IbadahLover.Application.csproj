@@ -17,16 +17,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DTOs\BanType\Validators\" />
+    <Folder Include="DTOs\DhikrType\Validators\" />
+    <Folder Include="DTOs\PermissionType\Validators\" />
     <Folder Include="DTOs\ProfilePictureType\Validators\" />
+    <Folder Include="DTOs\RoleType\Validators\" />
     <Folder Include="DTOs\SalahType\Validators\" />
+    <Folder Include="Features\BanTypes\Handlers\Commands\" />
+    <Folder Include="Features\BanTypes\Requests\Commands\" />
     <Folder Include="Features\DhikrTypes\Handlers\Commands\" />
     <Folder Include="Features\DhikrTypes\Requests\Commands\" />
+    <Folder Include="Features\PermissionTypes\Handlers\Commands\" />
+    <Folder Include="Features\PermissionTypes\Requests\Commands\" />
     <Folder Include="Features\ProfilePictureTypes\Handlers\Commands\" />
     <Folder Include="Features\ProfilePictureTypes\Handlers\Queries\" />
     <Folder Include="Features\ProfilePictureTypes\Requests\Commands\" />
+    <Folder Include="Features\RoleTypes\Handlers\Commands\" />
+    <Folder Include="Features\RoleTypes\Requests\Commands\" />
     <Folder Include="Features\SalahTypes\Handlers\Commands\" />
     <Folder Include="Features\SalahTypes\Requests\Commands\" />
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
+    <Folder Include="Features\UserSalahOverviews\Handlers\Commands\" />
+    <Folder Include="Features\UserSalahOverviews\Handlers\Queries\" />
+    <Folder Include="Features\UserSalahOverviews\Requests\Commands\" />
   </ItemGroup>
 
 </Project>

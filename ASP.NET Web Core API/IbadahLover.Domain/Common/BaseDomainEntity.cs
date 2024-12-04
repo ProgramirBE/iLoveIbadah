@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,13 @@ namespace IbadahLover.Domain.Common
         public int Id { get; set; }
         [DataType(DataType.Date)]
         public DateTime CreatedOn { get; set; }
+        [ForeignKey("CreatedByUserAccount")]
         public int CreatedBy { get; set; }
+        public UserAccount CreatedByUserAccount { get; set; }
         [DataType(DataType.Date)]
         public DateTime LastModifiedOn { get; set; }
-        public string LastModifiedBy { get; set; }
+        [ForeignKey("LastModifiedByUserAccount")]
+        public int LastModifiedBy { get; set; }
+        public UserAccount LastModifiedByUserAccount { get; set; }
     }
 }
