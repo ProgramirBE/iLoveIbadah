@@ -1,0 +1,45 @@
+/* Stijl van de pagina */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Gebruikt de volledige hoogte van de pagina */
+    background-color: #6a0dad; /* Paarse achtergrondkleur */
+    color: white; /* Witte tekst voor contrast */
+    text-align: center;
+  }
+  
+  /* Hoofdcontainer */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Grotere ruimte tussen de teller en knoppen */
+  }
+  
+  /* Knoppen */
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid #4b0082; /* Donkerpaarse rand */
+    border-radius: 8px;
+    background-color: #8a2be2; /* Kleur van de knoppen */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Zachte overgang voor hover */
+    margin: 0 10px; /* Ruimte tussen de knoppen */
+  }
+  
+  /* Hover-effect voor knoppen */
+  button:hover {
+    background-color: #9b30ff; /* Kleur bij hover */
+    transform: scale(1.05); /* Iets vergroten bij hover */
+  }
+  
+  /* Extra ruimte tussen knoppen */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ruimte tussen de knoppen */
+  }
+  
