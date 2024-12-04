@@ -15,6 +15,6 @@ namespace IbadahLover.Application.Features.DhikrTypes.Requests.Queries
         public DateTime CreatedOn { get; set; }
         public int CreatedBy { get; set; }
         public DateTime LastModifiedOn { get; set; }
-        public string LastModifiedBy { get; set; }
+        public int LastModifiedBy { get; set; }
     }
 }
