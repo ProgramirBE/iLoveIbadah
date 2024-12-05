@@ -118,6 +118,19 @@ CREATE TABLE User_Account_Ban_Type (
 	CONSTRAINT UQ_User_Account_Ban_Type_User_Account_id_Ban_Type_id UNIQUE (User_Account_id, Ban_Type_id)
 );
 GO
+CREATE TABLE Warning_Type (
+    id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
+    full_name NVARCHAR(255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
+	created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
+	created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+	last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE(), 120) NOT NULL, -- The date in YYYY-MM-DD format
+	last_modified_by BIGINT NOT NULL,
+
+	CONSTRAINT FK_Dhikr_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account(id),
+	CONSTRAINT FK_Dhikr_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account(id),
+	CONSTRAINT UQ_Dhikr_Type_full_name UNIQUE (full_name) -- Ensures a unique record per dhikr type.
+);
+GO
 CREATE TABLE Dhikr_Type (
     id BIGINT PRIMARY KEY IDENTITY(1,1), -- Auto-incrementing primary key
     full_name NVARCHAR(255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
