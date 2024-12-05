@@ -20,7 +20,7 @@ namespace IbadahLover.Domain.Common
         [DataType(DataType.Date)]
         public DateTime LastModifiedOn { get; set; }
         [ForeignKey("LastModifiedByUserAccount")]
-        public int LastModifiedBy { get; set; }
-        public UserAccount LastModifiedByUserAccount { get; set; }
+        public int? LastModifiedBy { get; set; }
+        public UserAccount? LastModifiedByUserAccount { get; set; }
     }
 }
