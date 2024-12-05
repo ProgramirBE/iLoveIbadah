@@ -1,8 +1,7 @@
 <div class="container">
-  <h1>Counter: {{ counter }}</h1>
+  <h1>{{ currentWord }}</h1>
+  <h2>Counter: {{ counter }}</h2>
   <div class="buttons">
-    <button ion-button type="button" (click)="incrementCounter('Soubhan\'Allah')">Soubhan'Allah</button>
-    <button ion-button type="button" (click)="incrementCounter('Allah u akbar')">Allah u akbar</button>
-    <button ion-button type="button" (click)="incrementCounter('Al hamdulilah')">Al hamdulilah</button>
+    <button ion-button type="button" (click)="onButtonClick()">+</button>
   </div>
 </div>

@@ -7,13 +7,12 @@
 
 /* Algemene instellingen voor de pagina */
 body {
-  background-color: #101010; /* Donkere achtergrondkleur */
-  color: #fff; /* Witte tekstkleur */
-  min-height: 100vh; /* Minimale hoogte is het volledige scherm */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Lettertype */
-  display: flex; /* Flexbox om inhoud te centreren */
-  justify-content: center; /* Horizontaal centreren */
-  align-items: center; /* Verticaal centreren */
+  color: #fff; /* Tekstkleur */
+  min-height: 100vh; /* Volledige schermhoogte */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex; /* Centraal uitlijnen */
+  justify-content: center;
+  align-items: center;
 }
 
 /* Stijl voor paragrafen */
@@ -23,33 +22,29 @@ p {
 
 /* Stijl voor titels */
 h1, h2, h3 {
-  background: linear-gradient(to right, white 10%, #e60597 70%); /* Lineaire kleurovergang */
+  background: linear-gradient(to right, #00ff87 10%, #00b357 50%, #007f3f 90%); /* Groene gradiënt */
   -webkit-background-clip: text; /* Alleen tekst krijgt de achtergrondkleur */
   -webkit-text-fill-color: transparent; /* Maak de tekst transparant voor de achtergrondkleur */
   text-align: center; /* Tekst in het midden */
 }
 
+/* Containergrootte en centrering */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 colonnes */
-  grid-template-rows: repeat(4, auto); /* 4 rangées */
-  gap: 1rem; /* Espacement entre les éléments */
+  grid-template-columns: repeat(6, 1fr); /* 6 kolommen */
+  grid-template-rows: repeat(4, auto); /* Automatische rijen */
+  gap: 1rem; /* Afstand tussen items */
   padding: 1rem;
-
-  /* Dimensions et centrage */
-  max-width: 800px; /* Limite la largeur totale */
-  height: auto; /* Hauteur automatique pour s'adapter au contenu */
-  margin: auto; /* Centre le conteneur verticalement et horizontalement */
-  position: relative;
-  top: 50%; /* Positionne à 50% de la hauteur */
-  transform: translateY(-50%); /* Centre précisément verticalement */
+  max-width: 800px; /* Maximale breedte */
+  width: 90%; /* Breedte als percentage voor responsiveness */
+  margin: auto; /* Midden positioneren */
   border-radius: 3rem;
-  border: 10px solid #4b0082; /* Donkerpaarse rand */
+  border: 10px solid #00b357; /* Heldere groene rand */
 }
 
 /* Algemene stijl voor grid-items */
 .grid-item {
-  background-color: #444; /* Donkergrijze achtergrond */
+  background: linear-gradient(135deg, #3a3a3a, #2c2c2c); /* Donkere gradiënt */
   color: #fff; /* Witte tekstkleur */
   padding: 1rem; /* Binnenruimte */
   text-align: center; /* Tekst gecentreerd */
@@ -58,65 +53,88 @@ h1, h2, h3 {
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animatie bij hover */
 }
 
-/* Specifieke grootte en positie van elk item in de grid */
+.grid-item:hover {
+  transform: translateY(-5px); /* Verplaats iets omhoog */
+  box-shadow: 0 6px 20px rgba(0, 255, 135, 0.7); /* Neongroene schaduw bij hover */
+}
+
+a.grid-item {
+  display: block; /* Zorg ervoor dat de link het hele grid-item beslaat */
+  text-decoration: none; /* Verwijder onderlijning van de link */
+  color: inherit; /* Zorg ervoor dat de tekst dezelfde kleur heeft als de grid-item */
+}
+
+/* Posities voor grid-items */
 .grid-item-1 {
-  grid-column: span 4; /* Beslaat 4 kolommen */
-  grid-row: span 2; /* Beslaat 2 rijen */
+  grid-column: span 4; /* 4 kolommen breed */
+  grid-row: span 2; /* 2 rijen hoog */
 }
 
 .grid-item-2,
 .grid-item-3 {
-  grid-column: span 1; /* Beslaat 1 kolom */
-  grid-row: span 2; /* Beslaat 2 rijen */
+  grid-column: span 1; /* 1 kolom breed */
+  grid-row: span 2; /* 2 rijen hoog */
 }
 
 .grid-item-4 {
-  grid-column: span 6; /* Beslaat alle 6 kolommen */
-  grid-row: span 1; /* Beslaat 1 rij */
+  grid-column: span 6; /* Alle kolommen */
+  grid-row: span 1; /* 1 rij */
 }
 
 .grid-item-5 {
-  grid-column: span 4; /* Beslaat 4 kolommen */
-  grid-row: span 1; /* Beslaat 1 rij */
+  grid-column: span 4; /* 4 kolommen breed */
+  grid-row: span 1; /* 1 rij */
 }
 
 .grid-item-6,
 .grid-item-7 {
-  grid-column: span 1; /* Beslaat 1 kolom */
-  grid-row: span 1; /* Beslaat 1 rij */
+  grid-column: span 1; /* 1 kolom breed */
+  grid-row: span 1; /* 1 rij */
 }
 
-/* Hover-effect voor de grid-items */
-.grid-item:hover {
-  transform: translateY(-5px); /* Verplaats iets omhoog */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Sterkere schaduw bij hover */
+/* Stijl voor de afbeelding-container */
+.image-container {
+  margin-top: 2rem; /* Ruimte boven de afbeelding */
+  text-align: center; /* Centreer de afbeelding horizontaal */
 }
 
-/* Specifieke kleuren voor elk item */
-.grid-item-1 {
-  background-color: #6a0dad; /* Donkerpaars */
+/* Stijl voor de afbeelding */
+.image-container img {
+  max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder is dan de container */
+  height: 200px; /* Stel een specifieke hoogte in */
+  object-fit: cover; /* Zorg ervoor dat de afbeelding proportioneel wordt bijgesneden indien nodig */
+  border-radius: 10px; /* Optioneel: afgeronde hoeken */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtiele schaduw onder de afbeelding */
 }
 
-.grid-item-2 {
-  background-color: #8a2be2; /* Lichtpaars */
+
+/* Responsiveness voor kleinere schermen */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolommen op kleinere schermen */
+    width: 95%; /* Iets minder breedte */
+  }
+
+  .grid-item-1 {
+    grid-column: span 2; /* Volle breedte op kleinere schermen */
+    grid-row: span 1;
+  }
+
+  .grid-item-4 {
+    grid-column: span 2; /* Volle breedte */
+  }
+
+  .grid-item-5 {
+    grid-column: span 2; /* Volle breedte */
+  }
 }
 
-.grid-item-3 {
-  background-color: #c53ccf; /* Donkerroze */
-}
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 kolom */
+  }
 
-.grid-item-4 {
-  background-color: #9b30ff; /* Helder paars */
-}
-
-.grid-item-5 {
-  background-color: #7d3cb5; /* Blauwpaars */
-}
-
-.grid-item-6 {
-  background-color: #512d89; /* Donker indigo */
-}
-
-.grid-item-7 {
-  background-color: #654cbb; /* Licht indigo */
+  .grid-item {
+    grid-column: span 1; /* Elk item in een enkele kolom */
+  }
 }
