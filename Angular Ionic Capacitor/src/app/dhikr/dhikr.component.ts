@@ -7,9 +7,16 @@ import { Component } from '@angular/core';
 })
 export class DhikrComponent {
   counter: number = 0;
+  words: string[] = ["Soubhan'Allah", "Allah u akbar", "Al hamdulilah"];
+  currentWord: string = this.words[0]; // Start met het eerste woord
 
-  incrementCounter(dhikrType: string) {
+  onButtonClick(): void {
+    // Verhoog de teller
     this.counter++;
-    console.log(`${dhikrType} clicked! Counter: ${this.counter}`);
+
+    // Wissel het woord
+    const currentIndex = this.words.indexOf(this.currentWord);
+    const nextIndex = (currentIndex + 1) % this.words.length; // Circulaire rotatie
+    this.currentWord = this.words[nextIndex];
   }
 }
