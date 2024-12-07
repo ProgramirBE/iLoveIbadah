@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Persistence.Contracts
 {
-    public interface IRoleTypePermissionTypeRepository : IGenericRepository<RoleTypePermissionType>
+    public interface IRoleTypePermissionTypeRepository : IGenericRepository<RoleTypePermissionTypeMapping>
     {
-        Task<RoleTypePermissionType> GetRoleTypePermissionTypeWithDetails(int id);
-        Task<List<RoleTypePermissionType>> GetRoleTypePermissionTypesWithDetails();
+        Task<RoleTypePermissionTypeMapping> GetRoleTypePermissionTypeWithDetails(int id);
+        Task<List<RoleTypePermissionTypeMapping>> GetRoleTypePermissionTypesWithDetails();
     }
 }

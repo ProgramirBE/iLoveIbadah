@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.RoleType
 {
-    public class RoleTypeDto : BaseDto
+    public class RoleTypeDto
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
         public string Details { get; set; }
     }

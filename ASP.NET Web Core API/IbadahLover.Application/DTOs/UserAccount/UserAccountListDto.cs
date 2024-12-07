@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.UserAccount
 {
-    public class UserAccountListDto : BaseDto
+    public class UserAccountListDto
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
         public byte[]? ProfilePicture { get; set; }
     }

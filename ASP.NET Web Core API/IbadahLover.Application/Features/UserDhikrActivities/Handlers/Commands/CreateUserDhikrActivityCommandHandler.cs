@@ -32,14 +32,6 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
             var validator = new CreateUserDhikrActivityDtoValidator(_userDhikrActivityRepository, _userAccountRepository, _dhikrTypeRepository); //need to give the 3 repositories as parameter as in dto
             var validationResult = await validator.ValidateAsync(request.UserDhikrActivityDto);
 
-            //var validationResult = await validator.ValidateAsync(new CreateUserAccountDto
-            //{
-            //    // Copy properties from UserAccountDto to CreateUserAccountDto
-            //    Property1 = request.UserAccountDto.Property1,
-            //    Property2 = request.UserAccountDto.Property2,
-            //    // Add more properties as needed
-            //});   
-
             if (!validationResult.IsValid)
             {
                 throw new Exception();

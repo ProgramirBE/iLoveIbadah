@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.DhikrType
 {
-    public class DhikrTypeListDto : BaseDto
+    public class DhikrTypeListDto
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
+        public int CreatedBy { get; set; }
     }
 }

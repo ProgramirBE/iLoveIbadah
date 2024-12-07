@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.ProfilePictureType
 {
-    public class ProfilePictureTypeListDto : BaseDto
+    public class ProfilePictureTypeListDto
     {
+        public int Id { get; set; }
         public byte[] Base64Code { get; set; }
+        public int CreatedBy { get; set; }
     }
 }

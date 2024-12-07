@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Domain
 {
-    public class PermissionType : BaseDomainEntity
+    public class PermissionType
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
         public string Details { get; set; }
     }

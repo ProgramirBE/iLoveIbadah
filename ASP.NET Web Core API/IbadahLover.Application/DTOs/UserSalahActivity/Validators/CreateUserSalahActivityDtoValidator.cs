@@ -38,13 +38,13 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity.Validators
                     return !salahTypeExists;
                 });
 
-            RuleFor(p => p.PerformedOn)
+            RuleFor(p => p.TrackedOn)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
-                .MustAsync(async (dto, performedOn, token) =>
+                .MustAsync(async (dto, trackedOn, token) =>
                 {
-                    var userSalahActivityPerformedAtExists = await _userSalahActivityRepository.PerformedOnExists(dto.UserAccountId, performedOn);
-                    return userSalahActivityPerformedAtExists; // il ne doit pas exister de activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste update allowed
+                    var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId, trackedOn);
+                    return userSalahActivityTrackedOnExists; // il ne doit pas exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste update allowed
                 });
         }
     }

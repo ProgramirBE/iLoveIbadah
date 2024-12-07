@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.PermissionType
 {
-    public class PermissionTypeDto : BaseDto
+    public class PermissionTypeDto
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
         public string Details { get; set; }
     }

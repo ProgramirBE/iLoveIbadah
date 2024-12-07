@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Domain
 {
-    public class ProfilePictureType : BaseDomainEntity
+    public class ProfilePictureType
     {
+        public int Id { get; set; }
         public byte[] Base64Code { get; set; }
     }
 }

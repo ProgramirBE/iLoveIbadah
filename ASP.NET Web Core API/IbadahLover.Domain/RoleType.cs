@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Domain
 {
-    public class RoleType : BaseDomainEntity
+    public class RoleType
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
         public string Details { get; set; }
     }

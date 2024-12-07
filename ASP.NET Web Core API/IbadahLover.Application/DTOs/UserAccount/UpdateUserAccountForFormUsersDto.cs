@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.UserAccount
 {
-    public class UpdateUserAccountForFormUsersDto : BaseDto
+    public class UpdateUserAccountForFormUsersDto
     {
+        public int Id { get; set; }
         public string? FullName { get; set; }
         public string? PasswordHash { get; set; }
         public byte[]? ProfilePicture { get; set; }

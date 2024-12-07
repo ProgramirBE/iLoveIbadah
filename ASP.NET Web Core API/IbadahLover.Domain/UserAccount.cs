@@ -13,6 +13,7 @@ namespace IbadahLover.Domain
     //Database Table UserAccount
     public class UserAccount
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
         [ForeignKey("ProfilePictureType")]
@@ -24,12 +25,12 @@ namespace IbadahLover.Domain
         public bool EmailConfirmed { get; set; }
         public string? CurrentLocation { get; set; }
         public int? TotalWarnings { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime CreatedOn { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime LastModifiedOn { get; set; }
-        [ForeignKey("LastModifiedByUserAccount")]
-        public int? LastModifiedBy { get; set; }
-        public UserAccount? LastModifiedByUserAccount { get; set; } // Navigation property
+        //[DataType(DataType.Date)]
+        //public DateTime CreatedOn { get; set; }
+        //[DataType(DataType.Date)]
+        //public DateTime LastModifiedOn { get; set; }
+        //[ForeignKey("LastModifiedByUserAccount")]
+        //public int? LastModifiedBy { get; set; }
+        //public UserAccount? LastModifiedByUserAccount { get; set; } // Navigation property
     }
 }

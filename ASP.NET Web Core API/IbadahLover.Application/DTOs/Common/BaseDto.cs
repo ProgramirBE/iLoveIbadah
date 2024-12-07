@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.Common
 {
-    public abstract class BaseDto
-    {
-        public int Id { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime CreatedOn { get; set; }
-        public int CreatedBy { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime LastModifiedOn { get; set; }
-        public int LastModifiedBy { get; set; }
-    }
+    //public abstract class BaseDto
+    //{
+    //    public int Id { get; set; }
+    //    [DataType(DataType.Date)]
+    //    public DateTime CreatedOn { get; set; }
+    //    public int CreatedBy { get; set; }
+    //    [DataType(DataType.Date)]
+    //    public DateTime LastModifiedOn { get; set; }
+    //    public int LastModifiedBy { get; set; }
+    //}
 }

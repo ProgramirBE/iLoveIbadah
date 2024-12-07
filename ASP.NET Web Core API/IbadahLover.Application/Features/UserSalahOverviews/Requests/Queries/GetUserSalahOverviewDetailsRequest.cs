@@ -12,7 +12,7 @@ namespace IbadahLover.Application.Features.UserSalahOverviews.Requests.Queries
     {
         public int Id { get; set; }
         public int UserAccountId { get; set; }
-        public int TotalPerformed { get; set; }
-        public DateTime LastPerformedAt { get; set; }
+        public int TotalTracked { get; set; }
+        public DateTime LastTrackedAt { get; set; }
     }
 }

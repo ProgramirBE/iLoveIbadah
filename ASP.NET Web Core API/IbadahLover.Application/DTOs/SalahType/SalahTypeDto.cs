@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.SalahType
 {
-    public class SalahTypeDto : BaseDto
+    public class SalahTypeDto
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
+        public int CreatedBy { get; set; }
     }
 }

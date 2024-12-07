@@ -21,8 +21,10 @@
     <Folder Include="DTOs\DhikrType\Validators\" />
     <Folder Include="DTOs\PermissionType\Validators\" />
     <Folder Include="DTOs\ProfilePictureType\Validators\" />
+    <Folder Include="DTOs\RoleTypePermissionTypeMapping\Validators\" />
     <Folder Include="DTOs\RoleType\Validators\" />
     <Folder Include="DTOs\SalahType\Validators\" />
+    <Folder Include="DTOs\UserAccountRoleTypeMapping\Validators\" />
     <Folder Include="Features\BanTypes\Handlers\Commands\" />
     <Folder Include="Features\BanTypes\Requests\Commands\" />
     <Folder Include="Features\DhikrTypes\Handlers\Commands\" />
@@ -30,16 +32,19 @@
     <Folder Include="Features\PermissionTypes\Handlers\Commands\" />
     <Folder Include="Features\PermissionTypes\Requests\Commands\" />
     <Folder Include="Features\ProfilePictureTypes\Handlers\Commands\" />
-    <Folder Include="Features\ProfilePictureTypes\Handlers\Queries\" />
     <Folder Include="Features\ProfilePictureTypes\Requests\Commands\" />
+    <Folder Include="Features\RoleTypePermissionTypeMappings\Handlers\Commands\" />
+    <Folder Include="Features\RoleTypePermissionTypeMappings\Requests\Commands\" />
     <Folder Include="Features\RoleTypes\Handlers\Commands\" />
     <Folder Include="Features\RoleTypes\Requests\Commands\" />
     <Folder Include="Features\SalahTypes\Handlers\Commands\" />
     <Folder Include="Features\SalahTypes\Requests\Commands\" />
+    <Folder Include="Features\UserAccountRoleTypeMappings\Handlers\Commands\" />
+    <Folder Include="Features\UserAccountRoleTypeMappings\Requests\Commands\" />
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
     <Folder Include="Features\UserSalahOverviews\Handlers\Commands\" />
-    <Folder Include="Features\UserSalahOverviews\Handlers\Queries\" />
     <Folder Include="Features\UserSalahOverviews\Requests\Commands\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>
