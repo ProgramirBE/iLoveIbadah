@@ -1,0 +1,42 @@
+<div class="login-container">
+  <h1>Login</h1>
+  <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Enter your email"
+        required
+      />
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
+        Please enter a valid email.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Enter your password"
+        required
+      />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
+        Password is required.
+      </div>
+    </div>
+
+    <!-- Login button -->
+    <ion-button expand="block" type="submit" [disabled]="loginForm.invalid">Login</ion-button>
+  </form>
+
+  <!-- Link om een account te maken -->
+  <div class="register-link">
+    <p>Nog geen account? 
+      <a routerLink="/register">Maak een account aan</a>
+    </p>
+  </div>
+</div>

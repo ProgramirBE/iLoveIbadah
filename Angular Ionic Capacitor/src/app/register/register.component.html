@@ -1,0 +1,54 @@
+<div class="register-container">
+  <h1>Maak een account aan</h1>
+  <form (ngSubmit)="onRegister()" [formGroup]="registerForm">
+    <div class="form-group">
+      <label for="name">Naam</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Voer je naam in"
+        required
+      />
+      <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="error">
+        Naam is verplicht.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Voer je email in"
+        required
+      />
+      <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="error">
+        Voer een geldig emailadres in.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Wachtwoord</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Voer een wachtwoord in"
+        required
+      />
+      <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="error">
+        Wachtwoord is verplicht.
+      </div>
+    </div>
+
+    <ion-button expand="block" type="submit" [disabled]="registerForm.invalid">Account aanmaken</ion-button>
+  </form>
+
+  <div class="login-link">
+    <p>Heb je al een account? 
+      <a routerLink="/login">Log in</a>
+    </p>
+  </div>
+</div>
