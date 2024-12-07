@@ -1,0 +1,77 @@
+/* Algemene reset voor marges en padding */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Algemene instellingen voor de pagina */
+body {
+    color: #fff; /* Tekstkleur */
+    min-height: 100vh; /* Volledige schermhoogte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex; /* Centraal uitlijnen */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stijl voor paragrafen */
+p {
+    font-size: 0.75rem; /* Kleine lettergrootte voor tekst */
+}
+
+/* Stijl voor titels */
+h1, h2, h3 {
+    background: linear-gradient(to right, #00ff87 10%, #00b357 50%, #007f3f 90%); /* Groene gradiënt */
+    -webkit-background-clip: text; /* Alleen tekst krijgt de achtergrondkleur */
+    -webkit-text-fill-color: transparent; /* Maak de tekst transparant voor de achtergrondkleur */
+    text-align: center; /* Tekst in het midden */
+}
+
+/* Containergrootte en centrering */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
+    gap: 1rem; /* Afstand tussen items */
+    padding: 1rem;
+    max-width: 800px; /* Maximale breedte */
+    width: 90%; /* Breedte als percentage voor responsiveness */
+    margin: auto; /* Midden positioneren */
+    border-radius: 3rem;
+    border: 10px solid #00b357; /* Heldere groene rand */
+}
+
+/* Algemene stijl voor grid-items */
+.grid-item {
+    background: linear-gradient(135deg, #3a3a3a, #2c2c2c); /* Donkere gradiënt */
+    color: #fff; /* Witte tekstkleur */
+    padding: 1rem; /* Binnenruimte */
+    text-align: center; /* Tekst gecentreerd */
+    border-radius: 0.75rem; /* Afgeronde hoeken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animatie bij hover */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Verplaats iets omhoog */
+    box-shadow: 0 6px 20px rgba(0, 255, 135, 0.7); /* Neongroene schaduw bij hover */
+}
+
+a.grid-item {
+    display: block; /* Zorg ervoor dat de link het hele grid-item beslaat */
+    text-decoration: none; /* Verwijder onderlijning van de link */
+    color: inherit; /* Zorg ervoor dat de tekst dezelfde kleur heeft als de grid-item */
+}
+
+/* Responsiveness voor kleinere schermen */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Twee kolommen op kleinere schermen */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Eén kolom op hele kleine schermen */
+    }
+}
