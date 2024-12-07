@@ -20,9 +20,8 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Queries
         public OAuthProviderType? OAuthProvider { get; set; }
         public string? OAuthId { get; set; }
         public bool EmailConfirmed { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public int CreatedBy { get; set; }
-        public DateTime LastModifiedOn { get; set; }
-        public int LastModifiedBy { get; set; }
+        //public DateTime CreatedOn { get; set; }
+        //public DateTime LastModifiedOn { get; set; }
+        //public int LastModifiedBy { get; set; }
     }
 }

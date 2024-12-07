@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Persistence.Contracts
 {
-    public interface IUserAccountRoleTypeRepository : IGenericRepository<UserAccountRoleType>
+    public interface IUserAccountRoleTypeRepository : IGenericRepository<UserAccountRoleTypeMapping>
     {
-        Task<UserAccountRoleType> GetUserAccountRoleTypeWithDetails(int id);
-        Task<List<UserAccountRoleType>> GetUserAccountRoleTypesWithDetails();
+        Task<UserAccountRoleTypeMapping> GetUserAccountRoleTypeWithDetails(int id);
+        Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypesWithDetails();
     }
 }

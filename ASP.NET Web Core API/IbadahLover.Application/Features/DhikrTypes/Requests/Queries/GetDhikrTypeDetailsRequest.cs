@@ -12,9 +12,9 @@ namespace IbadahLover.Application.Features.DhikrTypes.Requests.Queries
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        public DateTime CreatedOn { get; set; }
+        //public DateTime CreatedOn { get; set; }
         public int CreatedBy { get; set; }
-        public DateTime LastModifiedOn { get; set; }
-        public int LastModifiedBy { get; set; }
+        //public DateTime LastModifiedOn { get; set; }
+        //public int LastModifiedBy { get; set; }
     }
 }

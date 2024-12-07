@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Domain
 {
-    public class BanType : BaseDomainEntity
+    public class BanType
     {
+        public int Id { get; set; }
         public int TotalWarnings { get; set; }
         public int BanDuration { get; set; }
         public bool IsPermanent { get; set; }

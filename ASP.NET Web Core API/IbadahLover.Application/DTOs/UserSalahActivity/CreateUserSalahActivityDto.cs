@@ -12,7 +12,7 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity
         public int UserAccountId { get; set; }
         public int SalahTypeId { get; set; }
         [DataType(DataType.Date)]
-        public DateTime PerformedOn { get; set; }
+        public DateTime TrackedOn { get; set; }
         public decimal PunctualityPercentage { get; set; }
     }
 }

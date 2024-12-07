@@ -12,9 +12,9 @@ namespace IbadahLover.Application.Features.ProfilePictureTypes.Requests.Queries
     {
         public int Id { get; set; }
         public byte[] Base64Code { get; set; }
-        public DateTime CreatedOn { get; set; }
+        //public DateTime CreatedOn { get; set; }
         public int CreatedBy { get; set; }
-        public DateTime LastModifiedOn { get; set; }
-        public int LastModifiedBy { get; set; }
+        //public DateTime LastModifiedOn { get; set; }
+        //public int LastModifiedBy { get; set; }
     }
 }

@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.DhikrType;
+using IbadahLover.Application.DTOs.PermissionType;
 using IbadahLover.Application.DTOs.ProfilePictureType;
+using IbadahLover.Application.DTOs.RoleType;
 using IbadahLover.Application.DTOs.SalahType;
 using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.DTOs.UserDhikrActivity;
 using IbadahLover.Application.DTOs.UserDhikrOverview;
 using IbadahLover.Application.DTOs.UserSalahActivity;
+using IbadahLover.Application.DTOs.UserSalahOverview;
 using IbadahLover.Domain;
 using System;
 using System.Collections.Generic;
@@ -23,11 +26,13 @@ namespace IbadahLover.Application.profiles
             CreateMap<DhikrType, DhikrTypeDto>().ReverseMap();
             CreateMap<SalahType, SalahTypeDto>().ReverseMap();
             CreateMap<ProfilePictureType, ProfilePictureTypeDto>().ReverseMap();
+            CreateMap<RoleType, RoleTypeDto>().ReverseMap();
+            CreateMap<PermissionType, PermissionTypeDto>().ReverseMap();
             CreateMap<UserAccount, UserAccountDto>().ReverseMap();
             CreateMap<UserDhikrActivity, UserDhikrActivityDto>().ReverseMap();
             CreateMap<UserDhikrOverview, UserDhikrOverviewDto>().ReverseMap();
             CreateMap<UserSalahActivity, UserSalahActivityDto>().ReverseMap();
-            //CreateMap<UserSalahOverview, UserSalahOverviewDto>().ReverseMap();
+            CreateMap<UserSalahOverview, UserSalahOverviewDto>().ReverseMap();
         }
     }
 }

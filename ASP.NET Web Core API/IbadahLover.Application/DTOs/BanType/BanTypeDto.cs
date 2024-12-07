@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.BanType
 {
-    public class BanTypeDto : BaseDto
-    {
-        public string FullName { get; set; }
-        public string Details { get; set; }
-    }
+    //public class BanTypeDto
+    //{
+    //    public int Id { get; set; }
+    //    public string FullName { get; set; }
+    //    public string Details { get; set; }
+    //}
 }
