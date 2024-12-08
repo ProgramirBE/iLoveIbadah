@@ -17,4 +17,9 @@ ion-header {
   font-weight: bold;
   color: white; /* Texte blanc */
 }
+ion-toolbar {
+  --background: rgb(27, 25, 25); /* Donkergrijze achtergrondkleur */
+  --color: white; /* Witte tekstkleur voor contrast */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optionele schaduw voor diepte */
+}
 

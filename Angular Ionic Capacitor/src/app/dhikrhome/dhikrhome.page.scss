@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+ion-content {
+    --background: rgb(62, 55, 55); /* Heldere groene achtergrondkleur */
+  }
+
 /* Algemene instellingen voor de pagina */
 body {
     color: #fff; /* Tekstkleur */
@@ -62,6 +66,21 @@ a.grid-item {
     text-decoration: none; /* Verwijder onderlijning van de link */
     color: inherit; /* Zorg ervoor dat de tekst dezelfde kleur heeft als de grid-item */
 }
+
+/* Stijl voor de afbeelding-container */
+.image-container {
+    margin-top: 2rem; /* Ruimte boven de afbeelding */
+    text-align: center; /* Centreer de afbeelding horizontaal */
+  }
+  
+  /* Stijl voor de afbeelding */
+  .image-container img {
+    max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder is dan de container */
+    height: 200px; /* Stel een specifieke hoogte in */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding proportioneel wordt bijgesneden indien nodig */
+    border-radius: 10px; /* Optioneel: afgeronde hoeken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtiele schaduw onder de afbeelding */
+  }
 
 /* Responsiveness voor kleinere schermen */
 @media (max-width: 768px) {
