@@ -1,0 +1,49 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Gebruikt de volledige hoogte van de pagina */
+    background-color: #1a1a2e; /* Donkerblauwe achtergrondkleur */
+    color: white; /* Witte tekst voor contrast */
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50; /* Groene kleur */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #388e3c; /* Donkergroene kleur bij hover */
+    transform: scale(1.1);
+  }
+  
+  ion-button {
+    --background: #4caf50; /* Groene achtergrondkleur */
+    --background-hover: #388e3c; /* Donkergroene kleur bij hover */
+    --color: white; /* Tekst en icoonkleur wit */
+    --padding: 10px 20px; /* Padding van de knop */
+  }
+  
+  ion-icon {
+    color: white; /* Kleur van het icoon */
+    font-size: 24px; /* Grootte van het icoon */
+  }
+  
+  
