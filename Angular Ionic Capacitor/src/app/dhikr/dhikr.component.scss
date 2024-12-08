@@ -1,4 +1,3 @@
-/* Stijl van de pagina */
 :host {
   display: flex;
   justify-content: center;
@@ -9,38 +8,40 @@
   text-align: center;
 }
 
-/* Hoofdcontainer */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* Ruimte tussen de elementen */
-}
-
-/* Teller */
 h1 {
-  font-size: 2rem; /* Grotere tekst voor het woord */
-  margin: 0;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.5rem; /* Grotere tekst voor de teller */
-  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Knoppen */
 button {
   padding: 10px 20px;
-  font-size: 24px;
-  border: 2px solid #28a745; /* Groen thema voor de knop */
-  border-radius: 8px;
-  background-color: #34d058; /* Groene achtergrondkleur */
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50; /* Groene kleur */
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Zachte overgang voor hover */
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 button:hover {
-  background-color: #28a745; /* Donkergroen bij hover */
-  transform: scale(1.1); /* Knop iets vergroten bij hover */
+  background-color: #388e3c; /* Donkergroene kleur bij hover */
+  transform: scale(1.1);
+}
+
+ion-button {
+  --background: #4caf50; /* Groene achtergrondkleur */
+  --background-hover: #388e3c; /* Donkergroene kleur bij hover */
+  --color: white; /* Tekst en icoonkleur wit */
+  --padding: 10px 20px; /* Padding van de knop */
+}
+
+ion-icon {
+  color: white; /* Kleur van het icoon */
+  font-size: 24px; /* Grootte van het icoon */
 }

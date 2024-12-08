@@ -1,7 +1,37 @@
 <div class="container">
+  <!-- Terugknop -->
+  <ion-button fill="solid" color="success" routerLink="/dhikrhome">
+    <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+
+  <!-- Huidige woord -->
   <h1>{{ currentWord }}</h1>
+
+  <!-- Teller -->
   <h2>Counter: {{ counter }}</h2>
+
+  <!-- Plusknop -->
   <div class="buttons">
-    <button ion-button type="button" (click)="onButtonClick()">+</button>
+    <button
+      ion-button
+      type="button"
+      (click)="onButtonClick()"
+      [disabled]="buttonDisabled"
+    >
+      +
+    </button>
+  </div>
+
+  <!-- Tekst die verschijnt wanneer de knop is gedeactiveerd -->
+  <p *ngIf="buttonDisabled" class="final-text">
+    {{ finalText }}
+  </p>
+
+  <!-- Checkbox om de knop opnieuw in te schakelen -->
+  <div *ngIf="buttonDisabled" class="checkbox">
+    <label>
+      <input type="checkbox" (change)="onCheckboxChange($event)" />
+      Klik hier om de knop opnieuw te activeren.
+    </label>
   </div>
 </div>

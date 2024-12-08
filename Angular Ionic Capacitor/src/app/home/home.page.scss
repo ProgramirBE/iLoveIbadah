@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+ion-content {
+  --background: rgb(62, 55, 55); /* Heldere groene achtergrondkleur */
+}
+
+
 /* Algemene instellingen voor de pagina */
 body {
   color: #fff; /* Tekstkleur */
