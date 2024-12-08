@@ -44,7 +44,6 @@
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />
     <Folder Include="Features\UserSalahOverviews\Handlers\Commands\" />
     <Folder Include="Features\UserSalahOverviews\Requests\Commands\" />
-    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>

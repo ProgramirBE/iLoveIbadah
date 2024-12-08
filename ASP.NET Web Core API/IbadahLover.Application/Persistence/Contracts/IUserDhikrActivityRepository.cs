@@ -14,6 +14,6 @@ namespace IbadahLover.Application.Persistence.Contracts
         Task<UserDhikrActivity> GetUserDhikrActivityWithDetails(int id);
         Task<List<UserDhikrActivity>> GetUserDhikrActivitiesWithDetails();
         [DataType(DataType.Date)]
-        Task<bool> PerformedOnExists(int id, DateTime performedOn);
+        Task<bool> PerformedOnExists(int userAccountId, DateTime performedOn, int dhikrTypeId);
     }
 }

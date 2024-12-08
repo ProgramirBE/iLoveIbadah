@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.UserDhikrActivity.Validators;
+using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Persistence.Contracts;
@@ -35,7 +36,7 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var userDhikrActivity = await _userDhikrActivityRepository.GetById(request.UserDhikrActivityDto.Id);

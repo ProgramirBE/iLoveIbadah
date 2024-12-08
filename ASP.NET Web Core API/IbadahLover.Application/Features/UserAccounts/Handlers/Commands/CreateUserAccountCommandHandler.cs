@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.DTOs.UserAccount.Validators;
+using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
 using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Responses;
 using IbadahLover.Domain;
 using MediatR;
 using System;
@@ -13,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserAccounts.Handlers.Commands
 {
-    public class CreateUserAccountCommandHandler : IRequestHandler<CreateUserAccountCommand, int>
+    public class CreateUserAccountCommandHandler : IRequestHandler<CreateUserAccountCommand, BaseCommandResponse>
     {
         private readonly IUserAccountRepository _userAccountRepository;
         private readonly IMapper _mapper;
@@ -24,8 +26,9 @@ namespace IbadahLover.Application.Features.UserAccounts.Handlers.Commands
             _mapper = mapper;
         }
 
-        public async Task<int> Handle(CreateUserAccountCommand request, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(CreateUserAccountCommand request, CancellationToken cancellationToken)
         {
+            var response = new BaseCommandResponse();
             var validator = new CreateUserAccountDtoValidator();
             var validationResult = await validator.ValidateAsync(request.UserAccountDto);
 
@@ -39,13 +42,19 @@ namespace IbadahLover.Application.Features.UserAccounts.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                response.Success = false;
+                response.Message = "Creation Failed";
+                response.Errors = validationResult.Errors.Select(q => q.ErrorMessage).ToList();
+                //throw new ValidationException(validationResult);
             }
 
             var userAccount = _mapper.Map<UserAccount>(request.UserAccountDto);
             userAccount = await _userAccountRepository.Create(userAccount);
 
-            return userAccount.Id;
+            response.Success = true;
+            response.Message = "Creation Successful";
+            response.Id = userAccount.Id;
+            return response;
         }
     }
 }

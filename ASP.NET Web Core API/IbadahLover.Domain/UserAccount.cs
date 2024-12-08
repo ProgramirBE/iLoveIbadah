@@ -22,9 +22,10 @@ namespace IbadahLover.Domain
         public string? PasswordHash { get; set; }
         public OAuthProviderType? OAuthProvider { get; set; }
         public string? OAuthId { get; set; }
-        public bool EmailConfirmed { get; set; }
         public string? CurrentLocation { get; set; }
         public int? TotalWarnings { get; set; }
+        public bool? EmailConfirmed { get; set; }
+        public bool? IsPermanentlyBanned { get; set; }
         //[DataType(DataType.Date)]
         //public DateTime CreatedOn { get; set; }
         //[DataType(DataType.Date)]

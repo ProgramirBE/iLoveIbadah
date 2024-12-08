@@ -11,6 +11,8 @@ namespace IbadahLover.Application.DTOs.UserAccount
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        public byte[]? ProfilePicture { get; set; }
+        public int? ProfilePictureTypeId { get; set; }
+        public string? CurrentLocation { get; set; }
+        public bool? IsPermanentlyBanned { get; set; }
     }
 }

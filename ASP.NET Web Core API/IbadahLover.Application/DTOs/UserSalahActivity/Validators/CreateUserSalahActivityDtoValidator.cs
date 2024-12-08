@@ -21,31 +21,31 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity.Validators
             _salahTypeRepository = salahTypeRepository;
 
             RuleFor(p => p.UserAccountId)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
+                .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {
                     var userAccountExists = await _userAccountRepository.Exists(id);
-                    return !userAccountExists;
-                });
+                    return userAccountExists;
+                })
+                .WithMessage("{PropertyName} does not exist.");
 
             RuleFor(p => p.SalahTypeId)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
+                .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {
                     var salahTypeExists = await _salahTypeRepository.Exists(id);
-                    return !salahTypeExists;
-                });
+                    return salahTypeExists;
+                })
+                .WithMessage("{PropertyName} does not exist.");
 
             RuleFor(p => p.TrackedOn)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
+                .LessThanOrEqualTo(DateTime.Now)
                 .MustAsync(async (dto, trackedOn, token) =>
                 {
                     var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId, trackedOn);
-                    return userSalahActivityTrackedOnExists; // il ne doit pas exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste update allowed
-                });
+                    return !userSalahActivityTrackedOnExists; // il ne doit pas exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste update allowed
+                })
+                .NotEmpty().WithMessage("{PropertyName} should not exist in order to Create, else update for this date.");
         }
     }
 }

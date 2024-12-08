@@ -9,28 +9,28 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.UserSalahOverview.Validators
 {
-    public class UpdateUserSalahOverviewDtoValidator : AbstractValidator<UpdateUserSalahOverviewDto>
-    {
-        private readonly IUserAccountRepository _userAccountRepository;
-        public UpdateUserSalahOverviewDtoValidator(IUserAccountRepository userAccountRepository)
-        {
-            _userAccountRepository = userAccountRepository;
+    //public class UpdateUserSalahOverviewDtoValidator : AbstractValidator<UpdateUserSalahOverviewDto>
+    //{
+    //    private readonly IUserAccountRepository _userAccountRepository;
+    //    public UpdateUserSalahOverviewDtoValidator(IUserAccountRepository userAccountRepository)
+    //    {
+    //        _userAccountRepository = userAccountRepository;
 
-            RuleFor(p => p.UserAccountId)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
-                .MustAsync(async (id, token) =>
-                {
-                    var userAccountExists = await _userAccountRepository.Exists(id);
-                    return !userAccountExists;
-                });
+    //        RuleFor(p => p.UserAccountId)
+    //            .NotEmpty().WithMessage("{PropertyName} is required.")
+    //            .NotNull()
+    //            .MustAsync(async (id, token) =>
+    //            {
+    //                var userAccountExists = await _userAccountRepository.Exists(id);
+    //                return !userAccountExists;
+    //            });
 
-            RuleFor(p => p.TotalTracked)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .GreaterThan(0).WithMessage("{PropertyName} should be greater than 0.");
+    //        RuleFor(p => p.TotalTracked)
+    //            .NotEmpty().WithMessage("{PropertyName} is required.")
+    //            .GreaterThan(0).WithMessage("{PropertyName} should be greater than 0.");
 
-            RuleFor(p => p.LastTrackedAt)
-                .NotEmpty().WithMessage("{PropertyName} is required.");
-        }
-    }
+    //        RuleFor(p => p.LastTrackedAt)
+    //            .NotEmpty().WithMessage("{PropertyName} is required.");
+    //    }
+    //}
 }

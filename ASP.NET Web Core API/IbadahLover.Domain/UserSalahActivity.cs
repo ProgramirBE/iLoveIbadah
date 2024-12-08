@@ -18,7 +18,7 @@ namespace IbadahLover.Domain
         public int SalahTypeId { get; set; }
         public SalahType SalahType { get; set; } // Navigation property
         [DataType(DataType.Date)]
-        public DateTime PerformedOn { get; set; }
+        public DateTime TrackedOn { get; set; }
         [Column(TypeName = "decimal(4, 2)")]
         public decimal PunctualityPercentage { get; set; }
     }

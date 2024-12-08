@@ -21,31 +21,31 @@ namespace IbadahLover.Application.DTOs.UserDhikrActivity.Validators
             _dhikrTypeRepository = dhikrTypeRepository;
 
             RuleFor(p => p.UserAccountId)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
+                .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {
                     var userAccountExists = await _userAccountRepository.Exists(id);
-                    return !userAccountExists;
-                });
+                    return userAccountExists;
+                })
+                .WithMessage("{PropertyName} does not exist.");
 
             RuleFor(p => p.DhikrTypeId)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
+                .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {
                     var dhikrTypeExists = await _dhikrTypeRepository.Exists(id);
-                    return !dhikrTypeExists;
-                });
+                    return dhikrTypeExists;
+                })
+                .WithMessage("{PropertyName} does not exist.");
 
             RuleFor(p => p.PerformedOn)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
+                .LessThanOrEqualTo(DateTime.Now)
                 .MustAsync(async (dto, performedOn, token) =>
                 {
-                    var userDhikrActivityPerformedOnExists = await _userDhikrActivityRepository.PerformedOnExists(dto.UserAccountId, performedOn);
-                    return userDhikrActivityPerformedOnExists; // il ne doit pas exister de activity pour cette journée pour cette utilisateur pour ce dhikrtype, sinon juste update allowed
-                });
+                    var userDhikrActivityPerformedOnExists = await _userDhikrActivityRepository.PerformedOnExists(dto.UserAccountId, performedOn, dto.DhikrTypeId);
+                    return !userDhikrActivityPerformedOnExists; // il ne doit pas exister de activity pour cette journée pour cette utilisateur pour ce dhikrtype, sinon juste update allowed
+                })
+                .WithMessage("{PropertyName} should not exist in order to Create, else update for this date.");
         }
     }
 }

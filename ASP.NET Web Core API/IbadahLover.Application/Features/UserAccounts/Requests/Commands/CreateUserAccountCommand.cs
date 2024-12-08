@@ -1,4 +1,5 @@
 ﻿using IbadahLover.Application.DTOs.UserAccount;
+using IbadahLover.Application.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserAccounts.Requests.Commands
 {
-    public class CreateUserAccountCommand : IRequest<int>
+    public class CreateUserAccountCommand : IRequest<BaseCommandResponse>
     {
         public CreateUserAccountDto UserAccountDto { get; set; }
     }

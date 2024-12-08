@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Persistence.Contracts
 {
-    //public interface IBanTypeRepository : IGenericRepository<BanType>
+    //public interface
+    //IBanTypeRepository : IGenericRepository<BanType>
     //{
     //    Task<BanType> GetBanTypeWithDetails(int id);
     //    Task<List<BanType>> GetBanTypesWithDetails();

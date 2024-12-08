@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.DTOs.UserSalahActivity.Validators;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Commands;
 using IbadahLover.Application.Persistence.Contracts;
@@ -33,7 +34,7 @@ namespace IbadahLover.Application.Features.UserSalahActivities.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var userSalahActivity = await _userSalahActivityRepository.GetById(request.UserSalahActivityDto.Id);
