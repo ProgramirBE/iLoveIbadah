@@ -13,6 +13,8 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Queries
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        public byte[]? ProfilePicture { get; set; }
+        public int? ProfilePictureTypeId { get; set; }
+        public string? CurrentLocation { get; set; } // Maybe leaderboards bassed on continent filtering option? asia, europe, africa, etc
+        public bool? IsPermanentlyBanned { get; set; } // to filter out permanently banned users from leaderboards! if he has a bad username and is banned he wil else still appear on leaderboard except if I delete the profile, but maybe he will contact support and justify so now he lost his account. so just ban and block acces to using app logged in!
     }
 }

@@ -14,7 +14,7 @@ namespace IbadahLover.Application.Features.Enums
 
     public static class WarningTypeExtensions // I wanted warningtype + description for each warning, this is what gemini + github copilot suggested
     {
-        private static readonly Dictionary<WarningType, string> WarningDescritions = new()
+        public static readonly Dictionary<WarningType, string> WarningDescritions = new()
         {
             { WarningType.HaramFullName, "FullName is non-sharia-compliant so non-compliant with terms of service policy." },
             { WarningType.HaramProfilePictureType, "ProfilePictureType is non-sharia-compliant so non-compliant with terms of service policy." }

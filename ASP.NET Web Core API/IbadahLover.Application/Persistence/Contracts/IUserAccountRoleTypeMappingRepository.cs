@@ -11,8 +11,8 @@ namespace IbadahLover.Application.Persistence.Contracts
     {
         Task<UserAccountRoleTypeMapping> GetUserAccountRoleTypeMappingWithDetails(int id);
         Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypeMappingsWithDetails();
-        Task<UserAccountRoleTypeMapping> GetUserAccountRoleTypeMappingByUserAccountAndRoleType(int userAccountId, int roleTypeId);
-        Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypeMappingsByUserAccount(int UserAccountId);
-        Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypeMappingsByRoleType(int roleTypeId);
+        //Task<UserAccountRoleTypeMapping> GetUserAccountRoleTypeMappingByUserAccountAndRoleType(int userAccountId, int roleTypeId);
+        //Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypeMappingsByUserAccount(int UserAccountId);
+        //Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypeMappingsByRoleType(int roleTypeId);
     }
 }

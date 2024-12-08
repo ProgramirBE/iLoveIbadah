@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.UserDhikrActivity.Validators;
 using IbadahLover.Application.DTOs.UserSalahActivity.Validators;
+using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Commands;
 using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Responses;
 using IbadahLover.Domain;
 using MediatR;
 using System;
@@ -14,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserSalahActivities.Handlers.Commands
 {
-    public class CreateUserSalahActivityCommandHandler : IRequestHandler<CreateUserSalahActivityCommand, int>
+    public class CreateUserSalahActivityCommandHandler : IRequestHandler<CreateUserSalahActivityCommand, BaseCommandResponse>
     {
         private readonly IUserSalahActivityRepository _userSalahActivityRepository;
         private readonly IUserAccountRepository _userAccountRepository;
@@ -29,8 +31,9 @@ namespace IbadahLover.Application.Features.UserSalahActivities.Handlers.Commands
             _mapper = mapper;
         }
 
-        public async Task<int> Handle(CreateUserSalahActivityCommand request, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(CreateUserSalahActivityCommand request, CancellationToken cancellationToken)
         {
+            var response = new BaseCommandResponse();
             var validator = new CreateUserSalahActivityDtoValidator(_userSalahActivityRepository, _userAccountRepository, _salahTypeRepository); //need to give the 3 repositories as parameter as in dto
             var validationResult = await validator.ValidateAsync(request.UserSalahActivityDto);
 
@@ -44,13 +47,19 @@ namespace IbadahLover.Application.Features.UserSalahActivities.Handlers.Commands
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                response.Success = false;
+                response.Message = "Creation Failed";
+                response.Errors = validationResult.Errors.Select(q => q.ErrorMessage).ToList();
+                //throw new ValidationException(validationResult);
             }
 
             var userSalahActivity = _mapper.Map<UserSalahActivity>(request.UserSalahActivityDto);
             userSalahActivity = await _userSalahActivityRepository.Create(userSalahActivity);
 
-            return userSalahActivity.Id;
+            response.Success = true;
+            response.Message = "Creation Successful";
+            response.Id = userSalahActivity.Id;
+            return response;
         }
     }
 }

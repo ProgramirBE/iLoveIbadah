@@ -12,7 +12,6 @@ namespace IbadahLover.Application.Persistence.Contracts
     {
         Task<UserAccount> GetUserAccountWithDetails(int id);
         Task<List<UserAccount>> GetUserAccountsWithDetails();
-
-        //Task ChangeEmailConfirmationStatus(UserAccount userAccount, bool? EmailConfirmationStatus);
+        Task UpdateUserAccountEmailConfirmed(UserAccount userAccount, bool? EmailConfirmed);
     }
 }

@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IbadahLover.Application", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IbadahLover.Domain", "IbadahLover.Domain\IbadahLover.Domain.csproj", "{E05E2945-A9F2-4C77-9195-821C303C5F15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbadahLover.Persistence", "IbadahLover.Persistence\IbadahLover.Persistence.csproj", "{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbadahLover.Infrastructure", "IbadahLover.Infrastructure\IbadahLover.Infrastructure.csproj", "{FDCBD349-B1DC-4A2F-8145-4B5B2528C172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{E05E2945-A9F2-4C77-9195-821C303C5F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E05E2945-A9F2-4C77-9195-821C303C5F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E05E2945-A9F2-4C77-9195-821C303C5F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDCBD349-B1DC-4A2F-8145-4B5B2528C172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCBD349-B1DC-4A2F-8145-4B5B2528C172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCBD349-B1DC-4A2F-8145-4B5B2528C172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCBD349-B1DC-4A2F-8145-4B5B2528C172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +56,8 @@ Global
 		{25FD3D6B-A70D-4FC4-8AF8-42A55F5269E3} = {9514B46D-6961-47FB-B6B5-E06D4882EEE8}
 		{FED66DFA-E04C-4262-A9FE-DF29D6D74406} = {27FF9F39-295A-4EB6-A460-2FBB801BD424}
 		{E05E2945-A9F2-4C77-9195-821C303C5F15} = {27FF9F39-295A-4EB6-A460-2FBB801BD424}
+		{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5} = {25FD3D6B-A70D-4FC4-8AF8-42A55F5269E3}
+		{FDCBD349-B1DC-4A2F-8145-4B5B2528C172} = {25FD3D6B-A70D-4FC4-8AF8-42A55F5269E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55533CF9-754F-4B54-862D-9E1579CB0D4A}

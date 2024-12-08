@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.UserDhikrActivity.Validators;
+using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Responses;
 using IbadahLover.Domain;
 using MediatR;
 using System;
@@ -12,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
 {
-    public class CreateUserDhikrActivityCommandHandler : IRequestHandler<CreateUserDhikrActivityCommand, int>
+    public class CreateUserDhikrActivityCommandHandler : IRequestHandler<CreateUserDhikrActivityCommand, BaseCommandResponse>
     {
         private readonly IUserDhikrActivityRepository _userDhikrActivityRepository;
         private readonly IUserAccountRepository _userAccountRepository;
@@ -27,20 +29,28 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
             _mapper = mapper;
         }
 
-        public async Task<int> Handle(CreateUserDhikrActivityCommand request, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(CreateUserDhikrActivityCommand request, CancellationToken cancellationToken)
         {
+            var response = new BaseCommandResponse();
             var validator = new CreateUserDhikrActivityDtoValidator(_userDhikrActivityRepository, _userAccountRepository, _dhikrTypeRepository); //need to give the 3 repositories as parameter as in dto
             var validationResult = await validator.ValidateAsync(request.UserDhikrActivityDto);
 
             if (!validationResult.IsValid)
             {
-                throw new Exception();
+                response.Success = false;
+                response.Message = "Creation Failed";
+                response.Errors = validationResult.Errors.Select(q => q.ErrorMessage).ToList();
+                //throw new ValidationException(validationResult);
             }
 
             var userDhikrActivity = _mapper.Map<UserDhikrActivity>(request.UserDhikrActivityDto);
             userDhikrActivity = await _userDhikrActivityRepository.Create(userDhikrActivity);
 
-            return userDhikrActivity.Id;
+            response.Success = true;
+            response.Message = "Creation Successful";
+            response.Id = userDhikrActivity.Id;
+
+            return response;
         }
     }
 }

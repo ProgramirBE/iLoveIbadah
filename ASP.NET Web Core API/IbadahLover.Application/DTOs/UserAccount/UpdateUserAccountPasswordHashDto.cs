@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.DTOs.UserAccount
 {
-    public class UpdateUserAccountForOAuthUsersDto
+    public class UpdateUserAccountPasswordHashDto
     {
         public int Id { get; set; }
-        public string? FullName { get; set; }
-        public byte[]? ProfilePicture { get; set; }
+        public string PasswordHash { get; set; }
     }
 }
