@@ -2,7 +2,7 @@
 using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.Features.DhikrTypes.Requests.Queries;
 using IbadahLover.Application.Features.UserAccounts.Requests.Queries;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

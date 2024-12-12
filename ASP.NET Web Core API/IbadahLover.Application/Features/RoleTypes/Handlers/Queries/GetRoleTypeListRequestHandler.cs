@@ -3,7 +3,7 @@ using IbadahLover.Application.DTOs.PermissionType;
 using IbadahLover.Application.DTOs.RoleType;
 using IbadahLover.Application.Features.PermissionTypes.Requests.Queries;
 using IbadahLover.Application.Features.RoleTypes.Requests.Queries;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

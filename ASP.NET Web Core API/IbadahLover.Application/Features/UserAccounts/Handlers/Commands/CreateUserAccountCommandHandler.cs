@@ -3,7 +3,8 @@ using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.DTOs.UserAccount.Validators;
 using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
+using IbadahLover.Application.Contracts.Infrastructure;
 using IbadahLover.Application.Responses;
 using IbadahLover.Domain;
 using MediatR;
@@ -12,17 +13,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IbadahLover.Application.Models;
 
 namespace IbadahLover.Application.Features.UserAccounts.Handlers.Commands
 {
     public class CreateUserAccountCommandHandler : IRequestHandler<CreateUserAccountCommand, BaseCommandResponse>
     {
         private readonly IUserAccountRepository _userAccountRepository;
+        private readonly IEmailSender _emailSender;
         private readonly IMapper _mapper;
 
-        public CreateUserAccountCommandHandler(IUserAccountRepository userAccountRepository, IMapper mapper)
+        public CreateUserAccountCommandHandler(IUserAccountRepository userAccountRepository, IEmailSender emailSender, IMapper mapper)
         {
             _userAccountRepository = userAccountRepository;
+            _emailSender = emailSender;
             _mapper = mapper;
         }
 
@@ -54,7 +58,27 @@ namespace IbadahLover.Application.Features.UserAccounts.Handlers.Commands
             response.Success = true;
             response.Message = "Creation Successful";
             response.Id = userAccount.Id;
-            return response;
+
+            string emailVerificationToken = "";
+            var email = new Email
+            {
+                To = userAccount.Email,
+                Subject = "Activate Your Account [IbadahLover]",
+                Body = $"Activate Your Account to verify it is you who created it, if it is someone else using your email just ignore this email. Click on following link:{emailVerificationToken}"
+            };
+            try
+            {
+                await _emailSender.SendEmail(email);
+            }
+            catch (Exception ex)
+            {
+                // Log or handle exception
+                response.Success = false;
+                response.Message = "Creation Failed";
+                response.Errors = new List<string> { "Email sending failed" };
+            };
+
+                return response;
         }
     }
 }

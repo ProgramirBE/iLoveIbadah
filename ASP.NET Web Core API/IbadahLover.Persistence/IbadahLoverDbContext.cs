@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using IbadahLover.Domain;
 using IbadahLover.Persistence.Enums;
 using Microsoft.IdentityModel.Logging;
+using IbadahLover.Persistence.Configurations.Entities;
 
 namespace IbadahLover.Persistence
 {
@@ -18,6 +19,16 @@ namespace IbadahLover.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new UserAccountConfiguration());
+            modelBuilder.ApplyConfiguration(new DhikrTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new SalahTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new ProfilePictureTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new PermissionTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleTypePermissionTypeMappingConfiguration());
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(IbadahLoverDbContext).Assembly);
         }
 

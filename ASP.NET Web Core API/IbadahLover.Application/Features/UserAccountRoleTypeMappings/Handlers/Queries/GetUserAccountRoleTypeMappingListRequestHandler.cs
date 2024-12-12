@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.UserAccountRoleTypeMapping;
 using IbadahLover.Application.Features.UserAccountRoleTypeMappings.Requests.Queries;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

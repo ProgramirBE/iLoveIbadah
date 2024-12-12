@@ -15,4 +15,8 @@
     <ProjectReference Include="..\IbadahLover.Application\IbadahLover.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

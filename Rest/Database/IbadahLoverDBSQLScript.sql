@@ -1,5 +1,10 @@
-because these logging information will be stored in azure blob storage instead of database
-Use master go CREATE DATABASE IbadahLoverDB GO USE IbadahLoverDB go
+--because these logging information will be stored in azure blob storage instead of database
+Use master
+go
+CREATE DATABASE IbadahLoverDB
+GO 
+USE IbadahLoverDB 
+go
 CREATE TABLE
    User_Account (
       id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
@@ -78,7 +83,7 @@ CREATE TABLE
    User_Account_Role_Type_Mapping (
       id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       User_Account_id BIGINT NOT NULL,
-      Role_Type_id BIGINT NOT NULL,
+      Role_Type_id BIGINT DEFAULT 2 NOT NULL,
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
@@ -178,7 +183,7 @@ CREATE TABLE
       id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       base64_code IMAGE NOT NULL, -- it takes to much space but i allow this instead of just link to image storing because restricted to limited amount of image to not deal with censoring because it is a religious app it must be heavily heavily heavily censorized (leaderboard system!) and i can't use gravatar service for exemple because they and all other services that i know don't censor the way it islamicly must!
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
-      created_by BIGINT NOT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate)
+      created_by BIGINT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate)
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
       --CONSTRAINT FK_Profile_Picture_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
@@ -210,7 +215,7 @@ CREATE TABLE
       punctuality_percentage DECIMAL(4, 2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
       CONSTRAINT FK_User_Salah_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
       CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type (id) ON DELETE CASCADE,
-      CONSTRAINT UQ_User_Salah_Activity_User_Account_id_performed_on UNIQUE (User_Account_id, performed_on) -- Ensures a unique record per user per day
+      CONSTRAINT UQ_User_Salah_Activity_User_Account_id_performed_on UNIQUE (User_Account_id, tracked_on) -- Ensures a unique record per user per day
    );
 
 GO
@@ -325,7 +330,8 @@ CREATE TABLE
 --    WHERE User_Account_id = NEW.User_Account_id;
 --END;
 --TRIGGER FOR TOTAL TRACKED IN USER SALAH OVERVIEW BY CHATGPT
-GO CREATE TRIGGER Trigger_Update_User_Salah_Overview_total_tracked ON User_Salah_Activity AFTER INSERT AS BEGIN
+GO 
+CREATE TRIGGER Trigger_Update_User_Salah_Overview_total_tracked ON User_Salah_Activity AFTER INSERT AS BEGIN
 UPDATE uso
 SET
    uso.total_tracked = uso.total_tracked + 1, -- Increment by exactly 1 per business rule
@@ -369,7 +375,8 @@ WHERE
 -- Ensure the increment is exactly 1
 END END;
 
-GO CREATE TRIGGER Trigger_Increment_User_Dhikr_Overview_total_performed --when dhikr activity record is made it means there was an activity for space eficiency and many other reasons avoiding creating unnessary data in database!
+GO
+CREATE TRIGGER Trigger_Increment_User_Dhikr_Overview_total_performed --when dhikr activity record is made it means there was an activity for space eficiency and many other reasons avoiding creating unnessary data in database!
 ON User_Dhikr_Activity AFTER INSERT AS BEGIN
 -- Increment total_performed by 1 in User_Dhikr_Overview for the associated User_Account_id
 UPDATE udo
@@ -383,7 +390,8 @@ FROM
 END;
 
 --TRIGGER FOR CCREATING USER DHIKR OVERVIEW RECORD FOR NEW USER BY CHATGPT
-GO CREATE TRIGGER Trigger_Create_User_Dhikr_Overview ON User_Account AFTER INSERT AS BEGIN
+GO 
+CREATE TRIGGER Trigger_Create_User_Dhikr_Overview ON User_Account AFTER INSERT AS BEGIN
 -- Insert a record into User_Dhikr_Overview for each new User_Account created
 INSERT INTO
    User_Dhikr_Overview (User_Account_id)
@@ -395,7 +403,8 @@ FROM
 END;
 
 --TRIGGER FOR CCREATING USER SALAH OVERVIEW RECORD FOR NEW USER BY CHATGPT
-GO CREATE TRIGGER Trigger_Create_User_Salah_Overview ON User_Account AFTER INSERT AS BEGIN
+GO 
+CREATE TRIGGER Trigger_Create_User_Salah_Overview ON User_Account AFTER INSERT AS BEGIN
 -- Insert a record into User_Dhikr_Overview for each new User_Account created
 INSERT INTO
    User_Salah_Overview (User_Account_id)
@@ -406,7 +415,8 @@ FROM
 
 END;
 
-GO CREATE TRIGGER Trigger_Update_User_Account_is_permanently_banned 
+GO
+CREATE TRIGGER Trigger_Update_User_Account_is_permanently_banned 
 ON User_Account 
 AFTER UPDATE 
 AS
@@ -508,11 +518,18 @@ END;
 --        FROM SalahPunctuality;
 --    END;
 --END;
+
+
 GO
 ALTER DATABASE IbadahLoverDB
 SET
-   READ_WRITE GO USE IbadahLoverDB GO
+   READ_WRITE 
+GO
+USE IbadahLoverDB 
+GO
 SET
-   ANSI_NULLS ON GO
+   ANSI_NULLS ON
+GO
 SET
-   QUOTED_IDENTIFIER ON GO
+   QUOTED_IDENTIFIER ON 
+GO
