@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using IbadahLover.Application.DTOs.UserSalahActivity;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;

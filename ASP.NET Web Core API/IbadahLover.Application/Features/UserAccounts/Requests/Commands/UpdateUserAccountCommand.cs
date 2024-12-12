@@ -13,8 +13,9 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Commands
     {
         public int Id { get; set; }
         public UpdateUserAccountDto UserAccountDto { get; set; }
-        public UpdateUserAccountEmailConfirmedDto UpdateUserAccountEmailConfirmedDto { get; set; }
-        public UpdateUserAccountPasswordHashDto UpdateUserAccountPasswordHashDto { get; set; }
+        public UpdateUserAccountEmailConfirmedDto UserAccountEmailConfirmedDto { get; set; }
+        public UpdateUserAccountPasswordHashDto UserAccountPasswordHashDto { get; set; }
+        public UpdateUserAccountTotalWarningsDto UserAccountTotalWarningsDto { get; set; }
 
     }
 }

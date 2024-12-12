@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.BanType;
 using IbadahLover.Application.Features.BanTypes.Requests.Queries;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

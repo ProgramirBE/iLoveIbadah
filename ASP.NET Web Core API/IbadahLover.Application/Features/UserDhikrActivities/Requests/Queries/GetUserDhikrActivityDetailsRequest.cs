@@ -12,7 +12,7 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Requests.Queries
     // Application User Request to get Details of User Activity
     public class GetUserDhikrActivityDetailsRequest : IRequest<UserDhikrActivityDto>
     {
-        public int Id { get; }
+        public int Id { get; set; }
         public int UserAccountId { get; set; }
 
         public int DhikrTypeId { get; set; }

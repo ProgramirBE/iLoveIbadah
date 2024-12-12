@@ -2,7 +2,7 @@
 using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.DTOs.UserSalahActivity.Validators;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Commands;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

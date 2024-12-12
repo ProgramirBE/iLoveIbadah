@@ -1,4 +1,4 @@
-﻿using IbadahLover.Application.Persistence.Contracts;
+﻿using IbadahLover.Application.Contracts.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

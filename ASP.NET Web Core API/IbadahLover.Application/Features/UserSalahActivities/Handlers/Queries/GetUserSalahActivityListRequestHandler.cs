@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.UserSalahActivity;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Queries;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

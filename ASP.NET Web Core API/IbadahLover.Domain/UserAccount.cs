@@ -17,8 +17,8 @@ namespace IbadahLover.Domain
         public string FullName { get; set; }
         public string Email { get; set; }
         [ForeignKey("ProfilePictureType")]
-        public int ProfilePictureTypeId { get; set; } = 1;
-        public ProfilePictureType ProfilePictureType { get; set; }
+        public int? ProfilePictureTypeId { get; set; }
+        public ProfilePictureType? ProfilePictureType { get; set; }
         public string? PasswordHash { get; set; }
         public OAuthProviderType? OAuthProvider { get; set; }
         public string? OAuthId { get; set; }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using IbadahLover.Application.DTOs.UserDhikrOverview;
 using IbadahLover.Application.Features.UserDhikrOverviews.Requests.Queries;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using IbadahLover.Domain;
 using MediatR;
 using System;

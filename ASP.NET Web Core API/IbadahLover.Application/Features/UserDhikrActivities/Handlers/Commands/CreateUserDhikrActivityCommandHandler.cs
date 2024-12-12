@@ -2,7 +2,7 @@
 using IbadahLover.Application.DTOs.UserDhikrActivity.Validators;
 using IbadahLover.Application.Exceptions;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
-using IbadahLover.Application.Persistence.Contracts;
+using IbadahLover.Application.Contracts.Persistence;
 using IbadahLover.Application.Responses;
 using IbadahLover.Domain;
 using MediatR;
