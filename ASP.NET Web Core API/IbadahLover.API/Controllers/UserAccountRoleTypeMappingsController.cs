@@ -19,7 +19,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserAccountRoleTypeMappingsController>
         [HttpGet]
-        public async Task<ActionResult<List<UserAccountRoleTypeMappingListDto>>> Get()
+        public async Task<ActionResult<List<UserAccountRoleTypeMappingListDto>>> GetAll()
         {
             var userAccountRoleTypeMappings = await _mediator.Send(new GetUserAccountRoleTypeMappingListRequest());
             return userAccountRoleTypeMappings;

@@ -10,7 +10,6 @@ namespace IbadahLover.Application.Features.UserAccountRoleTypeMappings.Requests.
 {
     public class GetUserAccountRoleTypeMappingListRequest : IRequest<List<UserAccountRoleTypeMappingListDto>>
     {
-        public int Id { get; set; }
         public int UserAccountId { get; set; }
         public int RoleTypeId { get; set; }
     }

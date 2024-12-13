@@ -17,7 +17,8 @@ namespace IbadahLover.Persistence
         {
             services.AddDbContext<IbadahLoverDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("IbadahLoverDbContext"));
+                options.UseSqlServer(configuration.GetConnectionString("localConnectionString"));
+                // options.UseSqlServer(configuration.GetSection("azuresqlserverconnectionstring").Value);
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));

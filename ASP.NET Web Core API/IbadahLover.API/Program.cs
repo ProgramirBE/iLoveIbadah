@@ -1,3 +1,5 @@
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 using IbadahLover.Application;
 using IbadahLover.Infrastructure;
 using IbadahLover.Persistence;
@@ -7,6 +9,11 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//var KeyVaultUrl = new Uri(builder.Configuration.GetSection("KeyVaultUrl").Value!);
+//var AzureCredential = new DefaultAzureCredential();
+//builder.Configuration.AddAzureKeyVault(KeyVaultUrl, AzureCredential);
+
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
 builder.Services.CongfigurePersistenceServices(builder.Configuration);
@@ -30,6 +37,7 @@ builder.Services.AddOpenApi(opt =>
         return Task.CompletedTask;
     });
 });
+
 
 builder.Services.AddCors(options =>
 {

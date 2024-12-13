@@ -19,10 +19,14 @@ namespace IbadahLover.Application.DTOs.UserAccount.Validators
             _userAccountRepository = userAccountRepository;
             _profilePictureTypeRepository = profilePictureTypeRepository;
 
+            RuleFor(p => p)
+                .Must(p => !string.IsNullOrWhiteSpace(p.FullName) || p.ProfilePictureTypeId.HasValue)
+                .WithMessage("At least one of FullName or ProfilePictureTypeId must be provided.");
+
             RuleFor(p => p.FullName)
                 .NotEmpty().NotNull().WithMessage("{PropertyName} is required.")
                 .MaximumLength(35).WithMessage("{PropertyName} must not exceed 35 characters.")
-                .When(p => !string.IsNullOrEmpty(p.FullName));
+                .When(p => !string.IsNullOrWhiteSpace(p.FullName));
 
             //RuleFor(p => p.Id)
             //    .GreaterThan(0)
@@ -35,14 +39,13 @@ namespace IbadahLover.Application.DTOs.UserAccount.Validators
 
             RuleFor(p => p.ProfilePictureTypeId)
                 .GreaterThan(0)
-                .When(p => p.ProfilePictureTypeId.HasValue)
                 .MustAsync(async (profilePictureTypeId, token) =>
-    {
-                // If ProfilePictureTypeId is null, the rule won't run due to .When()
-                return profilePictureTypeId.HasValue &&
-                await _profilePictureTypeRepository.Exists(profilePictureTypeId.Value);
+                {
+                    // If ProfilePictureTypeId is null, the rule won't run due to .When()
+                    return profilePictureTypeId.HasValue && await _profilePictureTypeRepository.Exists(profilePictureTypeId.Value);
                 })
-                .WithMessage("{PropertyName} does not exist.");
+                .WithMessage("{PropertyName} does not exist.")
+                .When(p => p.ProfilePictureTypeId.HasValue);
 
             //RuleFor(p => p.ProfilePictureTypeId)
             //    .GreaterThan(0)

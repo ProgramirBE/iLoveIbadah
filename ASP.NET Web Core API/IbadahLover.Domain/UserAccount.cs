@@ -22,7 +22,10 @@ namespace IbadahLover.Domain
         public string? PasswordHash { get; set; }
         public OAuthProviderType? OAuthProvider { get; set; }
         public string? OAuthId { get; set; }
-        public string? CurrentLocation { get; set; }
+        [Column(TypeName = "decimal(11, 8)")]
+        public decimal? CurrentLongitude { get; set; }
+        [Column(TypeName = "decimal(10, 8)")]
+        public decimal? CurrentLatitude { get; set; }
         public int? TotalWarnings { get; set; }
         public bool? EmailConfirmed { get; set; }
         public bool? IsPermanentlyBanned { get; set; }

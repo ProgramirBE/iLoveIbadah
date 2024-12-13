@@ -35,7 +35,7 @@ namespace IbadahLover.API.Controllers
         }
 
         // POST api/<UserDhikrOverviewsController>
-        [HttpPost]
+        //[HttpPost]
         //public void Post([FromBody] string value)
         //{
         //}

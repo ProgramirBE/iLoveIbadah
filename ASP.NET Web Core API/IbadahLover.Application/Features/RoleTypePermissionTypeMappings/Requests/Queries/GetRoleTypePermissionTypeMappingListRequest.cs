@@ -10,7 +10,6 @@ namespace IbadahLover.Application.Features.RoleTypePermissionTypeMappings.Reques
 {
     public class GetRoleTypePermissionTypeMappingListRequest : IRequest<List<RoleTypePermissionTypeMappingListDto>>
     {
-        public int Id { get; set; }
         public int RoleTypeId { get; set; }
         public int PermissionTypeId { get; set; }
     }

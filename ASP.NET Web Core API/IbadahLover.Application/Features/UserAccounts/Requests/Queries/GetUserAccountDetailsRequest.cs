@@ -3,6 +3,7 @@ using IbadahLover.Application.Features.Enums;
 using MediatR;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,10 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Queries
         public string? PasswordHash { get; set; }
         public OAuthProviderType? OAuthProvider { get; set; }
         public string? OAuthId { get; set; }
-        public string? CurrentLocation { get; set; }
+        [Column(TypeName = "decimal(11, 8)")]
+        public decimal? CurrentLongitude { get; set; }
+        [Column(TypeName = "decimal(10, 8)")]
+        public decimal? CurrentLatitude { get; set; }
         public int? TotalWarnings { get; set; }
         public bool? EmailConfirmed { get; set; }
         public bool? IsPermanentlyBanned { get; set; }

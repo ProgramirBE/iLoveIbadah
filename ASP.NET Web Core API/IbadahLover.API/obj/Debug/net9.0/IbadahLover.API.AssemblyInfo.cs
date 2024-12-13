@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("279112e2-467b-4886-9467-871c8eb1c6a4")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("IbadahLover.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88eb0a35cade67e671668794054fbf3e9d238cec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a3a96ae57562ca6c062dc43000dfe64bcca24e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("IbadahLover.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IbadahLover.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
