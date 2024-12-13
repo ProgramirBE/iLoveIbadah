@@ -7,21 +7,24 @@ USE IbadahLoverDB
 GO
 CREATE TABLE Blob_File
 (
-    id BIGINT IDENTITY(1,1) PRIMARY KEY,      -- Primary key for each blob record
+    id INT IDENTITY(1,1) PRIMARY KEY,      -- Primary key for each blob record
     uri NVARCHAR(300) NOT NULL,        -- URI of the blob (maximum length of URI is 2083 characters but it is too long, recommanded 500 but also to long, 250 minimum but maybe to short, so 300!)
     full_name NVARCHAR(255) NOT NULL,        -- Name of the file (optional)
     extension NVARCHAR(100) NOT NULL,         -- MIME type or content type (optional)
-    size BIGINT NULL,          -- Size of the blob in bytes (optional)
+    size INT NULL,          -- Size of the blob in bytes (optional)
+	created_by INT NULL,
 
+	--adding foreign key constraint at end because useraccount table doensn't exist when this is executed...
+	--CONSTRAINT FK_Blob_File_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id) ON DELETE CASCADE, 
 	CONSTRAINT UQ_Blob_File_uri UNIQUE (uri)
 );
 GO
 CREATE TABLE
    Profile_Picture_Type (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      Blob_File_id BIGINT NOT NULL, -- it takes to much space but i allow this instead of just link to image storing because restricted to limited amount of image to not deal with censoring because it is a religious app it must be heavily heavily heavily censorized (leaderboard system!) and i can't use gravatar service for exemple because they and all other services that i know don't censor the way it islamicly must!
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      Blob_File_id INT NOT NULL, -- it takes to much space but i allow this instead of just link to image storing because restricted to limited amount of image to not deal with censoring because it is a religious app it must be heavily heavily heavily censorized (leaderboard system!) and i can't use gravatar service for exemple because they and all other services that i know don't censor the way it islamicly must!
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
-      created_by BIGINT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate)
+      created_by INT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate)
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
 
@@ -34,19 +37,19 @@ CREATE TABLE
 GO
 CREATE TABLE
    User_Account (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       full_name NVARCHAR (25) NOT NULL,
       email NVARCHAR (50) NOT NULL UNIQUE, -- Ensuring email is unique
-      Profile_Picture_Type_id BIGINT DEFAULT 1 NOT NULL, -- Base64 encryption for Project!
+      Profile_Picture_Type_id INT DEFAULT 1 NULL, -- Base64 encryption for Project!
       password_hash NVARCHAR (255) NULL,
       oauth_provider NVARCHAR (20) NULL,
       oauth_id NVARCHAR (255) NULL,
-      email_confirmed BIT DEFAULT 0 NOT NULL,
+      email_confirmed BIT DEFAULT 0 NULL,
       --current_location NVARCHAR (255) NULL,
 	  current_longitude DECIMAL(11, 8) NULL,
 	  current_latitude DECIMAL(10, 8) NULL,
-      total_warnings INT DEFAULT 0 NOT NULL, -- user cheat and has impossible score so leaderboard messed up, username is non sharia complient, and group name (later future) forbidden interactions. in terms of condition and policy
-	  is_permanently_banned BIT DEFAULT 0 NOT NULL, -- after 2 warnings perma ban, Only 1 type of banning for now, perma ban for ease of development, implementation of temporary ban is maybe later addon
+      total_warnings INT DEFAULT 0 NULL, -- user cheat and has impossible score so leaderboard messed up, username is non sharia complient, and group name (later future) forbidden interactions. in terms of condition and policy
+	  is_permanently_banned BIT DEFAULT 0 NULL, -- after 2 warnings perma ban, Only 1 type of banning for now, perma ban for ease of development, implementation of temporary ban is maybe later addon
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NULL, --do i add TRIGGER?????
@@ -65,7 +68,7 @@ CREATE TABLE
 GO
 CREATE TABLE
    Role_Type (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       full_name NVARCHAR (50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User') or for later functionality of groups of people, gorup id + admin
       details NVARCHAR (255) NULL, -- Description of the role
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
@@ -96,7 +99,7 @@ GO
 CREATE TABLE
    Role_Type_Permission_Type_Mapping (
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      Role_Type_id BIGINT NOT NULL,
+      Role_Type_id INT NOT NULL,
       Permission_Type_id INT NOT NULL,
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
@@ -112,9 +115,9 @@ CREATE TABLE
 GO
 CREATE TABLE
    User_Account_Role_Type_Mapping (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      User_Account_id BIGINT NOT NULL,
-      Role_Type_id BIGINT DEFAULT 2 NOT NULL,
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      User_Account_id INT NOT NULL,
+      Role_Type_id INT DEFAULT 2 NOT NULL, --1 is admin 2 is normal user
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
@@ -183,10 +186,10 @@ CREATE TABLE
 GO
 CREATE TABLE
    Dhikr_Type (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       full_name NVARCHAR (255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
-      created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+      created_by INT NOT NULL, -- So user can create his own personal dhirk types just for him
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
       --CONSTRAINT FK_Dhikr_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
@@ -197,10 +200,10 @@ CREATE TABLE
 GO
 CREATE TABLE
    Salah_Type (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       full_name NVARCHAR (255) NOT NULL, -- fajr, sobh, dohr, maghreb, isha, witr etc...
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
-      created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+      created_by INT NOT NULL, -- So user can create his own personal dhirk types just for him
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
       --CONSTRAINT FK_Salah_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
@@ -210,12 +213,12 @@ CREATE TABLE
 GO
 CREATE TABLE
    User_Dhikr_Activity (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
-      Dhikr_Type_id BIGINT NOT NULL, -- Foreign key to Dhikr table
-      performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
-      last_performed_at DATETIME DEFAULT GETDATE () NOT NULL,
-      total_performed BIGINT DEFAULT 1 NOT NULL, -- Default count to 0 for new records
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      User_Account_id INT NOT NULL, -- Foreign key to Users table
+      Dhikr_Type_id INT NOT NULL, -- Foreign key to Dhikr table
+      performed_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NULL, -- The date in YYYY-MM-DD format in which the activity occurred
+      last_performed_at DATETIME DEFAULT GETDATE () NULL,
+      total_performed INT DEFAULT 1 NULL, -- Default count to 0 for new records
       CONSTRAINT FK_User_Dhikr_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
       CONSTRAINT FK_User_Dhikr_Activity_Dhikr_Type_id FOREIGN KEY (Dhikr_Type_id) REFERENCES Dhikr_Type (id) ON DELETE CASCADE,
       CONSTRAINT UQ_User_Dhikr_Activity_User_Account_id_Dhikr_Type_id_performed_at UNIQUE (User_Account_id, Dhikr_Type_id, performed_on) -- Ensures a unique record per user per day per dhikr
@@ -224,10 +227,10 @@ CREATE TABLE
 GO
 CREATE TABLE
    User_Salah_Activity (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
-      Salah_Type_id BIGINT NOT NULL, -- Foreign key to Dhikr table
-      tracked_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format in which the activity occurred
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      User_Account_id INT NOT NULL, -- Foreign key to Users table
+      Salah_Type_id INT NOT NULL, -- Foreign key to Dhikr table
+      tracked_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NULL, -- The date in YYYY-MM-DD format in which the activity occurred
       punctuality_percentage DECIMAL(4, 2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
       CONSTRAINT FK_User_Salah_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
       CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type (id) ON DELETE CASCADE,
@@ -237,8 +240,8 @@ CREATE TABLE
 GO
 CREATE TABLE
    User_Salah_Overview (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      User_Account_id INT NOT NULL, -- Foreign key to Users table
       --average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
       total_tracked INT DEFAULT 0 NOT NULL, -- Total of salah records taken into account for the average punctuality percentage
       last_tracked_at DATETIME DEFAULT GETDATE () NOT NULL,
@@ -248,9 +251,9 @@ CREATE TABLE
 GO
 CREATE TABLE
    User_Dhikr_Overview (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      User_Account_id BIGINT NOT NULL, -- Foreign key to Users table
-      total_performed BIGINT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      User_Account_id INT NOT NULL, -- Foreign key to Users table
+      total_performed INT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
       last_performed_at DATETIME DEFAULT GETDATE () NOT NULL, -- Timestamp for when the overview was last updated
       CONSTRAINT FK_User_Dhikr_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE
    );
@@ -534,9 +537,11 @@ END;
 --        FROM SalahPunctuality;
 --    END;
 --END;
-
-
 GO
+
+ALTER TABLE Blob_File ADD CONSTRAINT FK_Blob_File_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id) ON DELETE NO ACTION;
+GO
+--INSERT INTO table (column) value (x);
 ALTER DATABASE IbadahLoverDB
 SET
    READ_WRITE 

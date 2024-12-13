@@ -28,6 +28,7 @@ namespace IbadahLover.Persistence
             modelBuilder.ApplyConfiguration(new PermissionTypeConfiguration());
             modelBuilder.ApplyConfiguration(new RoleTypeConfiguration());
             modelBuilder.ApplyConfiguration(new RoleTypePermissionTypeMappingConfiguration());
+            modelBuilder.ApplyConfiguration(new BlobFileConfiguration());
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(IbadahLoverDbContext).Assembly);
         }
@@ -50,6 +51,7 @@ namespace IbadahLover.Persistence
         }
 
         public DbSet<UserAccount> UserAccounts { get; set; }
+        public DbSet<BlobFile> BlobFiles { get; set; }
         public DbSet<DhikrType> DhikrTypes { get; set; }
         public DbSet<SalahType> SalahTypes { get; set; }
         public DbSet<ProfilePictureType> ProfilePictureTypes { get; set; }

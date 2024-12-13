@@ -13,6 +13,11 @@ namespace IbadahLover.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<UserDhikrActivity> builder)
         {
+            builder.ToTable(tb =>
+            {
+                tb.HasTrigger("Trigger_Increment_User_Dhikr_Overview_total_performed");
+                tb.HasTrigger("Trigger_Update_User_Dhikr_Overview_total_performed");
+            });
             builder.ToTable("User_Dhikr_Activity");
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.UserAccountId).HasColumnName("User_Account_id");

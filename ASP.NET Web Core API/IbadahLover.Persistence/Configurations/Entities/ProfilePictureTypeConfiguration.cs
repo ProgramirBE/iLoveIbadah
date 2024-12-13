@@ -15,7 +15,7 @@ namespace IbadahLover.Persistence.Configurations.Entities
         {
             builder.ToTable("Profile_Picture_Type");
             builder.Property(e => e.Id).HasColumnName("id");
-            builder.Property(e => e.Base64Code).HasColumnName("base64_code");
+            builder.Property(e => e.BlobFileId).HasColumnName("Blob_File_id");
             builder.Property(e => e.CreatedBy).HasColumnName("created_by");
         }
     }

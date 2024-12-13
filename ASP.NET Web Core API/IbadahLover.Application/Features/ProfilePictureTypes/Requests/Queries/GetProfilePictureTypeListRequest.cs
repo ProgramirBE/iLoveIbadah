@@ -10,7 +10,7 @@ namespace IbadahLover.Application.Features.ProfilePictureTypes.Requests.Queries
 {
     public class GetProfilePictureTypeListRequest : IRequest<List<ProfilePictureTypeListDto>>
     {
-        public byte[] Base64Code { get; set; }
+        public int BlobFileId { get; set; }
         public int CreatedBy { get; set; }
     }
 }
