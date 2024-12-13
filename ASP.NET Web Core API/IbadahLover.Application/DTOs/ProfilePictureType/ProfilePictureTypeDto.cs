@@ -10,7 +10,7 @@ namespace IbadahLover.Application.DTOs.ProfilePictureType
     public class ProfilePictureTypeDto
     {
         public int Id { get; set; }
-        public byte[] Base64Code { get; set; }
+        public int BlobFileId { get; set; }
         public int CreatedBy { get; set; }
     }
 }

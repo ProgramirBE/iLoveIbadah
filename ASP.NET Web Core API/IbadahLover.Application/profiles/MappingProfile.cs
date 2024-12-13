@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using IbadahLover.Application.DTOs.BlobFile;
 using IbadahLover.Application.DTOs.DhikrType;
 using IbadahLover.Application.DTOs.PermissionType;
 using IbadahLover.Application.DTOs.ProfilePictureType;
@@ -25,18 +26,45 @@ namespace IbadahLover.Application.profiles
     {
         public MappingProfile()
         {
+            CreateMap<BlobFile, BlobFileDto>().ReverseMap();
+            CreateMap<BlobFile, BlobFileListDto>().ReverseMap();
+            CreateMap<BlobFile, CreateBlobFileDto>().ReverseMap();
+            CreateMap<DhikrType, DhikrTypeListDto>().ReverseMap();
             CreateMap<DhikrType, DhikrTypeDto>().ReverseMap();
             CreateMap<SalahType, SalahTypeDto>().ReverseMap();
+            CreateMap<SalahType, SalahTypeListDto>().ReverseMap();
             CreateMap<ProfilePictureType, ProfilePictureTypeDto>().ReverseMap();
+            CreateMap<ProfilePictureType, ProfilePictureTypeListDto>().ReverseMap();
             CreateMap<RoleType, RoleTypeDto>().ReverseMap();
+            CreateMap<RoleType, RoleTypeListDto>().ReverseMap();
             CreateMap<PermissionType, PermissionTypeDto>().ReverseMap();
+            CreateMap<PermissionType, PermissionTypeListDto>().ReverseMap();
             CreateMap<RoleTypePermissionTypeMapping, RoleTypePermissionTypeMappingDto>().ReverseMap();
+            CreateMap<RoleTypePermissionTypeMapping, RoleTypePermissionTypeMappingListDto>().ReverseMap();
             CreateMap<UserAccount, UserAccountDto>().ReverseMap();
+            CreateMap<UserAccount, UserAccountListDto>().ReverseMap();
+            CreateMap<UserAccount, CreateUserAccountDto>().ReverseMap();
+            CreateMap<UserAccount, UpdateUserAccountDto>().ReverseMap();
+            CreateMap<UserAccount, UpdateUserAccountCurrentLocationDto>().ReverseMap();
+            CreateMap<UserAccount, UpdateUserAccountEmailConfirmedDto>().ReverseMap();
+            CreateMap<UserAccount, UpdateUserAccountIsPermanentlyBannedDto>().ReverseMap();
+            CreateMap<UserAccount, UpdateUserAccountPasswordHashDto>().ReverseMap();
+            CreateMap<UserAccount, UpdateUserAccountTotalWarningsDto>().ReverseMap();
             CreateMap<UserAccountRoleTypeMapping, UserAccountRoleTypeMappingDto>().ReverseMap();
+            CreateMap<UserAccountRoleTypeMapping, UserAccountRoleTypeMappingListDto>().ReverseMap();
             CreateMap<UserDhikrActivity, UserDhikrActivityDto>().ReverseMap();
+            CreateMap<UserDhikrActivity, UserDhikrActivityListDto>().ReverseMap();
+            CreateMap<UserDhikrActivity, CreateUserDhikrActivityDto>().ReverseMap();
+            CreateMap<UserDhikrActivity, UpdateUserDhikrActivityDto>().ReverseMap();
+            CreateMap<UserDhikrActivity, UserDhikrActivityPerformedOnExistsDto>().ReverseMap();
             CreateMap<UserDhikrOverview, UserDhikrOverviewDto>().ReverseMap();
+            CreateMap<UserDhikrOverview, UserDhikrOverviewListDto>().ReverseMap();
+            CreateMap<UserSalahActivity, UserSalahActivityListDto>().ReverseMap();
             CreateMap<UserSalahActivity, UserSalahActivityDto>().ReverseMap();
+            CreateMap<UserSalahActivity, CreateUserSalahActivityDto>().ReverseMap();
+            CreateMap<UserSalahActivity, UpdateUserSalahActivityDto>().ReverseMap();
             CreateMap<UserSalahOverview, UserSalahOverviewDto>().ReverseMap();
+            CreateMap<UserSalahOverview, UserSalahOverviewListDto>().ReverseMap();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using IbadahLover.Application.DTOs.UserSalahActivity;
+﻿using IbadahLover.Application.DTOs.UserDhikrActivity;
+using IbadahLover.Application.DTOs.UserSalahActivity;
+using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Queries;
 using MediatR;
@@ -34,8 +36,8 @@ namespace IbadahLover.API.Controllers
             return Ok(userSalahActivity);
         }
 
-        // POST api/<UserSalahActivitiesController>
-        //[HttpPost]
+        // POST api/<UserSalahActivitiesController>/5
+        [HttpPut("{id}")]
         public async Task<ActionResult> Update([FromBody] UpdateUserSalahActivityDto userSalahActivity)
         {
             var command = new UpdateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };
@@ -43,11 +45,14 @@ namespace IbadahLover.API.Controllers
             return NoContent();
         }
 
-        //// PUT api/<UserSalahActivitiesController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
+        //// PUT api/<UserSalahActivitiesController>
+        [HttpPost]
+        public async Task<ActionResult> Create([FromBody] CreateUserSalahActivityDto userSalahActivity)
+        {
+            var command = new CreateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };
+            var response = await _mediator.Send(command);
+            return Ok(response);
+        }
 
         //// DELETE api/<UserSalahActivitiesController>/5
         //[HttpDelete("{id}")]

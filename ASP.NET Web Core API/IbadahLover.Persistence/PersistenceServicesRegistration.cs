@@ -17,8 +17,8 @@ namespace IbadahLover.Persistence
         {
             services.AddDbContext<IbadahLoverDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("localConnectionString"));
-                // options.UseSqlServer(configuration.GetSection("azuresqlserverconnectionstring").Value);
+                options.UseSqlServer(configuration.GetConnectionString("localConnectionString")); // When Running Locally
+                //options.UseSqlServer(configuration.GetSection("azuresqlserverconnectionstring").Value); // When Deployed to Azure
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -32,6 +32,7 @@ namespace IbadahLover.Persistence
             services.AddScoped<IProfilePictureTypeRepository, ProfilePictureTypeRepository>();
             services.AddScoped<IPermissionTypeRepository, PermissionTypeRepository>();
             services.AddScoped<IRoleTypeRepository, RoleTypeRepository>();
+            services.AddScoped<IBlobFileRepository, BlobFileRepository>();
             services.AddScoped<IUserAccountRoleTypeMappingRepository, UserAccountRoleTypeMappingRepository>();
             services.AddScoped<IRoleTypePermissionTypeMappingRepository, RoleTypePermissionTypeMappingRepository>();
 

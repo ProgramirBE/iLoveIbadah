@@ -13,6 +13,10 @@ namespace IbadahLover.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<UserSalahActivity> builder)
         {
+            builder.ToTable(tb =>
+            {
+                tb.HasTrigger("Trigger_Update_User_Salah_Overview_total_tracked");
+            });
             builder.ToTable("User_Salah_Activity");
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.UserAccountId).HasColumnName("User_Account_id");

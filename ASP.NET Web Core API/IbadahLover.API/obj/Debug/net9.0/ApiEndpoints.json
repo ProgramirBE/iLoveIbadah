@@ -1,0 +1,789 @@
+[
+  {
+    "ContainingType": "IbadahLover.API.Controllers.BlobFilesController",
+    "Method": "GetAll",
+    "RelativePath": "api/BlobFiles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.BlobFile.BlobFileListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.BlobFilesController",
+    "Method": "Create",
+    "RelativePath": "api/BlobFiles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "blobFile",
+        "Type": "IbadahLover.Application.DTOs.BlobFile.CreateBlobFileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.BlobFilesController",
+    "Method": "GetById",
+    "RelativePath": "api/BlobFiles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.BlobFile.BlobFileDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.DhikrTypesController",
+    "Method": "GetAll",
+    "RelativePath": "api/DhikrTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.DhikrType.DhikrTypeListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Description": "Get A List of all the Dhikr Types",
+    "Summary": "Get all Dhikr Types"
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.DhikrTypesController",
+    "Method": "Get",
+    "RelativePath": "api/DhikrTypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.DhikrType.DhikrTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Description": "Get All Details of specific Dhikr Type",
+    "Summary": "Get Dhikr Type by Id"
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.PermissionTypesController",
+    "Method": "GetAll",
+    "RelativePath": "api/PermissionTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.PermissionType.PermissionTypeListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.PermissionTypesController",
+    "Method": "Get",
+    "RelativePath": "api/PermissionTypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.PermissionType.PermissionTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.ProfilePictureTypesController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProfilePictureTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.ProfilePictureType.ProfilePictureTypeListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.ProfilePictureTypesController",
+    "Method": "Get",
+    "RelativePath": "api/ProfilePictureTypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.ProfilePictureType.ProfilePictureTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.RoleTypePermissionTypeMappingsController",
+    "Method": "GetAll",
+    "RelativePath": "api/RoleTypePermissionTypeMappings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.RoleTypePermissionTypeMapping.RoleTypePermissionTypeMappingListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.RoleTypePermissionTypeMappingsController",
+    "Method": "Get",
+    "RelativePath": "api/RoleTypePermissionTypeMappings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.RoleTypePermissionTypeMapping.RoleTypePermissionTypeMappingDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.RoleTypesController",
+    "Method": "GetAll",
+    "RelativePath": "api/RoleTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.RoleType.RoleTypeListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.RoleTypesController",
+    "Method": "Get",
+    "RelativePath": "api/RoleTypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.RoleType.RoleTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.SalahTypesController",
+    "Method": "GetAll",
+    "RelativePath": "api/SalahTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.SalahType.SalahTypeListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.SalahTypesController",
+    "Method": "Get",
+    "RelativePath": "api/SalahTypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.SalahType.SalahTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountRoleTypeMappingsController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserAccountRoleTypeMappings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.UserAccountRoleTypeMapping.UserAccountRoleTypeMappingListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountRoleTypeMappingsController",
+    "Method": "Get",
+    "RelativePath": "api/UserAccountRoleTypeMappings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.UserAccountRoleTypeMapping.UserAccountRoleTypeMappingDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserAccounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.UserAccount.UserAccountListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "Create",
+    "RelativePath": "api/UserAccounts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userAccount",
+        "Type": "IbadahLover.Application.DTOs.UserAccount.CreateUserAccountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "GetById",
+    "RelativePath": "api/UserAccounts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.UserAccount.UserAccountDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "Update",
+    "RelativePath": "api/UserAccounts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userAccount",
+        "Type": "IbadahLover.Application.DTOs.UserAccount.UpdateUserAccountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "UpdatePasswordHash",
+    "RelativePath": "api/UserAccounts/updatepasswordhash/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userAccountPasswordHash",
+        "Type": "IbadahLover.Application.DTOs.UserAccount.UpdateUserAccountPasswordHashDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "UpdateTotalWarnings",
+    "RelativePath": "api/UserAccounts/updatetotalwarnings/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userAccountTotalWarnings",
+        "Type": "IbadahLover.Application.DTOs.UserAccount.UpdateUserAccountTotalWarningsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserDhikrActivitiesController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserDhikrActivities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.UserDhikrActivity.UserDhikrActivityListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserDhikrActivitiesController",
+    "Method": "Create",
+    "RelativePath": "api/UserDhikrActivities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDhikrActivity",
+        "Type": "IbadahLover.Application.DTOs.UserDhikrActivity.CreateUserDhikrActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserDhikrActivitiesController",
+    "Method": "Update",
+    "RelativePath": "api/UserDhikrActivities",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDhikrActivity",
+        "Type": "IbadahLover.Application.DTOs.UserDhikrActivity.UpdateUserDhikrActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserDhikrActivitiesController",
+    "Method": "GetById",
+    "RelativePath": "api/UserDhikrActivities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.UserDhikrActivity.UserDhikrActivityDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserDhikrOverviewsController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserDhikrOverviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.UserDhikrOverview.UserDhikrOverviewListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserDhikrOverviewsController",
+    "Method": "GetById",
+    "RelativePath": "api/UserDhikrOverviews/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.UserDhikrOverview.UserDhikrOverviewDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserSalahActivitiesController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserSalahActivities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.UserSalahActivity.UserSalahActivityListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserSalahActivitiesController",
+    "Method": "Create",
+    "RelativePath": "api/UserSalahActivities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userSalahActivity",
+        "Type": "IbadahLover.Application.DTOs.UserSalahActivity.CreateUserSalahActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserSalahActivitiesController",
+    "Method": "GetById",
+    "RelativePath": "api/UserSalahActivities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.UserSalahActivity.UserSalahActivityDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserSalahActivitiesController",
+    "Method": "Update",
+    "RelativePath": "api/UserSalahActivities/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userSalahActivity",
+        "Type": "IbadahLover.Application.DTOs.UserSalahActivity.UpdateUserSalahActivityDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserSalahOverviewsController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserSalahOverviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.UserSalahOverview.UserSalahOverviewListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserSalahOverviewsController",
+    "Method": "GetById",
+    "RelativePath": "api/UserSalahOverviews/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.DTOs.UserSalahOverview.UserSalahOverviewDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[IbadahLover.API.WeatherForecast, IbadahLover.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

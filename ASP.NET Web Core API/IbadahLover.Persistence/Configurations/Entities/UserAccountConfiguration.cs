@@ -13,6 +13,12 @@ namespace IbadahLover.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<UserAccount> builder)
         {
+            builder.ToTable(tb =>
+            {
+                tb.HasTrigger("Trigger_Update_User_Account_is_permanently_banned");
+                tb.HasTrigger("Trigger_Create_User_Salah_Overview");
+                tb.HasTrigger("Trigger_Create_User_Dhikr_Overview");
+            });
             builder.ToTable("User_Account");
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.FullName).HasColumnName("full_name");

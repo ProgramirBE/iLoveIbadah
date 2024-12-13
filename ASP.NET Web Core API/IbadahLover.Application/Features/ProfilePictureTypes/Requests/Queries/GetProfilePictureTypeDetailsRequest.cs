@@ -11,7 +11,7 @@ namespace IbadahLover.Application.Features.ProfilePictureTypes.Requests.Queries
     public class GetProfilePictureTypeDetailsRequest : IRequest<ProfilePictureTypeDto>
     {
         public int Id { get; set; }
-        public byte[] Base64Code { get; set; }
+        public int BlobFileId { get; set; }
         //public DateTime CreatedOn { get; set; }
         public int CreatedBy { get; set; }
         //public DateTime LastModifiedOn { get; set; }
