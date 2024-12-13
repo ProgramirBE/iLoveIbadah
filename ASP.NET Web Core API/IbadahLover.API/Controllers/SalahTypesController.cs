@@ -19,7 +19,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<SalahTypesController>
         [HttpGet]
-        public async Task<ActionResult<List<SalahTypeListDto>>> Get()
+        public async Task<ActionResult<List<SalahTypeListDto>>> GetAll()
         {
             var salahTypes = await _mediator.Send(new GetSalahTypeListRequest());
             return salahTypes;

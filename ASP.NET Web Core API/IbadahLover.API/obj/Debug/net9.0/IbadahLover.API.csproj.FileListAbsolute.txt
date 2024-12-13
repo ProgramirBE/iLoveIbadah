@@ -90,3 +90,7 @@ C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\o
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Debug\net9.0\IbadahLover.API.pdb
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Debug\net9.0\IbadahLover.API.genruntimeconfig.cache
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Debug\net9.0\ref\IbadahLover.API.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Debug\net9.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Debug\net9.0\Azure.Security.KeyVault.Secrets.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Debug\net9.0\Microsoft.Extensions.Caching.Hybrid.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Debug\net9.0\System.Net.WebSockets.WebSocketProtocol.dll

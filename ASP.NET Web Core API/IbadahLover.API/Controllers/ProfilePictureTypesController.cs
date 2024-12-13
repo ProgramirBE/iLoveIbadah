@@ -21,7 +21,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<ValuesController>
         [HttpGet]
-        public async Task<ActionResult<List<ProfilePictureTypeListDto>>> Get()
+        public async Task<ActionResult<List<ProfilePictureTypeListDto>>> GetAll()
         {
             var profilePictureTypes = await _mediator.Send(new GetProfilePictureTypeListRequest());
             return profilePictureTypes;

@@ -16,7 +16,16 @@ namespace IbadahLover.Persistence.Configurations.Entities
             builder.ToTable("User_Account");
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.FullName).HasColumnName("full_name");
-            builder.Property(e => e.CreatedBy).HasColumnName("created_by");
+            builder.Property(e => e.Email).HasColumnName("email");
+            builder.Property(e => e.ProfilePictureTypeId).HasColumnName("Profile_Picture_Type_id");
+            builder.Property(e => e.PasswordHash).HasColumnName("password_hash");
+            builder.Property(e => e.OAuthProvider).HasColumnName("oauth_provider");
+            builder.Property(e => e.OAuthId).HasColumnName("oauth_id");
+            builder.Property(e => e.CurrentLongitude).HasColumnName("current_longitude");
+            builder.Property(e => e.CurrentLatitude).HasColumnName("current_latitude");
+            builder.Property(e => e.TotalWarnings).HasColumnName("total_warnings");
+            builder.Property(e => e.EmailConfirmed).HasColumnName("email_confirmed");
+            builder.Property(e => e.IsPermanentlyBanned).HasColumnName("is_permanently_banned");
         }
     }
 }

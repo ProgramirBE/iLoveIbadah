@@ -11,7 +11,6 @@ namespace IbadahLover.Application.Features.UserSalahActivities.Requests.Queries
 {
     public class GetUserSalahActivityListRequest : IRequest<List<UserSalahActivityListDto>>
     {
-        public int Id { get; set; }
         public int UserAccountId { get; set; }
         public int SalahTypeId { get; set; }
         [DataType(DataType.Date)]

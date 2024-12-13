@@ -10,5 +10,6 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Requests.Queries
 {
     public class GetUserDhikrActivityListRequest : IRequest<List<UserDhikrActivityListDto>>
     {
+        public int Id { get; set; }
     }
 }

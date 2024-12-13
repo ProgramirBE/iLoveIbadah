@@ -4,7 +4,34 @@ go
 CREATE DATABASE IbadahLoverDB
 GO 
 USE IbadahLoverDB 
-go
+GO
+CREATE TABLE Blob_File
+(
+    id BIGINT IDENTITY(1,1) PRIMARY KEY,      -- Primary key for each blob record
+    uri NVARCHAR(300) NOT NULL,        -- URI of the blob (maximum length of URI is 2083 characters but it is too long, recommanded 500 but also to long, 250 minimum but maybe to short, so 300!)
+    full_name NVARCHAR(255) NOT NULL,        -- Name of the file (optional)
+    extension NVARCHAR(100) NOT NULL,         -- MIME type or content type (optional)
+    size BIGINT NULL,          -- Size of the blob in bytes (optional)
+
+	CONSTRAINT UQ_Blob_File_uri UNIQUE (uri)
+);
+GO
+CREATE TABLE
+   Profile_Picture_Type (
+      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      Blob_File_id BIGINT NOT NULL, -- it takes to much space but i allow this instead of just link to image storing because restricted to limited amount of image to not deal with censoring because it is a religious app it must be heavily heavily heavily censorized (leaderboard system!) and i can't use gravatar service for exemple because they and all other services that i know don't censor the way it islamicly must!
+      --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
+      created_by BIGINT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate)
+      --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
+      --last_modified_by BIGINT NOT NULL,
+
+	  CONSTRAINT FK_Profile_Picture_Type_Blob_File_id FOREIGN KEY (Blob_File_id) REFERENCES Blob_File (id) ON DELETE CASCADE,
+	  CONSTRAINT UQ_Profile_Picture_Type_Blob_File_id UNIQUE (Blob_File_id)
+      --CONSTRAINT FK_Profile_Picture_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
+      --CONSTRAINT FK_Profile_Picture_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+      -- CONSTRAINT UQ_Profile_Picture_Type_base64_code UNIQUE (base64_code) -- Ensures a unique record per Salah type. Couldn't do it cause cannot index on image type to long characters, chatgpt propose me to hash the base64_code and that I could put unique constraint on hash but I will just skip unique constraint!
+   );
+GO
 CREATE TABLE
    User_Account (
       id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
@@ -15,13 +42,17 @@ CREATE TABLE
       oauth_provider NVARCHAR (20) NULL,
       oauth_id NVARCHAR (255) NULL,
       email_confirmed BIT DEFAULT 0 NOT NULL,
-      current_location NVARCHAR (255) NULL,
+      --current_location NVARCHAR (255) NULL,
+	  current_longitude DECIMAL(11, 8) NULL,
+	  current_latitude DECIMAL(10, 8) NULL,
       total_warnings INT DEFAULT 0 NOT NULL, -- user cheat and has impossible score so leaderboard messed up, username is non sharia complient, and group name (later future) forbidden interactions. in terms of condition and policy
 	  is_permanently_banned BIT DEFAULT 0 NOT NULL, -- after 2 warnings perma ban, Only 1 type of banning for now, perma ban for ease of development, implementation of temporary ban is maybe later addon
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NULL, --do i add TRIGGER?????
       --CONSTRAINT FK_User_Account_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+
+	  CONSTRAINT FK_User_Account_Profile_Picture_Type_id FOREIGN KEY (Profile_Picture_Type_id) REFERENCES Profile_Picture_Type (id) ON DELETE CASCADE,
       CONSTRAINT UQ_User_Account_email UNIQUE (email),
       CONSTRAINT UQ_User_Account_email_password_hash UNIQUE (email, password_hash),
       CONSTRAINT UQ_User_Account_email_oauth_id UNIQUE (email, oauth_id),
@@ -176,21 +207,6 @@ CREATE TABLE
       --CONSTRAINT FK_Salah_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
       CONSTRAINT UQ_Salah_Type_full_name UNIQUE (full_name) -- Ensures a unique record per Salah type.
    );
-
-GO
-CREATE TABLE
-   Profile_Picture_Type (
-      id BIGINT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      base64_code IMAGE NOT NULL, -- it takes to much space but i allow this instead of just link to image storing because restricted to limited amount of image to not deal with censoring because it is a religious app it must be heavily heavily heavily censorized (leaderboard system!) and i can't use gravatar service for exemple because they and all other services that i know don't censor the way it islamicly must!
-      --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
-      created_by BIGINT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate)
-      --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
-      --last_modified_by BIGINT NOT NULL,
-      --CONSTRAINT FK_Profile_Picture_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
-      --CONSTRAINT FK_Profile_Picture_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
-      -- CONSTRAINT UQ_Profile_Picture_Type_base64_code UNIQUE (base64_code) -- Ensures a unique record per Salah type. Couldn't do it cause cannot index on image type to long characters, chatgpt propose me to hash the base64_code and that I could put unique constraint on hash but I will just skip unique constraint!
-   );
-
 GO
 CREATE TABLE
    User_Dhikr_Activity (

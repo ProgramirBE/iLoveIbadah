@@ -19,7 +19,9 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<DhikrTypesController>
         [HttpGet]
-        public async Task<ActionResult<List<DhikrTypeListDto>>> Get()
+        [EndpointSummary("Get all Dhikr Types")]
+        [EndpointDescription("Get A List of all the Dhikr Types")]
+        public async Task<ActionResult<List<DhikrTypeListDto>>> GetAll()
         {
             var dhikrTypes = await _mediator.Send(new GetDhikrTypeListRequest());
             return dhikrTypes;
@@ -27,6 +29,8 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<DhikrTypesController>/5
         [HttpGet("{id}")]
+        [EndpointSummary("Get Dhikr Type by Id")]
+        [EndpointDescription("Get All Details of specific Dhikr Type")]
         public async Task<ActionResult<DhikrTypeDto>> Get(int id) //Get or GetById??? check if issue! todo! error! debug! fix! test! review! verify! validate! confirm! check! inspect! examine! audit! revise! study! investigate! analyze! assess! evaluate! scrutinize! probe!
         {
             var dhikrType = await _mediator.Send(new GetDhikrTypeDetailsRequest { Id = id });

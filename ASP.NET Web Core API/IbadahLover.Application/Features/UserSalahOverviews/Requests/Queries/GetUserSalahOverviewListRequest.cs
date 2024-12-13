@@ -10,7 +10,6 @@ namespace IbadahLover.Application.Features.UserSalahOverviews.Requests.Queries
 {
     public class GetUserSalahOverviewListRequest : IRequest<List<UserSalahOverviewListDto>>
     {
-        public int Id { get; set; }
         public int UserAccountId { get; set; }
         public int TotalTracked { get; set; }
         public DateTime LastTrackedAt { get; set; }
