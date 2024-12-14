@@ -5,30 +5,24 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'; // Voor formulieren
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { Dhikr1Component } from './dhikr1/dhikr1.component';
-import { Dhikr2Component } from './dhikr2/dhikr2.component';
-import { Dhikr3Component } from './dhikr3/dhikr3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
-    Dhikr1Component,
-    Dhikr2Component,
-    Dhikr3Component,
+    RegisterComponent, // Declareer de login- en registercomponenten
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    ReactiveFormsModule, // Formulieren ondersteunen
+    ReactiveFormsModule, // Ondersteuning voor reactieve formulieren
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Voor Ionic-componenten
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Hiermee worden Ionic-componenten herkend
   bootstrap: [AppComponent],
 })
 export class AppModule {}
