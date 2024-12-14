@@ -17,7 +17,9 @@ namespace IbadahLover.Persistence.Configurations.Entities
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.UserAccountId).HasColumnName("User_Account_id");
             builder.Property(e => e.TotalPerformed).HasColumnName("total_performed");
-            builder.Property(e => e.LastPerformedAt).HasColumnName("last_performed_at");
+            builder.Property(e => e.LastPerformedAt)
+                .HasColumnName("last_performed_at")
+                .ValueGeneratedOnAddOrUpdate();
         }
     }
 }

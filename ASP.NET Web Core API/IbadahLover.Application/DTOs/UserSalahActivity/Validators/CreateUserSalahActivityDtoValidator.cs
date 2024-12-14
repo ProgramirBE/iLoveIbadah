@@ -38,14 +38,14 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity.Validators
                 })
                 .WithMessage("{PropertyName} does not exist.");
 
-            RuleFor(p => p.TrackedOn)
-                .LessThanOrEqualTo(DateTime.Now)
-                .MustAsync(async (dto, trackedOn, token) =>
-                {
-                    var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId, trackedOn);
-                    return !userSalahActivityTrackedOnExists; // il ne doit pas exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste update allowed
-                })
-                .NotEmpty().WithMessage("{PropertyName} should not exist in order to Create, else update for this date.");
+            //RuleFor(p => p.TrackedOn)
+            //    .LessThanOrEqualTo(DateTime.Now)
+            //    .MustAsync(async (dto, trackedOn, token) =>
+            //    {
+            //        var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId, trackedOn);
+            //        return !userSalahActivityTrackedOnExists; // il ne doit pas exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste update allowed
+            //    })
+            //    .NotEmpty().WithMessage("{PropertyName} should not exist in order to Create, else update for this date.");
         }
     }
 }

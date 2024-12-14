@@ -38,14 +38,14 @@ namespace IbadahLover.Application.DTOs.UserDhikrActivity.Validators
                 })
                 .WithMessage("{PropertyName} does not exist.");
 
-            RuleFor(p => p.PerformedOn)
-                .LessThanOrEqualTo(DateTime.Now)
-                .MustAsync(async (dto, performedOn, token) =>
-                {
-                    var userDhikrActivityPerformedOnExists = await _userDhikrActivityRepository.PerformedOnExists(dto.UserAccountId, performedOn, dto.DhikrTypeId);
-                    return !userDhikrActivityPerformedOnExists; // il ne doit pas exister de activity pour cette journée pour cette utilisateur pour ce dhikrtype, sinon juste update allowed
-                })
-                .WithMessage("{PropertyName} should not exist in order to Create, else update for this date.");
+            //RuleFor(p => p.PerformedOn)
+            //    .LessThanOrEqualTo(DateTime.Now)
+            //    .MustAsync(async (dto, performedOn, token) =>
+            //    {
+            //        var userDhikrActivityPerformedOnExists = await _userDhikrActivityRepository.PerformedOnExists(dto.UserAccountId, performedOn, dto.DhikrTypeId);
+            //        return !userDhikrActivityPerformedOnExists; // il ne doit pas exister de activity pour cette journée pour cette utilisateur pour ce dhikrtype, sinon juste update allowed
+            //    })
+            //    .WithMessage("{PropertyName} should not exist in order to Create, else update for this date.");
         }
     }
 }

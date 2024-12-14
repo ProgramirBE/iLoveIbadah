@@ -1497,18 +1497,6 @@
           "dhikrTypeId": {
             "type": "integer",
             "format": "int32"
-          },
-          "performedOn": {
-            "type": "string",
-            "format": "date"
-          },
-          "lastPerformedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "totalPerformed": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1523,10 +1511,6 @@
           "salahTypeId": {
             "type": "integer",
             "format": "int32"
-          },
-          "trackedOn": {
-            "type": "string",
-            "format": "date"
           },
           "punctualityPercentage": {
             "type": "number",
