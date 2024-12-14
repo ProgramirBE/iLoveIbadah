@@ -1,37 +1,69 @@
 <div class="container">
-  <!-- Terugknop -->
-  <ion-button fill="solid" color="success" routerLink="/dhikrhome">
+  <!-- Terugknop alleen zichtbaar voor andere secties dan 'home' -->
+  <ion-button *ngIf="section !== 'home'" fill="solid" color="success" routerLink="/dhikr/home">
     <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
   </ion-button>
 
-  <!-- Huidige woord -->
-  <h1>{{ currentWord }}</h1>
+  <!-- Dynamische inhoud gebaseerd op de actieve sectie -->
+  <ng-container [ngSwitch]="section">
+    <!-- Home sectie -->
+    <div *ngSwitchCase="'home'">
+      <h1>Dhikr Home</h1>
+      <div class="grid-container">
+        <a class="grid-item" routerLink="/dhikr/dhikr">
+          <h2>Module 1</h2>
+          <p>Soubhan' Allah, Alhamdulilah, Allah u akbar</p>
+        </a>
+        <a class="grid-item" routerLink="/dhikr/1">
+          <h2>Module 2</h2>
+          <p>Soubhan' Allah</p>
+        </a>
+        <a class="grid-item" routerLink="/dhikr/2">
+          <h2>Module 3</h2>
+          <p>Alhamdulilah</p>
+        </a>
+        <a class="grid-item" routerLink="/dhikr/3">
+          <h2>Module 4</h2>
+          <p>Allah u akbar</p>
+        </a>
+      </div>
+      <div class="image-container">
+        <img src="assets/images/dhikrimg.jpg" alt="Background Image" />
+      </div>
+    </div>
 
-  <!-- Teller -->
-  <h2>Counter: {{ counter }}</h2>
+    <!-- Algemene Dhikr -->
+    <div *ngSwitchCase="'dhikr'">
+      <h1>{{ currentWord }}</h1>
+      <h2>Counter: {{ counter }}</h2>
+      <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
 
-  <!-- Plusknop -->
-  <div class="buttons">
-    <button
-      ion-button
-      type="button"
-      (click)="onButtonClick()"
-      [disabled]="buttonDisabled"
-    >
-      +
-    </button>
-  </div>
+      <div *ngIf="buttonDisabled">
+        <p>
+          Lè ilèhè illa Al-lahoe oe-ahdahoe lè shèrika lèhoe,
+          Lèhoel molkoe oe-è lèhoel hamdoe, oe-è hoewa ‘âla koel-li sjee‘in Qadier.
+        </p>
+        <ion-checkbox (ionChange)="onCheckboxToggle()">Klik om opnieuw te activeren</ion-checkbox>
+      </div>
+    </div>
 
-  <!-- Tekst die verschijnt wanneer de knop is gedeactiveerd -->
-  <p *ngIf="buttonDisabled" class="final-text">
-    {{ finalText }}
-  </p>
+    <!-- Specifieke Dhikr-secties -->
+    <div *ngSwitchCase="'1'">
+      <h1>{{ currentWord }}</h1>
+      <h2>Counter: {{ counter }}</h2>
+      <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
+    </div>
 
-  <!-- Checkbox om de knop opnieuw in te schakelen -->
-  <div *ngIf="buttonDisabled" class="checkbox">
-    <label>
-      <input type="checkbox" (change)="onCheckboxChange($event)" />
-      Klik hier om de knop opnieuw te activeren.
-    </label>
-  </div>
+    <div *ngSwitchCase="'2'">
+      <h1>{{ currentWord }}</h1>
+      <h2>Counter: {{ counter }}</h2>
+      <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
+    </div>
+
+    <div *ngSwitchCase="'3'">
+      <h1>{{ currentWord }}</h1>
+      <h2>Counter: {{ counter }}</h2>
+      <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
+    </div>
+  </ng-container>
 </div>

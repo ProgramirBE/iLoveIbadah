@@ -8,24 +8,32 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  currentPageTitle: string = 'Home'; // Valeur par défaut
+  currentPageTitle: string = 'Home'; // Standaardpagina
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Écoutez les changements de route
+    // Luister naar routewijzigingen
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        // Mettez à jour le titre en fonction de la route active
+        // Werk de paginatitel bij op basis van de actieve route
         const url = event.urlAfterRedirects;
 
         if (url.includes('/home')) {
           this.currentPageTitle = 'Home';
+        } else if (url.includes('/dhikr/home')) {
+          this.currentPageTitle = 'Dhikr Home';
         } else if (url.includes('/dhikr')) {
           this.currentPageTitle = 'Dhikr';
         } else if (url.includes('/leaderboard')) {
           this.currentPageTitle = 'Leaderboard';
+        } else if (url.includes('/login')) {
+          this.currentPageTitle = 'Login';
+        } else if (url.includes('/register')) {
+          this.currentPageTitle = 'Register';
+        } else {
+          this.currentPageTitle = 'Ibadah Lover'; // Standaardtitel
         }
       });
   }
