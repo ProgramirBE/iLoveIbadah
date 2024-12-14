@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MediatR.Wrappers;
 
 namespace IbadahLover.Persistence.Configurations.Entities
 {
@@ -22,9 +23,16 @@ namespace IbadahLover.Persistence.Configurations.Entities
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.UserAccountId).HasColumnName("User_Account_id");
             builder.Property(e => e.DhikrTypeId).HasColumnName("Dhikr_Type_id");
-            builder.Property(e => e.PerformedOn).HasColumnName("performed_on");
-            builder.Property(e => e.LastPerformedAt).HasColumnName("last_performed_at");
-            builder.Property(e => e.TotalPerformed).HasColumnName("total_performed");
+            builder.Property(e => e.PerformedOn)
+                .HasColumnName("performed_on")
+                .ValueGeneratedOnAddOrUpdate();
+            //.HasDefaultValueSql("CONVERT(VARCHAR(10), GETDATE (), 120)");
+            builder.Property(e => e.LastPerformedAt)
+                .HasColumnName("last_performed_at")
+                .ValueGeneratedOnAddOrUpdate();
+            builder.Property(e => e.TotalPerformed)
+                .HasColumnName("total_performed")
+                .HasDefaultValue(1);
         }
     }
 }

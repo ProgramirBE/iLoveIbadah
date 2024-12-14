@@ -46,7 +46,7 @@ builder.Services.AddOpenApi(opt =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CorsPolicy",
+    options.AddPolicy("CorsPolicy", // for angular frontend access to this api
         builder => builder.AllowAnyOrigin()
         .AllowAnyMethod()
         .AllowAnyHeader());

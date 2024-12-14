@@ -18,7 +18,8 @@ namespace IbadahLover.Persistence.Configurations.Entities
             builder.Property(e => e.Uri).HasColumnName("uri");
             builder.Property(e => e.FullName).HasColumnName("full_name");
             builder.Property(e => e.Extension).HasColumnName("extension");
-            builder.Property(e => e.Size).HasColumnName("size");
+            builder.Property(e => e.Size).HasColumnName("size")
+                .HasDefaultValue(null);
             builder.Property(e => e.CreatedBy).HasColumnName("created_by");
         }
     }
