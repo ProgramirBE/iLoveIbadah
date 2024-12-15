@@ -1,47 +1,178 @@
-:host {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Gebruikt de volledige hoogte van de pagina */
-  background-color: #1a1a2e; /* Donkerblauwe achtergrondkleur */
-  color: white; /* Witte tekst voor contrast */
-  text-align: center;
+/* Algemene reset voor marges en padding */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+/* Stijl voor de container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(62, 55, 55);
+    /* Heldere groene achtergrondkleur */
+    color: white;
+    /* Witte tekstkleur */
+    text-align: center;
+}
+
+/* Specifieke stijl voor de DhikrHome sectie */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Twee kolommen */
+    gap: 20px;
+    /* Ruimte tussen de items */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    /* Subtiele schaduw */
+    border-radius: 3rem;
+    border: 10px solid #00b357;
+    /* Heldere groene rand */
+}
+
+.grid-item {
+    background: linear-gradient(135deg, #3a3a3a, #2c2c2c);
+    /* Donkere gradiënt */
+    color: white;
+    /* Witte tekstkleur */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    /* Geen onderstreping */
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Subtiele schaduw */
+}
+
+.grid-container h2 {
+    background: linear-gradient(to right, #00ff87 10%, #00b357 50%, #007f3f 90%);
+    /* Groene gradiënt */
+    -webkit-background-clip: text;
+    /* Alleen tekst krijgt de achtergrondkleur */
+    -webkit-text-fill-color: transparent;
+    /* Maak de tekst transparant voor de achtergrondkleur */
+    text-align: center;
+    /* Tekst in het midden */
+}
+
+.grid-container p {
+    background: white;
+    /* Groene gradiënt */
+    -webkit-background-clip: text;
+    /* Alleen tekst krijgt de achtergrondkleur */
+    -webkit-text-fill-color: transparent;
+    /* Maak de tekst transparant voor de achtergrondkleur */
+    text-align: center;
+    /* Tekst in het midden */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    /* Verplaats iets omhoog */
+    box-shadow: 0 6px 20px rgba(0, 255, 135, 0.7);
+    /* Neongroene schaduw bij hover */
+}
+
+.grid-item p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #d9fdd3;
+    /* Lichte groene kleur voor tekst */
+}
+
+/* Stijl voor de afbeelding-container */
+.image-container {
+    margin-top: 2rem;
+    /* Ruimte boven de afbeelding */
+    text-align: center;
+    /* Centreer de afbeelding horizontaal */
+}
+
+/* Stijl voor de afbeelding */
+.image-container img {
+    max-width: 100%;
+    /* Zorg ervoor dat de afbeelding niet breder is dan de container */
+    height: 200px;
+    /* Stel een specifieke hoogte in */
+    object-fit: cover;
+    /* Zorg ervoor dat de afbeelding proportioneel wordt bijgesneden indien nodig */
+    border-radius: 10px;
+    /* Optioneel: afgeronde hoeken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Subtiele schaduw onder de afbeelding */
+}
+
+
+/* Algemene stijlen voor andere Dhikr-secties */
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #4caf50; /* Groene kleur */
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    /* Groene kleur voor de knop */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 button:hover {
-  background-color: #388e3c; /* Donkergroene kleur bij hover */
-  transform: scale(1.1);
+    background-color: #388e3c;
+    /* Donkergroene kleur bij hover */
+    transform: scale(1.1);
+    /* Iets groter bij hover */
 }
 
-ion-button {
-  --background: #4caf50; /* Groene achtergrondkleur */
-  --background-hover: #388e3c; /* Donkergroene kleur bij hover */
-  --color: white; /* Tekst en icoonkleur wit */
-  --padding: 10px 20px; /* Padding van de knop */
+button:disabled {
+    background-color: #888;
+    /* Grijze kleur voor disabled knoppen */
+    cursor: not-allowed;
 }
 
-ion-icon {
-  color: white; /* Kleur van het icoon */
-  font-size: 24px; /* Grootte van het icoon */
+ion-checkbox {
+    margin-top: 1rem;
+}
+
+/* Responsiveness voor mobiele apparaten */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* Eén kolom op kleinere schermen */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
 }
