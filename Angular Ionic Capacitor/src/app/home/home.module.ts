@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
+import { TranslateModule } from '@ngx-translate/core'; 
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { HomePage } from './home.page';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
+    TranslateModule // Voeg TranslateModule toe hier
   ],
-  declarations: [HomePage],
+  declarations: [HomePage]
 })
 export class HomePageModule {}

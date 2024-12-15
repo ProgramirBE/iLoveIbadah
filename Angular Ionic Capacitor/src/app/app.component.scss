@@ -12,14 +12,17 @@ ion-header {
     font-size: 24px; /* Taille des icônes */
   }
   
-  ion-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: white; /* Texte blanc */
-}
 ion-toolbar {
   --background: rgb(27, 25, 25); /* Donkergrijze achtergrondkleur */
   --color: white; /* Witte tekstkleur voor contrast */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optionele schaduw voor diepte */
 }
 
+ion-footer{
+  ion-title{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+  }
+}
