@@ -2,8 +2,7 @@
   <!--Header-->
   <ion-header>
     <ion-toolbar>
-      <ion-title>{{ currentPageTitle }}</ion-title>
-      <ion-buttons slot="end">
+      <ion-buttons slot="start">
         <ion-button routerLink="/home">
           <ion-icon slot="icon-only" name="home-outline"></ion-icon>
         </ion-button>
@@ -17,8 +16,23 @@
           <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="changeLanguage('en')">
+          <ion-icon name="globe-outline"></ion-icon> EN
+        </ion-button>
+        <ion-button (click)="changeLanguage('ar')">
+          <ion-icon name="globe-outline"></ion-icon> AR
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
+
   <ion-router-outlet></ion-router-outlet>
+
   <!--Footer-->
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title class="footer-title">{{ currentPageTitle }}</ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>
