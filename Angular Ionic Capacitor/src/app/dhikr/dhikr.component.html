@@ -1,8 +1,12 @@
 <div class="container">
   <!-- Terugknop alleen zichtbaar voor andere secties dan 'home' -->
-  <ion-button *ngIf="section !== 'home'" fill="solid" color="success" routerLink="/dhikr/home">
-    <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
-  </ion-button>
+  <ion-button
+  *ngIf="section !== 'home'"
+  fill="solid"
+  color="success"
+  (click)="goBack()">
+  <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+</ion-button>
 
   <!-- Dynamische inhoud gebaseerd op de actieve sectie -->
   <ng-container [ngSwitch]="section">
@@ -27,8 +31,9 @@
           <p>Allah u akbar</p>
         </a>
       </div>
-      <div class="image-container">
-        <img src="assets/images/dhikrimg.jpg" alt="Background Image" />
+      <div class="total-container">
+        <h2>Total Performed</h2>
+        <p>{{ totalCounter }}</p>
       </div>
     </div>
 
@@ -36,8 +41,11 @@
     <div *ngSwitchCase="'dhikr'">
       <h1>{{ currentWord }}</h1>
       <h2>Counter: {{ counter }}</h2>
-      <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
-
+      <button
+        [disabled]="buttonDisabled"
+        ion-button
+        color="primary"
+        (click)="onButtonClick()">+</button>
       <div *ngIf="buttonDisabled">
         <p>
           Lè ilèhè illa Al-lahoe oe-ahdahoe lè shèrika lèhoe,
@@ -49,19 +57,19 @@
 
     <!-- Specifieke Dhikr-secties -->
     <div *ngSwitchCase="'1'">
-      <h1>{{ currentWord }}</h1>
+      <h1>Dhikr 1</h1>
       <h2>Counter: {{ counter }}</h2>
       <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
     </div>
 
     <div *ngSwitchCase="'2'">
-      <h1>{{ currentWord }}</h1>
+      <h1>Dhikr 2</h1>
       <h2>Counter: {{ counter }}</h2>
       <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
     </div>
 
     <div *ngSwitchCase="'3'">
-      <h1>{{ currentWord }}</h1>
+      <h1>Dhikr 3</h1>
       <h2>Counter: {{ counter }}</h2>
       <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
     </div>
