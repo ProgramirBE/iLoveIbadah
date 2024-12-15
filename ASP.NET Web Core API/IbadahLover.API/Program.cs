@@ -5,6 +5,7 @@ using IbadahLover.Infrastructure;
 using IbadahLover.Persistence;
 using Microsoft.OpenApi.Models;
 using IbadahLover.API.Middleware;
+using Scalar.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,14 +60,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IbadahLover API v1"));
+    app.MapScalarApiReference();
 }
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 //app.UseAuthentication();
-
-app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IbadahLover API v1"));
 
 app.UseAuthorization();
 
