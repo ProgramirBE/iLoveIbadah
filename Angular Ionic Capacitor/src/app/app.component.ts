@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -8,33 +9,40 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  currentPageTitle: string = 'Home'; // Standaardpagina
+  currentPageTitle: string = 'Home';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private translate: TranslateService) {
+    // Haal de opgeslagen taal op of stel standaard Engels in
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    this.translate.setDefaultLang(savedLanguage);
+    this.translate.use(savedLanguage);
+  }
 
   ngOnInit() {
-    // Luister naar routewijzigingen
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        // Werk de paginatitel bij op basis van de actieve route
         const url = event.urlAfterRedirects;
 
+        // Werk de titel bij op basis van de huidige route
         if (url.includes('/home')) {
-          this.currentPageTitle = 'Home';
-        } else if (url.includes('/dhikr/home')) {
-          this.currentPageTitle = 'Dhikr Home';
+          this.currentPageTitle = this.translate.instant('HOME');
         } else if (url.includes('/dhikr')) {
-          this.currentPageTitle = 'Dhikr';
+          this.currentPageTitle = this.translate.instant('DHIKR');
         } else if (url.includes('/leaderboard')) {
-          this.currentPageTitle = 'Leaderboard';
+          this.currentPageTitle = this.translate.instant('LEADERBOARD');
         } else if (url.includes('/login')) {
-          this.currentPageTitle = 'Login';
+          this.currentPageTitle = this.translate.instant('LOGIN');
         } else if (url.includes('/register')) {
-          this.currentPageTitle = 'Register';
-        } else {
-          this.currentPageTitle = 'Ibadah Lover'; // Standaardtitel
+          this.currentPageTitle = this.translate.instant('REGISTER');
         }
       });
+  }
+
+  // Functie om van taal te wisselen
+  changeLanguage(lang: string): void {
+    this.translate.use(lang); // Verander de taal
+    localStorage.setItem('language', lang); // Sla de nieuwe taal op
+    window.location.reload(); // Vernieuw de pagina om directe veranderingen te zien
   }
 }
