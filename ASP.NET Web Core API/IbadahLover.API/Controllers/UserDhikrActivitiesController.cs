@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.UserDhikrActivity;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Queries;
+using IbadahLover.Application.Responses;
 using IbadahLover.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -38,7 +39,7 @@ namespace IbadahLover.API.Controllers
 
         // POST api/<UserDhikrActivitiesController>
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] CreateUserDhikrActivityDto userDhikrActivity)
+        public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserDhikrActivityDto userDhikrActivity)
         {
             var command = new CreateUserDhikrActivityCommand { UserDhikrActivityDto = userDhikrActivity };
             var response = await _mediator.Send(command);

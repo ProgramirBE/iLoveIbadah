@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
 using IbadahLover.Application.Features.UserAccounts.Requests.Queries;
+using IbadahLover.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,7 +37,7 @@ namespace IbadahLover.API.Controllers
 
         // POST api/<UserAccountsController>
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] CreateUserAccountDto userAccount)
+        public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserAccountDto userAccount)
         {
             var command = new CreateUserAccountCommand { UserAccountDto = userAccount };
             var response = await _mediator.Send(command);

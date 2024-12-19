@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ibadahlover" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP\.NET\ Web\ Core\ API\\IbadahLover\.API\\obj\\Release\\net9\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

@@ -3,6 +3,7 @@ using IbadahLover.Application.DTOs.UserSalahActivity;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Queries;
+using IbadahLover.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -47,7 +48,7 @@ namespace IbadahLover.API.Controllers
 
         //// PUT api/<UserSalahActivitiesController>
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] CreateUserSalahActivityDto userSalahActivity)
+        public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserSalahActivityDto userSalahActivity)
         {
             var command = new CreateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };
             var response = await _mediator.Send(command);

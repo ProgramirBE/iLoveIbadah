@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.BlobFile;
 using IbadahLover.Application.Features.BlobFiles.Requests.Commands;
 using IbadahLover.Application.Features.BlobFiles.Requests.Queries;
+using IbadahLover.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,7 +36,7 @@ namespace IbadahLover.API.Controllers
 
         // POST api/<BlobFilesController>
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] CreateBlobFileDto blobFile)
+        public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateBlobFileDto blobFile)
         {
             var command = new CreateBlobFileCommand { BlobFileDto = blobFile };
             var response = await _mediator.Send(command);
