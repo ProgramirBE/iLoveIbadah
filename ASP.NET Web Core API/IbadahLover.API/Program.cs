@@ -16,9 +16,9 @@ builder.Services.AddHttpContextAccessor();
 // Add services to the container.
 
 //------------------ BELOW is the code to get the connection string from Azure Key Vault for when deployed to Azure
-//var KeyVaultUrl = new Uri(builder.Configuration.GetSection("KeyVaultUrl").Value!);
-//var AzureCredential = new DefaultAzureCredential();
-//builder.Configuration.AddAzureKeyVault(KeyVaultUrl, AzureCredential);
+var KeyVaultUrl = new Uri(builder.Configuration.GetSection("KeyVaultUrl").Value!);
+var AzureCredential = new DefaultAzureCredential();
+builder.Configuration.AddAzureKeyVault(KeyVaultUrl, AzureCredential);
 
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
