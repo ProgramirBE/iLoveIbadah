@@ -43,8 +43,8 @@ export class SalatComponent implements OnInit {
 
   fetchSalatTimes(): void {
     if (this.latitude !== null && this.longitude !== null) {
-      this.salatService.getSalatTimes(this.latitude, this.longitude).subscribe(
-        (data) => {
+      this.salatService.getSalatTimes(this.latitude, this.longitude).subscribe({
+        next: (data) => {
           console.log('Ontvangen gegevens:', data);
           if (data.success && data.data) {
             this.salatTimes = data.data;
@@ -53,13 +53,13 @@ export class SalatComponent implements OnInit {
             this.salatTimes = null;
           }
         },
-        (error) => {
+        error: (error) => {
           console.error('Fout bij ophalen van gebedstijden:', error);
           this.salatTimes = null;
-        }
-      );
+        },
+      });
     } else {
-      console.error('Latitude en/of Longitude zijn niet beschikbaar.');
+      console.error('Latitude en longitude zijn niet beschikbaar.');
     }
-  }
+  }  
 }

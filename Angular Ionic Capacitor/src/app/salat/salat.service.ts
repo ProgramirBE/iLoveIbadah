@@ -15,6 +15,7 @@ export class SalatService {
       latitude: latitude.toString(),
       longitude: longitude.toString(),
     };
+    console.log('API-aanroep met params:', params);
     return this.http.get(this.apiUrl, { params });
   }
 }
