@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\blobfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\blobfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +15,135 @@
       "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\configurations\\entities\\useraccountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\configurations\\entities\\useraccountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\ibadahloverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\ibadahloverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\validators\\createuseraccountdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\validators\\createuseraccountdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\createuseraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\createuseraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\useraccounts\\requests\\commands\\createuseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\useraccounts\\requests\\commands\\createuseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\contracts\\persistence\\ipermissiontyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\contracts\\persistence\\ipermissiontyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\contracts\\persistence\\ibantyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\contracts\\persistence\\ibantyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\contracts\\infrastructure\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\contracts\\infrastructure\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\models\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\models\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\blobfiles\\handlers\\commands\\createblobfilecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\blobfiles\\handlers\\commands\\createblobfilecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\bantypes\\requests\\queries\\getbantypedetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\bantypes\\requests\\queries\\getbantypedetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\bantypes\\handlers\\queries\\getbantypedetailsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\bantypes\\handlers\\queries\\getbantypedetailsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\useraccountlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\useraccountlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\configurations\\entities\\useraccountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\configurations\\entities\\useraccountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\configurations\\entities\\salahtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\configurations\\entities\\salahtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\usersalahoverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\usersalahoverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\usersalahactivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\usersalahactivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\userdhikroverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\userdhikroverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\userdhikractivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\userdhikractivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\useraccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\useraccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\useraccountroletypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\useraccountroletypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\salahtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\salahtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\roletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\roletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\roletypepermissiontypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\roletypepermissiontypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\profilepicturetypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\profilepicturetypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\permissiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\permissiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\dhikrtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\dhikrtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\configurations\\entities\\blobfileconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +168,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\configurations\\entities\\roletypepermissiontypemappingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\configurations\\entities\\roletypepermissiontypemappingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\configurations\\entities\\salahtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\configurations\\entities\\salahtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\configurations\\entities\\useraccountroletypemappingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,16 +206,8 @@
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\userdhikractivity\\createuserdhikractivitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\createuseraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\createuseraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\blobfile\\createblobfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\blobfile\\createblobfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\validators\\createuseraccountdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\validators\\createuseraccountdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,26 +234,6 @@
       "RelativeMoniker": "D:0:0:{E05E2945-A9F2-4C77-9195-821C303C5F15}|IbadahLover.Domain\\IbadahLover.Domain.csproj|solutionrelative:ibadahlover.domain\\profilepicturetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\blobfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\blobfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\usersalahactivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\usersalahactivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\userdhikractivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\userdhikractivitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\dhikrtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\dhikrtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\contracts\\persistence\\iblobfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\contracts\\persistence\\iblobfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -153,18 +248,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\blobfile\\blobfilelistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\blobfile\\blobfilelistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\blobfiles\\handlers\\commands\\createblobfilecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\blobfiles\\handlers\\commands\\createblobfilecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\ibadahloverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\ibadahloverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\blobfiles\\requests\\commands\\createblobfilecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -197,13 +280,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E05E2945-A9F2-4C77-9195-821C303C5F15}|IbadahLover.Domain\\IbadahLover.Domain.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.domain\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E05E2945-A9F2-4C77-9195-821C303C5F15}|IbadahLover.Domain\\IbadahLover.Domain.csproj|solutionrelative:ibadahlover.domain\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\usersalahoverviews\\requests\\queries\\getusersalahoverviewlistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -246,34 +322,6 @@
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\permissiontypes\\requests\\queries\\getpermissiontypelistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\useraccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\useraccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\useraccountroletypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\useraccountroletypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\salahtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\salahtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\roletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\roletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\roletypepermissiontypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\roletypepermissiontypemappingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\profilepicturetypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\profilepicturetypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\permissiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\permissiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\ibadahlover.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\ibadahlover.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -298,16 +346,8 @@
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\updateuseraccounttotalwarningsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\useraccount\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\useraccounts\\requests\\commands\\updateuseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\useraccounts\\requests\\commands\\updateuseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\userdhikroverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\userdhikroverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\useraccount\\validators\\updateuseraccounttotalwarningsdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -316,10 +356,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\updateuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\updateuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\usersalahoverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\usersalahoverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\userdhikractivity\\userdhikractivityperformedonexistsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -341,643 +377,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\appsettings.json",
               "RelativeDocumentMoniker": "IbadahLover.API\\appsettings.json",
               "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\appsettings.json",
               "RelativeToolTip": "IbadahLover.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-10T08:41:54.633Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProfilePictureTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:32:12.911Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RoleTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABDAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\AM5\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
+              "ToolTip": "C:\\Users\\AM5\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-13T19:07:56.632Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateUserAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\CreateUserAccountCommand.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\CreateUserAccountCommand.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\CreateUserAccountCommand.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\CreateUserAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:35:55.407Z",
+              "WhenOpened": "2024-12-18T17:00:41.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserAccountConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:37:53.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowBwAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T19:41:24.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserAccountListDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:16:34.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BlobFileConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:41:31.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Program.cs",
               "RelativeDocumentMoniker": "IbadahLover.API\\Program.cs",
               "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Program.cs",
               "RelativeToolTip": "IbadahLover.API\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADAAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T13:46:25.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DhikrTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:24:29.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PermissionTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:30:26.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RoleTypePermissionTypeMappingConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:33:47.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SalahTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:37:00.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserAccountRoleTypeMappingConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:00:42.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserDhikrActivityConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:02:38.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserDhikrOverviewConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:11:07.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserSalahActivityConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:14:24.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserSalahOverviewConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:30:05.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CreateUserSalahActivityDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAvwCgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T22:09:21.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CreateUserSalahActivityDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:46:22.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CreateBlobFileDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:51:07.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CreateUserDhikrActivityDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAawCgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T22:09:00.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CreateUserDhikrActivityDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T22:03:08.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CreateUserAccountDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:45:54.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CreateUserAccountDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:24:47.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "GetProfilePictureTypeDetailsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:01:58.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "RelativeToolTip": "IbadahLover.Application\\profiles\\MappingProfile.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAiwEIAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:15:14.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ProfilePictureTypeDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:17:44.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ProfilePictureType.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\ProfilePictureType.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Domain\\ProfilePictureType.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\ProfilePictureType.cs",
-              "RelativeToolTip": "IbadahLover.Domain\\ProfilePictureType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T20:16:21.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UserSalahActivitiesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAgwDAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:09:44.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "BlobFilesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\BlobFilesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\BlobFilesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\BlobFilesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\BlobFilesController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:51:54.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ProfilePictureTypeListDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:02:44.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserDhikrActivitiesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:44:47.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "GetProfilePictureTypeListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:51:00.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "DhikrTypesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\DhikrTypesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\DhikrTypesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\DhikrTypesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\DhikrTypesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:35:06.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "CreateBlobFileDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:52:24.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "BlobFileDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:49:10.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BlobFileListDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:50:22.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "CreateBlobFileCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:07:59.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "IBlobFileRepository.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:47:10.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IbadahLoverDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLoverDbContext.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\IbadahLoverDbContext.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLoverDbContext.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\IbadahLoverDbContext.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwDUAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T19:49:19.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "PersistenceServicesRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:48:04.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "CreateBlobFileCommand.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:58:40.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "GetBlobFileDetailsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:56:28.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "GetBlobFileListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:57:03.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "BlobFile.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\BlobFile.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Domain\\BlobFile.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\BlobFile.cs",
-              "RelativeToolTip": "IbadahLover.Domain\\BlobFile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:37:38.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "GetBlobFileListRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:01:45.062Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "BlobFileRepository.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
-              "RelativeToolTip": "IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:44:36.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "GetBlobFileDetailsRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:05:01.192Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\AM5\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
-              "ToolTip": "C:\\Users\\AM5\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\279112e2-467b-4886-9467-871c8eb1c6a4\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAACmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-13T19:07:56.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "UserAccount.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\UserAccount.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Domain\\UserAccount.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\UserAccount.cs",
-              "RelativeToolTip": "IbadahLover.Domain\\UserAccount.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T09:06:05.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "GetUserAccountListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:12:28.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 7,
               "Title": "ExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Middleware\\ExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "IbadahLover.API\\Middleware\\ExceptionMiddleware.cs",
@@ -985,263 +443,218 @@
               "RelativeToolTip": "IbadahLover.API\\Middleware\\ExceptionMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T18:33:25.922Z"
+              "WhenOpened": "2024-12-13T18:33:25.922Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "GetUserAccountRoleTypeMappingListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BlobFilesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\BlobFilesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\BlobFilesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\BlobFilesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\BlobFilesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:48:11.853Z"
+              "WhenOpened": "2024-12-13T20:51:54.344Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "GetUserDhikrActivityListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:48:47.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "GetUserSalahActivityListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:50:45.191Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "GetUserSalahOverviewListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:50:55.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "GetUserDhikrActivityDetailsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "DocumentIndex": 1,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:29:16.827Z"
+              "WhenOpened": "2024-12-11T19:41:24.609Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "CheckUserDhikrActivityPerformedOnExistsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "PersistenceServicesRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\PersistenceServicesRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T19:33:18.63Z"
+              "WhenOpened": "2024-12-13T14:48:04.328Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "GetPermissionTypeListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IbadahLoverDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLoverDbContext.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\IbadahLoverDbContext.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLoverDbContext.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\IbadahLoverDbContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDUAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:38:28.132Z"
+              "WhenOpened": "2024-12-11T19:49:19.478Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "GetUserAccountDetailsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "CreateUserAccountDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\CreateUserAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:13:13.461Z"
+              "WhenOpened": "2024-12-13T21:45:54.681Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "UserAccountsController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountsController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserAccountsController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountsController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserAccountsController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwEcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "CreateUserAccountDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\CreateUserAccountDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:41:33.374Z"
+              "WhenOpened": "2024-12-13T14:24:47.64Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "GetRoleTypePermissionTypeMappingListRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "IPermissionTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IPermissionTypeRepository.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Contracts\\Persistence\\IPermissionTypeRepository.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IPermissionTypeRepository.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Contracts\\Persistence\\IPermissionTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:50:51.549Z"
+              "WhenOpened": "2024-12-18T16:59:44.718Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "UserAccountRoleTypeMappingsController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABKAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "IBanTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IBanTypeRepository.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Contracts\\Persistence\\IBanTypeRepository.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IBanTypeRepository.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Contracts\\Persistence\\IBanTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:36:15.39Z"
+              "WhenOpened": "2024-12-18T16:59:42.126Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "SalahTypesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\SalahTypesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\SalahTypesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\SalahTypesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\SalahTypesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA5AAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "IEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:36:10.182Z"
+              "WhenOpened": "2024-12-18T16:59:31.732Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "RoleTypesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\RoleTypesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\RoleTypesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABFAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Models\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Models\\EmailSettings.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Models\\EmailSettings.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Models\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:36:02.768Z"
+              "WhenOpened": "2024-12-18T16:58:17.859Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "RoleTypePermissionTypeMappingsController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABNAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "Email.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Models\\Email.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Models\\Email.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Models\\Email.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Models\\Email.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:35:53.027Z"
+              "WhenOpened": "2024-12-18T16:58:14.598Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "ProfilePictureTypesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABCAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "GetBanTypeDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BanTypes\\Requests\\Queries\\GetBanTypeDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BanTypes\\Requests\\Queries\\GetBanTypeDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BanTypes\\Requests\\Queries\\GetBanTypeDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BanTypes\\Requests\\Queries\\GetBanTypeDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:35:44.773Z"
+              "WhenOpened": "2024-12-18T16:57:26.768Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "PermissionTypesController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\PermissionTypesController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\PermissionTypesController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\PermissionTypesController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\PermissionTypesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBcAAABLAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "GetBanTypeDetailsRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BanTypes\\Handlers\\Queries\\GetBanTypeDetailsRequestHandler.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BanTypes\\Handlers\\Queries\\GetBanTypeDetailsRequestHandler.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BanTypes\\Handlers\\Queries\\GetBanTypeDetailsRequestHandler.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BanTypes\\Handlers\\Queries\\GetBanTypeDetailsRequestHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:35:34.755Z"
+              "WhenOpened": "2024-12-18T16:57:15.014Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "IbadahLover.Persistence.csproj",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
-              "RelativeDocumentMoniker": "IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
-              "RelativeToolTip": "IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-13T16:22:32.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "IbadahLover.API.csproj",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\IbadahLover.API.csproj",
-              "RelativeDocumentMoniker": "IbadahLover.API\\IbadahLover.API.csproj",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\IbadahLover.API.csproj",
-              "RelativeToolTip": "IbadahLover.API\\IbadahLover.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-11T19:19:09.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "UpdateUserAccountCurrentLocationDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABwAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "SalahTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\SalahTypeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:18:43.133Z"
+              "WhenOpened": "2024-12-11T20:37:00.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "UpdateUserAccountDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "CreateBlobFileCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Commands\\CreateBlobFileCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:24:17.447Z"
+              "WhenOpened": "2024-12-13T20:07:59.121Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "UpdateUserAccountCurrentLocationDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "UserAccountConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T14:17:26.395Z"
+              "WhenOpened": "2024-12-11T20:37:53.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 20,
               "Title": "UserAccountDto.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UserAccountDto.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\UserAccountDto.cs",
@@ -1253,31 +666,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "UpdateUserAccountTotalWarningsDto.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
-              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "UserAccountListDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\UserAccountListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:39:15.984Z"
+              "WhenOpened": "2024-12-13T14:16:34.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "UpdateUserAccountCommand.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABeAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "UserSalahOverviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAABQwDMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:00:26.123Z"
+              "WhenOpened": "2024-12-12T08:11:22.648Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 21,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "IbadahLover.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-16T12:09:13.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserSalahActivitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwDIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:09:44.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "UserDhikrOverviewsController.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
               "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
@@ -1289,7 +727,727 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserDhikrActivitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserDhikrActivitiesController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T12:44:47.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UserAccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountsController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserAccountsController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountsController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserAccountsController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T12:41:33.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UserAccountRoleTypeMappingsController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserAccountRoleTypeMappingsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:36:15.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SalahTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\SalahTypesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\SalahTypesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\SalahTypesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\SalahTypesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:36:10.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RoleTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\RoleTypesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\RoleTypesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:36:02.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RoleTypePermissionTypeMappingsController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\RoleTypePermissionTypeMappingsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:35:53.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProfilePictureTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\ProfilePictureTypesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:35:44.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PermissionTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\PermissionTypesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\PermissionTypesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\PermissionTypesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\PermissionTypesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:35:34.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DhikrTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\DhikrTypesController.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\DhikrTypesController.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\DhikrTypesController.cs",
+              "RelativeToolTip": "IbadahLover.API\\Controllers\\DhikrTypesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:35:06.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "BlobFileConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\BlobFileConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:41:31.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "RoleTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T20:35:55.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ProfilePictureTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\ProfilePictureTypeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T20:32:12.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DhikrTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\DhikrTypeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T20:24:29.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PermissionTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\PermissionTypeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T20:30:26.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "RoleTypePermissionTypeMappingConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\RoleTypePermissionTypeMappingConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T20:33:47.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UserAccountRoleTypeMappingConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserAccountRoleTypeMappingConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T21:00:42.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UserDhikrActivityConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrActivityConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T21:02:38.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UserDhikrOverviewConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserDhikrOverviewConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T21:11:07.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UserSalahActivityConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T21:14:24.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UserSalahOverviewConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T21:30:05.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CreateUserSalahActivityDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserSalahActivity\\Validators\\CreateUserSalahActivityDtoValidator.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAvwCgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T22:09:21.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "CreateUserSalahActivityDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserSalahActivity\\CreateUserSalahActivityDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T21:46:22.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "CreateBlobFileDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\CreateBlobFileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:51:07.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "CreateUserDhikrActivityDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\Validators\\CreateUserDhikrActivityDtoValidator.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAawCgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T22:09:00.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CreateUserDhikrActivityDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\CreateUserDhikrActivityDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T22:03:08.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "GetProfilePictureTypeDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T21:01:58.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "RelativeToolTip": "IbadahLover.Application\\profiles\\MappingProfile.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA2wEIAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T20:15:14.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ProfilePictureTypeDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T20:17:44.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ProfilePictureType.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\ProfilePictureType.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Domain\\ProfilePictureType.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\ProfilePictureType.cs",
+              "RelativeToolTip": "IbadahLover.Domain\\ProfilePictureType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T20:16:21.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ProfilePictureTypeListDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\ProfilePictureType\\ProfilePictureTypeListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T21:02:44.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "GetProfilePictureTypeListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\ProfilePictureTypes\\Requests\\Queries\\GetProfilePictureTypeListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T12:51:00.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "CreateBlobFileDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\Validators\\CreateBlobFileDtoValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwCMAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:52:24.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "BlobFileDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:49:10.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "BlobFileListDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\BlobFile\\BlobFileListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:50:22.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "IBlobFileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Contracts\\Persistence\\IBlobFileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:47:10.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "CreateBlobFileCommand.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Commands\\CreateBlobFileCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:58:40.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "GetBlobFileDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:56:28.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "GetBlobFileListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Requests\\Queries\\GetBlobFileListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:57:03.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "BlobFile.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\BlobFile.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Domain\\BlobFile.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\BlobFile.cs",
+              "RelativeToolTip": "IbadahLover.Domain\\BlobFile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:37:38.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "GetBlobFileListRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileListRequestHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T20:01:45.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "BlobFileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
+              "RelativeToolTip": "IbadahLover.Persistence\\Repositories\\BlobFileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:44:36.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "GetBlobFileDetailsRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\BlobFiles\\Handlers\\Queries\\GetBlobFileDetailsRequestHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T20:05:01.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "UserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\UserAccount.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Domain\\UserAccount.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\UserAccount.cs",
+              "RelativeToolTip": "IbadahLover.Domain\\UserAccount.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T09:06:05.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "GetUserAccountListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:12:28.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "GetUserAccountRoleTypeMappingListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccountRoleTypeMappings\\Requests\\Queries\\GetUserAccountRoleTypeMappingListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:48:11.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "GetUserDhikrActivityListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:48:47.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "GetUserSalahActivityListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:50:45.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "GetUserSalahOverviewListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:50:55.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "GetUserDhikrActivityDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:29:16.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "CheckUserDhikrActivityPerformedOnExistsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\CheckUserDhikrActivityPerformedOnExistsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T19:33:18.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "GetPermissionTypeListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\PermissionTypes\\Requests\\Queries\\GetPermissionTypeListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:38:28.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "GetUserAccountDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Queries\\GetUserAccountDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:13:13.461Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 78,
+              "Title": "GetRoleTypePermissionTypeMappingListRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\RoleTypePermissionTypeMappings\\Requests\\Queries\\GetRoleTypePermissionTypeMappingListRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T12:50:51.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "IbadahLover.Persistence.csproj",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
+              "RelativeDocumentMoniker": "IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
+              "RelativeToolTip": "IbadahLover.Persistence\\IbadahLover.Persistence.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-13T16:22:32.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "IbadahLover.API.csproj",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\IbadahLover.API.csproj",
+              "RelativeDocumentMoniker": "IbadahLover.API\\IbadahLover.API.csproj",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\IbadahLover.API.csproj",
+              "RelativeToolTip": "IbadahLover.API\\IbadahLover.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-11T19:19:09.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "UpdateUserAccountCurrentLocationDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountCurrentLocationDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:18:43.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "UpdateUserAccountDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:24:17.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "UpdateUserAccountCurrentLocationDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountCurrentLocationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:17:26.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "UpdateUserAccountTotalWarningsDto.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
+              "RelativeToolTip": "IbadahLover.Application\\DTOs\\UserAccount\\UpdateUserAccountTotalWarningsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:39:15.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "UpdateUserAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserAccounts\\Requests\\Commands\\UpdateUserAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T14:00:26.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
               "Title": "UpdateUserDhikrActivityCommand.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\UpdateUserDhikrActivityCommand.cs",
@@ -1301,19 +1459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "UserSalahOverviewsController.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
-              "RelativeToolTip": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAxwDMAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:11:22.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 87,
               "Title": "UpdateUserAccountTotalWarningsDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountTotalWarningsDtoValidator.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserAccount\\Validators\\UpdateUserAccountTotalWarningsDtoValidator.cs",
@@ -1325,7 +1471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 89,
               "Title": "UserDhikrActivityPerformedOnExistsDto.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityPerformedOnExistsDto.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityPerformedOnExistsDto.cs",
@@ -1337,7 +1483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 90,
               "Title": "ImportUserDhikrActivityCommand.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\ImportUserDhikrActivityCommand.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\ImportUserDhikrActivityCommand.cs",
@@ -1349,7 +1495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 91,
               "Title": "ImportUserDhikrActivityCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\ImportUserDhikrActivityCommandHandler.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Commands\\ImportUserDhikrActivityCommandHandler.cs",

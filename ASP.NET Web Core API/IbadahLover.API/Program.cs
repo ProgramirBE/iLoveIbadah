@@ -5,6 +5,7 @@ using IbadahLover.Infrastructure;
 using IbadahLover.Persistence;
 using Microsoft.OpenApi.Models;
 using IbadahLover.API.Middleware;
+using Scalar.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,9 +16,9 @@ builder.Services.AddHttpContextAccessor();
 // Add services to the container.
 
 //------------------ BELOW is the code to get the connection string from Azure Key Vault for when deployed to Azure
-//var KeyVaultUrl = new Uri(builder.Configuration.GetSection("KeyVaultUrl").Value!);
-//var AzureCredential = new DefaultAzureCredential();
-//builder.Configuration.AddAzureKeyVault(KeyVaultUrl, AzureCredential);
+var KeyVaultUrl = new Uri(builder.Configuration.GetSection("KeyVaultUrl").Value!);
+var AzureCredential = new DefaultAzureCredential();
+builder.Configuration.AddAzureKeyVault(KeyVaultUrl, AzureCredential);
 
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
@@ -59,14 +60,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IbadahLover API v1"));
+    app.MapScalarApiReference();
 }
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 //app.UseAuthentication();
-
-app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IbadahLover API v1"));
 
 app.UseAuthorization();
 
