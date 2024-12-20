@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Gebedstijden voor {{ location }}</h1>
+
+  <div *ngIf="salatTimes; else loading">
+    <ul>
+      <li>Fajr: {{ salatTimes?.Fajr || 'Niet beschikbaar' }}</li>
+      <li>Dhuhr: {{ salatTimes?.Dhuhr || 'Niet beschikbaar' }}</li>
+      <li>Asr: {{ salatTimes?.Asr || 'Niet beschikbaar' }}</li>
+      <li>Maghrib: {{ salatTimes?.Maghrib || 'Niet beschikbaar' }}</li>
+      <li>Isha: {{ salatTimes?.Isha || 'Niet beschikbaar' }}</li>
+    </ul>
+  </div>
+
+  <ng-template #loading>
+    <p>Gebedstijden laden...</p>
+  </ng-template>
+</div>

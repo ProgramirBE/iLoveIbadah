@@ -1,0 +1,30 @@
+.container {
+    background-color: rgb(62, 55, 55);
+    color: rgb(250, 250, 250);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  h1 {
+    color: rgb(255, 215, 0); /* Geel voor de titel */
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 1.2rem;
+    color: rgb(250, 250, 250);
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+  }
+  

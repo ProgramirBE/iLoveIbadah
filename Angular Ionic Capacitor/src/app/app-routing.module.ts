@@ -24,6 +24,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./dhikr/dhikr.module').then((m) => m.DhikrModule),
   },  
+  {
+    path: 'salat',
+    loadChildren: () =>
+      import('./salat/salat.module').then((m) => m.SalatModule),
+  },
 ];
 
 @NgModule({
