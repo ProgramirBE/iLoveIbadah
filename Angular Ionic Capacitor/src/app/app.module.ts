@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+// Factory function voor ngx-translate
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -22,14 +23,14 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent, 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, 
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,8 +1,8 @@
 {
-    "HOME": "Home",
-    "DHIKR": "Dhikr",
-    "LEADERBOARD": "Leaderboard",
-    "LOGIN": "Login",
-    "REGISTER": "Register"
-  }
-  
+  "HOME": "Home",
+  "DHIKR": "Dhikr",
+  "LEADERBOARD": "Leaderboard",
+  "LOGIN": "Login",
+  "REGISTER": "Register",
+  "SALAT": "Salat"
+}
