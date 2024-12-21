@@ -24,16 +24,11 @@ export class SalatComponent implements OnInit {
         (position) => {
           this.latitude = position.coords.latitude;
           this.longitude = position.coords.longitude;
-          console.log('Coördinaten ontvangen:', this.latitude, this.longitude);
-
-          // Controleer op geldige coördinaten voordat je API-aanroepen doet
-          if (this.latitude !== null && this.longitude !== null) {
-            this.fetchSalatTimes();
-            this.location = `${this.latitude.toFixed(2)}, ${this.longitude.toFixed(2)}`;
-          }
+          this.location = `${this.latitude.toFixed(2)}, ${this.longitude.toFixed(2)}`;
+          this.fetchSalatTimes();
         },
         (error) => {
-          console.error('Fout bij ophalen van locatie:', error);
+          console.error('Fout bij ophalen locatie:', error);
         }
       );
     } else {
@@ -45,21 +40,26 @@ export class SalatComponent implements OnInit {
     if (this.latitude !== null && this.longitude !== null) {
       this.salatService.getSalatTimes(this.latitude, this.longitude).subscribe({
         next: (data) => {
-          console.log('Ontvangen gegevens:', data);
-          if (data.success && data.data) {
-            this.salatTimes = data.data;
+          console.log('Ontvangen data:', data);
+
+          if (data.success && data.results) {
+            // Extract de gebedstijden en verwijder "%"-tekens
+            this.salatTimes = Object.fromEntries(
+              Object.entries(data.results).map(([key, value]) => [
+                key,
+                (value as string).replace(/%/g, ''),
+              ])
+            );
           } else {
             console.error('Geen gebedstijden ontvangen.');
             this.salatTimes = null;
           }
         },
         error: (error) => {
-          console.error('Fout bij ophalen van gebedstijden:', error);
+          console.error('Fout bij ophalen gebedstijden:', error);
           this.salatTimes = null;
         },
       });
-    } else {
-      console.error('Latitude en longitude zijn niet beschikbaar.');
     }
-  }  
+  }
 }

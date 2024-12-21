@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://www.islamicfinder.us",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": "/index.php/api"
+      }
+    }
+  }
+  

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SalatService {
-  private apiUrl = 'https://www.islamicfinder.us/index.php/api/prayer_times';
+  private apiUrl = '/api/prayer_times'; // Proxy gebruikt
 
   constructor(private http: HttpClient) {}
 
@@ -14,8 +14,8 @@ export class SalatService {
     const params = {
       latitude: latitude.toString(),
       longitude: longitude.toString(),
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, // Automatisch timezone ophalen
     };
-    console.log('API-aanroep met params:', params);
     return this.http.get(this.apiUrl, { params });
   }
 }
