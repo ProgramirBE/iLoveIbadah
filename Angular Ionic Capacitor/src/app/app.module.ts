@@ -6,14 +6,14 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'; 
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './presentation/shared/components/login/login.component';
+import { RegisterComponent } from './presentation/shared/components/register/register.component';
 import { HttpClient } from '@angular/common/http';
 
 // Factory-functie om de vertaalmodule te configureren
@@ -36,12 +36,12 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient], 
+        deps: [HttpClient],
       },
     }),
   ],
   providers: [
-    provideHttpClient(withInterceptorsFromDi()), 
+    provideHttpClient(withInterceptorsFromDi()),
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],

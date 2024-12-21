@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbadahLover.API", "IbadahLo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbadahLover.Identity", "IbadahLover.Identity\IbadahLover.Identity.csproj", "{DDE1B04C-3951-40DC-AE6A-73C40A4D8A74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILoveIbadah.Application.UnitTests", "ILoveIbadah.Application.UnitTests\ILoveIbadah.Application.UnitTests.csproj", "{604ED38A-628F-4A52-B042-18EF8E43467C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{DDE1B04C-3951-40DC-AE6A-73C40A4D8A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDE1B04C-3951-40DC-AE6A-73C40A4D8A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDE1B04C-3951-40DC-AE6A-73C40A4D8A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604ED38A-628F-4A52-B042-18EF8E43467C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604ED38A-628F-4A52-B042-18EF8E43467C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604ED38A-628F-4A52-B042-18EF8E43467C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604ED38A-628F-4A52-B042-18EF8E43467C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{FDCBD349-B1DC-4A2F-8145-4B5B2528C172} = {25FD3D6B-A70D-4FC4-8AF8-42A55F5269E3}
 		{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C} = {EDCB5C0C-5C52-4FA0-A792-702789033F7C}
 		{DDE1B04C-3951-40DC-AE6A-73C40A4D8A74} = {25FD3D6B-A70D-4FC4-8AF8-42A55F5269E3}
+		{604ED38A-628F-4A52-B042-18EF8E43467C} = {9ED830CA-9FED-4400-BC4E-DEE107371E7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55533CF9-754F-4B54-862D-9E1579CB0D4A}
