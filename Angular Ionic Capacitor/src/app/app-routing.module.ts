@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+
+import { LoginComponent } from './presentation/shared/components/login/login.component';
+import { RegisterComponent } from './presentation/shared/components/register/register.component'; // Importeer de RegisterComponent
+
 
 const routes: Routes = [
   // Standaard route die naar de login-pagina omleidt
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+
 
   // Route voor login-component
   { path: 'login', component: LoginComponent },
@@ -17,14 +20,23 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+      import('./presentation/shared/components/home/home.module').then((m) => m.HomePageModule),
+  },
+
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }, // Voeg de route voor de RegisterComponent toe
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./presentation/shared/components/home/home.module').then((m) => m.HomePageModule), // Laad 'home' module
+
   },
 
   // Lazy-loaded route voor de 'leaderboard'-module
   {
     path: 'leaderboard',
     loadChildren: () =>
-      import('./leaderboard/leaderboard.module').then(
+      import('./presentation/shared/components/leaderboard/leaderboard.module').then(
         (m) => m.LeaderboardPageModule
       ),
   },
@@ -33,14 +45,16 @@ const routes: Routes = [
   {
     path: 'dhikr',
     loadChildren: () =>
-      import('./dhikr/dhikr.module').then((m) => m.DhikrModule),
+      import('./presentation/shared/components/dhikr/dhikr.module').then((m) => m.DhikrModule),
   },
 
   // Lazy-loaded route voor de 'salat'-module
+
+
   {
     path: 'salat',
     loadChildren: () =>
-      import('./salat/salat.module').then((m) => m.SalatModule),
+      import('./presentation/shared/components/salat/salat.module').then((m) => m.SalatModule),
   },
 
   // Fallback voor niet-bestaande routes

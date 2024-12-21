@@ -11,6 +11,11 @@
 
 
 ## Angular Code
+### Architecture:
+custom architecture based on:
+
+Layered Architecture in Angular: https://youtu.be/CVv1NlsHD6Y?si=mHwqL9Wvmy97QUK8
+Angular Clean Architecture Part 1 - Components: https://youtu.be/3jO7VlPDc6U?si=AD4wHiad18SqO0Lo
 
 ## TypeScript Code
 
