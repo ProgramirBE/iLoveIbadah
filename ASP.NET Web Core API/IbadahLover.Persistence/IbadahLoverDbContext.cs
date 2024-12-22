@@ -29,6 +29,11 @@ namespace IbadahLover.Persistence
             modelBuilder.ApplyConfiguration(new RoleTypeConfiguration());
             modelBuilder.ApplyConfiguration(new RoleTypePermissionTypeMappingConfiguration());
             modelBuilder.ApplyConfiguration(new BlobFileConfiguration());
+            modelBuilder.ApplyConfiguration(new UserAccountRoleTypeMappingConfiguration());
+            modelBuilder.ApplyConfiguration(new UserDhikrActivityConfiguration());
+            modelBuilder.ApplyConfiguration(new UserSalahActivityConfiguration());
+            modelBuilder.ApplyConfiguration(new UserDhikrOverviewConfiguration());
+            modelBuilder.ApplyConfiguration(new UserSalahOverviewConfiguration());
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(IbadahLoverDbContext).Assembly);
         }

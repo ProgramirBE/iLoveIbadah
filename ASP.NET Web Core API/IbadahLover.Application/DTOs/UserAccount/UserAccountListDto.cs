@@ -13,10 +13,11 @@ namespace IbadahLover.Application.DTOs.UserAccount
         public int Id { get; set; }
         public string FullName { get; set; }
         public int? ProfilePictureTypeId { get; set; }
-        [Column(TypeName = "decimal(11, 8)")]
-        public decimal? CurrentLongitude { get; set; }
-        [Column(TypeName = "decimal(10, 8)")]
-        public decimal? CurrentLatitude { get; set; }
+        //[Column(TypeName = "decimal(11, 8)")]
+        //public decimal? CurrentLongitude { get; set; }
+        //[Column(TypeName = "decimal(10, 8)")]
+        //public decimal? CurrentLatitude { get; set; }
+        public string? CurrentLocation { get; set; }
         public bool? IsPermanentlyBanned { get; set; }
     }
 }
