@@ -39,15 +39,16 @@ CREATE TABLE
    User_Account (
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       full_name NVARCHAR (25) NOT NULL,
+	  unique_id NVARCHAR (35) NULL,
       email NVARCHAR (50) NOT NULL UNIQUE, -- Ensuring email is unique
       Profile_Picture_Type_id INT DEFAULT 1 NULL, -- Base64 encryption for Project!
       password_hash NVARCHAR (255) NULL,
       oauth_provider NVARCHAR (20) NULL,
       oauth_id NVARCHAR (255) NULL,
       email_confirmed BIT DEFAULT 0 NULL,
-      --current_location NVARCHAR (255) NULL,
-	  current_longitude DECIMAL(11, 8) NULL,
-	  current_latitude DECIMAL(10, 8) NULL,
+      current_location NVARCHAR (75) NULL, -- stores city only privacy compliant. longest city name is 58 characters 75 should be enough for all cases even futures ones normaly.
+	  --current_longitude DECIMAL(11, 8) NULL,
+	  --current_latitude DECIMAL(10, 8) NULL,
       total_warnings INT DEFAULT 0 NULL, -- user cheat and has impossible score so leaderboard messed up, username is non sharia complient, and group name (later future) forbidden interactions. in terms of condition and policy
 	  is_permanently_banned BIT DEFAULT 0 NULL, -- after 2 warnings perma ban, Only 1 type of banning for now, perma ban for ease of development, implementation of temporary ban is maybe later addon
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
@@ -59,6 +60,7 @@ CREATE TABLE
       CONSTRAINT UQ_User_Account_email UNIQUE (email),
       CONSTRAINT UQ_User_Account_email_password_hash UNIQUE (email, password_hash),
       CONSTRAINT UQ_User_Account_email_oauth_id UNIQUE (email, oauth_id),
+	  CONSTRAINT UQ_User_Account_unique_id UNIQUE (unique_id),
       CONSTRAINT CK_User_Account_password_hash_oauth_id CHECK (
          password_hash IS NOT NULL
          OR oauth_id IS NOT NULL
@@ -429,6 +431,19 @@ INSERT INTO
    User_Salah_Overview (User_Account_id)
 SELECT
    id
+FROM
+   inserted;
+
+END;
+
+GO
+
+CREATE TRIGGER Trigger_Create_User_Account_Role_Type_Mapping ON User_Account AFTER INSERT AS BEGIN
+-- Insert a record into User_Dhikr_Overview for each new User_Account created
+INSERT INTO
+   User_Account_Role_Type_Mapping (User_Account_id, Role_Type_id)
+SELECT
+   id, 2
 FROM
    inserted;
 

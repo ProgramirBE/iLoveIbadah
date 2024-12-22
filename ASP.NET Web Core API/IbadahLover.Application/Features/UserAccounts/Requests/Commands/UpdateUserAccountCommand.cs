@@ -16,6 +16,7 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Commands
         public UpdateUserAccountEmailConfirmedDto UserAccountEmailConfirmedDto { get; set; }
         public UpdateUserAccountPasswordHashDto UserAccountPasswordHashDto { get; set; }
         public UpdateUserAccountTotalWarningsDto UserAccountTotalWarningsDto { get; set; }
+        public UpdateUserAccountIsPermanentlyBannedDto UserAccountIsPermanentlyBannedDto { get; set; }
         public UpdateUserAccountCurrentLocationDto UserAccountCurrentLocationDto { get; set; }
 
     }
