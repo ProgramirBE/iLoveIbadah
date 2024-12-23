@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IbadahLover.Application\IbadahLover.Application.csproj" />
+    <ProjectReference Include="..\IbadahLover.Identity\IbadahLover.Identity.csproj" />
     <ProjectReference Include="..\IbadahLover.Infrastructure\IbadahLover.Infrastructure.csproj" />
     <ProjectReference Include="..\IbadahLover.Persistence\IbadahLover.Persistence.csproj" />
   </ItemGroup>

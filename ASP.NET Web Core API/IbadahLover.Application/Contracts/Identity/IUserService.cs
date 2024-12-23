@@ -9,7 +9,7 @@ namespace IbadahLover.Application.Contracts.Identity
 {
     public interface IUserService
     {
-        Task<List<UserAccount>> GetUserAccounts();
-        Task<UserAccount> GetUserAccount(int id);
+        Task<UserAccount> UpdateUserAccountPasswordHash(int id, string currentPasswordHash, string newPasswordHash);
+        Task<UserAccount> UpdateUserAccountEmailConfirmed(int id);
     }
 }

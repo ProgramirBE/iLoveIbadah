@@ -33,11 +33,11 @@ namespace IbadahLover.Persistence.Repositories
             return userAccount;
         }
 
-        public async Task UpdateUserAccountEmailConfirmed(UserAccount userAccount, bool? EmailConfirmed)
-        {
-            userAccount.EmailConfirmed = EmailConfirmed;
-            _dbContext.Entry(userAccount).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync();
-        }
+        //public async Task UpdateUserAccountEmailConfirmed(UserAccount userAccount, bool? EmailConfirmed)
+        //{
+        //    userAccount.EmailConfirmed = EmailConfirmed;
+        //    _dbContext.Entry(userAccount).State = EntityState.Modified;
+        //    await _dbContext.SaveChangesAsync();
+        //}
     }
 }
