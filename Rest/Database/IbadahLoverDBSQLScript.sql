@@ -43,8 +43,6 @@ CREATE TABLE
       email NVARCHAR (50) NOT NULL UNIQUE, -- Ensuring email is unique
       Profile_Picture_Type_id INT DEFAULT 1 NULL, -- Base64 encryption for Project!
       password_hash NVARCHAR (255) NULL,
-      oauth_provider NVARCHAR (20) NULL,
-      oauth_id NVARCHAR (255) NULL,
       email_confirmed BIT DEFAULT 0 NULL,
       current_location NVARCHAR (75) NULL, -- stores city only privacy compliant. longest city name is 58 characters 75 should be enough for all cases even futures ones normaly.
 	  --current_longitude DECIMAL(11, 8) NULL,
@@ -66,6 +64,36 @@ CREATE TABLE
          OR oauth_id IS NOT NULL
       ) -- At least one must be non-NULL
    );
+
+GO
+
+CREATE TABLE
+	User_Account_External_Login (
+		id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+		User_Account_id INT NOT NULL,
+		oauth_provider NVARCHAR (25) NOT NULL,
+        oauth_key NVARCHAR (255) NOT NULL,
+		oauth_full_name NVARCHAR (25) NULL,
+
+		CONSTRAINT FK_User_Account_External_Login_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
+		--CONSTRAINT UQ_User_Account_External_Login_User_Account_id UNIQUE (User_Account_id),
+		CONSTRAINT UQ_User_Account_External_Login_oauth_key UNIQUE (oauth_key)
+	);
+
+GO
+
+CREATE TABLE
+	User_Account_Authentication_Token (
+		id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+		User_Account_id INT NOT NULL,
+		login_provider NVARCHAR (25) NOT NULL,
+        unique_id NVARCHAR (25) NOT NULL,
+		jwt_value NVARCHAR (max) NOT NULL,
+
+		CONSTRAINT FK_User_Account_Authentication_Token_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
+		--CONSTRAINT UQ_User_Account_Authentication_Token_User_Account_id UNIQUE (User_Account_id), --not applicable in our context, what if user both register with built in authentication and oauth! or 2 accounts or same account... not for now implementation!
+		CONSTRAINT UQ_User_Account_Authentication_Token_jwt_value UNIQUE (jwt_value)
+	);
 
 GO
 CREATE TABLE

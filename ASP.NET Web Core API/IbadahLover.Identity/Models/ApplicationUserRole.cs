@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Identity.Models
 {
-    public class ApplicationUser : IdentityUser<int>
+    public class ApplicationUserRole : IdentityUserRole<int>
     {
-        public string FullName { get; set; }
-        public string UniqueId { get; set; }
+        //public int Id { get; set; }
     }
 }
