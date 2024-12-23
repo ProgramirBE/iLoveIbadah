@@ -19,7 +19,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IbadahLover.Application.profiles
+namespace IbadahLover.Application.Profiles
 {
     // Map Entities to Dtos, Application Layer to Domain Layer
     public class MappingProfile : Profile

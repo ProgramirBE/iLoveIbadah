@@ -18,14 +18,15 @@ namespace IbadahLover.Identity.Services
     public class AuthService : IAuthService
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        //private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
 
-        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings, SignInManager<ApplicationUser> signInManager)
+        //public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings, SignInManager<ApplicationUser> signInManager)
+        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings)
         {
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
-            _signInManager = signInManager;
+            //_signInManager = signInManager;
         }
 
         public async Task<AuthResponse> Login(AuthRequest request)

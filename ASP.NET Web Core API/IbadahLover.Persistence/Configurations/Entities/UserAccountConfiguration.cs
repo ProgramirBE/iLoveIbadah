@@ -27,8 +27,8 @@ namespace IbadahLover.Persistence.Configurations.Entities
                 .HasColumnName("Profile_Picture_Type_id")
                 .HasDefaultValue(1);
             builder.Property(e => e.PasswordHash).HasColumnName("password_hash");
-            builder.Property(e => e.OAuthProvider).HasColumnName("oauth_provider");
-            builder.Property(e => e.OAuthId).HasColumnName("oauth_id");
+            //builder.Property(e => e.OAuthProvider).HasColumnName("oauth_provider");
+            //builder.Property(e => e.OAuthId).HasColumnName("oauth_id");
             //builder.Property(e => e.CurrentLongitude).HasColumnName("current_longitude");
             //builder.Property(e => e.CurrentLatitude).HasColumnName("current_latitude");
             builder.Property(e => e.CurrentLocation).HasColumnName("current_location");

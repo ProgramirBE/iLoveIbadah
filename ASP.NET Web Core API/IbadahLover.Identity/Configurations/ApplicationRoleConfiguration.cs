@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Identity.Configurations
 {
-    public class RoleTypeConfiguration : IEntityTypeConfiguration<IdentityRole>
+    public class ApplicationRoleConfiguration : IEntityTypeConfiguration<IdentityRole>
     {
         public void Configure(EntityTypeBuilder<IdentityRole> builder)
         {

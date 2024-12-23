@@ -2,7 +2,7 @@
 using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.Features.UserAccounts.Handlers.Commands;
 using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
-using IbadahLover.Application.profiles;
+using IbadahLover.Application.Profiles;
 using IbadahLover.Application.Responses;
 using Moq;
 using System;

@@ -1,8 +1,5 @@
-﻿using IbadahLover.Domain.Common;
-using IbadahLover.Domain.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Domain
 {
-    //Database Table UserAccount
     public class UserAccount
     {
         public int Id { get; set; }
@@ -20,8 +16,8 @@ namespace IbadahLover.Domain
         public int? ProfilePictureTypeId { get; set; }
         public ProfilePictureType? ProfilePictureType { get; set; }
         public string? PasswordHash { get; set; }
-        public OAuthProviderType? OAuthProvider { get; set; }
-        public string? OAuthId { get; set; }
+        //public OAuthProviderType? OAuthProvider { get; set; }
+        //public string? OAuthId { get; set; }
         //[Column(TypeName = "decimal(11, 8)")]
         //public decimal? CurrentLongitude { get; set; }
         //[Column(TypeName = "decimal(10, 8)")]
