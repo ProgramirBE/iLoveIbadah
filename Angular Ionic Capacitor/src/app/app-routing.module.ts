@@ -2,13 +2,11 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './presentation/shared/components/login/login.component';
-import { RegisterComponent } from './presentation/shared/components/register/register.component'; // Importeer de RegisterComponent
-
+import { RegisterComponent } from './presentation/shared/components/register/register.component';
 
 const routes: Routes = [
   // Standaard route die naar de login-pagina omleidt
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-
 
   // Route voor login-component
   { path: 'login', component: LoginComponent },
@@ -21,15 +19,6 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('./presentation/shared/components/home/home.module').then((m) => m.HomePageModule),
-  },
-
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }, // Voeg de route voor de RegisterComponent toe
-  {
-    path: 'home',
-    loadChildren: () =>
-      import('./presentation/shared/components/home/home.module').then((m) => m.HomePageModule), // Laad 'home' module
-
   },
 
   // Lazy-loaded route voor de 'leaderboard'-module
@@ -49,8 +38,6 @@ const routes: Routes = [
   },
 
   // Lazy-loaded route voor de 'salat'-module
-
-
   {
     path: 'salat',
     loadChildren: () =>
@@ -67,4 +54,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
