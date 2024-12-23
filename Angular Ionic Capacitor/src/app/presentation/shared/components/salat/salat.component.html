@@ -1,18 +1,40 @@
-<div class="container">
-  <h1>Gebedstijden voor {{ location }}</h1>
+<div class="page">
+  <div class="content">
+    <!-- Left Section: Date-Time and Location -->
+    <div class="left-section">
+      <div class="date-time">
+        <h2>Today: {{ currentDate }}</h2>
+        <p>Next Prayer: {{ nextPrayerName }} in 
+          <span *ngIf="timer">{{ timer.hours }}h {{ timer.minutes }}m {{ timer.seconds }}s</span>
+        </p>
+      </div>
+      <div class="location">
+        <h2>Location</h2>
+        <p>{{ location || 'Fetching location...' }}</p>
+      </div>
+    </div>
 
-  <div *ngIf="salatTimes; else loading">
-    <ul>
-      <li>Fajr: {{ salatTimes.Fajr || 'Niet beschikbaar' }}</li>
-      <li>Duha: {{ salatTimes.Duha || 'Niet beschikbaar' }}</li>
-      <li>Dhuhr: {{ salatTimes.Dhuhr || 'Niet beschikbaar' }}</li>
-      <li>Asr: {{ salatTimes.Asr || 'Niet beschikbaar' }}</li>
-      <li>Maghrib: {{ salatTimes.Maghrib || 'Niet beschikbaar' }}</li>
-      <li>Isha: {{ salatTimes.Isha || 'Niet beschikbaar' }}</li>
-    </ul>
+    <!-- Right Section: Prayer Times -->
+    <div class="right-section">
+      <div class="prayer">
+        <h2>Prayer Times</h2>
+        <ul>
+          <li *ngFor="let prayer of filteredPrayers">
+            {{ prayer.name }}: {{ prayer.time }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <ng-template #loading>
-    <p>Gebedstijden laden...</p>
-  </ng-template>
+  <!-- Dua After Prayer -->
+  <div class="dua">
+    <h2>Dua After Prayer</h2>
+    <p>{{ duaAfterPrayer }}</p>
+  </div>
+
+  <!-- Refresh Button -->
+  <div class="refresh">
+    <button (click)="refresh()">Refresh</button>
+  </div>
 </div>
