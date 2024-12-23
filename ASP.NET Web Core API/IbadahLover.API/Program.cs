@@ -6,6 +6,7 @@ using IbadahLover.Persistence;
 using Microsoft.OpenApi.Models;
 using IbadahLover.API.Middleware;
 using Scalar.AspNetCore;
+using IbadahLover.Identity;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +24,7 @@ builder.Configuration.AddAzureKeyVault(KeyVaultUrl, AzureCredential);
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
 builder.Services.CongfigurePersistenceServices(builder.Configuration);
-//builder.Services.ConfigureIdentityServices(builder.Configuration); //TODO!
+builder.Services.ConfigureIdentityServices(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

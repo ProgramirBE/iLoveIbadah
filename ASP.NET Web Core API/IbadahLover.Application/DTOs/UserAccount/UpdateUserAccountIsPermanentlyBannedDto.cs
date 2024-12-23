@@ -8,7 +8,7 @@ namespace IbadahLover.Application.DTOs.UserAccount
 {
     public class UpdateUserAccountIsPermanentlyBannedDto
     {
-        public int Id { get; set; }
+        //public int Id { get; set; } //already passed in the url
         public bool IsPermanentlyBanned { get; set; }
     }
 }
