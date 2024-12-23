@@ -1,6 +1,8 @@
-﻿using IbadahLover.Application.DTOs.UserAccount;
+﻿using IbadahLover.Application.Contracts.Identity;
+using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
 using IbadahLover.Application.Features.UserAccounts.Requests.Queries;
+using IbadahLover.Application.Models.Identity;
 using IbadahLover.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -14,9 +16,23 @@ namespace IbadahLover.API.Controllers
     public class UserAccountsController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public UserAccountsController(IMediator mediator)
+        private readonly IAuthService _authenticationService;
+        public UserAccountsController(IMediator mediator, IAuthService authenticationService)
         {
             _mediator = mediator;
+            _authenticationService = authenticationService;
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<AuthResponse>> Login(AuthRequest request)
+        {
+            return Ok(await _authenticationService.Login(request));
+        }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<RegistrationResponse>> Register(RegistrationRequest request)
+        {
+            return Ok(await _authenticationService.Register(request));
         }
 
         // GET: api/<UserAccountsController>

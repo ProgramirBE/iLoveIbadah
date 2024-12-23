@@ -9,7 +9,7 @@ namespace IbadahLover.Application.DTOs.UserAccount
 {
     public class UpdateUserAccountCurrentLocationDto
     {
-        public int Id { get; set; }
+        //public int Id { get; set; } //already passed in the url
         //[Column(TypeName = "decimal(11, 8)")]
         //public decimal CurrentLongitude { get; set; }
         //[Column(TypeName = "decimal(10, 8)")]

@@ -8,7 +8,7 @@ namespace IbadahLover.Application.DTOs.UserAccount
 {
     public class UpdateUserAccountTotalWarningsDto
     {
-        public int Id { get; set; }
+        //public int Id { get; set; } //already passed in the url
         public int TotalWarnings { get; set; }
     }
 }

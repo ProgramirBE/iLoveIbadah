@@ -11,7 +11,10 @@ namespace IbadahLover.Application.DTOs.UserAccount.Validators
     {
         public UpdateUserAccountPasswordHashDtoValidator()
         {
-            RuleFor(p => p.PasswordHash)
+            RuleFor(p => p.NewPasswordHash)
+                .NotNull().WithMessage("{PropertyName} must be provided.");
+
+            RuleFor(p => p.CurrentPasswordHash)
                 .NotNull().WithMessage("{PropertyName} must be provided.");
         }
     }
