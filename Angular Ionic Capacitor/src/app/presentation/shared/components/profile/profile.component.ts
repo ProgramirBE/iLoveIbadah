@@ -43,7 +43,6 @@ export class ProfileComponent implements OnInit {
 
   updateProfile(): void {
     console.log('Profile updated:', this.profile);
-    // Here, you can call an API to save the updated profile data
   }
 
   uploadProfilePicture(event: any): void {
