@@ -18,7 +18,9 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./presentation/shared/components/home/home.module').then((m) => m.HomePageModule),
+      import('./presentation/shared/components/home/home.module').then(
+        (m) => m.HomePageModule
+      ),
   },
 
   // Lazy-loaded route voor de 'leaderboard'-module
@@ -34,15 +36,29 @@ const routes: Routes = [
   {
     path: 'dhikr',
     loadChildren: () =>
-      import('./presentation/shared/components/dhikr/dhikr.module').then((m) => m.DhikrModule),
+      import('./presentation/shared/components/dhikr/dhikr.module').then(
+        (m) => m.DhikrModule
+      ),
   },
 
   // Lazy-loaded route voor de 'salat'-module
   {
     path: 'salat',
     loadChildren: () =>
-      import('./presentation/shared/components/salat/salat.module').then((m) => m.SalatModule),
+      import('./presentation/shared/components/salat/salat.module').then(
+        (m) => m.SalatModule
+      ),
   },
+
+  // Lazy-loaded route voor de 'profile'-module
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./presentation/shared/components/profile/profile.module').then(
+        (m) => m.ProfileModule
+      ),
+  },
+  
 
   // Fallback voor niet-bestaande routes
   { path: '**', redirectTo: 'login' },

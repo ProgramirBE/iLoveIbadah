@@ -37,6 +37,8 @@ export class AppComponent implements OnInit {
           this.currentPageTitle = this.translate.instant('REGISTER');
         } else if (url.includes('/salat')) {
           this.currentPageTitle = this.translate.instant('SALAT');
+        } else if (url.includes('/profile')) {
+          this.currentPageTitle = this.translate.instant('PROFILE');
         }
       });
   }
