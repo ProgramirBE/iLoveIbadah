@@ -30,5 +30,9 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "include": [
+    "src/**/*.ts", 
+    "src/app/presentation/shared/components/profile/**/*.ts"
+  ]
 }

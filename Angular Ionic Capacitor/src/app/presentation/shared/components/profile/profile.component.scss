@@ -1,0 +1,83 @@
+.profile-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #4e342e; /* Donker bruin achtergrond */
+    margin-top: 40px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #2e7d32; /* Groen achtergrond voor sidebar */
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .sidebar li.active,
+  .sidebar li:hover {
+    background-color: #66bb6a; /* Lichtgroen achtergrond bij hover of actief */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .section {
+    background-color: #f5f5dc; /* Licht beige achtergrond voor secties */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    color: #58443e;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    color: #58443e;
+}
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #00fd15; /* Felgroene rand */
+    background-color: #4e342e; /* Donker bruin achtergrond */
+    color: #fff; /* Witte tekstkleur */
+  }
+
+  button.btn {
+    background-color: #2e7d32; /* Groen voor knoppen */
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button.btn:hover {
+    background-color: #66bb6a; /* Lichtgroen achtergrond bij hover */
+  }
+  
