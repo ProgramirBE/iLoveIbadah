@@ -6,7 +6,7 @@
 }
 
 ion-content {
-  --background: rgb(62, 55, 55); 
+  --background:#f5f5dc;
 }
 
 
@@ -27,7 +27,7 @@ p {
 
 /* Stijl voor titels */
 h1, h2, h3 {
-  background: linear-gradient(to right, #00ff87 10%, #00b357 50%, #007f3f 90%); /* Groene gradiënt */
+  background: linear-gradient(to right,  #d7ccc8, #d7ccc8,  #d7ccc8); /* Groene gradiënt */ 
   -webkit-background-clip: text; /* Alleen tekst krijgt de achtergrondkleur */
   -webkit-text-fill-color: transparent; /* Maak de tekst transparant voor de achtergrondkleur */
   text-align: center; /* Tekst in het midden */
@@ -44,12 +44,12 @@ h1, h2, h3 {
   width: 90%; /* Breedte als percentage voor responsiveness */
   margin: auto; /* Midden positioneren */
   border-radius: 3rem;
-  border: 10px solid #00b357; /* Heldere groene rand */
+  border: 10px solid #8d7c78;/* Heldere groene rand */ 
 }
 
 /* Algemene stijl voor grid-items */
 .grid-item {
-  background: linear-gradient(135deg, #3a3a3a, #2c2c2c); /* Donkere gradiënt */
+  background: linear-gradient(135deg, #262323,#4e342e ); /* Donkere gradiënt */ 
   color: #fff; /* Witte tekstkleur */
   padding: 1rem; /* Binnenruimte */
   text-align: center; /* Tekst gecentreerd */
@@ -60,7 +60,7 @@ h1, h2, h3 {
 
 .grid-item:hover {
   transform: translateY(-5px); /* Verplaats iets omhoog */
-  box-shadow: 0 6px 20px rgba(0, 255, 135, 0.7); /* Neongroene schaduw bij hover */
+  box-shadow: 0 6px 20px rgba(131, 81, 81, 0.7); /* Neongroene schaduw bij hover */
 }
 
 a.grid-item {
