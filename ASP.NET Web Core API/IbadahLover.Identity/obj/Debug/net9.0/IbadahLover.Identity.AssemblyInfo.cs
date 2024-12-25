@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IbadahLover.Identity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e98aadaea366d1db301ce0363f6e0cc34966626")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de807501dff87dce0be7a98757bd13ee15f015a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("IbadahLover.Identity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IbadahLover.Identity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -53,7 +53,8 @@ namespace IbadahLover.Identity.Services
                 Id = user.Id,
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
                 Email = user.Email,
-                FullName = user.FullName
+                FullName = user.FullName,
+                UniqueId = user.UniqueId
             };
 
             return response;
@@ -66,7 +67,7 @@ namespace IbadahLover.Identity.Services
             var user = new ApplicationUser
             {
                 Email = request.Email,
-                FullName = request.FullName,
+                UniqueId = request.UniqueId,
                 //EmailConfirmed = true // clairement une erreur de trevoir williams...
             };
 

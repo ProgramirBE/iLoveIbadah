@@ -5,6 +5,7 @@ using IbadahLover.Application.Features.UserAccounts.Requests.Queries;
 using IbadahLover.Application.Models.Identity;
 using IbadahLover.Application.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,14 +14,17 @@ namespace IbadahLover.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserAccountsController : ControllerBase
     {
         private readonly IMediator _mediator;
         private readonly IAuthService _authenticationService;
-        public UserAccountsController(IMediator mediator, IAuthService authenticationService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public UserAccountsController(IMediator mediator, IAuthService authenticationService, IHttpContextAccessor httpContextAccessor)
         {
             _mediator = mediator;
             _authenticationService = authenticationService;
+            this._httpContextAccessor = httpContextAccessor;
         }
 
         [HttpPost("login")]
@@ -45,8 +49,16 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserAccountsController>/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin,Worshipper")]
         public async Task<ActionResult<UserAccountDto>> GetById(int id)
         {
+            var user = _httpContextAccessor.HttpContext.User;
+            //var currentUserId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            //if (currentUserId != id)
+            //{
+            //    return Forbid();
+            //}
+
             var userAccount = await _mediator.Send(new GetUserAccountDetailsRequest { Id = id });
             return Ok(userAccount);
         }

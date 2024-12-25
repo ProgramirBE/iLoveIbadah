@@ -111,19 +111,35 @@ CREATE TABLE
    );
 
 GO
+
 CREATE TABLE
-   Permission_Type (
+   Claim_Type (
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      full_name NVARCHAR (50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User')
+      full_name NVARCHAR (50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User') or for later functionality of groups of people, gorup id + admin
       details NVARCHAR (255) NULL, -- Description of the role
+	  data_type NVARCHAR(50) NULL, -- wheter bool, string, int collection<list blablabla> and so on. so i can validate userclaim value or roleclaim value...
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
-      --CONSTRAINT FK_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
-      --CONSTRAINT FK_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
-      CONSTRAINT UQ_Permission_Type_full_name UNIQUE (full_name)
+      --CONSTRAINT FK_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
+      --CONSTRAINT FK_Role_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+      CONSTRAINT UQ_Claim_Type_full_name UNIQUE (full_name)
    );
+
+--CREATE TABLE
+--   Permission_Type (
+--      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+--      full_name NVARCHAR (50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User')
+--      details NVARCHAR (255) NULL, -- Description of the role
+--      --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
+--      --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+--      --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
+--      --last_modified_by BIGINT NOT NULL,
+--      --CONSTRAINT FK_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
+--      --CONSTRAINT FK_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+--      CONSTRAINT UQ_Permission_Type_full_name UNIQUE (full_name)
+--   );
 
 GO
 CREATE TABLE
