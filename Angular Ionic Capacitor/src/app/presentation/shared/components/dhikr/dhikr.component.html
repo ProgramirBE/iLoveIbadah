@@ -1,12 +1,8 @@
 <div class="container">
   <!-- Terugknop alleen zichtbaar voor andere secties dan 'home' -->
-  <ion-button
-  *ngIf="section !== 'home'"
-  fill="solid"
-  color="success"
-  (click)="goBack()">
-  <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
-</ion-button>
+  <ion-button *ngIf="section !== 'home'" fill="solid" color="success" (click)="goBack()">
+    <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+  </ion-button>
 
   <!-- Dynamische inhoud gebaseerd op de actieve sectie -->
   <ng-container [ngSwitch]="section">
@@ -38,20 +34,18 @@
     </div>
 
     <!-- Algemene Dhikr -->
-    <div *ngSwitchCase="'dhikr'">
-      <h1>{{ currentWord }}</h1>
-      <h2>Counter: {{ counter }}</h2>
-      <button
-        [disabled]="buttonDisabled"
-        ion-button
-        color="primary"
-        (click)="onButtonClick()">+</button>
-      <div *ngIf="buttonDisabled">
-        <p>
-          Lè ilèhè illa Al-lahoe oe-ahdahoe lè shèrika lèhoe,
-          Lèhoel molkoe oe-è lèhoel hamdoe, oe-è hoewa ‘âla koel-li sjee‘in Qadier.
-        </p>
-        <ion-checkbox (ionChange)="onCheckboxToggle()">Klik om opnieuw te activeren</ion-checkbox>
+    <div class="noti">
+      <div *ngSwitchCase="'dhikr'">
+        <h1>{{ currentWord }}</h1>
+        <h2>Counter: {{ counter }}</h2>
+        <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
+        <div *ngIf="buttonDisabled">
+          <p>
+            Lè ilèhè illa Al-lahoe oe-ahdahoe lè shèrika lèhoe,
+            Lèhoel molkoe oe-è lèhoel hamdoe, oe-è hoewa ‘âla koel-li sjee‘in Qadier.
+          </p>
+          <ion-checkbox (ionChange)="onCheckboxToggle()">Click to reactivate</ion-checkbox>
+        </div>
       </div>
     </div>
 
