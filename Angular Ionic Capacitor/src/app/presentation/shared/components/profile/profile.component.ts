@@ -17,6 +17,11 @@ export class ProfileComponent implements OnInit {
     location: '',
   };
 
+  // Variables for Account Section
+  newUsername: string = '';
+  currentPassword: string = '';
+  newPassword: string = '';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -43,6 +48,7 @@ export class ProfileComponent implements OnInit {
 
   updateProfile(): void {
     console.log('Profile updated:', this.profile);
+    // Logic to update the profile (e.g., API call)
   }
 
   uploadProfilePicture(event: any): void {
@@ -54,5 +60,21 @@ export class ProfileComponent implements OnInit {
       };
       reader.readAsDataURL(file);
     }
+  }
+
+  onUsernameChange(): void {
+    console.log('Username updated to:', this.newUsername);
+    // Logic to update the username (e.g., API call)
+    this.newUsername = ''; // Clear the input after saving
+  }
+
+  onPasswordChange(): void {
+    console.log('Password change requested:', {
+      currentPassword: this.currentPassword,
+      newPassword: this.newPassword,
+    });
+    // Logic to update the password (e.g., API call with validation)
+    this.currentPassword = ''; // Clear current password input
+    this.newPassword = ''; // Clear new password input
   }
 }
