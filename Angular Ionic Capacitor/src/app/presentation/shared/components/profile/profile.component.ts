@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -16,21 +17,19 @@ export class ProfileComponent implements OnInit {
     favoriteDua: '',
     location: '',
   };
-
-  // Variables for Account Section
-  newUsername: string = '';
-  currentPassword: string = '';
-  newPassword: string = '';
+  newUsername: string = ''; // Gebruikersnaam wijzigen
+  currentPassword: string = ''; // Huidig wachtwoord
+  newPassword: string = ''; // Nieuw wachtwoord
 
   constructor() {}
 
   ngOnInit(): void {
-    // Load profile data (this can be replaced with actual API calls)
+    // Laad profielgegevens (vervang dit door echte API-aanroepen indien nodig)
     this.loadProfile();
   }
 
   loadProfile(): void {
-    // Mock data for demonstration purposes
+    // Mock data voor demonstratie
     this.profile = {
       fullName: 'John Doe',
       email: 'johndoe@example.com',
@@ -48,7 +47,7 @@ export class ProfileComponent implements OnInit {
 
   updateProfile(): void {
     console.log('Profile updated:', this.profile);
-    // Logic to update the profile (e.g., API call)
+    // Voeg hier API-aanroep toe om profielgegevens op te slaan
   }
 
   uploadProfilePicture(event: any): void {
@@ -64,17 +63,19 @@ export class ProfileComponent implements OnInit {
 
   onUsernameChange(): void {
     console.log('Username updated to:', this.newUsername);
-    // Logic to update the username (e.g., API call)
-    this.newUsername = ''; // Clear the input after saving
+    // Voeg hier API-aanroep toe om de gebruikersnaam bij te werken
   }
 
   onPasswordChange(): void {
-    console.log('Password change requested:', {
+    console.log('Password updated:', {
       currentPassword: this.currentPassword,
       newPassword: this.newPassword,
     });
-    // Logic to update the password (e.g., API call with validation)
-    this.currentPassword = ''; // Clear current password input
-    this.newPassword = ''; // Clear new password input
+    // Voeg hier API-aanroep toe om het wachtwoord bij te werken
+  }
+
+  onLocationChange(): void {
+    console.log('Location updated:', this.profile.location);
+    // Voeg hier API-aanroep toe om de locatie op te slaan
   }
 }

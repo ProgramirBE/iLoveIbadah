@@ -1,86 +1,89 @@
-<div class="profile-container">
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <ul>
-      <li (click)="navigateToSection('publicProfile')" [class.active]="currentSection === 'publicProfile'">
-        Public Profile
-      </li>
-      <li (click)="navigateToSection('account')" [class.active]="currentSection === 'account'">
-        Account
-      </li>
-    </ul>
-  </aside>
+<div class="profile-wrapper">
+  <div class="profile-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul>
+        <li (click)="navigateToSection('publicProfile')" [class.active]="currentSection === 'publicProfile'">
+          Public Profile
+        </li>
+        <li (click)="navigateToSection('account')" [class.active]="currentSection === 'account'">
+          Account
+        </li>
+      </ul>
+    </aside>
 
-  <!-- Main Content -->
-  <section class="content">
-    <!-- Public Profile Section -->
-    <div *ngIf="currentSection === 'publicProfile'" class="section">
-      <h2>Public Profile</h2>
-      <form (submit)="updateProfile()">
-        <div class="form-group">
-          <label for="fullName">Full Name</label>
-          <input [(ngModel)]="profile.fullName" id="fullName" type="text" placeholder="Enter full name" required>
-        </div>
+    <!-- Main Content -->
+    <section class="content">
+      <!-- Public Profile Section -->
+      <div *ngIf="currentSection === 'publicProfile'" class="section">
+        <h2>Public Profile</h2>
+        <form (submit)="updateProfile()">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input [(ngModel)]="profile.fullName" id="fullName" type="text" placeholder="Enter full name" required>
+          </div>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input [(ngModel)]="profile.email" id="email" type="email" placeholder="Enter email" required>
-        </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input [(ngModel)]="profile.email" id="email" type="email" placeholder="Enter email" required>
+          </div>
 
-        <div class="form-group">
-          <label for="profilePicture">Profile Picture</label>
-          <input type="file" id="profilePicture" (change)="uploadProfilePicture($event)">
-          <img *ngIf="profile.profilePicture" [src]="profile.profilePicture" alt="Profile Picture">
-        </div>
+          <div class="form-group">
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" id="profilePicture" (change)="uploadProfilePicture($event)">
+            <img *ngIf="profile.profilePicture" [src]="profile.profilePicture" alt="Profile Picture">
+          </div>
 
-        <div class="form-group">
-          <label for="bio">Bio</label>
-          <textarea [(ngModel)]="profile.bio" id="bio" placeholder="Write something about yourself"></textarea>
-        </div>
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea [(ngModel)]="profile.bio" id="bio" placeholder="Write something about yourself"></textarea>
+          </div>
 
-        <div class="form-group">
-          <label for="url">Website URL</label>
-          <input [(ngModel)]="profile.url" id="url" type="url" placeholder="Enter website URL">
-        </div>
+          <div class="form-group">
+            <label for="url">Website URL</label>
+            <input [(ngModel)]="profile.url" id="url" type="url" placeholder="Enter website URL">
+          </div>
 
-        <div class="form-group">
-          <label for="favoriteDua">Favorite Dua</label>
-          <input [(ngModel)]="profile.favoriteDua" id="favoriteDua" type="text" placeholder="Enter favorite dua">
-        </div>
+          <div class="form-group">
+            <label for="favoriteDua">Favorite Dua</label>
+            <input [(ngModel)]="profile.favoriteDua" id="favoriteDua" type="text" placeholder="Enter favorite dua">
+          </div>
 
-        <div class="form-group">
-          <label for="location">Location</label>
-          <input [(ngModel)]="profile.location" id="location" type="text" placeholder="Enter location">
-        </div>
+          <button type="submit" class="btn">Save Changes</button>
+        </form>
+      </div>
 
-        <button type="submit" class="btn">Save Changes</button>
-      </form>
-    </div>
+      <!-- Account Section -->
+      <div *ngIf="currentSection === 'account'" class="section">
+        <h2>Account</h2>
+        <form (submit)="onUsernameChange()">
+          <div class="form-group">
+            <label for="username">Change Username</label>
+            <input [(ngModel)]="newUsername" id="username" type="text" placeholder="Enter new username" required>
+          </div>
+          <button type="submit" class="btn">Update Username</button>
+        </form>
 
-    <!-- Account Section -->
-    <!-- Account Section -->
-    <div *ngIf="currentSection === 'account'" class="section">
-      <h2>Account</h2>
-      <form (submit)="onUsernameChange()">
-        <div class="form-group">
-          <label for="username">Change Username</label>
-          <input [(ngModel)]="newUsername" id="username" type="text" placeholder="Enter new username" required>
-        </div>
-        <button type="submit" class="btn">Update Username</button>
-      </form>
+        <form (submit)="onPasswordChange()">
+          <div class="form-group">
+            <label for="currentPassword">Current Password</label>
+            <input [(ngModel)]="currentPassword" id="currentPassword" type="password" placeholder="Enter current password" required>
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input [(ngModel)]="newPassword" id="newPassword" type="password" placeholder="Enter new password" required>
+          </div>
+          <button type="submit" class="btn">Update Password</button>
+        </form>
 
-      <form (submit)="onPasswordChange()">
-        <div class="form-group">
-          <label for="currentPassword">Current Password</label>
-          <input [(ngModel)]="currentPassword" id="currentPassword" type="password" placeholder="Enter current password"
-            required>
-        </div>
-        <div class="form-group">
-          <label for="newPassword">New Password</label>
-          <input [(ngModel)]="newPassword" id="newPassword" type="password" placeholder="Enter new password" required>
-        </div>
-        <button type="submit" class="btn">Update Password</button>
-      </form>
-    </div>
-  </section>
+        <form (submit)="onLocationChange()">
+          <div class="form-group">
+            <label for="location">Update Location</label>
+            <input [(ngModel)]="profile.location" id="location" type="text" placeholder="Enter new location">
+          </div>
+          <button type="submit" class="btn">Update Location</button>
+        </form>
+      </div>
+    </section>
+  </div>
 </div>
