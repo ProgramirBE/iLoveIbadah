@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Identity.Models
 {
-    public class ApplicationUserClaims : IdentityUserClaim<int>
+    public class ApplicationUserClaim : IdentityUserClaim<int>
     {
 
     }

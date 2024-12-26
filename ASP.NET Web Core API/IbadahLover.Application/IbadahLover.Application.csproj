@@ -39,6 +39,10 @@
     <Folder Include="Features\RoleTypes\Requests\Commands\" />
     <Folder Include="Features\SalahTypes\Handlers\Commands\" />
     <Folder Include="Features\SalahTypes\Requests\Commands\" />
+    <Folder Include="Features\UserAccountExternalLogins\Handlers\Commands\" />
+    <Folder Include="Features\UserAccountExternalLogins\Handlers\Queries\" />
+    <Folder Include="Features\UserAccountExternalLogins\Requests\Commands\" />
+    <Folder Include="Features\UserAccountExternalLogins\Requests\Queries\" />
     <Folder Include="Features\UserAccountRoleTypeMappings\Handlers\Commands\" />
     <Folder Include="Features\UserAccountRoleTypeMappings\Requests\Commands\" />
     <Folder Include="Features\UserDhikrOverviews\Handlers\Commands\" />

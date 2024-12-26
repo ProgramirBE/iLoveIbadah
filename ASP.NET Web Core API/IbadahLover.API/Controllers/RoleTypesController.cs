@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.RoleType;
 using IbadahLover.Application.Features.RoleTypes.Requests.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -18,6 +19,7 @@ namespace IbadahLover.API.Controllers
         }
         // GET: api/<ValuesController>
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<RoleTypeListDto>>> GetAll()
         {
             var roleTypes = await _mediator.Send(new GetRoleTypeListRequest());
@@ -26,6 +28,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<RoleTypeDto>> Get(int id)
         {
             var roleType = await _mediator.Send(new GetRoleTypeDetailsRequest { Id = id });

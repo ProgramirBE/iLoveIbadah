@@ -16,5 +16,6 @@ namespace IbadahLover.Domain
         public string LoginProvider { get; set; }
         public string UniqueId { get; set; }
         public string JwtValue { get; set; }
+        public string? JwtValueHash { get; set; } // limit to 64 characters so I can index it in db unique index! for now just nullable!
     }
 }

@@ -18,6 +18,10 @@ namespace IbadahLover.Identity.Profiles
             CreateMap<ApplicationUser, UserAccount>().ReverseMap();
             CreateMap<ApplicationRole, RoleType>().ReverseMap();
             CreateMap<ApplicationUserRole, UserAccountRoleTypeMapping>().ReverseMap();
+            CreateMap<ApplicationUserClaim, UserAccountClaimTypeMapping>().ReverseMap();
+            CreateMap<ApplicationRoleClaim, RoleTypeClaimTypeMapping>().ReverseMap();
+            CreateMap<ApplicationUserToken, UserAccountAuthenticationToken>().ReverseMap();
+            CreateMap<ApplicationUserLogin, UserAccountExternalLogin>().ReverseMap();
         }
     }
 }

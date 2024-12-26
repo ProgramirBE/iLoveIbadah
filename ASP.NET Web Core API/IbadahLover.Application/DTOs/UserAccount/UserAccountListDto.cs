@@ -12,6 +12,7 @@ namespace IbadahLover.Application.DTOs.UserAccount
     {
         public int Id { get; set; }
         public string FullName { get; set; }
+        public string UniqueId { get; set; }
         public int? ProfilePictureTypeId { get; set; }
         //[Column(TypeName = "decimal(11, 8)")]
         //public decimal? CurrentLongitude { get; set; }

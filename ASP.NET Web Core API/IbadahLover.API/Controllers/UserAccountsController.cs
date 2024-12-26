@@ -14,7 +14,6 @@ namespace IbadahLover.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class UserAccountsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -28,12 +27,14 @@ namespace IbadahLover.API.Controllers
         }
 
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<ActionResult<AuthResponse>> Login(AuthRequest request)
         {
             return Ok(await _authenticationService.Login(request));
         }
 
         [HttpPost("register")]
+        [AllowAnonymous]
         public async Task<ActionResult<RegistrationResponse>> Register(RegistrationRequest request)
         {
             return Ok(await _authenticationService.Register(request));
@@ -41,6 +42,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserAccountsController>
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<UserAccountListDto>>> GetAll()
         {
             var userAccounts = await _mediator.Send(new GetUserAccountListRequest());
@@ -49,31 +51,29 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserAccountsController>/5
         [HttpGet("{id}")]
-        [Authorize(Roles = "Admin,Worshipper")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<UserAccountDto>> GetById(int id)
         {
             var user = _httpContextAccessor.HttpContext.User;
-            //var currentUserId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            //if (currentUserId != id)
-            //{
-            //    return Forbid();
-            //}
-
             var userAccount = await _mediator.Send(new GetUserAccountDetailsRequest { Id = id });
             return Ok(userAccount);
         }
 
-        // POST api/<UserAccountsController>
-        [HttpPost]
-        public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserAccountDto userAccount)
-        {
-            var command = new CreateUserAccountCommand { UserAccountDto = userAccount };
-            var response = await _mediator.Send(command);
-            return Ok(response);
-        }
+        //--------------------->>>>> ACCOUNT CREATION HAPPENS IN REGISTER METHOD ABOVE <<<<---------------------
+
+        //// POST api/<UserAccountsController>
+        //[HttpPost]
+        //[Authorize]
+        //public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserAccountDto userAccount)
+        //{
+        //    var command = new CreateUserAccountCommand { UserAccountDto = userAccount };
+        //    var response = await _mediator.Send(command);
+        //    return Ok(response);
+        //}
 
         // PUT api/<UserAccountsController>/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<ActionResult> Update(int id, [FromBody] UpdateUserAccountDto userAccount)
         {
             var command = new UpdateUserAccountCommand { Id = id, UserAccountDto = userAccount };
@@ -83,6 +83,7 @@ namespace IbadahLover.API.Controllers
 
         // PUT api/<UserAccountsController>/updatepasswordhash/5
         [HttpPut("updatepasswordhash/{id}")]
+        [Authorize]
         public async Task<ActionResult> UpdatePasswordHash(int id, [FromBody] UpdateUserAccountPasswordHashDto userAccountPasswordHash)
         {
             var command = new UpdateUserAccountCommand { Id = id, UserAccountPasswordHashDto = userAccountPasswordHash };
@@ -92,6 +93,7 @@ namespace IbadahLover.API.Controllers
 
         // PUT api/<UserAccountsController>/updatetotalwarnings/5
         [HttpPut("updatetotalwarnings/{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> UpdateTotalWarnings(int id, [FromBody] UpdateUserAccountTotalWarningsDto userAccountTotalWarnings)
         {
             var command = new UpdateUserAccountCommand { Id = id, UserAccountTotalWarningsDto = userAccountTotalWarnings };

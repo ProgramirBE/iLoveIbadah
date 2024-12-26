@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.UserSalahOverview;
 using IbadahLover.Application.Features.UserSalahOverviews.Requests.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,6 +20,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserSalahOverviewsController>
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<List<UserSalahOverviewListDto>>> GetAll()
         {
             var userSalahOverviews = await _mediator.Send(new GetUserSalahOverviewListRequest());
@@ -27,6 +29,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserSalahOverviewsController>/5
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<UserSalahOverviewDto>> GetById(int id)
         {
             var userSalahOverview = await _mediator.Send(new GetUserSalahOverviewDetailsRequest { Id = id });

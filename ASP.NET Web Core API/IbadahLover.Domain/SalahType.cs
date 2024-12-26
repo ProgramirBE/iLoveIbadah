@@ -13,8 +13,8 @@ namespace IbadahLover.Domain
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        [ForeignKey("CreatedByUserAccount")]
+        [ForeignKey("UserAccount")]
         public int CreatedBy { get; set; }
-        public UserAccount CreatedByUserAccount { get; set; } // Navigation property
+        public UserAccount UserAccount { get; set; } // Navigation property
     }
 }

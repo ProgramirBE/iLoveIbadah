@@ -38,9 +38,11 @@ GO
 CREATE TABLE
    User_Account (
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      full_name NVARCHAR (25) NOT NULL,
-	  unique_id NVARCHAR (35) NULL,
-      email NVARCHAR (50) NOT NULL UNIQUE, -- Ensuring email is unique
+      full_name NVARCHAR (25) NOT NULL, -- isn't unique! yes!!! no more "this username is already used" error!!!! well yes... in unique_id still the case
+	  unique_id NVARCHAR (35) NOT NULL, --like in twitter @username so the unique username
+	  normalized_unique_id NVARCHAR (35) NULL, --for aspnetcore identity!
+      email NVARCHAR (100) NOT NULL, -- Ensuring email is unique
+	  normalized_email NVARCHAR (100) NULL, --for aspnetcore identity!
       Profile_Picture_Type_id INT DEFAULT 1 NULL, -- Base64 encryption for Project!
       password_hash NVARCHAR (255) NULL,
       email_confirmed BIT DEFAULT 0 NULL,
@@ -53,16 +55,16 @@ CREATE TABLE
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NULL, --do i add TRIGGER?????
       --CONSTRAINT FK_User_Account_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+	  concurrency_stamp NVARCHAR (36) NULL, --for aspnetcore identity!
+	  security_stamp NVARCHAR (36) NULL, --for aspnetcore identity!
 
 	  CONSTRAINT FK_User_Account_Profile_Picture_Type_id FOREIGN KEY (Profile_Picture_Type_id) REFERENCES Profile_Picture_Type (id) ON DELETE CASCADE,
       CONSTRAINT UQ_User_Account_email UNIQUE (email),
+	  CONSTRAINT UQ_User_Account_normalized_email UNIQUE (normalized_email),
       CONSTRAINT UQ_User_Account_email_password_hash UNIQUE (email, password_hash),
-      CONSTRAINT UQ_User_Account_email_oauth_id UNIQUE (email, oauth_id),
+      --CONSTRAINT UQ_User_Account_email_oauth_id UNIQUE (email, oauth_id),
 	  CONSTRAINT UQ_User_Account_unique_id UNIQUE (unique_id),
-      CONSTRAINT CK_User_Account_password_hash_oauth_id CHECK (
-         password_hash IS NOT NULL
-         OR oauth_id IS NOT NULL
-      ) -- At least one must be non-NULL
+      --CONSTRAINT CK_User_Account_password_hash_oauth_id CHECK (password_hash IS NOT NULL OR oauth_id IS NOT NULL) -- At least one must be non-NULL
    );
 
 GO
@@ -88,14 +90,35 @@ CREATE TABLE
 		User_Account_id INT NOT NULL,
 		login_provider NVARCHAR (25) NOT NULL,
         unique_id NVARCHAR (25) NOT NULL,
-		jwt_value NVARCHAR (max) NOT NULL,
+		jwt_value NVARCHAR (800) NOT NULL,
+		jwt_value_hash CHAR(64) NULL,
 
 		CONSTRAINT FK_User_Account_Authentication_Token_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
 		--CONSTRAINT UQ_User_Account_Authentication_Token_User_Account_id UNIQUE (User_Account_id), --not applicable in our context, what if user both register with built in authentication and oauth! or 2 accounts or same account... not for now implementation!
-		CONSTRAINT UQ_User_Account_Authentication_Token_jwt_value UNIQUE (jwt_value)
+		CONSTRAINT UQ_User_Account_Authentication_Token_jwt_value_hash UNIQUE (jwt_value_hash)
 	);
 
 GO
+
+CREATE TABLE
+   User_Account_Claim_Type_Mapping (
+      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+      User_Account_id INT NOT NULL,
+      claim_type NVARCHAR(50) NOT NULL, --no claimtype table!
+	  claim_value NVARCHAR(50) NOT NULL, --no claimtype table!
+      --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
+      --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+      --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
+      --last_modified_by BIGINT NOT NULL,
+      --CONSTRAINT FK_Role_Type_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
+      --CONSTRAINT FK_Role_Type_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+      CONSTRAINT FK_User_Account_Claim_Type_Mapping_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
+      --CONSTRAINT FK_Role_Type_Claim_Type_Mapping_Claim_Type_id FOREIGN KEY (Claim_Type_id) REFERENCES Claim_Type (id) ON DELETE CASCADE,
+      CONSTRAINT UQ_User_Account_Claim_Type_Mapping_User_Account_id_claim_type_claim_value UNIQUE (User_Account_id, claim_type, claim_value)
+   );
+
+GO
+
 CREATE TABLE
    Role_Type (
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
@@ -112,20 +135,20 @@ CREATE TABLE
 
 GO
 
-CREATE TABLE
-   Claim_Type (
-      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
-      full_name NVARCHAR (50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User') or for later functionality of groups of people, gorup id + admin
-      details NVARCHAR (255) NULL, -- Description of the role
-	  data_type NVARCHAR(50) NULL, -- wheter bool, string, int collection<list blablabla> and so on. so i can validate userclaim value or roleclaim value...
-      --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
-      --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
-      --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
-      --last_modified_by BIGINT NOT NULL,
-      --CONSTRAINT FK_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
-      --CONSTRAINT FK_Role_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
-      CONSTRAINT UQ_Claim_Type_full_name UNIQUE (full_name)
-   );
+--CREATE TABLE
+--   Claim_Type (
+--      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+--      full_name NVARCHAR (50) NOT NULL, -- Name of the role (e.g., 'Regular User', 'Premium User') or for later functionality of groups of people, gorup id + admin
+--      details NVARCHAR (255) NULL, -- Description of the role
+--	  data_type NVARCHAR(50) NULL, -- wheter bool, string, int collection<list blablabla> and so on. so i can validate userclaim value or roleclaim value...
+--      --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
+--      --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+--      --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
+--      --last_modified_by BIGINT NOT NULL,
+--      --CONSTRAINT FK_Role_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
+--      --CONSTRAINT FK_Role_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+--      CONSTRAINT UQ_Claim_Type_full_name UNIQUE (full_name)
+--   );
 
 --CREATE TABLE
 --   Permission_Type (
@@ -142,21 +165,39 @@ CREATE TABLE
 --   );
 
 GO
+
 CREATE TABLE
-   Role_Type_Permission_Type_Mapping (
+   Role_Type_Claim_Type_Mapping (
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       Role_Type_id INT NOT NULL,
-      Permission_Type_id INT NOT NULL,
+      claim_type NVARCHAR(50) NOT NULL, --no claimtype table!
+	  claim_value NVARCHAR(50) NOT NULL, --no claimtype table!
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
       --CONSTRAINT FK_Role_Type_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
       --CONSTRAINT FK_Role_Type_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
-      CONSTRAINT FK_Role_Type_Permission_Type_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type (id) ON DELETE CASCADE,
-      CONSTRAINT FK_Role_Type_Permission_Type_Permission_id FOREIGN KEY (Permission_Type_id) REFERENCES Permission_Type (id) ON DELETE CASCADE,
-      CONSTRAINT UQ_Role_Type_Permission_Type_Role_Type_id_Permission_id UNIQUE (Role_Type_id, Permission_Type_id)
+      CONSTRAINT FK_Role_Type_Claim_Type_Mapping_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type (id) ON DELETE CASCADE,
+      --CONSTRAINT FK_Role_Type_Claim_Type_Mapping_Claim_Type_id FOREIGN KEY (Claim_Type_id) REFERENCES Claim_Type (id) ON DELETE CASCADE,
+      CONSTRAINT UQ_Role_Type_Claim_Type_Mapping_Role_Type_id_claim_type_claim_value UNIQUE (Role_Type_id, claim_type, claim_value)
    );
+
+--CREATE TABLE
+--   Role_Type_Permission_Type_Mapping (
+--      id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+--      Role_Type_id INT NOT NULL,
+--      Permission_Type_id INT NOT NULL,
+--      --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
+--      --created_by BIGINT NOT NULL, -- So user can create his own personal dhirk types just for him
+--      --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
+--      --last_modified_by BIGINT NOT NULL,
+--      --CONSTRAINT FK_Role_Type_Permission_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
+--      --CONSTRAINT FK_Role_Type_Permission_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
+--      CONSTRAINT FK_Role_Type_Permission_Type_Role_Type_id FOREIGN KEY (Role_Type_id) REFERENCES Role_Type (id) ON DELETE CASCADE,
+--      CONSTRAINT FK_Role_Type_Permission_Type_Permission_id FOREIGN KEY (Permission_Type_id) REFERENCES Permission_Type (id) ON DELETE CASCADE,
+--      CONSTRAINT UQ_Role_Type_Permission_Type_Role_Type_id_Permission_id UNIQUE (Role_Type_id, Permission_Type_id)
+--   );
 
 GO
 CREATE TABLE

@@ -10,7 +10,7 @@ namespace IbadahLover.Application.Models.Identity
     public class RegistrationRequest
     {
         [Required]
-        public string UniqueId { get; set; }
+        public string FullName { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; }

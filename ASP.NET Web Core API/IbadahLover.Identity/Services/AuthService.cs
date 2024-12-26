@@ -3,6 +3,7 @@ using IbadahLover.Application.Contracts.Identity;
 using IbadahLover.Application.Models.Identity;
 using IbadahLover.Identity.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -20,12 +21,14 @@ namespace IbadahLover.Identity.Services
         private readonly UserManager<ApplicationUser> _userManager;
         //private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
+        private readonly string _jwtSettingsKey;
 
         //public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings, SignInManager<ApplicationUser> signInManager)
-        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings)
+        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings, string jwtSettingsKey)
         {
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
+            _jwtSettingsKey = jwtSettingsKey;
             //_signInManager = signInManager;
         }
 
@@ -54,10 +57,41 @@ namespace IbadahLover.Identity.Services
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
                 Email = user.Email,
                 FullName = user.FullName,
-                UniqueId = user.UniqueId
+                UniqueId = user.UserName // I changed this from UniqueId to UserName just the name!
             };
 
             return response;
+        }
+        private async Task<bool> UniqueIdExists(string uniqueId)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == uniqueId);
+            return user != null;
+        }
+
+        private async Task<string> GenerateUniqueId(string fullName)
+        {
+            // Sanitize input by removing '@' and other restricted characters
+            string sanitizedInput = fullName.Replace("@", "").Trim();
+
+            // Add '@' prefix
+            string baseUniqueId = $"@{sanitizedInput}";
+
+            // Check database for conflicts
+            Random random = new Random();
+            string uniqueId = baseUniqueId;
+
+            for (int i = 0; i < 100; i++) //100 tries to find a unique id
+            {
+                int suffix = random.Next(1, 10001); // 1 to 10000 for if there are many many users with username Muhammad! the most given name to new borns in the world!
+                uniqueId = $"{baseUniqueId}{suffix}";
+
+                if (!await UniqueIdExists(uniqueId))
+                {
+                    return uniqueId;
+                }
+            }
+
+            throw new InvalidOperationException("Unable to generate a unique ID after multiple attempts.");
         }
 
         public async Task<RegistrationResponse> Register(RegistrationRequest request)
@@ -67,7 +101,8 @@ namespace IbadahLover.Identity.Services
             var user = new ApplicationUser
             {
                 Email = request.Email,
-                UniqueId = request.UniqueId,
+                UserName = await GenerateUniqueId(request.FullName),
+                FullName = request.FullName,
                 //EmailConfirmed = true // clairement une erreur de trevoir williams...
             };
 
@@ -112,12 +147,13 @@ namespace IbadahLover.Identity.Services
             .Union(userClaims)
             .Union(roleClaims);
 
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettingsKey));
             var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
             var jwtSecurityToken = new JwtSecurityToken(
                 issuer: _jwtSettings.Issuer,
                 audience: _jwtSettings.Audience,
+                expires: DateTime.UtcNow.AddYears(_jwtSettings.DurationInYears),
                 claims: claims,
                 signingCredentials: signingCredentials);
             return jwtSecurityToken;

@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.RoleTypePermissionTypeMapping;
 using IbadahLover.Application.Features.RoleTypePermissionTypeMappings.Requests.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,6 +20,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<ValuesController>
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<RoleTypePermissionTypeMappingListDto>>> GetAll()
         {
             var roleTypePermissionTypeMappings = await _mediator.Send(new GetRoleTypePermissionTypeMappingListRequest());
@@ -27,6 +29,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<RoleTypePermissionTypeMappingDto>> Get(int id)
         {
             var RoleTypePermissionTypeMapping = await _mediator.Send(new GetRoleTypePermissionTypeMappingDetailsRequest { Id = id });

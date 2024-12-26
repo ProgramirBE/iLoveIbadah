@@ -2,6 +2,7 @@
 using IbadahLover.Application.Features.UserDhikrOverviews.Requests.Queries;
 using IbadahLover.Domain;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -20,6 +21,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserDhikrOverviewsController>
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<List<UserDhikrOverviewListDto>>> GetAll()
         {
             var userDhikrOverviews = await _mediator.Send(new GetUserDhikrOverviewListRequest());
@@ -28,6 +30,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserDhikrOverviewsController>/5
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<UserDhikrOverviewDto>> GetById(int id)
         {
             var userDhikrOverview = await _mediator.Send(new GetUserDhikrOverviewDetailsRequest { Id = id });
