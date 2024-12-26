@@ -5,6 +5,7 @@ using IbadahLover.Application.Features.UserSalahActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Queries;
 using IbadahLover.Application.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -23,6 +24,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserSalahActivitiesController>
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<List<UserSalahActivityListDto>>> GetAll()
         {
             var userSalahActivities = await _mediator.Send(new GetUserSalahActivityListRequest());
@@ -31,6 +33,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserSalahActivitiesController>/5
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<UserSalahActivityDto>> GetById(int id)
         {
             var userSalahActivity = await _mediator.Send(new GetUserSalahActivityDetailsRequest { Id = id });
@@ -39,6 +42,7 @@ namespace IbadahLover.API.Controllers
 
         // POST api/<UserSalahActivitiesController>/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<ActionResult> Update([FromBody] UpdateUserSalahActivityDto userSalahActivity)
         {
             var command = new UpdateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };
@@ -48,6 +52,7 @@ namespace IbadahLover.API.Controllers
 
         //// PUT api/<UserSalahActivitiesController>
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserSalahActivityDto userSalahActivity)
         {
             var command = new CreateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };

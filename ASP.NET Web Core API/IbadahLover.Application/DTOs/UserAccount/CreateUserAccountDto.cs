@@ -12,8 +12,8 @@ namespace IbadahLover.Application.DTOs.UserAccount
     {
         public string FullName { get; set; }
         public string Email { get; set; }
-        public string? PasswordHash { get; set; }
-        public OAuthProviderType? OAuthProvider { get; set; }
-        public string? OAuthId { get; set; }
+        public string PasswordHash { get; set; } //pour l'instant! pas d'autre methode de connection
+        //public OAuthProviderType? OAuthProvider { get; set; }
+        //public string? OAuthId { get; set; }
     }
 }

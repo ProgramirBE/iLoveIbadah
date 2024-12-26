@@ -13,6 +13,7 @@ namespace IbadahLover.Application.Features.UserAccounts.Requests.Queries
     public class GetUserAccountListRequest : IRequest<List<UserAccountListDto>>
     {
         public string FullName { get; set; }
+        public string UniqueId { get; set; }
         public int? ProfilePictureTypeId { get; set; }
         //[Column(TypeName = "decimal(11, 8)")]
         //public decimal? CurrentLongitude { get; set; }

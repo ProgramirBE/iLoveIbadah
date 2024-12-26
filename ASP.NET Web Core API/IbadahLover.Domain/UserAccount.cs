@@ -11,7 +11,10 @@ namespace IbadahLover.Domain
     {
         public int Id { get; set; }
         public string FullName { get; set; }
+        public string UniqueId { get; set; }
+        public string? NormalizedUniqueId { get; set; }
         public string Email { get; set; }
+        public string? NormalizedEmail { get; set; }
         [ForeignKey("ProfilePictureType")]
         public int? ProfilePictureTypeId { get; set; }
         public ProfilePictureType? ProfilePictureType { get; set; }
@@ -33,5 +36,7 @@ namespace IbadahLover.Domain
         //[ForeignKey("LastModifiedByUserAccount")]
         //public int? LastModifiedBy { get; set; }
         //public UserAccount? LastModifiedByUserAccount { get; set; } // Navigation property
+        public string? SecurityStamp { get; set; }
+        public string? ConcurrencyStamp { get; set; }
     }
 }

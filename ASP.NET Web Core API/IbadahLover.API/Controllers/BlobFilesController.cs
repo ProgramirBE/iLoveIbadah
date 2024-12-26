@@ -3,6 +3,7 @@ using IbadahLover.Application.Features.BlobFiles.Requests.Commands;
 using IbadahLover.Application.Features.BlobFiles.Requests.Queries;
 using IbadahLover.Application.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -20,6 +21,7 @@ namespace IbadahLover.API.Controllers
         }
         // GET: api/<BlobFilesController>
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<BlobFileListDto>>> GetAll()
         {
             var blobFiles = await _mediator.Send(new GetBlobFileListRequest());
@@ -28,6 +30,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<BlobFilesController>/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<BlobFileDto>> GetById(int id)
         {
             var blobFile = await _mediator.Send(new GetBlobFileDetailsRequest { Id = id });
@@ -36,6 +39,7 @@ namespace IbadahLover.API.Controllers
 
         // POST api/<BlobFilesController>
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateBlobFileDto blobFile)
         {
             var command = new CreateBlobFileCommand { BlobFileDto = blobFile };

@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.DhikrType;
 using IbadahLover.Application.Features.DhikrTypes.Requests.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -21,6 +22,7 @@ namespace IbadahLover.API.Controllers
         [HttpGet]
         [EndpointSummary("Get all Dhikr Types")]
         [EndpointDescription("Get A List of all the Dhikr Types")]
+        [AllowAnonymous]
         public async Task<ActionResult<List<DhikrTypeListDto>>> GetAll()
         {
             var dhikrTypes = await _mediator.Send(new GetDhikrTypeListRequest());
@@ -31,6 +33,7 @@ namespace IbadahLover.API.Controllers
         [HttpGet("{id}")]
         [EndpointSummary("Get Dhikr Type by Id")]
         [EndpointDescription("Get All Details of specific Dhikr Type")]
+        [AllowAnonymous]
         public async Task<ActionResult<DhikrTypeDto>> Get(int id) //Get or GetById??? check if issue! todo! error! debug! fix! test! review! verify! validate! confirm! check! inspect! examine! audit! revise! study! investigate! analyze! assess! evaluate! scrutinize! probe!
         {
             var dhikrType = await _mediator.Send(new GetDhikrTypeDetailsRequest { Id = id });

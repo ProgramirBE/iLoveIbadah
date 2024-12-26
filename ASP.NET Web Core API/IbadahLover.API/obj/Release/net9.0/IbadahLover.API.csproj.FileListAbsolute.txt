@@ -180,3 +180,7 @@ C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\o
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\IbadahLover.API.pdb
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\IbadahLover.API.genruntimeconfig.cache
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\ref\IbadahLover.API.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Release\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Release\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Release\net9.0\IbadahLover.Identity.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\bin\Release\net9.0\IbadahLover.Identity.pdb

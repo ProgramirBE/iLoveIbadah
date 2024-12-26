@@ -492,6 +492,58 @@
   },
   {
     "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "Login",
+    "RelativePath": "api/UserAccounts/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "IbadahLover.Application.Models.Identity.AuthRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.Models.Identity.AuthResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
+    "Method": "Register",
+    "RelativePath": "api/UserAccounts/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "IbadahLover.Application.Models.Identity.RegistrationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.Models.Identity.RegistrationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
     "Method": "UpdatePasswordHash",
     "RelativePath": "api/UserAccounts/updatepasswordhash/{id}",
     "HttpMethod": "PUT",
@@ -804,26 +856,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "IbadahLover.API.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[IbadahLover.API.WeatherForecast, IbadahLover.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

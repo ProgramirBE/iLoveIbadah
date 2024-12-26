@@ -10,3 +10,11 @@ C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Ident
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\obj\Debug\net9.0\refint\IbadahLover.Identity.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\obj\Debug\net9.0\IbadahLover.Identity.pdb
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\obj\Debug\net9.0\ref\IbadahLover.Identity.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\obj\Debug\net9.0\IbadahLover.Identity.csproj.AssemblyReference.cache
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\bin\Debug\net9.0\IbadahLover.Identity.runtimeconfig.json
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\bin\Debug\net9.0\IbadahLover.Application.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\bin\Debug\net9.0\IbadahLover.Domain.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\bin\Debug\net9.0\IbadahLover.Application.pdb
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\bin\Debug\net9.0\IbadahLover.Domain.pdb
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\obj\Debug\net9.0\IbadahLo.7216BB94.Up2Date
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.Identity\obj\Debug\net9.0\IbadahLover.Identity.genruntimeconfig.cache

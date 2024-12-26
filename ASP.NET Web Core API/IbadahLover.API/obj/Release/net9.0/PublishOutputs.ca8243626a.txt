@@ -15,6 +15,8 @@ C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\o
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\MediatR.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\MediatR.Contracts.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
@@ -65,9 +67,11 @@ C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\o
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Application.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Domain.dll
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Identity.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Infrastructure.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Persistence.dll
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Application.pdb
+C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Identity.pdb
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Infrastructure.pdb
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Persistence.pdb
 C:\Users\AM5\Documents\GitHub\IbadahLover\ASP.NET Web Core API\IbadahLover.API\obj\Release\net9.0\PubTmp\Out\IbadahLover.Domain.pdb

@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.SalahType;
 using IbadahLover.Application.Features.SalahTypes.Requests.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,6 +20,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<SalahTypesController>
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<List<SalahTypeListDto>>> GetAll()
         {
             var salahTypes = await _mediator.Send(new GetSalahTypeListRequest());
@@ -26,6 +28,7 @@ namespace IbadahLover.API.Controllers
         }
 
         // GET api/<SalahTypesController>/5
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<SalahTypeDto>> Get(int id)
         {

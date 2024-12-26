@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using IbadahLover.Identity.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -9,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Identity.Configurations
 {
-    public class ApplicationRoleConfiguration : IEntityTypeConfiguration<IdentityRole>
+    public class ApplicationRoleConfiguration : IEntityTypeConfiguration<ApplicationRole>
     {
-        public void Configure(EntityTypeBuilder<IdentityRole> builder)
+        public void Configure(EntityTypeBuilder<ApplicationRole> builder)
         {
             builder.ToTable("Role_Type");
             builder.Property(e => e.Id).HasColumnName("id");
