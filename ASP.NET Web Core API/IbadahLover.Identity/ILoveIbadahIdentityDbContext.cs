@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace IbadahLover.Infrastructure.IbadahLover.Identity
 {
-    public class ILoveIbadahIdentityDbContext : IdentityDbContext<ApplicationUser, IdentityRole<int>, int>
+    public class ILoveIbadahIdentityDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int, ApplicationUserClaim, ApplicationUserRole, ApplicationUserLogin, ApplicationRoleClaim, ApplicationUserToken>
     {
         public ILoveIbadahIdentityDbContext(DbContextOptions<ILoveIbadahIdentityDbContext> options) : base(options)
         {
@@ -25,6 +25,10 @@ namespace IbadahLover.Infrastructure.IbadahLover.Identity
             modelBuilder.ApplyConfiguration(new ApplicationRoleConfiguration());
             modelBuilder.ApplyConfiguration(new ApplicationUserConfiguration());
             modelBuilder.ApplyConfiguration(new ApplicationUserRoleConfiguration());
+            modelBuilder.ApplyConfiguration(new ApplicationUserClaimConfiguration());
+            modelBuilder.ApplyConfiguration(new ApplicationRoleClaimConfiguration());
+            modelBuilder.ApplyConfiguration(new ApplicationUserTokenConfiguration());
+            modelBuilder.ApplyConfiguration(new ApplicationUserLoginConfiguration());
 
             // Les configurations suivantes sont redondantes et peuvent être supprimées
             /*

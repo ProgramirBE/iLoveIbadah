@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using IbadahLover.API.Middleware;
 using Scalar.AspNetCore;
 using IbadahLover.Identity;
+using System.Drawing.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,8 @@ builder.Services.AddHttpContextAccessor();
 var KeyVaultUrl = new Uri(builder.Configuration.GetSection("KeyVaultUrl").Value!);
 var AzureCredential = new DefaultAzureCredential();
 builder.Configuration.AddAzureKeyVault(KeyVaultUrl, AzureCredential);
+
+AddSwaggerDoc(builder.Services);
 
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
@@ -66,17 +69,60 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+app.UseAuthentication();
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 //app.UseAuthentication();
-
+app.UseRouting(); // ??? just follow tutorial don't know what it does
 app.UseAuthorization();
 
 app.UseCors("CorsPolicy");
 
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+//app.MapControllers(); TO KNOW! if UseEndpoints from above has issue use this instead
 
 app.Run();
+
+void AddSwaggerDoc(IServiceCollection services)
+{
+    services.AddSwaggerGen(c =>
+    {
+        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            Description = @"JWT Authorization header using the Bearer scheme. 
+                            Enter 'Bearer' [space] and then your token in the text input below.
+                            Example: 'Bearer 12345abcdef'",
+            Name = "Authorization",
+            In = ParameterLocation.Header,
+            Type = SecuritySchemeType.ApiKey,
+            Scheme = "Bearer"
+        });
+
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    },
+                    Scheme = "oauth2",
+                    Name = "Bearer",
+                    In = ParameterLocation.Header,
+                },
+                new List<string>()
+            }
+        });
+
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "IbadahLover API", Version = "v1" });
+    });
+}
 
 //void AddSwaggerDoc(IServiceCollection services)
 //{

@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using IbadahLover.Application.Contracts.Identity;
 using System.Reflection;
 using AutoMapper;
+using Microsoft.Extensions.Options;
 
 namespace IbadahLover.Identity
 {
@@ -29,6 +30,12 @@ namespace IbadahLover.Identity
 
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
+            var jwtSettingsKey = configuration.GetSection("jwtsettingskey").Value;
+            if (string.IsNullOrEmpty(jwtSettingsKey))
+            {
+                throw new Exception("jwtsettingskey is not configured properly.");
+            }
+
             services.AddDbContext<ILoveIbadahIdentityDbContext>(options =>
                 options.UseSqlServer(configuration.GetSection("azuresqlserverconnectionstring").Value));
                 //b => b.MigrationAssembly(typeof(ILoveIbadahIdentityDbContext).Assembly.FullName))); I don't need migration!
@@ -37,7 +44,10 @@ namespace IbadahLover.Identity
                 .AddEntityFrameworkStores<ILoveIbadahIdentityDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddTransient<IAuthService, AuthService>();
+            services.AddTransient<IAuthService, AuthService>(provider =>
+            {
+                return new AuthService(provider.GetRequiredService<UserManager<ApplicationUser>>(), provider.GetRequiredService<IOptions<JwtSettings>>(), jwtSettingsKey);
+            });
             services.AddTransient<IUserService, UserService>();
 
             services.AddAuthentication(options =>
@@ -56,7 +66,7 @@ namespace IbadahLover.Identity
                         ClockSkew = TimeSpan.Zero,
                         ValidIssuer = configuration["JwtSettings:Issuer"],
                         ValidAudience = configuration["JwtSettings:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Key"]))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettingsKey))
                     };
                 });
 

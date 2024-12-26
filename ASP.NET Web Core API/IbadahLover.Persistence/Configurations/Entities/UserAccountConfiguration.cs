@@ -18,11 +18,15 @@ namespace IbadahLover.Persistence.Configurations.Entities
                 tb.HasTrigger("Trigger_Update_User_Account_is_permanently_banned");
                 tb.HasTrigger("Trigger_Create_User_Salah_Overview");
                 tb.HasTrigger("Trigger_Create_User_Dhikr_Overview");
+                tb.HasTrigger("Trigger_Create_User_Account_Role_Type_Mapping");
             });
             builder.ToTable("User_Account");
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.FullName).HasColumnName("full_name");
+            builder.Property(e => e.UniqueId).HasColumnName("unique_id");
+            builder.Property(e => e.NormalizedUniqueId).HasColumnName("normalized_unique_id");
             builder.Property(e => e.Email).HasColumnName("email");
+            builder.Property(e => e.NormalizedEmail).HasColumnName("normalized_email");
             builder.Property(e => e.ProfilePictureTypeId)
                 .HasColumnName("Profile_Picture_Type_id")
                 .HasDefaultValue(1);
@@ -41,6 +45,8 @@ namespace IbadahLover.Persistence.Configurations.Entities
             builder.Property(e => e.IsPermanentlyBanned)
                 .HasColumnName("is_permanently_banned")
                 .HasDefaultValue(false);
+            builder.Property(e => e.ConcurrencyStamp).HasColumnName("concurrency_stamp");
+            builder.Property(e => e.SecurityStamp).HasColumnName("security_stamp");
         }
     }
 }

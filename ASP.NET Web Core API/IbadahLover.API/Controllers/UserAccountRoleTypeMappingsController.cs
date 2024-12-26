@@ -1,6 +1,7 @@
 ﻿using IbadahLover.Application.DTOs.UserAccountRoleTypeMapping;
 using IbadahLover.Application.Features.UserAccountRoleTypeMappings.Requests.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,6 +20,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserAccountRoleTypeMappingsController>
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<UserAccountRoleTypeMappingListDto>>> GetAll()
         {
             var userAccountRoleTypeMappings = await _mediator.Send(new GetUserAccountRoleTypeMappingListRequest());
@@ -27,6 +29,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserAccountRoleTypeMappingsController>/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<UserAccountRoleTypeMappingDto>> Get(int id)
         {
             var userAccountRoleTypeMapping = await _mediator.Send(new GetUserAccountRoleTypeMappingDetailsRequest { Id = id });

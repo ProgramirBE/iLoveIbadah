@@ -9,6 +9,6 @@ namespace IbadahLover.Identity.Models
 {
     public class ApplicationUserRole : IdentityUserRole<int>
     {
-        //public int Id { get; set; }
+        public int Id { get; set; }
     }
 }

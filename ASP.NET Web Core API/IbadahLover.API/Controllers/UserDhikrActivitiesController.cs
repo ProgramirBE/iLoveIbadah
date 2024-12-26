@@ -4,6 +4,7 @@ using IbadahLover.Application.Features.UserDhikrActivities.Requests.Queries;
 using IbadahLover.Application.Responses;
 using IbadahLover.Domain;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 
@@ -23,6 +24,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserDhikrActivitiesController>
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<List<UserDhikrActivityListDto>>> GetAll()
         {
             var userDhikrActivities = await _mediator.Send(new GetUserDhikrActivityListRequest());
@@ -31,6 +33,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserDhikrActivitiesController>/5
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<UserDhikrActivityDto>> GetById(int id)
         {
             var userDhikrActivity = await _mediator.Send(new GetUserDhikrActivityDetailsRequest { Id = id });
@@ -39,6 +42,7 @@ namespace IbadahLover.API.Controllers
 
         // POST api/<UserDhikrActivitiesController>
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserDhikrActivityDto userDhikrActivity)
         {
             var command = new CreateUserDhikrActivityCommand { UserDhikrActivityDto = userDhikrActivity };
@@ -48,6 +52,7 @@ namespace IbadahLover.API.Controllers
 
         // PUT api/<UserDhikrActivitiesController>
         [HttpPut]
+        [Authorize]
         public async Task<ActionResult> Update([FromBody] UpdateUserDhikrActivityDto userDhikrActivity)
         {
             var command = new UpdateUserDhikrActivityCommand { UserDhikrActivityDto = userDhikrActivity };

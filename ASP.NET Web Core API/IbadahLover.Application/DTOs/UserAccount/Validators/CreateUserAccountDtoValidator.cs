@@ -23,10 +23,11 @@ namespace IbadahLover.Application.DTOs.UserAccount.Validators
                 .MaximumLength(255).WithMessage("{PropertyName} must not exceed 255 characters.");
 
             RuleFor(p => p.PasswordHash)
-                .NotNull().When(p => p.OAuthId == null).WithMessage("Either {PropertyName} or OAuthId must be provided.");
+                .NotEmpty().WithMessage("{PropertyName} is required.");
+                //.NotNull().When(p => p.OAuthId == null).WithMessage("Either {PropertyName} or OAuthId must be provided.");
 
-            RuleFor(p => p.OAuthId)
-                .NotNull().When(p => p.PasswordHash == null).WithMessage("Either {PropertyName} or PasswordHash must be provided.");
+            //RuleFor(p => p.OAuthId)
+            //.NotNull().When(p => p.PasswordHash == null).WithMessage("Either {PropertyName} or PasswordHash must be provided.");
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "IbadahLover.API",
-    "version": "1.0"
+    "title": "IbadahLover API",
+    "version": "v1"
   },
   "paths": {
     "/api/BlobFiles": {
@@ -672,6 +672,102 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UserAccountRoleTypeMappingDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UserAccounts/login": {
+      "post": {
+        "tags": [
+          "UserAccounts"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UserAccounts/register": {
+      "post": {
+        "tags": [
+          "UserAccounts"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrationResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrationResponse"
                 }
               }
             }
@@ -1398,49 +1494,50 @@
           }
         }
       }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
+      "AuthRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "BaseCommandResponse": {
         "type": "object",
         "properties": {
@@ -1568,13 +1665,6 @@
           "passwordHash": {
             "type": "string",
             "nullable": true
-          },
-          "oAuthProvider": {
-            "$ref": "#/components/schemas/OAuthProviderType"
-          },
-          "oAuthId": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1647,15 +1737,6 @@
         },
         "additionalProperties": false
       },
-      "OAuthProviderType": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
       "PermissionTypeDto": {
         "type": "object",
         "properties": {
@@ -1722,6 +1803,40 @@
             "format": "int32"
           },
           "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrationRequest": {
+        "required": [
+          "email",
+          "fullName",
+          "passwordHash"
+        ],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "passwordHash": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrationResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
             "type": "integer",
             "format": "int32"
           }
@@ -1839,10 +1954,6 @@
       "UpdateUserAccountDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "fullName": {
             "type": "string",
             "nullable": true
@@ -1858,11 +1969,11 @@
       "UpdateUserAccountPasswordHashDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
+          "currentPasswordHash": {
+            "type": "string",
+            "nullable": true
           },
-          "passwordHash": {
+          "newPasswordHash": {
             "type": "string",
             "nullable": true
           }
@@ -1872,10 +1983,6 @@
       "UpdateUserAccountTotalWarningsDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "totalWarnings": {
             "type": "integer",
             "format": "int32"
@@ -1942,10 +2049,6 @@
       "UserAccountDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "fullName": {
             "type": "string",
             "nullable": true
@@ -1954,22 +2057,20 @@
             "type": "string",
             "nullable": true
           },
-          "profilePictureTypeId": {
-            "type": "integer",
-            "format": "int32",
+          "normalizedEmail": {
+            "type": "string",
             "nullable": true
           },
-          "oAuthProvider": {
-            "$ref": "#/components/schemas/OAuthProviderType"
-          },
-          "currentLongitude": {
-            "type": "number",
-            "format": "double",
+          "uniqueId": {
+            "type": "string",
             "nullable": true
           },
-          "currentLatitude": {
-            "type": "number",
-            "format": "double",
+          "normalizedUniqueId": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentLocation": {
+            "type": "string",
             "nullable": true
           },
           "totalWarnings": {
@@ -1983,6 +2084,14 @@
           },
           "isPermanentlyBanned": {
             "type": "boolean",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -1999,19 +2108,17 @@
             "type": "string",
             "nullable": true
           },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true
+          },
           "profilePictureTypeId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
-          "currentLongitude": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "currentLatitude": {
-            "type": "number",
-            "format": "double",
+          "currentLocation": {
+            "type": "string",
             "nullable": true
           },
           "isPermanentlyBanned": {
@@ -2256,30 +2363,20 @@
           }
         },
         "additionalProperties": false
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. \r\n                            Enter 'Bearer' [space] and then your token in the text input below.\r\n                            Example: 'Bearer 12345abcdef'",
+        "name": "Authorization",
+        "in": "header"
       }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
