@@ -419,32 +419,6 @@
   },
   {
     "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
-    "Method": "Create",
-    "RelativePath": "api/UserAccounts",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userAccount",
-        "Type": "IbadahLover.Application.DTOs.UserAccount.CreateUserAccountDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "IbadahLover.Application.Responses.BaseCommandResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "IbadahLover.API.Controllers.UserAccountsController",
     "Method": "GetById",
     "RelativePath": "api/UserAccounts/{id}",
     "HttpMethod": "GET",

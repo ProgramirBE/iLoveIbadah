@@ -2,14 +2,26 @@
   <h1>Login</h1>
   <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
     <div class="form-group">
+      <label for="full_name">Email</label>
+      <input
+        id="full_name"
+        type="text"
+        formControlName="full_name"
+        placeholder="Enter your username"
+        required />
+      <!-- <div *ngIf="loginForm.get('full_name')?.invalid && loginForm.get('full_name')?.touched" class="error">
+        Please enter a valid username.
+      </div> -->
+    </div>
+
+    <div class="form-group">
       <label for="email">Email</label>
       <input
         id="email"
         type="email"
         formControlName="email"
         placeholder="Enter your email"
-        required
-      />
+        required />
       <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
         Please enter a valid email.
       </div>
@@ -22,8 +34,7 @@
         type="password"
         formControlName="password"
         placeholder="Enter your password"
-        required
-      />
+        required />
       <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
         Password is required.
       </div>
@@ -35,7 +46,7 @@
 
   <!-- Link om een account te maken -->
   <div class="register-link">
-    <p>Nog geen account? 
+    <p>Nog geen account?
       <a routerLink="/register">Maak een account aan</a>
     </p>
   </div>

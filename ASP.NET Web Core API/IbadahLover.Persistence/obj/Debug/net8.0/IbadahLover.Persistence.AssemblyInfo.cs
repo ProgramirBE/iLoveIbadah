@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IbadahLover.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e1ec4c9f62b10a6ead75af404081a7a76d58017")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31c46280334ab437d06cead3baa25f9d8aef7b06")]
 [assembly: System.Reflection.AssemblyProductAttribute("IbadahLover.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IbadahLover.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
