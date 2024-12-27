@@ -39,11 +39,15 @@ namespace IbadahLover.Application.Features.UserDhikrActivities.Handlers.Commands
                 throw new ValidationException(validationResult);
             }
 
-            var userDhikrActivity = await _userDhikrActivityRepository.GetById(request.UserDhikrActivityDto.Id);
+            var userDhikrActivity = await _userDhikrActivityRepository.GetUserDhikrActivityByPerformedOn(request.UserDhikrActivityDto.UserAccountId.Value, request.UserDhikrActivityDto.PerformedOn, request.UserDhikrActivityDto.DhikrTypeId);
+            //var userDhikrActivity = await _userDhikrActivityRepository.GetById(request.UserDhikrActivityDto.UserAccountId.Value);
 
             _mapper.Map(request.UserDhikrActivityDto, userDhikrActivity);
 
-            await _userDhikrActivityRepository.Update(userDhikrActivity);
+            //await _userDhikrActivityRepository.Update(userDhikrActivity); -- Pour plutart SI JAMAIS Je LAISSE INCREMENT PAR PLUS QUE SEULEMENT 1!!!!
+
+            await _userDhikrActivityRepository.IncrementTotalPerformed(request.UserDhikrActivityDto.UserAccountId.Value, request.UserDhikrActivityDto.PerformedOn, request.UserDhikrActivityDto.DhikrTypeId);
+
 
             return Unit.Value;
         }

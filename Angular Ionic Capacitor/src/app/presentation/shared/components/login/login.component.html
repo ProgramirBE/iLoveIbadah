@@ -2,19 +2,6 @@
   <h1>Login</h1>
   <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
     <div class="form-group">
-      <label for="full_name">Email</label>
-      <input
-        id="full_name"
-        type="text"
-        formControlName="full_name"
-        placeholder="Enter your username"
-        required />
-      <!-- <div *ngIf="loginForm.get('full_name')?.invalid && loginForm.get('full_name')?.touched" class="error">
-        Please enter a valid username.
-      </div> -->
-    </div>
-
-    <div class="form-group">
       <label for="email">Email</label>
       <input
         id="email"

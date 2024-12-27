@@ -35,11 +35,12 @@ namespace IbadahLover.Persistence.Repositories
             return userSalahActivity;
         }
 
-        public async Task<bool> TrackedOnExists(int userAccountId, DateTime trackedOn)
+        public async Task<bool> TrackedOnExists(int userAccountId, DateTime trackedOn, int salahTypeId)
         {
             var userSalahActivity = await _dbContext.UserSalahActivities
                 .Include(q => q.UserAccount)
-                .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId && q.TrackedOn.Date == trackedOn.Date); //trackedOn.Date requires additional processing, table and class both already store date in yyyy-mm-dd so no need for trackedOn.Date to check to day precision only
+                .Include(q => q.SalahType)
+                .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId && q.TrackedOn.Date == trackedOn.Date && q.SalahTypeId == salahTypeId); //trackedOn.Date requires additional processing, table and class both already store date in yyyy-mm-dd so no need for trackedOn.Date to check to day precision only
             return userSalahActivity != null;
         }
     }
