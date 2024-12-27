@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -8,46 +7,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   currentSection: string = 'publicProfile'; // Default section
+  isEditMode: boolean = false; // Controls edit mode
+
   profile = {
-    fullName: '',
-    email: '',
+    fullName: 'John Doe',
+    email: 'johndoe@example.com',
     profilePicture: '',
-    bio: '',
-    url: '',
-    favoriteDua: '',
-    location: '',
+    bio: 'A passionate learner and enthusiast.',
+    url: 'https://example.com',
+    favoriteDua: 'Rabbi zidni ilma',
+    location: 'New York, USA',
   };
-  newUsername: string = ''; // Gebruikersnaam wijzigen
-  currentPassword: string = ''; // Huidig wachtwoord
-  newPassword: string = ''; // Nieuw wachtwoord
+
+  account = {
+    username: 'john_doe',
+    password: '********',
+  };
 
   constructor() {}
 
-  ngOnInit(): void {
-    // Laad profielgegevens (vervang dit door echte API-aanroepen indien nodig)
-    this.loadProfile();
-  }
-
-  loadProfile(): void {
-    // Mock data voor demonstratie
-    this.profile = {
-      fullName: 'John Doe',
-      email: 'johndoe@example.com',
-      profilePicture: '',
-      bio: 'I am a dedicated learner and enthusiast.',
-      url: 'https://example.com',
-      favoriteDua: 'Rabbi zidni ilma',
-      location: 'New York, USA',
-    };
-  }
+  ngOnInit(): void {}
 
   navigateToSection(section: string): void {
     this.currentSection = section;
   }
 
+  toggleEditMode(): void {
+    this.isEditMode = !this.isEditMode;
+  }
+
   updateProfile(): void {
     console.log('Profile updated:', this.profile);
-    // Voeg hier API-aanroep toe om profielgegevens op te slaan
+    this.isEditMode = false; // Exit edit mode
+  }
+
+  updateAccount(): void {
+    console.log('Account updated:', this.account);
+    this.isEditMode = false; // Exit edit mode
   }
 
   uploadProfilePicture(event: any): void {
@@ -59,23 +55,5 @@ export class ProfileComponent implements OnInit {
       };
       reader.readAsDataURL(file);
     }
-  }
-
-  onUsernameChange(): void {
-    console.log('Username updated to:', this.newUsername);
-    // Voeg hier API-aanroep toe om de gebruikersnaam bij te werken
-  }
-
-  onPasswordChange(): void {
-    console.log('Password updated:', {
-      currentPassword: this.currentPassword,
-      newPassword: this.newPassword,
-    });
-    // Voeg hier API-aanroep toe om het wachtwoord bij te werken
-  }
-
-  onLocationChange(): void {
-    console.log('Location updated:', this.profile.location);
-    // Voeg hier API-aanroep toe om de locatie op te slaan
   }
 }
