@@ -56,10 +56,11 @@ namespace IbadahLover.Application.Profiles
             CreateMap<UserDhikrActivity, UserDhikrActivityListDto>().ReverseMap();
             CreateMap<UserDhikrActivity, CreateUserDhikrActivityDto>().ReverseMap();
             CreateMap<UserDhikrActivity, UpdateUserDhikrActivityDto>().ReverseMap();
-            CreateMap<UserDhikrActivity, UserDhikrActivityPerformedOnExistsDto>().ReverseMap();
             CreateMap<UserDhikrOverview, UserDhikrOverviewDto>().ReverseMap();
             CreateMap<UserDhikrOverview, UserDhikrOverviewListDto>().ReverseMap();
+            CreateMap<UserDhikrActivity, UserDhikrActivityByPerformedOnDto>().ReverseMap();
             CreateMap<UserSalahActivity, UserSalahActivityListDto>().ReverseMap();
+            CreateMap<UserSalahActivity, UserSalahActivityListByTrackedOnDto>().ReverseMap();
             CreateMap<UserSalahActivity, UserSalahActivityDto>().ReverseMap();
             CreateMap<UserSalahActivity, CreateUserSalahActivityDto>().ReverseMap();
             CreateMap<UserSalahActivity, UpdateUserSalahActivityDto>().ReverseMap();

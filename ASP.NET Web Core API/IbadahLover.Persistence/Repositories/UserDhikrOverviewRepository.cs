@@ -32,5 +32,13 @@ namespace IbadahLover.Persistence.Repositories
                 .FirstOrDefaultAsync(q => q.Id == id);
             return userDhikrOverview;
         }
+
+        public async Task<UserDhikrOverview> GetUserDhikrOverviewByUserAccountWithDetails(int userAccountId)
+        {
+            var userDhikrOverview = await _dbContext.UserDhikrOverviews
+                .Include(q => q.UserAccount)
+                .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId);
+            return userDhikrOverview;
+        }
     }
 }

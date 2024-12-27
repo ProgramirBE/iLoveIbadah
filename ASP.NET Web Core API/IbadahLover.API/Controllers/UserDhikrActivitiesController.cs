@@ -44,6 +44,35 @@ namespace IbadahLover.API.Controllers
             return Ok(userDhikrActivity);
         }
 
+        // GET api/<UserDhikrActivitiesController>/getbyperformedon
+        [HttpGet("getbyperformedon")]
+        [AllowAnonymous]
+        public async Task<ActionResult<UserDhikrActivityByPerformedOnDto>> GetByPerformedOn([FromQuery] DateTime performedOn, [FromQuery] int dhikrTypeId)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+
+            var userDhikrActivity = await _mediator.Send(new GetUserDhikrActivityByPerformedOnDetailsRequest
+            {
+                UserAccountId = int.Parse(userIdClaim),
+                DhikrTypeId = dhikrTypeId,
+                PerformedOn = performedOn
+            });
+            return Ok(userDhikrActivity);
+        }
+
+        //// GET api/<UserDhikrActivitiesController>/getallbyperformedon
+        //[HttpGet("getallbyperformedon")]
+        //[AllowAnonymous]
+        //public async Task<ActionResult<UserDhikrActivityDto>> GetAllByPerformedOn(int id)
+        //{
+        //    var userDhikrActivity = await _mediator.Send(new GetUserDhikrActivityDetailsRequest { Id = id });
+        //    return Ok(userDhikrActivity);
+        //}
+
 
         [HttpPost("upsert")]
         [Authorize]

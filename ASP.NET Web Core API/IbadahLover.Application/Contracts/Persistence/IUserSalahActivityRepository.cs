@@ -13,6 +13,7 @@ namespace IbadahLover.Application.Contracts.Persistence
     {
         Task<UserSalahActivity> GetUserSalahActivityWithDetails(int id);
         Task<List<UserSalahActivity>> GetUserSalahActivitiesWithDetails();
+        Task<List<UserSalahActivity>> GetUserSalahActivitiesByTrackedOn(int userAccountId, DateTime trackedOn);
         [DataType(DataType.Date)]
         Task<bool> TrackedOnExists(int userAccountId, DateTime trackedOn, int salahTypeId);
     }

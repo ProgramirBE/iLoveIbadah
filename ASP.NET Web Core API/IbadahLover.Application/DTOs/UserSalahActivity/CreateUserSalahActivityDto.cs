@@ -9,7 +9,7 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity
 {
     public class CreateUserSalahActivityDto
     {
-        public int UserAccountId { get; set; }
+        public int? UserAccountId { get; set; }
         public int SalahTypeId { get; set; }
         [DataType(DataType.Date)]
         public DateTime TrackedOn { get; set; }

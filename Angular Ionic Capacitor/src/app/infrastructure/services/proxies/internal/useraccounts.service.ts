@@ -1,28 +1,38 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable, tap, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable, tap, throwError, pipe } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment.prod';
 import { AuthHeaderService } from './shared/auth-header.service';
+import { UserAccount } from 'src/app/domain/models/user-account';
 // import { response } from 'express'; // Remove this line if not needed
 
 @Injectable({
   providedIn: 'root',
 })
-export class UseraccountsService {
+export class UserAccountsService {
   constructor(private authHeaderService: AuthHeaderService) {}
   private http = inject(HttpClient);
   private apiUrl = environment.apiURL + '/useraccounts';
 
-  public getById(id: string): Observable<any> {
+  public getById(): Observable<any> {
     const headers = this.authHeaderService.getAuthHeaders();
-    return this.http.get<any>(`${this.apiUrl}/${id}`, { headers });
+    return this.http
+      .get<any>(`${this.apiUrl}/getbyid`, { headers })
+      .pipe(map((response) => UserAccount.fromApiResponse(response)));
   }
 
-  public getAll(): Observable<any[]> {
-    const headers = this.authHeaderService.getAuthHeaders();
-    return this.http.get<any[]>(this.apiUrl, { headers });
-  }
+  //--- for admin only so no impelementation needed for now
+  // public getAll(): Observable<any[]> {
+  //   const headers = this.authHeaderService.getAuthHeaders();
+  //   return this.http
+  //     .get<any[]>(this.apiUrl, { headers })
+  //     .pipe(
+  //       map((response) =>
+  //         response.map((user) => UserAccount.fromApiResponse(user))
+  //       )
+  //     );
+  // }
 
   public login(credentials: {
     email: string;

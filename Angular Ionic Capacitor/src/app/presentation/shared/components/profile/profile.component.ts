@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserAccount } from 'src/app/domain/models/user-account';
+import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,16 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-  currentSection: string = 'publicProfile'; // Default section
+  currentSection: string = 'userAccount'; // Default section
   isEditing: boolean = false; // Controle voor bewerkmodus
-  profile = {
+  userAccount: Partial<UserAccount> = {
+    uniqueId: '',
     fullName: '',
     email: '',
-    profilePicture: '',
-    bio: '',
-    url: '',
-    favoriteDua: '',
-    location: '',
+    profilePictureTypeId: 0,
+    emailConfirmed: false,
+    currentLocation: 'Belgique',
+    totalWarnings: 0,
+    isPermanentlyBanned: false,
+
+    //bio: '',
+    //url: '',
+    //favoriteDua: '',
+    //: '',
   };
   account = {
     username: '',
@@ -23,30 +31,32 @@ export class ProfileComponent implements OnInit {
     newPassword: '',
   };
 
-  constructor() {}
+  constructor(private userAccountService: UserAccountsService) {}
 
   ngOnInit(): void {
-    this.loadProfile();
+    this.loadUserAccount();
     this.loadAccountSettings();
   }
 
   // Mockdata laden voor profiel
-  loadProfile(): void {
-    this.profile = {
-      fullName: 'John Doe',
-      email: 'johndoe@example.com',
-      profilePicture: 'https://via.placeholder.com/150',
-      bio: 'Dedicated learner and enthusiast.',
-      url: 'https://example.com',
-      favoriteDua: 'Rabbi zidni ilma',
-      location: 'New York, USA',
-    };
+  loadUserAccount(): void {
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+      this.userAccountService.getById().subscribe(
+        (user: UserAccount) => {
+          this.userAccount = user;
+        },
+        (error) => {
+          console.error('Failed to load user information', error);
+        }
+      );
+    }
   }
 
   // Mockdata laden voor accountinstellingen
   loadAccountSettings(): void {
     this.account = {
-      username: 'john_doe',
+      username: '',
       currentPassword: '',
       newPassword: '',
     };
@@ -69,8 +79,8 @@ export class ProfileComponent implements OnInit {
   }
 
   // Profiel bijwerken (mock)
-  updateProfile(): void {
-    console.log('Profiel bijgewerkt:', this.profile);
+  updateUserAccount(): void {
+    console.log('Profiel bijgewerkt:', this.userAccount);
     alert('Profile updated successfully!');
     this.disableEdit();
   }
@@ -83,9 +93,9 @@ export class ProfileComponent implements OnInit {
   }
 
   // Username bijwerken
-  saveUsername(): void {
-    if (this.account.username.trim() !== '') {
-      console.log('Gebruikersnaam bijgewerkt naar:', this.account.username);
+  updateFullName(): void {
+    if (this.userAccount.fullName?.trim() !== '') {
+      console.log('Gebruikersnaam bijgewerkt naar:', this.userAccount.fullName);
       alert('Username updated successfully!');
     } else {
       alert('Username cannot be empty!');
@@ -93,24 +103,25 @@ export class ProfileComponent implements OnInit {
   }
 
   // Wachtwoord bijwerken
-  savePassword(): void {
-    if (this.account.currentPassword && this.account.newPassword) {
-      console.log(
-        'Wachtwoord bijgewerkt. Huidig wachtwoord:',
-        this.account.currentPassword,
-        'Nieuw wachtwoord:',
-        this.account.newPassword
-      );
-      alert('Password updated successfully!');
-    } else {
-      alert('Please fill in both current and new passwords!');
-    }
+  updatePasswordHash(): void {
+    // if (this.userAccount. && this.account.newPassword) {
+    //   console.log(
+    //     'Wachtwoord bijgewerkt. Huidig wachtwoord:',
+    //     this.account.currentPassword,
+    //     'Nieuw wachtwoord:',
+    //     this.account.newPassword
+    //   );
+    //   alert('Password updated successfully!');
+    // } else {
+    //   alert('Please fill in both current and new passwords!');
+    // }
   }
 
   // Locatie bijwerken
-  saveLocation(): void {
-    if (this.profile.location.trim() !== '') {
-      console.log('Locatie bijgewerkt naar:', this.profile.location);
+  updateCurrentLocation(): void {
+    const currentLocation = this.userAccount.currentLocation?.trim() ?? '';
+    if (currentLocation !== '') {
+      console.log('Locatie bijgewerkt naar:', currentLocation);
       alert('Location updated successfully!');
     } else {
       alert('Location cannot be empty!');
@@ -118,14 +129,14 @@ export class ProfileComponent implements OnInit {
   }
 
   // Profielfoto uploaden
-  uploadProfilePicture(event: any): void {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.profile.profilePicture = reader.result as string;
-      };
-      reader.readAsDataURL(file);
-    }
+  updateProfilePictureTypeId(event: any): void {
+    // const file = event.target.files[0];
+    // if (file) {
+    //   const reader = new FileReader();
+    //   reader.onload = () => {
+    //     this.userAccount.profilePictureTypeId = reader.result as string;
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
   }
 }

@@ -1,10 +1,10 @@
-<div class="profile-wrapper">
-  <div class="profile-container">
+<div class="userAccount-wrapper">
+  <div class="userAccount-container">
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <ul>
-        <li (click)="navigateToSection('publicProfile')" [class.active]="currentSection === 'publicProfile'">
-          Public Profile
+        <li (click)="navigateToSection('publicuserAccount')" [class.active]="currentSection === 'publicuserAccount'">
+          Public userAccount
         </li>
         <li (click)="navigateToSection('account')" [class.active]="currentSection === 'account'">
           Account
@@ -14,47 +14,68 @@
 
     <!-- Main Content -->
     <section class="content">
-      <!-- Public Profile Section -->
-      <div *ngIf="currentSection === 'publicProfile'" class="section">
+      <!-- Public userAccount Section -->
+      <div *ngIf="currentSection === 'publicuserAccount'" class="section">
         <div class="header">
-          <h2>Public Profile</h2>
+          <h2>Public userAccount</h2>
           <button class="btn edit-btn" (click)="enableEdit()">Edit Data</button>
         </div>
 
         <div *ngIf="!isEditing">
-          <p><strong>Full Name:</strong> {{ profile.fullName }}</p>
-          <p><strong>Email:</strong> {{ profile.email }}</p>
-          <p><strong>Bio:</strong> {{ profile.bio }}</p>
-          <p><strong>Website:</strong> <a [href]="profile.url" target="_blank">{{ profile.url }}</a></p>
-          <p><strong>Favorite Dua:</strong> {{ profile.favoriteDua }}</p>
-          <p><strong>Location:</strong> {{ profile.location }}</p>
+          <p><strong>Full Name:</strong> {{ userAccount.fullName }}</p>
+          <p><strong>unique Id:</strong> {{ userAccount.uniqueId }}</p>
+          <p><strong>Email:</strong> {{ userAccount.email }}</p>
+          <p><strong>Profile Picture Type Id:</strong> {{ userAccount.profilePictureTypeId }}</p>
+
+          <!-- <p><strong>Bio:</strong> {{ userAccount.bio }}</p> -->
+          <!-- <p><strong>Website:</strong> <a [href]="userAccount.url" target="_blank">{{ userAccount.url }}</a></p> -->
+          <!-- <p><strong>Favorite Dua:</strong> {{ userAccount.favoriteDua }}</p> -->
+          <p><strong>Location:</strong> {{ userAccount.currentLocation }}</p>
+          <p><strong>Total Warnings:</strong> {{ userAccount.totalWarnings }}</p>
+          <p><strong>Is Permanently Banned:</strong> {{ userAccount.isPermanentlyBanned }}</p>
+
+
         </div>
 
-        <form *ngIf="isEditing" (submit)="updateProfile()">
+        <form *ngIf="isEditing" (submit)="updateUserAccount()">
           <div class="form-group">
             <label for="fullName">Full Name</label>
-            <input [(ngModel)]="profile.fullName" id="fullName" type="text" placeholder="Enter full name" required>
+            <input [(ngModel)]="userAccount.fullName" id="fullName" type="text" placeholder="Enter full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="uniqueId">Unique Id</label>
+            <textarea [(ngModel)]="userAccount.uniqueId" id="uniqueId" placeholder="Enter Unique Id"></textarea>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input [(ngModel)]="profile.email" id="email" type="email" placeholder="Enter email" required>
+            <input [(ngModel)]="userAccount.email" id="email" type="email" placeholder="Enter email" required>
           </div>
 
           <div class="form-group">
+            <label for="profilePictureTypeId">Profile Picture Type Id</label>
+            <input [(ngModel)]="userAccount.profilePictureTypeId" id="profilePictureTypeId" type="text" placeholder="Enter Profile Picture Type Id">
+          </div>
+
+          <div class="form-group">
+            <label for="currentLocation">Location</label>
+            <input [(ngModel)]="userAccount.currentLocation" id="currentLocation" type="text" placeholder="Enter Current Location">
+          </div>
+          <!-- <div class="form-group">
             <label for="bio">Bio</label>
-            <textarea [(ngModel)]="profile.bio" id="bio" placeholder="Write something about yourself"></textarea>
+            <textarea [(ngModel)]="userAccount.bio" id="bio" placeholder="Write something about yourself"></textarea>
           </div>
 
           <div class="form-group">
             <label for="url">Website URL</label>
-            <input [(ngModel)]="profile.url" id="url" type="url" placeholder="Enter website URL">
+            <input [(ngModel)]="userAccount.url" id="url" type="url" placeholder="Enter website URL">
           </div>
 
           <div class="form-group">
             <label for="favoriteDua">Favorite Dua</label>
-            <input [(ngModel)]="profile.favoriteDua" id="favoriteDua" type="text" placeholder="Enter favorite dua">
-          </div>
+            <input [(ngModel)]="userAccount.favoriteDua" id="favoriteDua" type="text" placeholder="Enter favorite dua">
+          </div> -->
 
           <button type="submit" class="btn">Save Changes</button>
         </form>
@@ -69,7 +90,7 @@
 
         <div *ngIf="!isEditing">
           <p><strong>Username:</strong> {{ account.username }}</p>
-          <p><strong>Location:</strong> {{ profile.location }}</p>
+          <p><strong>Location:</strong> {{ userAccount.currentLocation }}</p>
         </div>
 
         <form *ngIf="isEditing">
@@ -77,7 +98,7 @@
           <div class="form-group">
             <label for="username">Change Username</label>
             <input [(ngModel)]="account.username" id="username" type="text" placeholder="Enter new username" required>
-            <button type="button" class="btn" (click)="saveUsername()">Save Username</button>
+            <button type="button" class="btn" (click)="updateFullName()">Save Username</button>
           </div>
 
           <!-- Change Password -->
@@ -91,13 +112,13 @@
             <input [(ngModel)]="account.newPassword" id="newPassword" type="password" placeholder="Enter new password"
               required>
           </div>
-          <button type="button" class="btn" (click)="savePassword()">Save Password</button>
+          <button type="button" class="btn" (click)="updatePasswordHash()">Save Password</button>
 
           <!-- Change Location -->
           <div class="form-group">
             <label for="location">Update Location</label>
-            <input [(ngModel)]="profile.location" id="location" type="text" placeholder="Enter new location">
-            <button type="button" class="btn" (click)="saveLocation()">Save Location</button>
+            <input [(ngModel)]="userAccount.currentLocation" id="location" type="text" placeholder="Enter new location">
+            <button type="button" class="btn" (click)="updateCurrentLocation()">Save Location</button>
           </div>
         </form>
       </div>

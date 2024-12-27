@@ -11,6 +11,7 @@ namespace IbadahLover.Application.Contracts.Persistence
     public interface IUserDhikrOverviewRepository : IGenericRepository<UserDhikrOverview>
     {
         Task<UserDhikrOverview> GetUserDhikrOverviewWithDetails(int id);
+        Task<UserDhikrOverview> GetUserDhikrOverviewByUserAccountWithDetails(int userAccountId);
         Task<List<UserDhikrOverview>> GetUserDhikrOverviewsWithDetails();
     }
 }

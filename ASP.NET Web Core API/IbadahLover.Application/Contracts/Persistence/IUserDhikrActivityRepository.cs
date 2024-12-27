@@ -14,7 +14,6 @@ namespace IbadahLover.Application.Contracts.Persistence
         Task<UserDhikrActivity> GetUserDhikrActivityWithDetails(int id);
         Task<UserDhikrActivity> GetUserDhikrActivityByPerformedOn(int userAccountId, DateTime performedOn, int dhikrTypeId);
         Task<List<UserDhikrActivity>> GetUserDhikrActivitiesWithDetails();
-        [DataType(DataType.Date)]
         Task<bool> PerformedOnExists(int userAccountId, DateTime performedOn, int dhikrTypeId);
         Task IncrementTotalPerformed(int userAccountId, DateTime performedOn, int dhikrTypeId);
     }

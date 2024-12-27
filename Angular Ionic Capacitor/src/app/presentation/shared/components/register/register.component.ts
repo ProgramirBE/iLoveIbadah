@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UseraccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
+import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +13,7 @@ export class RegisterComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private useraccountsService: UseraccountsService,
+    private useraccountsService: UserAccountsService,
     private router: Router
   ) {
     this.registerForm = this.formBuilder.group({

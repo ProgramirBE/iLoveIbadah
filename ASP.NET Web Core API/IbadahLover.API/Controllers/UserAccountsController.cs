@@ -1,9 +1,11 @@
-﻿using IbadahLover.Application.Contracts.Identity;
+﻿using IbadahLover.Application.Constants;
+using IbadahLover.Application.Contracts.Identity;
 using IbadahLover.Application.DTOs.UserAccount;
 using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
 using IbadahLover.Application.Features.UserAccounts.Requests.Queries;
 using IbadahLover.Application.Models.Identity;
 using IbadahLover.Application.Responses;
+using IbadahLover.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -50,11 +52,16 @@ namespace IbadahLover.API.Controllers
         }
 
         // GET api/<UserAccountsController>/5
-        [HttpGet("{id}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<UserAccountDto>> GetById(int id)
+        [HttpGet("getbyid")]
+        [Authorize]
+        public async Task<ActionResult<UserAccountDto>> GetById()
         {
-            var user = _httpContextAccessor.HttpContext.User;
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            int id = int.Parse(userIdClaim);
             var userAccount = await _mediator.Send(new GetUserAccountDetailsRequest { Id = id });
             return Ok(userAccount);
         }
