@@ -42,7 +42,7 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity.Validators
                 .LessThanOrEqualTo(DateTime.Now)
                 .MustAsync(async (dto, trackedOn, token) =>
                 {
-                    var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId, trackedOn);
+                    var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId, trackedOn, dto.SalahTypeId);
                     return userSalahActivityTrackedOnExists; // il doit! exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste create allowed
                 })
                 .WithMessage("{PropertyName} should exist in order to update, else create for this date.");

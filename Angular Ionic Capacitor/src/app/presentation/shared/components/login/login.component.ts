@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UseraccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
+import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private useraccountsService: UseraccountsService
+    private useraccountsService: UserAccountsService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],

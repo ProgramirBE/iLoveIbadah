@@ -1,5 +1,7 @@
-﻿using IbadahLover.Application.DTOs.UserSalahOverview;
+﻿using IbadahLover.Application.Constants;
+using IbadahLover.Application.DTOs.UserSalahOverview;
 using IbadahLover.Application.Features.UserSalahOverviews.Requests.Queries;
+using IbadahLover.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,9 +15,11 @@ namespace IbadahLover.API.Controllers
     public class UserSalahOverviewsController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public UserSalahOverviewsController(IMediator mediator)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public UserSalahOverviewsController(IMediator mediator, IHttpContextAccessor httpContextAccessor)
         {
             _mediator = mediator;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: api/<UserSalahOverviewsController>
@@ -33,6 +37,20 @@ namespace IbadahLover.API.Controllers
         public async Task<ActionResult<UserSalahOverviewDto>> GetById(int id)
         {
             var userSalahOverview = await _mediator.Send(new GetUserSalahOverviewDetailsRequest { Id = id });
+            return Ok(userSalahOverview);
+        }
+
+        // GET api/<UserSalahOverviewsController>/getbyuseraccount
+        [HttpGet("getbyuseraccount")]
+        [Authorize]
+        public async Task<ActionResult<UserSalahOverviewDto>> GetByUserAccount()
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            var userSalahOverview = await _mediator.Send(new GetUserSalahOverviewByUserAccountDetailsRequest { UserAccountId = int.Parse(userIdClaim) });
             return Ok(userSalahOverview);
         }
 

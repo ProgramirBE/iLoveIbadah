@@ -3,7 +3,7 @@ body {
     background-color: #826b66; /* Bruine kleur voor de zijkanten */
 }
 
-.profile-wrapper {
+.userAccount-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -11,7 +11,7 @@ body {
     background-color: #d5d5bf; /* Achtergrondkleur voor inhoud */
 }
 
-.profile-container {
+.userAccount-container {
     display: flex;
     flex-direction: row;
     min-height: 100vh;

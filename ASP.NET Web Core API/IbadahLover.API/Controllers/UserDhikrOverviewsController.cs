@@ -1,5 +1,8 @@
-﻿using IbadahLover.Application.DTOs.UserDhikrOverview;
+﻿using IbadahLover.Application.Constants;
+using IbadahLover.Application.DTOs.UserDhikrOverview;
+using IbadahLover.Application.DTOs.UserSalahOverview;
 using IbadahLover.Application.Features.UserDhikrOverviews.Requests.Queries;
+using IbadahLover.Application.Features.UserSalahOverviews.Requests.Queries;
 using IbadahLover.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -14,9 +17,11 @@ namespace IbadahLover.API.Controllers
     public class UserDhikrOverviewsController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public UserDhikrOverviewsController(IMediator mediator)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public UserDhikrOverviewsController(IMediator mediator, IHttpContextAccessor httpContextAccessor)
         {
             _mediator = mediator;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: api/<UserDhikrOverviewsController>
@@ -34,6 +39,20 @@ namespace IbadahLover.API.Controllers
         public async Task<ActionResult<UserDhikrOverviewDto>> GetById(int id)
         {
             var userDhikrOverview = await _mediator.Send(new GetUserDhikrOverviewDetailsRequest { Id = id });
+            return Ok(userDhikrOverview);
+        }
+
+        // GET api/<UserdhikrOverviewsController>/getbyuseraccount
+        [HttpGet("getbyuseraccount")]
+        [Authorize]
+        public async Task<ActionResult<UserSalahOverviewDto>> GetByUserAccount()
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            var userDhikrOverview = await _mediator.Send(new GetUserDhikrOverviewByUserAccountDetailsRequest { UserAccountId = int.Parse(userIdClaim) });
             return Ok(userDhikrOverview);
         }
 

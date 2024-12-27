@@ -321,7 +321,7 @@ CREATE TABLE
       punctuality_percentage DECIMAL(4, 2) DEFAULT 0 NOT NULL, -- The percentage of punctuality in prayer time (e.g., 98.50)
       CONSTRAINT FK_User_Salah_Activity_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE,
       CONSTRAINT FK_User_Salah_Activity_Salah_Type_id FOREIGN KEY (Salah_Type_id) REFERENCES Salah_Type (id) ON DELETE CASCADE,
-      CONSTRAINT UQ_User_Salah_Activity_User_Account_id_performed_on UNIQUE (User_Account_id, tracked_on) -- Ensures a unique record per user per day
+      CONSTRAINT UQ_User_Salah_Activity_User_Account_id_Salah_Type_id_tracked_on UNIQUE (User_Account_id, Salah_Type_id, tracked_on) -- Ensures a unique record per user per day
    );
 
 GO

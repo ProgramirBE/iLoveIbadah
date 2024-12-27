@@ -45,8 +45,26 @@ namespace IbadahLover.API.Controllers
             return Ok(userSalahActivity);
         }
 
+        [HttpGet("getallbytrackedon")]
+        [AllowAnonymous]
+        public async Task<ActionResult<UserDhikrActivityByPerformedOnDto>> GetAllByTrackedOn([FromQuery] DateTime trackedOn)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+
+            var userDhikrActivity = await _mediator.Send(new GetUserSalahActivityListByTrackedOnRequest
+            {
+                UserAccountId = int.Parse(userIdClaim),
+                TrackedOn = trackedOn
+            });
+            return Ok(userDhikrActivity);
+        }
+
         // POST api/<UserSalahActivitiesController>/5
-        [HttpPut("{id}")]
+        [HttpPut("update")]
         [Authorize]
         public async Task<ActionResult> Update([FromBody] UpdateUserSalahActivityDto userSalahActivity)
         {
@@ -56,7 +74,7 @@ namespace IbadahLover.API.Controllers
         }
 
         //// PUT api/<UserSalahActivitiesController>
-        [HttpPost]
+        [HttpPost("create")]
         [Authorize]
         public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserSalahActivityDto userSalahActivity)
         {

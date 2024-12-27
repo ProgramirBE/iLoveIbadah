@@ -813,21 +813,10 @@
         }
       }
     },
-    "/api/UserAccounts/{id}": {
+    "/api/UserAccounts/getbyid": {
       "get": {
         "tags": [
           "UserAccounts"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
         ],
         "responses": {
           "200": {
@@ -851,7 +840,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/api/UserAccounts/{id}": {
       "put": {
         "tags": [
           "UserAccounts"
@@ -1130,6 +1121,53 @@
         }
       }
     },
+    "/api/UserDhikrActivities/getbyperformedon": {
+      "get": {
+        "tags": [
+          "UserDhikrActivities"
+        ],
+        "parameters": [
+          {
+            "name": "performedOn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "dhikrTypeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDhikrActivityByPerformedOnDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDhikrActivityByPerformedOnDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDhikrActivityByPerformedOnDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/UserDhikrActivities/upsert": {
       "post": {
         "tags": [
@@ -1256,6 +1294,35 @@
         }
       }
     },
+    "/api/UserDhikrOverviews/getbyuseraccount": {
+      "get": {
+        "tags": [
+          "UserDhikrOverviews"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSalahOverviewDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSalahOverviewDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSalahOverviewDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/UserSalahActivities": {
       "get": {
         "tags": [
@@ -1287,52 +1354,6 @@
                   "items": {
                     "$ref": "#/components/schemas/UserSalahActivityListDto"
                   }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "UserSalahActivities"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUserSalahActivityDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUserSalahActivityDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUserSalahActivityDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseCommandResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseCommandResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseCommandResponse"
                 }
               }
             }
@@ -1378,20 +1399,51 @@
             }
           }
         }
-      },
-      "put": {
+      }
+    },
+    "/api/UserSalahActivities/getallbytrackedon": {
+      "get": {
         "tags": [
           "UserSalahActivities"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
+            "name": "trackedOn",
+            "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDhikrActivityByPerformedOnDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDhikrActivityByPerformedOnDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDhikrActivityByPerformedOnDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UserSalahActivities/update": {
+      "put": {
+        "tags": [
+          "UserSalahActivities"
         ],
         "requestBody": {
           "content": {
@@ -1415,6 +1467,54 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/UserSalahActivities/create": {
+      "post": {
+        "tags": [
+          "UserSalahActivities"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserSalahActivityDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserSalahActivityDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserSalahActivityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -1472,6 +1572,35 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSalahOverviewDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSalahOverviewDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSalahOverviewDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UserSalahOverviews/getbyuseraccount": {
+      "get": {
+        "tags": [
+          "UserSalahOverviews"
         ],
         "responses": {
           "200": {
@@ -1673,11 +1802,16 @@
         "properties": {
           "userAccountId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "salahTypeId": {
             "type": "integer",
             "format": "int32"
+          },
+          "trackedOn": {
+            "type": "string",
+            "format": "date"
           },
           "punctualityPercentage": {
             "type": "number",
@@ -2027,15 +2161,11 @@
       "UserAccountDto": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "fullName": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "normalizedEmail": {
             "type": "string",
             "nullable": true
           },
@@ -2043,8 +2173,13 @@
             "type": "string",
             "nullable": true
           },
-          "normalizedUniqueId": {
+          "email": {
             "type": "string",
+            "nullable": true
+          },
+          "profilePictureTypeId": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "currentLocation": {
@@ -2062,14 +2197,6 @@
           },
           "isPermanentlyBanned": {
             "type": "boolean",
-            "nullable": true
-          },
-          "securityStamp": {
-            "type": "string",
-            "nullable": true
-          },
-          "concurrencyStamp": {
-            "type": "string",
             "nullable": true
           }
         },
@@ -2136,6 +2263,36 @@
             "format": "int32"
           },
           "roleTypeId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDhikrActivityByPerformedOnDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userAccountId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dhikrTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "performedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastPerformedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalPerformed": {
             "type": "integer",
             "format": "int32"
           }

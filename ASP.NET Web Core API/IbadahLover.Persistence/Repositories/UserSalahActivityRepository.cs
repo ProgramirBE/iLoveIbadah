@@ -35,6 +35,16 @@ namespace IbadahLover.Persistence.Repositories
             return userSalahActivity;
         }
 
+        public async Task<List<UserSalahActivity>> GetUserSalahActivitiesByTrackedOn(int userAccountId, DateTime trackedOn)
+        {
+            var userSalahActivities = await _dbContext.UserSalahActivities
+                .Include(q => q.UserAccount)
+                .Include(q => q.SalahType)
+                .Where(q => q.UserAccountId == userAccountId && q.TrackedOn.Date == trackedOn.Date)
+                .ToListAsync();
+            return userSalahActivities;
+        }
+
         public async Task<bool> TrackedOnExists(int userAccountId, DateTime trackedOn, int salahTypeId)
         {
             var userSalahActivity = await _dbContext.UserSalahActivities
