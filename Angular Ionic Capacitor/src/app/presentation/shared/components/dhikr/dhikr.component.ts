@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { DhikrService } from './dhikr.service'; // Import de service
-
 import { NetworkService } from 'src/app/infrastructure/services/proxies/external/network.service';
 
 
@@ -25,11 +23,8 @@ export class DhikrComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-
-    private dhikrService: DhikrService // Inject de service
-
+    private dhikrService: DhikrService ,// Inject de service
     private networkService: NetworkService
-
   ) {}
 
   ngOnInit(): void {
