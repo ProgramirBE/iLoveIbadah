@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DhikrService } from './dhikr.service'; // Import de service
 import { NetworkService } from 'src/app/infrastructure/services/proxies/external/network.service';
 
+
 @Component({
   selector: 'app-dhikr',
   templateUrl: './dhikr.component.html',
@@ -99,6 +100,7 @@ export class DhikrComponent implements OnInit {
       const currentIndex = this.words.indexOf(this.currentWord);
       this.currentWord = this.words[(currentIndex + 1) % this.words.length];
     }
+
         // Opslaan in de lokale opslag
         localStorage.setItem('dhikrCounter', this.counter.toString());
         localStorage.setItem('dhikrTotalCounter', this.totalCounter.toString());
