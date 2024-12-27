@@ -7,45 +7,117 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   currentSection: string = 'publicProfile'; // Default section
-  isEditMode: boolean = false; // Controls edit mode
-
+  isEditing: boolean = false; // Controle voor bewerkmodus
   profile = {
-    fullName: 'John Doe',
-    email: 'johndoe@example.com',
+    fullName: '',
+    email: '',
     profilePicture: '',
-    bio: 'A passionate learner and enthusiast.',
-    url: 'https://example.com',
-    favoriteDua: 'Rabbi zidni ilma',
-    location: 'New York, USA',
+    bio: '',
+    url: '',
+    favoriteDua: '',
+    location: '',
   };
-
   account = {
-    username: 'john_doe',
-    password: '********',
+    username: '',
+    currentPassword: '',
+    newPassword: '',
   };
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loadProfile();
+    this.loadAccountSettings();
+  }
 
+  // Mockdata laden voor profiel
+  loadProfile(): void {
+    this.profile = {
+      fullName: 'John Doe',
+      email: 'johndoe@example.com',
+      profilePicture: 'https://via.placeholder.com/150',
+      bio: 'Dedicated learner and enthusiast.',
+      url: 'https://example.com',
+      favoriteDua: 'Rabbi zidni ilma',
+      location: 'New York, USA',
+    };
+  }
+
+  // Mockdata laden voor accountinstellingen
+  loadAccountSettings(): void {
+    this.account = {
+      username: 'john_doe',
+      currentPassword: '',
+      newPassword: '',
+    };
+  }
+
+  // Navigeren tussen secties
   navigateToSection(section: string): void {
     this.currentSection = section;
+    this.isEditing = false; // Uitschakelen bewerkmodus bij sectiewissel
   }
 
-  toggleEditMode(): void {
-    this.isEditMode = !this.isEditMode;
+  // Bewerkmodus activeren
+  enableEdit(): void {
+    this.isEditing = true;
   }
 
+  // Bewerkmodus deactiveren
+  disableEdit(): void {
+    this.isEditing = false;
+  }
+
+  // Profiel bijwerken (mock)
   updateProfile(): void {
-    console.log('Profile updated:', this.profile);
-    this.isEditMode = false; // Exit edit mode
+    console.log('Profiel bijgewerkt:', this.profile);
+    alert('Profile updated successfully!');
+    this.disableEdit();
   }
 
-  updateAccount(): void {
-    console.log('Account updated:', this.account);
-    this.isEditMode = false; // Exit edit mode
+  // Accountinstellingen bijwerken (mock)
+  updateAccountSettings(): void {
+    console.log('Account instellingen bijgewerkt:', this.account);
+    alert('Account settings updated successfully!');
+    this.disableEdit();
   }
 
+  // Username bijwerken
+  saveUsername(): void {
+    if (this.account.username.trim() !== '') {
+      console.log('Gebruikersnaam bijgewerkt naar:', this.account.username);
+      alert('Username updated successfully!');
+    } else {
+      alert('Username cannot be empty!');
+    }
+  }
+
+  // Wachtwoord bijwerken
+  savePassword(): void {
+    if (this.account.currentPassword && this.account.newPassword) {
+      console.log(
+        'Wachtwoord bijgewerkt. Huidig wachtwoord:',
+        this.account.currentPassword,
+        'Nieuw wachtwoord:',
+        this.account.newPassword
+      );
+      alert('Password updated successfully!');
+    } else {
+      alert('Please fill in both current and new passwords!');
+    }
+  }
+
+  // Locatie bijwerken
+  saveLocation(): void {
+    if (this.profile.location.trim() !== '') {
+      console.log('Locatie bijgewerkt naar:', this.profile.location);
+      alert('Location updated successfully!');
+    } else {
+      alert('Location cannot be empty!');
+    }
+  }
+
+  // Profielfoto uploaden
   uploadProfilePicture(event: any): void {
     const file = event.target.files[0];
     if (file) {
