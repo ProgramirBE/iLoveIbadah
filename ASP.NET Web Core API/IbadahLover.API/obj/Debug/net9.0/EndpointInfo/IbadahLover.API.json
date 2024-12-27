@@ -1130,6 +1130,54 @@
         }
       }
     },
+    "/api/UserDhikrActivities/upsert": {
+      "post": {
+        "tags": [
+          "UserDhikrActivities"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserDhikrActivityDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserDhikrActivityDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserDhikrActivityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/UserDhikrOverviews": {
       "get": {
         "tags": [
@@ -1610,7 +1658,8 @@
         "properties": {
           "userAccountId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "dhikrTypeId": {
             "type": "integer",
@@ -1929,13 +1978,10 @@
       "UpdateUserDhikrActivityDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "userAccountId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "dhikrTypeId": {
             "type": "integer",
@@ -1948,10 +1994,6 @@
           "lastPerformedAt": {
             "type": "string",
             "format": "date-time"
-          },
-          "totalPerformed": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

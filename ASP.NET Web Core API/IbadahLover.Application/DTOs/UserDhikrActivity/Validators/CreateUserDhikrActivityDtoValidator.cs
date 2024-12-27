@@ -21,10 +21,12 @@ namespace IbadahLover.Application.DTOs.UserDhikrActivity.Validators
             _dhikrTypeRepository = dhikrTypeRepository;
 
             RuleFor(p => p.UserAccountId)
+                .Must(id => true) // Always valid since it's set by the server
+                .WithMessage("UserAccountId is not validated directly.")
                 .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {
-                    var userAccountExists = await _userAccountRepository.Exists(id);
+                    var userAccountExists = await _userAccountRepository.Exists(id.Value);
                     return userAccountExists;
                 })
                 .WithMessage("{PropertyName} does not exist.");

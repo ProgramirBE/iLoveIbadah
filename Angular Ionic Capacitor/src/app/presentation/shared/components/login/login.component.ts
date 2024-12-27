@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UseraccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +11,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   isLoginMode = true; // True for login, false for register
   loginForm: FormGroup;
-  registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private useraccountsService: UseraccountsService
+  ) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-    });
-
-    this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
@@ -25,13 +25,22 @@ export class LoginComponent {
 
   onLogin() {
     if (this.loginForm.valid) {
-      console.log('Login data:', this.loginForm.value);
-    }
-  }
-
-  onRegister() {
-    if (this.registerForm.valid) {
-      console.log('Register data:', this.registerForm.value);
+      const { email, password } = this.loginForm.value;
+      this.useraccountsService
+        .login({ email: email, passwordHash: password })
+        .subscribe({
+          next: (response) => {
+            console.log('Login successful');
+          },
+          error: (error) => {
+            console.error('Login failed', error);
+            // Handle login error (e.g., show error message)
+          },
+          complete: () => {
+            console.log('Login process completed');
+            this.router.navigate(['/home']);
+          },
+        });
     }
   }
 
