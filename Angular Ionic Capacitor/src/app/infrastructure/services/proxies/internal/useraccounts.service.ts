@@ -25,8 +25,8 @@ export class UseraccountsService {
   }
 
   public login(credentials: {
-    username: string;
-    password: string;
+    email: string;
+    passwordHash: string;
   }): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/login`, credentials).pipe(
       tap((response: any) => {
@@ -45,9 +45,9 @@ export class UseraccountsService {
   }
 
   public register(user: {
-    username: string;
-    password: string;
+    fullName: string;
     email: string;
+    passwordHash: string;
   }): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/register`, user);
   }

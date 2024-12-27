@@ -647,6 +647,32 @@
     ]
   },
   {
+    "ContainingType": "IbadahLover.API.Controllers.UserDhikrActivitiesController",
+    "Method": "Upsert",
+    "RelativePath": "api/UserDhikrActivities/upsert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDhikrActivity",
+        "Type": "IbadahLover.Application.DTOs.UserDhikrActivity.UpdateUserDhikrActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.Responses.BaseCommandResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "IbadahLover.API.Controllers.UserDhikrOverviewsController",
     "Method": "GetAll",
     "RelativePath": "api/UserDhikrOverviews",

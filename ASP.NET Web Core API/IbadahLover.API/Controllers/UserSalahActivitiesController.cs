@@ -1,9 +1,12 @@
-﻿using IbadahLover.Application.DTOs.UserDhikrActivity;
+﻿using IbadahLover.Application.Constants;
+using IbadahLover.Application.DTOs.UserDhikrActivity;
 using IbadahLover.Application.DTOs.UserSalahActivity;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
+using IbadahLover.Application.Features.UserDhikrActivities.Requests.Queries;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserSalahActivities.Requests.Queries;
 using IbadahLover.Application.Responses;
+using IbadahLover.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +20,11 @@ namespace IbadahLover.API.Controllers
     public class UserSalahActivitiesController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public UserSalahActivitiesController(IMediator mediator)
+        private IHttpContextAccessor _httpContextAccessor;
+        public UserSalahActivitiesController(IMediator mediator, IHttpContextAccessor httpContextAccessor)
         {
             _mediator = mediator;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: api/<UserSalahActivitiesController>
@@ -55,6 +60,30 @@ namespace IbadahLover.API.Controllers
         [Authorize]
         public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserSalahActivityDto userSalahActivity)
         {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            userSalahActivity.UserAccountId = int.Parse(userIdClaim);
+
+            var exists = await _mediator.Send(new CheckUserSalahActivityPerformedOnExistsRequest
+            {
+                UserAccountId = userSalahActivity.UserAccountId,
+                SalahTypeId = userSalahActivity.SalahTypeId,
+                TrackedOn = userSalahActivity.TrackedOn
+            });
+
+            if (exists)
+            {
+                return BadRequest("User Salah Activity already exists for the day.");
+                //var createDto = new UpdateUserSalahActivityDto
+                //{
+                //    UserAccountId = userDhikrActivity.UserAccountId.Value,
+                //    SalahTypeId = userDhikrActivity.DhikrTypeId
+                //};
+                //return await Update(userSalahActivity);
+            }
             var command = new CreateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };
             var response = await _mediator.Send(command);
             return Ok(response);

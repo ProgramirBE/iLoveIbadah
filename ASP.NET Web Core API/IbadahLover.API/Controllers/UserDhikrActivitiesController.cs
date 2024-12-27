@@ -1,4 +1,5 @@
-﻿using IbadahLover.Application.DTOs.UserDhikrActivity;
+﻿using IbadahLover.Application.Constants;
+using IbadahLover.Application.DTOs.UserDhikrActivity;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Commands;
 using IbadahLover.Application.Features.UserDhikrActivities.Requests.Queries;
 using IbadahLover.Application.Responses;
@@ -7,6 +8,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
+using System.Security.Claims;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -17,9 +19,11 @@ namespace IbadahLover.API.Controllers
     public class UserDhikrActivitiesController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public UserDhikrActivitiesController(IMediator mediator)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public UserDhikrActivitiesController(IMediator mediator, IHttpContextAccessor httpContextAccessor)
         {
             _mediator = mediator;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: api/<UserDhikrActivitiesController>
@@ -40,11 +44,52 @@ namespace IbadahLover.API.Controllers
             return Ok(userDhikrActivity);
         }
 
-        // POST api/<UserDhikrActivitiesController>
-        [HttpPost]
+
+        [HttpPost("upsert")]
+        [Authorize]
+        public async Task<ActionResult<BaseCommandResponse>> Upsert([FromBody] UpdateUserDhikrActivityDto userDhikrActivity)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            userDhikrActivity.UserAccountId = int.Parse(userIdClaim);
+
+            // Vérifiez si une activité de Dhikr existe déjà pour la journée donnée
+            var exists = await _mediator.Send(new CheckUserDhikrActivityPerformedOnExistsRequest
+            {
+                UserAccountId = userDhikrActivity.UserAccountId.Value,
+                DhikrTypeId = userDhikrActivity.DhikrTypeId,
+                PerformedOn = userDhikrActivity.PerformedOn
+            });
+
+            if (exists)
+            {
+                return await Update(userDhikrActivity);
+            }
+            else
+            {
+                var createDto = new CreateUserDhikrActivityDto
+                {
+                    UserAccountId = userDhikrActivity.UserAccountId.Value,
+                    DhikrTypeId = userDhikrActivity.DhikrTypeId
+                };
+                return await Create(createDto);
+            }
+        }
+
+            // POST api/<UserDhikrActivitiesController>
+            [HttpPost]
         [Authorize]
         public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserDhikrActivityDto userDhikrActivity)
         {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            userDhikrActivity.UserAccountId = int.Parse(userIdClaim);
             var command = new CreateUserDhikrActivityCommand { UserDhikrActivityDto = userDhikrActivity };
             var response = await _mediator.Send(command);
             return Ok(response);
@@ -55,6 +100,8 @@ namespace IbadahLover.API.Controllers
         [Authorize]
         public async Task<ActionResult> Update([FromBody] UpdateUserDhikrActivityDto userDhikrActivity)
         {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            userDhikrActivity.UserAccountId = int.Parse(userIdClaim);
             var command = new UpdateUserDhikrActivityCommand { UserDhikrActivityDto = userDhikrActivity };
             await _mediator.Send(command);
             return NoContent();
