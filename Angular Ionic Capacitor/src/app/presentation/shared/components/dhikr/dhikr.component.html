@@ -28,8 +28,11 @@
         </a>
       </div>
       <div class="total-container">
-        <h2>Total Performed</h2>
+        <h2>Total Performed (Local)</h2>
         <p>{{ totalCounter }}</p>
+
+        <h2>Total Performed (Online)</h2>
+        <p>{{ onlineTotalCounter }}</p>
       </div>
     </div>
 
@@ -38,6 +41,7 @@
       <div *ngSwitchCase="'dhikr'">
         <h1>{{ currentWord }}</h1>
         <h2>Counter: {{ counter }}</h2>
+        <h2>Online Counter: {{ onlineCounter }}</h2>
         <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
         <div *ngIf="buttonDisabled">
           <p>
@@ -53,18 +57,21 @@
     <div *ngSwitchCase="'1'">
       <h1>Soubhan'Allah</h1>
       <h2>Counter: {{ counter }}</h2>
+      <h2>Online Counter: {{ onlineCounter }}</h2>
       <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
     </div>
 
     <div *ngSwitchCase="'2'">
       <h1>Alhamdulilah</h1>
       <h2>Counter: {{ counter }}</h2>
+      <h2>Online Counter: {{ onlineCounter }}</h2>
       <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
     </div>
 
     <div *ngSwitchCase="'3'">
       <h1>Allah u akbar</h1>
       <h2>Counter: {{ counter }}</h2>
+      <h2>Online Counter: {{ onlineCounter }}</h2>
       <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
     </div>
   </ng-container>

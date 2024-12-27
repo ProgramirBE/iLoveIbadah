@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { DhikrService } from './dhikr.service'; // Import de service
+
 import { NetworkService } from 'src/app/infrastructure/services/proxies/external/network.service';
+
 
 @Component({
   selector: 'app-dhikr',
@@ -9,8 +13,10 @@ import { NetworkService } from 'src/app/infrastructure/services/proxies/external
 })
 export class DhikrComponent implements OnInit {
   section: string = ''; // Huidige sectie
-  counter: number = 0; // Huidige teller
-  totalCounter: number = 0; // Totaal aantal klikken
+  counter: number = 0; // Lokale teller
+  totalCounter: number = 0; // Lokale totaal teller
+  onlineCounter: number = 0; // Online teller
+  onlineTotalCounter: number = 0; // Online totaal teller
   buttonDisabled: boolean = false;
   words: string[] = ["Soubhan' Allah", 'Alhamdulilah', 'Allah u akbar'];
   currentWord: string = this.words[0];
@@ -19,16 +25,23 @@ export class DhikrComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+
+    private dhikrService: DhikrService // Inject de service
+
     private networkService: NetworkService
+
   ) {}
 
   ngOnInit(): void {
-    // Ophalen van de sectie uit de route
     this.route.data.subscribe((data) => {
       this.section = data['section'] || 'home';
     });
 
-    // Ophalen van de teller uit lokale opslag
+    this.loadLocalCounters();
+    this.loadOnlineCounters(); // Haal online counters op
+  }
+
+  private loadLocalCounters(): void {
     const savedCounter = localStorage.getItem('dhikrCounter');
     const savedTotalCounter = localStorage.getItem('dhikrTotalCounter');
 
@@ -47,6 +60,21 @@ export class DhikrComponent implements OnInit {
     });
   }
 
+  private loadOnlineCounters(): void {
+    this.dhikrService.getCounters().subscribe({
+      next: (data) => {
+        this.onlineCounter = data.onlineCounter;
+        this.onlineTotalCounter = data.onlineTotalCounter;
+      },
+      error: (err) => {
+        console.error('Fout bij ophalen online counters:', err);
+        // Mock data als fallback
+        this.onlineCounter = 0;
+        this.onlineTotalCounter = 0;
+      },
+    });
+  }
+
   onButtonClick(): void {
     this.networkService.isOnline.subscribe((status) => {
       if (status) {
@@ -56,6 +84,27 @@ export class DhikrComponent implements OnInit {
         // Handle offline scenario (e.g., show a message to the user)
         this.counter++;
         this.totalCounter++;
+
+    // Update lokaal opgeslagen data
+    localStorage.setItem('dhikrCounter', this.counter.toString());
+    localStorage.setItem('dhikrTotalCounter', this.totalCounter.toString());
+
+    // Update online counters
+    this.dhikrService.updateCounter(1).subscribe({
+      next: () => {
+        this.onlineCounter++;
+        this.onlineTotalCounter++;
+      },
+      error: (err) => {
+        console.error('Fout bij updaten online counter:', err);
+      },
+    });
+
+    // Wissel woorden alleen voor algemene Dhikr
+    if (this.section === 'dhikr') {
+      const currentIndex = this.words.indexOf(this.currentWord);
+      this.currentWord = this.words[(currentIndex + 1) % this.words.length];
+    }
 
         // Opslaan in de lokale opslag
         localStorage.setItem('dhikrCounter', this.counter.toString());
@@ -89,7 +138,6 @@ export class DhikrComponent implements OnInit {
     this.buttonDisabled = false;
   }
 
-  // Methode om terug te navigeren en de pagina te refreshen
   goBack(): void {
     this.router.navigate(['/dhikr/home']).then(() => {
       window.location.reload();
