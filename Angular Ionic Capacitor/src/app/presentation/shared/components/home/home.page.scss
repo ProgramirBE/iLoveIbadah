@@ -6,9 +6,8 @@
 }
 
 ion-content {
-  --background:#f5f5dc;
+  --background: #f5f5dc;
 }
-
 
 /* Algemene instellingen voor de pagina */
 body {
@@ -20,6 +19,15 @@ body {
   align-items: center;
 }
 
+/* Salutation sectie */
+.salutation {
+  text-align: center;
+  margin: 20px 0;
+  color: #3e2723; /* Donkerder bruin */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* Stijl voor paragrafen */
 p {
   font-size: 0.75rem; /* Kleine lettergrootte voor tekst */
@@ -27,7 +35,7 @@ p {
 
 /* Stijl voor titels */
 h1, h2, h3 {
-  background: linear-gradient(to right,  #d7ccc8, #d7ccc8,  #d7ccc8); /* Groene gradiënt */ 
+  background: linear-gradient(to right, #d7ccc8, #d7ccc8, #d7ccc8); /* Groene gradiënt */
   -webkit-background-clip: text; /* Alleen tekst krijgt de achtergrondkleur */
   -webkit-text-fill-color: transparent; /* Maak de tekst transparant voor de achtergrondkleur */
   text-align: center; /* Tekst in het midden */
@@ -44,12 +52,12 @@ h1, h2, h3 {
   width: 90%; /* Breedte als percentage voor responsiveness */
   margin: auto; /* Midden positioneren */
   border-radius: 3rem;
-  border: 10px solid #8d7c78;/* Heldere groene rand */ 
+  border: 10px solid #8d7c78; /* Heldere groene rand */
 }
 
 /* Algemene stijl voor grid-items */
 .grid-item {
-  background: linear-gradient(135deg, #262323,#4e342e ); /* Donkere gradiënt */ 
+  background: linear-gradient(135deg, #262323, #4e342e); /* Donkere gradiënt */
   color: #fff; /* Witte tekstkleur */
   padding: 1rem; /* Binnenruimte */
   text-align: center; /* Tekst gecentreerd */
@@ -111,7 +119,6 @@ a.grid-item {
   border-radius: 10px; /* Optioneel: afgeronde hoeken */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtiele schaduw onder de afbeelding */
 }
-
 
 /* Responsiveness voor kleinere schermen */
 @media (max-width: 768px) {
