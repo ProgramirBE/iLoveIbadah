@@ -16,10 +16,21 @@
     <section class="content">
       <!-- Public Profile Section -->
       <div *ngIf="currentSection === 'publicProfile'" class="section">
-        <h2>Public Profile</h2>
-        <button class="btn" (click)="toggleEditMode()">Edit Data</button>
+        <div class="header">
+          <h2>Public Profile</h2>
+          <button class="btn edit-btn" (click)="enableEdit()">Edit Data</button>
+        </div>
 
-        <form *ngIf="isEditMode" (submit)="updateProfile()">
+        <div *ngIf="!isEditing">
+          <p><strong>Full Name:</strong> {{ profile.fullName }}</p>
+          <p><strong>Email:</strong> {{ profile.email }}</p>
+          <p><strong>Bio:</strong> {{ profile.bio }}</p>
+          <p><strong>Website:</strong> <a [href]="profile.url" target="_blank">{{ profile.url }}</a></p>
+          <p><strong>Favorite Dua:</strong> {{ profile.favoriteDua }}</p>
+          <p><strong>Location:</strong> {{ profile.location }}</p>
+        </div>
+
+        <form *ngIf="isEditing" (submit)="updateProfile()">
           <div class="form-group">
             <label for="fullName">Full Name</label>
             <input [(ngModel)]="profile.fullName" id="fullName" type="text" placeholder="Enter full name" required>
@@ -28,12 +39,6 @@
           <div class="form-group">
             <label for="email">Email</label>
             <input [(ngModel)]="profile.email" id="email" type="email" placeholder="Enter email" required>
-          </div>
-
-          <div class="form-group">
-            <label for="profilePicture">Profile Picture</label>
-            <input type="file" id="profilePicture" (change)="uploadProfilePicture($event)">
-            <img *ngIf="profile.profilePicture" [src]="profile.profilePicture" alt="Profile Picture">
           </div>
 
           <div class="form-group">
@@ -53,44 +58,48 @@
 
           <button type="submit" class="btn">Save Changes</button>
         </form>
-
-        <div *ngIf="!isEditMode">
-          <p><strong>Full Name:</strong> {{ profile.fullName }}</p>
-          <p><strong>Email:</strong> {{ profile.email }}</p>
-          <p><strong>Bio:</strong> {{ profile.bio }}</p>
-          <p><strong>Website URL:</strong> {{ profile.url }}</p>
-          <p><strong>Favorite Dua:</strong> {{ profile.favoriteDua }}</p>
-        </div>
       </div>
 
       <!-- Account Section -->
       <div *ngIf="currentSection === 'account'" class="section">
-        <h2>Account</h2>
-        <button class="btn" (click)="toggleEditMode()">Edit Data</button>
+        <div class="header">
+          <h2>Account</h2>
+          <button class="btn edit-btn" (click)="enableEdit()">Edit Data</button>
+        </div>
 
-        <form *ngIf="isEditMode" (submit)="updateAccount()">
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input [(ngModel)]="account.username" id="username" type="text" placeholder="Enter username" required>
-          </div>
-
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input [(ngModel)]="account.password" id="password" type="password" placeholder="Enter password" required>
-          </div>
-
-          <div class="form-group">
-            <label for="location">Location</label>
-            <input [(ngModel)]="profile.location" id="location" type="text" placeholder="Enter location">
-          </div>
-
-          <button type="submit" class="btn">Save Changes</button>
-        </form>
-
-        <div *ngIf="!isEditMode">
+        <div *ngIf="!isEditing">
           <p><strong>Username:</strong> {{ account.username }}</p>
           <p><strong>Location:</strong> {{ profile.location }}</p>
         </div>
+
+        <form *ngIf="isEditing">
+          <!-- Change Username -->
+          <div class="form-group">
+            <label for="username">Change Username</label>
+            <input [(ngModel)]="account.username" id="username" type="text" placeholder="Enter new username" required>
+            <button type="button" class="btn" (click)="saveUsername()">Save Username</button>
+          </div>
+
+          <!-- Change Password -->
+          <div class="form-group">
+            <label for="currentPassword">Current Password</label>
+            <input [(ngModel)]="account.currentPassword" id="currentPassword" type="password"
+              placeholder="Enter current password" required>
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input [(ngModel)]="account.newPassword" id="newPassword" type="password" placeholder="Enter new password"
+              required>
+          </div>
+          <button type="button" class="btn" (click)="savePassword()">Save Password</button>
+
+          <!-- Change Location -->
+          <div class="form-group">
+            <label for="location">Update Location</label>
+            <input [(ngModel)]="profile.location" id="location" type="text" placeholder="Enter new location">
+            <button type="button" class="btn" (click)="saveLocation()">Save Location</button>
+          </div>
+        </form>
       </div>
     </section>
   </div>
