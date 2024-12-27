@@ -9,7 +9,7 @@ namespace IbadahLover.Application.DTOs.UserDhikrActivity
 {
     public class CreateUserDhikrActivityDto
     {
-        public int UserAccountId { get; set; }
+        public int? UserAccountId { get; set; }
 
         public int DhikrTypeId { get; set; }
         //[DataType(DataType.Date)]

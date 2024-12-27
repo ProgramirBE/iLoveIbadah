@@ -35,6 +35,15 @@ namespace IbadahLover.Persistence.Repositories
             return userDhikrActivity;
         }
 
+        public async Task<UserDhikrActivity> GetUserDhikrActivityByPerformedOn(int userAccountId, DateTime performedOn, int dhikrTypeId)
+        {
+            var userDhikrActivity = await _dbContext.UserDhikrActivities
+                .Include(q => q.UserAccount)
+                .Include(q => q.DhikrType)
+                .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId && q.DhikrTypeId == dhikrTypeId && q.PerformedOn == performedOn);
+            return userDhikrActivity;
+        }
+
         public async Task<bool> PerformedOnExists(int userAccountId, DateTime performedOn, int dhikrTypeId)
         {
             var userDhikrActivity = await _dbContext.UserDhikrActivities
@@ -43,6 +52,15 @@ namespace IbadahLover.Persistence.Repositories
                 .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId && q.PerformedOn == performedOn && q.DhikrTypeId == dhikrTypeId);
 
             return userDhikrActivity != null;
+        }
+
+        public async Task IncrementTotalPerformed(int userAccountId, DateTime performedOn, int dhikrTypeId)
+        {
+            var userDhikrActivity = await _dbContext.UserDhikrActivities
+                .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId && q.PerformedOn == performedOn && q.DhikrTypeId == dhikrTypeId);
+            
+            userDhikrActivity.TotalPerformed += 1;
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
