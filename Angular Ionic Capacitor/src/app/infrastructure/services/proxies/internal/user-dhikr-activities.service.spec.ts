@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UserdhikractivitiesService } from './userdhikractivities.service';
+import { UserdhikractivitiesService } from './user-dhikr-activities.service';
 
 describe('UserdhikractivitiesService', () => {
   let service: UserdhikractivitiesService;

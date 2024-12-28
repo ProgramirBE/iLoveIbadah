@@ -15,10 +15,10 @@ export class UserAccountsService {
   private http = inject(HttpClient);
   private apiUrl = environment.apiURL + '/useraccounts';
 
-  public getById(): Observable<any> {
+  public getById(): Observable<UserAccount> {
     const headers = this.authHeaderService.getAuthHeaders();
     return this.http
-      .get<any>(`${this.apiUrl}/getbyid`, { headers })
+      .get<UserAccount>(`${this.apiUrl}/getbyid`, { headers })
       .pipe(map((response) => UserAccount.fromApiResponse(response)));
   }
 
@@ -60,5 +60,17 @@ export class UserAccountsService {
     passwordHash: string;
   }): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/register`, user);
+  }
+
+  public isLoggedIn(): Observable<boolean> {
+    const headers = this.authHeaderService.getAuthHeaders();
+    return this.http
+      .get<boolean>(`${this.apiUrl}/isLoggedIn`, { headers })
+      .pipe(
+        catchError((error) => {
+          console.error('Failed to check login status', error);
+          return throwError(() => new Error('Failed to check login status'));
+        })
+      );
   }
 }

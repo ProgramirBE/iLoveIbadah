@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAccount } from 'src/app/domain/models/user-account';
-import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
+import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/user-accounts.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,28 +10,31 @@ import { UserAccountsService } from 'src/app/infrastructure/services/proxies/int
 export class ProfileComponent implements OnInit {
   currentSection: string = 'userAccount'; // Default section
   isEditing: boolean = false; // Controle voor bewerkmodus
-  userAccount: Partial<UserAccount> = {
-    uniqueId: '',
-    fullName: '',
-    email: '',
-    profilePictureTypeId: 0,
-    emailConfirmed: false,
-    currentLocation: 'Belgique',
-    totalWarnings: 0,
-    isPermanentlyBanned: false,
+  userAccount: UserAccount = new UserAccount({});
+  // userAccount: Partial<UserAccount> = {
+  //   uniqueId: '',
+  //   fullName: '',
+  //   email: '',
+  //   profilePictureTypeId: 0,
+  //   emailConfirmed: false,
+  //   currentLocation: 'Belgique',
+  //   totalWarnings: 0,
+  //   isPermanentlyBanned: false,
 
-    //bio: '',
-    //url: '',
-    //favoriteDua: '',
-    //: '',
-  };
+  //   //bio: '',
+  //   //url: '',
+  //   //favoriteDua: '',
+  //   //: '',
+  // };
   account = {
     username: '',
     currentPassword: '',
     newPassword: '',
   };
 
-  constructor(private userAccountService: UserAccountsService) {}
+  constructor(
+    private userAccountService: UserAccountsService
+  ) {}
 
   ngOnInit(): void {
     this.loadUserAccount();
@@ -42,14 +45,17 @@ export class ProfileComponent implements OnInit {
   loadUserAccount(): void {
     const userId = localStorage.getItem('userId');
     if (userId) {
-      this.userAccountService.getById().subscribe(
-        (user: UserAccount) => {
+      this.userAccountService.getById().subscribe({
+        next: (user: UserAccount) => {
           this.userAccount = user;
         },
-        (error) => {
+        error: (error) => {
           console.error('Failed to load user information', error);
+        },
+        complete: () => {
+          console.log('User information loaded successfully');
         }
-      );
+      });
     }
   }
 

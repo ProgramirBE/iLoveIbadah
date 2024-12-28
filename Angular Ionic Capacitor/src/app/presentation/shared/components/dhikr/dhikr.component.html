@@ -10,21 +10,9 @@
     <div *ngSwitchCase="'home'">
       <h1>Dhikr Home</h1>
       <div class="grid-container">
-        <a class="grid-item" routerLink="/dhikr/dhikr">
-          <h2>Module 1</h2>
-          <p>Soubhan' Allah, Alhamdulilah, Allah u akbar</p>
-        </a>
-        <a class="grid-item" routerLink="/dhikr/1">
-          <h2>Module 2</h2>
-          <p>Soubhan' Allah</p>
-        </a>
-        <a class="grid-item" routerLink="/dhikr/2">
-          <h2>Module 3</h2>
-          <p>Alhamdulilah</p>
-        </a>
-        <a class="grid-item" routerLink="/dhikr/3">
-          <h2>Module 4</h2>
-          <p>Allah u akbar</p>
+        <a *ngFor="let dhikrType of dhikrTypes" class="grid-item" [routerLink]="'/dhikr/' + dhikrType.id">
+          <h2>{{ dhikrType.fullName }}</h2>
+          <p>{{ dhikrType.fullName }}</p>
         </a>
       </div>
       <div class="total-container">
@@ -37,42 +25,28 @@
     </div>
 
     <!-- Algemene Dhikr -->
-    <div class="noti">
-      <div *ngSwitchCase="'dhikr'">
-        <h1>{{ currentWord }}</h1>
-        <h2>Counter: {{ counter }}</h2>
-        <h2>Online Counter: {{ onlineCounter }}</h2>
-        <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
-        <div *ngIf="buttonDisabled">
-          <p>
-            Lè ilèhè illa Al-lahoe oe-ahdahoe lè shèrika lèhoe,
-            Lèhoel molkoe oe-è lèhoel hamdoe, oe-è hoewa ‘âla koel-li sjee‘in Qadier.
-          </p>
-          <ion-checkbox (ionChange)="onCheckboxToggle()">Click to reactivate</ion-checkbox>
-        </div>
+    <div *ngSwitchCase="'dhikr'">
+      <h1>{{ currentWord }}</h1>
+      <h2>Counter: {{ counter }}</h2>
+      <h2>Online Counter: {{ onlineCounter }}</h2>
+      <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
+      <div *ngIf="buttonDisabled">
+        <p>
+          Lè ilèhè illa Al-lahoe oe-ahdahoe lè shèrika lèhoe,
+          Lèhoel molkoe oe-è lèhoel hamdoe, oe-è hoewa ‘âla koel-li sjee‘in Qadier.
+        </p>
+        <ion-checkbox (ionChange)="onCheckboxToggle()">Click to reactivate</ion-checkbox>
       </div>
     </div>
 
     <!-- Specifieke Dhikr-secties -->
-    <div *ngSwitchCase="'1'">
-      <h1>Soubhan'Allah</h1>
-      <h2>Counter: {{ counter }}</h2>
-      <h2>Online Counter: {{ onlineCounter }}</h2>
-      <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
-    </div>
-
-    <div *ngSwitchCase="'2'">
-      <h1>Alhamdulilah</h1>
-      <h2>Counter: {{ counter }}</h2>
-      <h2>Online Counter: {{ onlineCounter }}</h2>
-      <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
-    </div>
-
-    <div *ngSwitchCase="'3'">
-      <h1>Allah u akbar</h1>
-      <h2>Counter: {{ counter }}</h2>
-      <h2>Online Counter: {{ onlineCounter }}</h2>
-      <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
-    </div>
-  </ng-container>
+    <ng-container *ngFor="let dhikrType of dhikrTypes">
+      <div *ngSwitchCase="dhikrType.id.toString()">
+        <h1>{{ dhikrType.fullName }}</h1>
+        <h2>Counter: {{ counter }}</h2>
+        <h2>Online Counter: {{ onlineCounter }}</h2>
+        <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
+      </div>
+    </ng-container>
+    </ng-container>
 </div>
