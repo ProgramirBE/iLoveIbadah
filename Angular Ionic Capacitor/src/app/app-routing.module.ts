@@ -3,6 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './presentation/shared/components/login/login.component';
 import { RegisterComponent } from './presentation/shared/components/register/register.component';
+import { DhikrTypesResolver } from './infrastructure/resolvers/proxies/internal/dhikr-types.resolver';
+import { UserDhikrOverviewsResolver } from './infrastructure/resolvers/proxies/internal/user-dhikr-overviews.resolver';
 
 const routes: Routes = [
   // Standaard route die naar de login-pagina omleidt
@@ -39,6 +41,10 @@ const routes: Routes = [
       import('./presentation/shared/components/dhikr/dhikr.module').then(
         (m) => m.DhikrModule
       ),
+    resolve: {
+      userDhikrOverview: UserDhikrOverviewsResolver,
+      dhikrTypes: DhikrTypesResolver,
+    }
   },
 
   // Lazy-loaded route voor de 'salat'-module
@@ -58,7 +64,7 @@ const routes: Routes = [
         (m) => m.ProfileModule
       ),
   },
-  
+
 
   // Fallback voor niet-bestaande routes
   { path: '**', redirectTo: 'login' },

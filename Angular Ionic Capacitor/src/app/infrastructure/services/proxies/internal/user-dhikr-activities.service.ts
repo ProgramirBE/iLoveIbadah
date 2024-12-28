@@ -10,7 +10,7 @@ import { UserDhikrOverview } from 'src/app/domain/models/user-dhikr-overview';
 @Injectable({
   providedIn: 'root',
 })
-export class UserdhikractivitiesService {
+export class UserDhikrActivitiesService {
   constructor(private authHeaderService: AuthHeaderService) {}
   private http = inject(HttpClient);
   private apiUrl = environment.apiURL + '/userdhikractivities';
@@ -45,5 +45,15 @@ export class UserdhikractivitiesService {
     return this.http.post<any>(`${this.apiUrl}/upsert`, requestBody, {
       headers,
     });
+  }
+
+  public getbyperformedon(
+    performedOn: Date,
+    dhikrTypeId: number
+  ): Observable<any> {
+    const headers = this.authHeaderService.getAuthHeaders();
+    const formattedDate = performedOn.toISOString().split('T')[0]; // Format to YYYY-MM-DD
+    const url = `${this.apiUrl}/getbyperformedon?performedOn=${formattedDate}&dhikrTypeId=${dhikrTypeId}`;
+    return this.http.get<any>(url, { headers });
   }
 }

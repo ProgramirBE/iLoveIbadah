@@ -607,32 +607,32 @@
       "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\ibadahlover.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahActivities\\Handlers\\Queries\\GetUserSalahActivityListByTrackedOnRequestHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IbadahLover.Application\\Features\\UserSalahActivities\\Handlers\\Queries\\GetUserSalahActivityListByTrackedOnRequestHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\usersalahactivities\\handlers\\queries\\getusersalahactivitylistbytrackedonrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\usersalahactivities\\handlers\\queries\\getusersalahactivitylistbytrackedonrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\ImportUserDhikrActivityCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Commands\\ImportUserDhikrActivityCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\importuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\commands\\importuserdhikractivitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityByPerformedOnDetailsRequestHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IbadahLover.Application\\Features\\UserDhikrActivities\\Handlers\\Queries\\GetUserDhikrActivityByPerformedOnDetailsRequestHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitybyperformedondetailsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\handlers\\queries\\getuserdhikractivitybyperformedondetailsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListByTrackedOnRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IbadahLover.Application\\Features\\UserSalahActivities\\Requests\\Queries\\GetUserSalahActivityListByTrackedOnRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\usersalahactivities\\requests\\queries\\getusersalahactivitylistbytrackedonrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\usersalahactivities\\requests\\queries\\getusersalahactivitylistbytrackedonrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserSalahActivity\\UserSalahActivityListByTrackedOnDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IbadahLover.Application\\DTOs\\UserSalahActivity\\UserSalahActivityListByTrackedOnDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\usersalahactivity\\usersalahactivitylistbytrackedondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\usersalahactivity\\usersalahactivitylistbytrackedondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityByPerformedOnDetailsRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IbadahLover.Application\\Features\\UserDhikrActivities\\Requests\\Queries\\GetUserDhikrActivityByPerformedOnDetailsRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitybyperformedondetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\features\\userdhikractivities\\requests\\queries\\getuserdhikractivitybyperformedondetailsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityByPerformedOnDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IbadahLover.Application\\DTOs\\UserDhikrActivity\\UserDhikrActivityByPerformedOnDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\userdhikractivity\\userdhikractivitybyperformedondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|solutionrelative:ibadahlover.application\\dtos\\userdhikractivity\\userdhikractivitybyperformedondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -642,7 +642,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -659,19 +659,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
-              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
-              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:18:50.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "IUserDhikrOverviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IUserDhikrOverviewRepository.cs",
@@ -680,8 +667,7 @@
               "RelativeToolTip": "IbadahLover.Application\\Contracts\\Persistence\\IUserDhikrOverviewRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:17:44.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:17:44.576Z"
             },
             {
               "$type": "Document",
@@ -693,8 +679,7 @@
               "RelativeToolTip": "IbadahLover.Application\\Features\\UserSalahOverviews\\Handlers\\Queries\\GetUserSalahOverviewByUserAccountDetailsRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:11:04.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:11:04.878Z"
             },
             {
               "$type": "Document",
@@ -706,8 +691,7 @@
               "RelativeToolTip": "IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAowDcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T07:55:13.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T07:55:13.688Z"
             },
             {
               "$type": "Document",
@@ -717,10 +701,22 @@
               "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
               "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
               "RelativeToolTip": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowDUAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T08:11:22.648Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
+              "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
+              "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T23:18:50.509Z"
             },
             {
               "$type": "Document",
@@ -732,8 +728,7 @@
               "RelativeToolTip": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Handlers\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:19:35.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:19:35.201Z"
             },
             {
               "$type": "Document",
@@ -745,8 +740,7 @@
               "RelativeToolTip": "IbadahLover.Persistence\\Repositories\\UserDhikrOverviewRepository.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:15:34.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:15:34.074Z"
             },
             {
               "$type": "Document",
@@ -758,8 +752,7 @@
               "RelativeToolTip": "IbadahLover.Persistence\\Repositories\\UserSalahOverviewRepository.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwCMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:13:29.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:13:29.308Z"
             },
             {
               "$type": "Document",
@@ -771,8 +764,7 @@
               "RelativeToolTip": "IbadahLover.Application\\Contracts\\Persistence\\IUserSalahOverviewRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:12:40.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:12:40.322Z"
             },
             {
               "$type": "Document",
@@ -784,8 +776,7 @@
               "RelativeToolTip": "IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewByUserAccountDetailsRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:09:37.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T23:09:37.737Z"
             },
             {
               "$type": "Document",
@@ -797,8 +788,7 @@
               "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:14:24.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T21:14:24.146Z"
             },
             {
               "$type": "Document",
@@ -810,8 +800,7 @@
               "RelativeToolTip": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:30:05.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T21:30:05.475Z"
             },
             {
               "$type": "Document",
@@ -823,8 +812,7 @@
               "RelativeToolTip": "IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAgwFAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:09:44.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T08:09:44.477Z"
             },
             {
               "$type": "Document",
@@ -836,8 +824,7 @@
               "RelativeToolTip": "IbadahLover.Application\\Features\\UserSalahActivities\\Handlers\\Queries\\CheckUserSalahActivityPerformedOnExistsRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:39:38.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T14:39:38.512Z"
             },
             {
               "$type": "Document",
@@ -849,8 +836,7 @@
               "RelativeToolTip": "IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAlwBUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T19:41:24.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T19:41:24.609Z"
             },
             {
               "$type": "Document",
@@ -874,8 +860,7 @@
               "RelativeToolTip": "IbadahLover.API\\Program.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAlwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:46:25.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T13:46:25.81Z"
             },
             {
               "$type": "Document",

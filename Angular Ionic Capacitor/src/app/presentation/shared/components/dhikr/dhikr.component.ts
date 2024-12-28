@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DhikrService } from './dhikr.service';
+import { UserDhikrActivity } from 'src/app/domain/models/user-dhikr-activity';
+import { UserDhikrActivitiesService } from 'src/app/infrastructure/services/proxies/internal/user-dhikr-activities.service';
+import { NetworkService } from 'src/app/infrastructure/services/proxies/external/network.service';
+import { DhikrType } from 'src/app/domain/models/dhikr-type';
+import { UserDhikrOverviewsService } from 'src/app/infrastructure/services/proxies/internal/user-dhikr-overviews.service';
+import { UserDhikrOverview } from 'src/app/domain/models/user-dhikr-overview';
 
 @Component({
   selector: 'app-dhikr',
@@ -14,20 +19,41 @@ export class DhikrComponent implements OnInit {
   onlineCounter: number = 0; // Online teller
   onlineTotalCounter: number = 0; // Online totale teller
   buttonDisabled: boolean = false;
-  words: string[] = ["Soubhan' Allah", "Alhamdulilah", "Allah u akbar"];
-  currentWord: string = this.words[0];
+  currentWord: string = '';
+  //dhikrType: DhikrType = new DhikrType({});
+  userDhikrActivity: UserDhikrActivity = new UserDhikrActivity({});
+  dhikrTypes: DhikrType[] = [];
+  currentDhikrTypeId: number = 0;
+  userDhikrOverview: UserDhikrOverview = new UserDhikrOverview({});
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private dhikrService: DhikrService
+    private userDhikrActivitiesService: UserDhikrActivitiesService,
+    private userDhikrOverviewService: UserDhikrOverviewsService,
+    private networkService: NetworkService
   ) {}
 
   ngOnInit(): void {
     // Ophalen van de sectie uit de route
     this.route.data.subscribe((data) => {
       this.section = data['section'] || 'home';
+      // this.dhikrTypes = data['dhikrTypes'] || [];
+      // console.log('Dhikr types:', this.dhikrTypes);
+      this.setCurrentWord();
     });
+
+    this.dhikrTypes = this.route.snapshot.data['dhikrTypes'] || [];
+    if (!this.dhikrTypes) {
+      console.error('Failed to load dhikr types, retry to fetch from api');
+    }
+
+    this.userDhikrOverview = this.route.snapshot.data['userDhikrOverview'];
+    if (!this.userDhikrOverview) {
+      console.error(
+        'Failed to load user dhikr overview, retry to fetch from api'
+      );
+    }
 
     // Ophalen van de lokale counters
     const savedCounter = localStorage.getItem('dhikrCounter');
@@ -40,12 +66,40 @@ export class DhikrComponent implements OnInit {
     if (savedTotalCounter) {
       this.totalCounter = parseInt(savedTotalCounter, 10);
     }
+    this.syncOnlineTotalCounter();
+    this.syncOnlineCounter();
 
-    // Ophalen van online counters
-    this.dhikrService.getCounters().subscribe({
-      next: (data) => {
-        this.onlineCounter = data.onlineCounter;
-        this.onlineTotalCounter = data.onlineTotalCounter;
+    // this.dhikrService.getCounters().subscribe({
+    //   next: (data) => {
+    //     this.onlineCounter = data.onlineCounter;
+    //     this.onlineTotalCounter = data.onlineTotalCounter;
+    //   },
+    //   error: (err) => {
+    //     console.error('Error fetching online counters:', err);
+    //   },
+    // });
+  }
+  syncOnlineCounter(): void {
+    this.userDhikrActivitiesService
+      .getbyperformedon(new Date(), parseInt(this.section))
+      .subscribe({
+        next: (dhikrActivity: UserDhikrActivity) => {
+          this.userDhikrActivity = dhikrActivity;
+          //const activity = UserDhikrActivity.fromApiResponse(response);
+          this.onlineCounter = this.userDhikrActivity.totalPerformed; // Adjust as needed
+        },
+        error: (err) => {
+          console.error('Error fetching online counters:', err);
+        },
+      });
+  }
+
+  syncOnlineTotalCounter(): void {
+    this.userDhikrOverviewService.getByUserAccount().subscribe({
+      next: (dhikrOverview: UserDhikrOverview) => {
+        this.userDhikrOverview = dhikrOverview;
+        //const activity = UserDhikrActivity.fromApiResponse(response);
+        this.onlineTotalCounter = this.userDhikrOverview.totalPerformed; // Adjust as needed
       },
       error: (err) => {
         console.error('Error fetching online counters:', err);
@@ -53,41 +107,78 @@ export class DhikrComponent implements OnInit {
     });
   }
 
-  onButtonClick(): void {
-    this.counter++;
-    this.totalCounter++;
-    this.onlineCounter++;
-    this.onlineTotalCounter++;
+  setCurrentWord(): void {
+    const currentDhikrType = this.dhikrTypes.find(
+      (dhikrType) => dhikrType.id.toString() === this.section
+    );
+    if (currentDhikrType) {
+      this.currentWord = currentDhikrType.fullName;
+    }
+  }
 
-    // Lokale opslag bijwerken
-    localStorage.setItem('dhikrCounter', this.counter.toString());
-    localStorage.setItem('dhikrTotalCounter', this.totalCounter.toString());
+  async onButtonClick(): Promise<void> {
+    this.networkService.isOnline.subscribe(async (status) => {
+      if (status) {
+        console.log('onlinecounter: ' + this.onlineCounter);
+        try {
+          // Await upsert operation
+          const upsertResponse = await this.userDhikrActivitiesService
+            .upsert(parseInt(this.section))
+            .toPromise();
+          console.log('Dhikr activity upserted successfully', upsertResponse);
+        } catch {
+          Error;
+        }
+        console.error('Error upserting dhikr activity', Error);
+        // this.userDhikrActivitiesService
+        //   .upsert(parseInt(this.section))
+        //   .subscribe({
+        //     next: (upsertResponse) => {
+        //       console.log(
+        //         'Dhikr activity upserted successfully',
+        //         upsertResponse
+        //       );
+        //     },
+        //     error: (upsertError) => {
+        //       console.error('Failed to upsert dhikr activity', upsertError);
+        //     },
+        //   });
 
-    // Online teller bijwerken
-    this.dhikrService.updateCounter(1).subscribe({
-      next: () => {
-        console.log('Online counter updated');
-      },
-      error: (err) => {
-        console.error('Error updating online counter:', err);
-      },
+        console.log('onlinecounter: ' + this.onlineCounter);
+
+        this.syncOnlineCounter();
+
+        console.log('onlinecounter: ' + this.onlineCounter);
+
+        //--------------- de toi j'ai enlevé car c'est moi qui gère le backend coté api database
+        // Online teller bijwerken
+        // this.dhikrService.updateCounter(1).subscribe({
+        //   next: () => {
+        //     console.log('Online counter updated');
+        //   },
+        //   error: (err) => {
+        //     console.error('Error updating online counter:', err);
+        //   },
+        // });
+      } else {
+        this.counter++;
+        this.totalCounter++;
+
+        // Lokale opslag bijwerken
+        localStorage.setItem('dhikrCounter', this.counter.toString());
+        localStorage.setItem('dhikrTotalCounter', this.totalCounter.toString());
+      }
     });
 
-    // Wissel woorden alleen voor algemene Dhikr
-    if (this.section === 'dhikr') {
-      const currentIndex = this.words.indexOf(this.currentWord);
-      const nextIndex = (currentIndex + 1) % this.words.length;
-      this.currentWord = this.words[nextIndex];
-    }
+    this.setCurrentWord();
 
     // Specifieke secties
-    if (this.section === '1') {
-      this.currentWord = "Soubhan' Allah";
-    } else if (this.section === '2') {
-      this.currentWord = 'Alhamdulilah';
-    } else if (this.section === '3') {
-      this.currentWord = 'Allah u akbar';
-    }
+    // const currentDhikrType = this.dhikrTypes.find(
+    //   (dhikrType) => dhikrType.id.toString() === this.section
+    // );
+    // if (currentDhikrType) {
+    //   this.currentWord = currentDhikrType.fullName;
+    // }
 
     // Deactiveer de knop elke 99 klikken
     if (this.counter % 99 === 0) {

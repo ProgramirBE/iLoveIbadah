@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/useraccounts.service';
+import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/user-accounts.service';
 
 @Component({
   selector: 'app-register',
