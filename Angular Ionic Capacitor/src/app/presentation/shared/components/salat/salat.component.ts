@@ -13,9 +13,12 @@ export class SalatComponent implements OnInit {
   longitude: number | null = null;
   currentDate: string = '';
   nextPrayerName: string = '';
+  currentPrayerName: string = '';
   timer: { hours: number; minutes: number; seconds: number } | null = null;
   filteredPrayers: { name: string; time: string }[] = [];
-  duaAfterPrayer: string = ''; 
+  prayerTimesForSelection: string[] = [];
+  selectedTime: string = '';
+  duaAfterPrayer: string = ''; // Toegevoegd om de fout te corrigeren
   private timerInterval: any;
 
   constructor(private salatService: SalatService) {}
@@ -59,23 +62,18 @@ export class SalatComponent implements OnInit {
     if (this.latitude !== null && this.longitude !== null) {
       this.salatService.getSalatTimes(this.latitude, this.longitude).subscribe({
         next: (data) => {
-          if (data.success && data.results) {
-            this.salatTimes = Object.fromEntries(
-              Object.entries(data.results).map(([key, value]) => [
-                key,
-                (value as string).replace(/%/g, ''), 
-              ])
-            );
+          if (data.results) {
+            this.salatTimes = data.results;
 
             this.filteredPrayers = [
-              { name: 'Fajr', time: this.salatTimes['Fajr'] },
-              { name: 'Dhuhr', time: this.salatTimes['Dhuhr'] },
-              { name: 'Asr', time: this.salatTimes['Asr'] },
-              { name: 'Maghrib', time: this.salatTimes['Maghrib'] },
-              { name: 'Isha', time: this.salatTimes['Isha'] },
+              { name: 'Fajr', time: this.salatTimes['Fajr'].replace(/[^0-9:]/g, '') },
+              { name: 'Dhuhr', time: this.salatTimes['Dhuhr'].replace(/[^0-9:]/g, '') },
+              { name: 'Asr', time: this.salatTimes['Asr'].replace(/[^0-9:]/g, '') },
+              { name: 'Maghrib', time: this.salatTimes['Maghrib'].replace(/[^0-9:]/g, '') },
+              { name: 'Isha', time: this.salatTimes['Isha'].replace(/[^0-9:]/g, '') },
             ];
 
-            this.setNextPrayerTimer(); // Set the timer
+            this.setCurrentPrayer();
           } else {
             console.error('No prayer times received.');
             this.salatTimes = null;
@@ -89,18 +87,7 @@ export class SalatComponent implements OnInit {
     }
   }
 
-  setNextPrayerTimer(): void {
-    if (this.timerInterval) {
-      clearInterval(this.timerInterval);
-    }
-
-    if (!this.filteredPrayers || this.filteredPrayers.length === 0) {
-      console.error('No prayer times available to set the timer.');
-      this.nextPrayerName = 'Unavailable';
-      this.timer = { hours: 0, minutes: 0, seconds: 0 };
-      return;
-    }
-
+  setCurrentPrayer(): void {
     const now = new Date();
 
     const prayerTimes = this.filteredPrayers.map((prayer) => {
@@ -110,30 +97,34 @@ export class SalatComponent implements OnInit {
       return { name: prayer.name, time: prayerDate };
     });
 
-    const nextPrayer =
-      prayerTimes.find((prayer) => prayer.time > now) || prayerTimes[0];
+    const currentPrayer =
+      prayerTimes.find((prayer, index) => {
+        const nextPrayer = prayerTimes[index + 1];
+        return nextPrayer
+          ? now >= prayer.time && now < nextPrayer.time
+          : now >= prayer.time;
+      }) || prayerTimes[0];
 
-    this.nextPrayerName = nextPrayer.name;
+    this.currentPrayerName = currentPrayer.name;
 
-    this.timerInterval = setInterval(() => {
-      const currentTime = new Date();
-      let diff = (nextPrayer.time.getTime() - currentTime.getTime()) / 1000;
+    // Genereer tijdopties voor het huidige gebed
+    this.generatePrayerTimeOptions(currentPrayer.time);
+  }
 
-      if (diff < 0) {
-        diff += 24 * 60 * 60;
-      }
+  generatePrayerTimeOptions(prayerTime: Date): void {
+    const options = [];
+    for (let i = 0; i < 5; i++) {
+      const newTime = new Date(prayerTime.getTime());
+      newTime.setMinutes(newTime.getMinutes() + i * 10);
+      options.push(newTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+    }
+    options.push('Later');
+    this.prayerTimesForSelection = options;
+  }
 
-      if (diff <= 0) {
-        clearInterval(this.timerInterval);
-        this.setNextPrayerTimer();
-      } else {
-        this.timer = {
-          hours: Math.floor(diff / 3600),
-          minutes: Math.floor((diff % 3600) / 60),
-          seconds: Math.floor(diff % 60),
-        };
-      }
-    }, 1000);
+  onPrayerAnswered(): void {
+    console.log(`Gebed beantwoord: Ja`);
+    console.log(`Geselecteerde tijd: ${this.selectedTime}`);
   }
 
   refresh(): void {

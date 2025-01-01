@@ -34,8 +34,7 @@
     min-width: 300px;
     max-width: 400px;
 
-    .date-time,
-    .location {
+    .date-time {
       text-align: center;
       background-color: #4e342e;
       color: #ffffff;
@@ -112,6 +111,10 @@
     }
   }
 
+  .task-question{
+    display: flex;
+    gap: 20px;
+  }
   .refresh {
     margin-top: 20px;
 
@@ -130,6 +133,76 @@
       }
     }
   }
+
+  .prayer-question {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #4e342e;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h3 {
+      font-size: 1.2rem;
+      color: #d7ccc8;
+      margin: 0;
+    }
+
+    .prayer-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Zet ruimte tussen de items */
+      gap: 20px;
+
+      .prayer-label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        input[type="radio"] {
+          margin-right: 5px;
+          accent-color: #66bb6a; /* Groene kleur voor geselecteerde radiobutton */
+        }
+
+        label {
+          font-size: 1rem;
+          color: #d7ccc8;
+          margin: 0;
+        }
+      }
+
+      .prayer-select {
+        display: flex;
+        align-items: center;
+
+        label {
+          font-size: 1rem;
+          color: #d7ccc8;
+          margin-right: 5px;
+          white-space: nowrap;
+        }
+
+        select {
+          padding: 5px 10px;
+          border: 1px solid #d7ccc8;
+          border-radius: 4px;
+          background-color: #ffffff;
+          color: #4e342e;
+          font-size: 1rem;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: #66bb6a;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -140,5 +213,13 @@
 
   .content-wrapper {
     padding: 10px;
+  }
+
+  .prayer-question {
+    .prayer-options {
+      flex-direction: column; /* Zet items onder elkaar op kleinere schermen */
+      align-items: flex-start; /* Links uitgelijnd op kleine schermen */
+      gap: 10px;
+    }
   }
 }
