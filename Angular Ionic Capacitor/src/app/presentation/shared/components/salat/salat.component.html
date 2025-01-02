@@ -1,23 +1,31 @@
 <div class="page">
-  <!-- Wrapper for the content with fixed width and centered alignment -->
   <div class="content-wrapper">
     <div class="content">
-      <!-- Left Section: Date-Time and Location -->
       <div class="left-section">
         <div class="date-time">
-          <h2>Today: {{ currentDate }}</h2>
+          <h2>Today: {{ currentDate }} | Current Time: {{ currentTime }}</h2>
           <p>
-            Next Prayer: {{ nextPrayerName }} in
-            <span *ngIf="timer">{{ timer.hours }}h {{ timer.minutes }}m {{ timer.seconds }}s</span>
+            Next Prayer: {{ currentPrayerName }}
           </p>
         </div>
-        <div class="location">
-          <h2>Location</h2>
-          <p>{{ location || 'Fetching location...' }}</p>
+        <div class="prayer-question">
+          <h3>Heb je vandaag {{ currentPrayerName }} gebeden?</h3>
+          <div class="task-question">
+            <div>
+              <label>
+                <input type="radio" name="prayerAnswered" value="yes" (change)="onPrayerAnswered()" />
+                Ja
+              </label>
+            </div>
+            <div>
+              <label for="timeSelect">Kies een tijd:</label>
+              <select id="timeSelect" [(ngModel)]="selectedTime">
+                <option *ngFor="let time of prayerTimesForSelection" [value]="time">{{ time }}</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Right Section: Prayer Times -->
       <div class="right-section">
         <div class="prayer">
           <h2>Prayer Times</h2>
@@ -30,13 +38,11 @@
       </div>
     </div>
 
-    <!-- Dua After Prayer -->
     <div class="dua">
       <h2>Dua After Prayer</h2>
       <p>{{ duaAfterPrayer }}</p>
     </div>
 
-    <!-- Refresh Button -->
     <div class="refresh">
       <button (click)="refresh()">Refresh</button>
     </div>
