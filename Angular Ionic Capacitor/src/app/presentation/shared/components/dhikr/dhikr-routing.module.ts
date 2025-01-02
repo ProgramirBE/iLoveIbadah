@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '1', component: DhikrComponent, data: { section: '1' } },
   { path: '2', component: DhikrComponent, data: { section: '2' } },
   { path: '3', component: DhikrComponent, data: { section: '3' } },
+  { path: 'combo', component: DhikrComponent, data: { section: 'combo' } },
   { path: 'dhikr', component: DhikrComponent, data: { section: 'dhikr' } },
 ];
 

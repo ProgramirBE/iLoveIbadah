@@ -14,6 +14,7 @@ import { UserDhikrOverview } from 'src/app/domain/models/user-dhikr-overview';
 })
 export class DhikrComponent implements OnInit {
   section: string = ''; // Huidige sectie
+  dhikrTypeId: number = 0; // Huidige dhikr type id
   counter: number = 0; // Lokale teller
   totalCounter: number = 0; // Lokale totale teller
   onlineCounter: number = 0; // Online teller

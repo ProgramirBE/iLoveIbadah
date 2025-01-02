@@ -642,7 +642,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -656,6 +656,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-10T08:41:54.633Z",
               "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -689,7 +693,7 @@
               "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
               "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
               "RelativeToolTip": "IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T07:55:13.688Z",
               "EditorCaption": ""
@@ -704,8 +708,7 @@
               "RelativeToolTip": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:11:22.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T08:11:22.648Z"
             },
             {
               "$type": "Document",
