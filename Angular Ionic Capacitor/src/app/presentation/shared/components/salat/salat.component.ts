@@ -12,7 +12,7 @@ export class SalatComponent implements OnInit {
   latitude: number | null = null;
   longitude: number | null = null;
   currentDate: string = '';
-  currentTime: string = ''; // Current time in 24-hour format
+  currentTime: string = ''; // Current time in AM/PM format
   nextPrayerName: string = ''; // Holds the name of the next prayer
   currentPrayerName: string = ''; // Holds the current prayer for display
   filteredPrayers: { name: string; time: string }[] = []; // Stores the list of prayers with times
@@ -38,10 +38,11 @@ export class SalatComponent implements OnInit {
       month: 'long',
       day: 'numeric',
     });
-    this.currentTime = now.toLocaleTimeString('en-GB', {
+    this.currentTime = now.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',
+      hour12: true,
     });
   }
 
@@ -92,30 +93,37 @@ export class SalatComponent implements OnInit {
     }
   }
 
-  // Formats time to ensure it's in the correct 24-hour format
+  // Formats time to ensure it's in the correct format
   formatTime(time: string): string {
-    return time.replace(/[^0-9:]/g, ''); // Remove any unwanted characters (e.g., %)
+    return time.replace(/[^0-9:]/g, ''); // Remove any unwanted characters
   }
 
   // Determines the next prayer based on the current time
   setNextPrayer(): void {
     const now = new Date();
+    console.log(`Current time: ${now.toLocaleTimeString('en-US')}`);
 
     // Parse prayer times into Date objects for accurate comparison
     const prayerTimes = this.filteredPrayers.map((prayer) => {
       const [hours, minutes] = prayer.time.split(':').map(Number);
       const prayerDate = new Date();
       prayerDate.setHours(hours, minutes, 0, 0); // Set the time for today
+      console.log(`Parsed ${prayer.name} time: ${prayerDate.toLocaleTimeString('en-US')}`);
       return { name: prayer.name, time: prayerDate };
     });
 
     // Sort prayer times in chronological order
     prayerTimes.sort((a, b) => a.time.getTime() - b.time.getTime());
 
+    console.log('Parsed prayer times:', prayerTimes);
+
     // Find the next prayer
     let nextPrayer = null;
 
     for (const prayer of prayerTimes) {
+      console.log(
+        `Checking if now (${now.toLocaleTimeString('en-US')}) < ${prayer.name} (${prayer.time.toLocaleTimeString('en-US')})`
+      );
       if (now < prayer.time) {
         nextPrayer = prayer;
         break;
@@ -124,6 +132,7 @@ export class SalatComponent implements OnInit {
 
     // If no future prayer is found, set the next prayer to Fajr
     if (!nextPrayer) {
+      console.log('Current time is after Isha. Next prayer is Fajr.');
       nextPrayer = prayerTimes[0]; // First prayer of the next day
     }
 
@@ -134,6 +143,9 @@ export class SalatComponent implements OnInit {
     this.currentPrayerName =
       currentPrayerIndex >= 0 ? prayerTimes[currentPrayerIndex].name : prayerTimes[prayerTimes.length - 1].name;
 
+    console.log(`Next prayer: ${this.nextPrayerName}`);
+    console.log(`Current prayer for question: ${this.currentPrayerName}`);
+
     // Populate prayer times dropdown for user selection
     this.generatePrayerTimeOptions(nextPrayer.time);
   }
@@ -141,13 +153,18 @@ export class SalatComponent implements OnInit {
   // Populates dropdown options for "Kies een tijd"
   generatePrayerTimeOptions(prayerTime: Date): void {
     const options = [];
+    const now = new Date();
     for (let i = 0; i < 5; i++) {
       const newTime = new Date(prayerTime.getTime());
-      newTime.setMinutes(newTime.getMinutes() + i * 10); // Add 10-minute intervals
-      options.push(newTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }));
+      newTime.setMinutes(newTime.getMinutes() + i * 10);
+      if (newTime > now) {
+        options.push(newTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }));
+      }
     }
     options.push('Later');
     this.prayerTimesForSelection = options;
+
+    console.log('Generated prayer times for dropdown:', this.prayerTimesForSelection);
   }
 
   // Sets a Dua to be displayed after the prayer
