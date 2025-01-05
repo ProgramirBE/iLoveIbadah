@@ -7,18 +7,25 @@ import { SalatService } from './salat.service';
   styleUrls: ['./salat.component.scss'],
 })
 export class SalatComponent implements OnInit {
-  salatTimes: any = null; // Holds the fetched prayer times
+  salatTimes: any = null;
   location: string = '';
   latitude: number | null = null;
   longitude: number | null = null;
   currentDate: string = '';
-  currentTime: string = ''; // Current time in AM/PM format
-  nextPrayerName: string = ''; // Holds the name of the next prayer
-  currentPrayerName: string = ''; // Holds the current prayer for display
-  filteredPrayers: { name: string; time: string }[] = []; // Stores the list of prayers with times
-  prayerTimesForSelection: string[] = []; // Options for the prayer time dropdown
-  selectedTime: string = ''; // User-selected time for the prayer
-  duaAfterPrayer: string = ''; // Holds the Dua after prayer
+  currentTime: Date = new Date();
+  nextPrayerName: string = '';
+  currentPrayerName: string = '';
+  filteredPrayers: { name: string; time: Date }[] = [];
+  prayerTimesForSelection: string[] = [];
+  duaAfterPrayer: string = '';
+  selectedTime: string = '';
+  prayerPercentages: { [key: string]: number } = {
+    Fajr: 0,
+    Dhuhr: 0,
+    Asr: 0,
+    Maghrib: 0,
+    Isha: 0,
+  };
 
   constructor(private salatService: SalatService) {}
 
@@ -26,27 +33,24 @@ export class SalatComponent implements OnInit {
     this.updateCurrentDateTime();
     this.getLocationAndFetchTimes();
     this.setDuaAfterPrayer();
-    setInterval(() => this.updateCurrentDateTime(), 1000); // Update the time every second
+
+    setInterval(() => {
+      this.updateCurrentDateTime();
+      this.determineNextPrayer();
+      this.determineCurrentPrayer();
+    }, 60000); // Update toutes les 60 secondes
   }
 
-  // Updates the current date and time
   updateCurrentDateTime(): void {
-    const now = new Date();
-    this.currentDate = now.toLocaleDateString('en-US', {
+    this.currentDate = new Date().toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     });
-    this.currentTime = now.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true,
-    });
+    this.currentTime = new Date();
   }
 
-  // Fetches the user's location and retrieves prayer times
   getLocationAndFetchTimes(): void {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -56,7 +60,7 @@ export class SalatComponent implements OnInit {
           this.fetchSalatTimes();
         },
         (error) => {
-          console.error('Error fetching location:', error);
+          console.error('Location error:', error);
         }
       );
     } else {
@@ -64,24 +68,23 @@ export class SalatComponent implements OnInit {
     }
   }
 
-  // Fetches prayer times from the SalatService using latitude and longitude
   fetchSalatTimes(): void {
     if (this.latitude !== null && this.longitude !== null) {
       this.salatService.getSalatTimes(this.latitude, this.longitude).subscribe({
         next: (data) => {
+          console.log('Raw salat times from API:', data.results);
           if (data.results) {
             this.salatTimes = data.results;
-
-            // Extract and format prayer times into the filteredPrayers array
             this.filteredPrayers = [
-              { name: 'Fajr', time: this.formatTime(this.salatTimes['Fajr']) },
-              { name: 'Dhuhr', time: this.formatTime(this.salatTimes['Dhuhr']) },
-              { name: 'Asr', time: this.formatTime(this.salatTimes['Asr']) },
-              { name: 'Maghrib', time: this.formatTime(this.salatTimes['Maghrib']) },
-              { name: 'Isha', time: this.formatTime(this.salatTimes['Isha']) },
+              { name: 'Fajr', time: this.convertToDate(data.results['Fajr']) },
+              { name: 'Dhuhr', time: this.convertToDate(data.results['Dhuhr']) },
+              { name: 'Asr', time: this.convertToDate(data.results['Asr']) },
+              { name: 'Maghrib', time: this.convertToDate(data.results['Maghrib']) },
+              { name: 'Isha', time: this.convertToDate(data.results['Isha']) },
             ];
-
-            this.setNextPrayer();
+            console.log('Filtered prayers with Date objects:', this.filteredPrayers);
+            this.determineNextPrayer();
+            this.determineCurrentPrayer();
           } else {
             console.error('No prayer times received.');
           }
@@ -93,95 +96,79 @@ export class SalatComponent implements OnInit {
     }
   }
 
-  // Formats time to ensure it's in the correct format
-  formatTime(time: string): string {
-    return time.replace(/[^0-9:]/g, ''); // Remove any unwanted characters
+  convertToDate(time: string): Date {
+    try {
+      const now = new Date();
+      const [hours, minutes] = time.split(':').map((t) => parseInt(t, 10));
+      const isPM = time.toLowerCase().includes('pm');
+      const finalHours = isPM && hours < 12 ? hours + 12 : hours;
+
+      const date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), finalHours, minutes);
+      return date;
+    } catch (error) {
+      console.error('Error converting time to Date:', time, error);
+      return new Date();
+    }
   }
 
-  // Determines the next prayer based on the current time
-  setNextPrayer(): void {
-    const now = new Date();
-    console.log(`Current time: ${now.toLocaleTimeString('en-US')}`);
+  determineNextPrayer(): void {
+    const now = this.currentTime;
 
-    // Parse prayer times into Date objects for accurate comparison
-    const prayerTimes = this.filteredPrayers.map((prayer) => {
-      const [hours, minutes] = prayer.time.split(':').map(Number);
-      const prayerDate = new Date();
-      prayerDate.setHours(hours, minutes, 0, 0); // Set the time for today
-      console.log(`Parsed ${prayer.name} time: ${prayerDate.toLocaleTimeString('en-US')}`);
-      return { name: prayer.name, time: prayerDate };
-    });
+    for (let i = 0; i < this.filteredPrayers.length; i++) {
+      const currentPrayer = this.filteredPrayers[i];
+      const nextPrayer = this.filteredPrayers[(i + 1) % this.filteredPrayers.length];
 
-    // Sort prayer times in chronological order
-    prayerTimes.sort((a, b) => a.time.getTime() - b.time.getTime());
-
-    console.log('Parsed prayer times:', prayerTimes);
-
-    // Find the next prayer
-    let nextPrayer = null;
-
-    for (const prayer of prayerTimes) {
-      console.log(
-        `Checking if now (${now.toLocaleTimeString('en-US')}) < ${prayer.name} (${prayer.time.toLocaleTimeString('en-US')})`
-      );
-      if (now < prayer.time) {
-        nextPrayer = prayer;
-        break;
+      if (now >= currentPrayer.time && now < nextPrayer.time) {
+        this.nextPrayerName = nextPrayer.name;
+        return;
       }
     }
 
-    // If no future prayer is found, set the next prayer to Fajr
-    if (!nextPrayer) {
-      console.log('Current time is after Isha. Next prayer is Fajr.');
-      nextPrayer = prayerTimes[0]; // First prayer of the next day
-    }
-
-    this.nextPrayerName = nextPrayer.name;
-
-    // Set the current prayer name for the UI
-    const currentPrayerIndex = prayerTimes.findIndex((prayer) => prayer.name === nextPrayer.name) - 1;
-    this.currentPrayerName =
-      currentPrayerIndex >= 0 ? prayerTimes[currentPrayerIndex].name : prayerTimes[prayerTimes.length - 1].name;
-
-    console.log(`Next prayer: ${this.nextPrayerName}`);
-    console.log(`Current prayer for question: ${this.currentPrayerName}`);
-
-    // Populate prayer times dropdown for user selection
-    this.generatePrayerTimeOptions(nextPrayer.time);
+    // Special : after Isha or before Fajr
+    this.nextPrayerName = 'Fajr';
   }
 
-  // Populates dropdown options for "Kies een tijd"
+  determineCurrentPrayer(): void {
+    const now = this.currentTime;
+
+    for (let i = 0; i < this.filteredPrayers.length; i++) {
+      const currentPrayer = this.filteredPrayers[i];
+      const nextPrayer = this.filteredPrayers[(i + 1) % this.filteredPrayers.length];
+
+      if (now >= currentPrayer.time && now < nextPrayer.time) {
+        this.currentPrayerName = currentPrayer.name;
+        this.generatePrayerTimeOptions(currentPrayer.time);
+        return;
+      }
+    }
+
+    // Special : after Isha or before Fajr
+    this.currentPrayerName = 'Isha';
+    this.generatePrayerTimeOptions(this.filteredPrayers[4].time);
+  }
+
   generatePrayerTimeOptions(prayerTime: Date): void {
     const options = [];
-    const now = new Date();
     for (let i = 0; i < 5; i++) {
-      const newTime = new Date(prayerTime.getTime());
+      const newTime = new Date(prayerTime);
       newTime.setMinutes(newTime.getMinutes() + i * 10);
-      if (newTime > now) {
-        options.push(newTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }));
-      }
+      options.push(newTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }));
     }
     options.push('Later');
     this.prayerTimesForSelection = options;
-
-    console.log('Generated prayer times for dropdown:', this.prayerTimesForSelection);
   }
 
-  // Sets a Dua to be displayed after the prayer
   setDuaAfterPrayer(): void {
     this.duaAfterPrayer = `اللهم أنت السلام ومنك السلام تباركت يا ذا الجلال والإكرام 
-    Translation: "O Allah, You are peace and from You comes peace. Blessed are You, O Owner of Majesty and Honor."`;
+    Translation: "O Allah, You are peace, and from You comes peace. Blessed are You, O Owner of Majesty and Honor."`;
   }
 
-  // Handles when the user answers the prayer question
   onPrayerAnswered(): void {
-    console.log(`User answered for prayer: ${this.currentPrayerName}`);
+    console.log(`Prayer confirmed: ${this.currentPrayerName}`);
     console.log(`Selected time: ${this.selectedTime}`);
   }
 
-  // Refreshes the location and prayer times
   refresh(): void {
-    console.log('Refreshing location and prayer times...');
     this.getLocationAndFetchTimes();
   }
 }
