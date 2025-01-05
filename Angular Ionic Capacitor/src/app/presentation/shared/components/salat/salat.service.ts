@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SalatService {
-  private apiUrl = '/api/prayer_times'; // Proxy gebruikt
+  private apiUrl = 'https://www.islamicfinder.us/index.php/api/prayer_times'; // Proxy gebruikt
 
   constructor(private http: HttpClient) {}
 
