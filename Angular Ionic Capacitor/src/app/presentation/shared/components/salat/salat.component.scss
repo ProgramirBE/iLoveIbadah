@@ -6,18 +6,19 @@
   align-items: center;
   background-color: #d5d5bf;
   padding: 20px;
+  overflow-y: auto;
 
   .content-wrapper {
-    background-color: #f5f5dc; /* Licht beige achtergrond voor inhoud */
-    width: 1500px; /* Maximale breedte van de inhoud */
-    max-width: 90%; /* Responsieve breedte */
+    background-color: #f5f5dc; 
+    width: 100%; 
+    max-width: 1500px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px; /* Ruimte boven de inhoud */
+    margin-top: 40px;
   }
 
   .content {
@@ -111,10 +112,11 @@
     }
   }
 
-  .task-question{
+  .task-question {
     display: flex;
     gap: 20px;
   }
+
   .refresh {
     margin-top: 20px;
 
@@ -155,7 +157,7 @@
     .prayer-options {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Zet ruimte tussen de items */
+      justify-content: space-between;
       gap: 20px;
 
       .prayer-label {
@@ -163,9 +165,9 @@
         align-items: center;
         gap: 5px;
 
-        input[type="radio"] {
+        input[type='radio'] {
           margin-right: 5px;
-          accent-color: #66bb6a; /* Groene kleur voor geselecteerde radiobutton */
+          accent-color: #66bb6a; 
         }
 
         label {
@@ -183,7 +185,6 @@
           font-size: 1rem;
           color: #d7ccc8;
           margin-right: 5px;
-          white-space: nowrap;
         }
 
         select {
@@ -193,33 +194,52 @@
           background-color: #ffffff;
           color: #4e342e;
           font-size: 1rem;
-          transition: border-color 0.3s ease;
-
-          &:focus {
-            border-color: #66bb6a;
-            outline: none;
-          }
         }
       }
     }
   }
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .content-wrapper {
+    padding: 10px;
+  }
+
   .content {
     flex-direction: column;
     align-items: center;
   }
 
-  .content-wrapper {
-    padding: 10px;
-  }
-
   .prayer-question {
     .prayer-options {
-      flex-direction: column; /* Zet items onder elkaar op kleinere schermen */
-      align-items: flex-start; /* Links uitgelijnd op kleine schermen */
+      flex-direction: column;
+      align-items: flex-start;
       gap: 10px;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prayer,
+  .date-time,
+  .dua {
+    width: 100%;
+    text-align: center;
+  }
+
+  .prayer-options {
+    flex-direction: column;
+    gap: 10px;
   }
 }

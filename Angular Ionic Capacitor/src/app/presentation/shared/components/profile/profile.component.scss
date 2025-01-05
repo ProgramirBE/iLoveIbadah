@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-color: #826b66; /* Bruine kleur voor de zijkanten */
+    background-color: #826b66; /* Brown color for the sides */
+    font-family: Arial, sans-serif;
 }
 
 .userAccount-wrapper {
@@ -8,27 +9,29 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background-color: #d5d5bf; /* Achtergrondkleur voor inhoud */
+    background-color: #d5d5bf; /* Light beige background for the main content */
+    padding: 20px; /* Padding for better spacing on smaller screens */
 }
 
 .userAccount-container {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
-    background-color: #f5f5dc; /* Licht beige achtergrond voor secties */
-    margin: 40px auto; /* Zorgt voor centrale plaatsing */
-    width: 1500px; /* Vaste breedte */
-    max-width: 90%; /* Zorgt voor responsiviteit op kleinere schermen */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte */
-    border-radius: 12px; /* Afgeronde hoeken */
+    background-color: #f5f5dc; /* Light beige for section backgrounds */
+    margin: 40px auto; /* Center the container */
+    width: 1500px; /* Fixed width for larger screens */
+    max-width: 100%; /* Responsiveness for smaller screens */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Depth shadow */
+    border-radius: 12px; /* Rounded corners */
+    overflow: hidden; /* Avoid layout overflow */
 }
 
 .sidebar {
     width: 250px;
-    background-color: #2e7d32; /* Groen achtergrond voor sidebar */
+    background-color: #2e7d32; /* Green background for the sidebar */
     color: #fff;
     padding: 20px;
-    border-radius: 12px 0 0 12px; /* Alleen afgeronde hoeken links */
+    border-radius: 12px 0 0 12px; /* Rounded corners on the left */
 }
 
 .sidebar ul {
@@ -47,16 +50,17 @@ body {
 
 .sidebar li.active,
 .sidebar li:hover {
-    background-color: #66bb6a; /* Lichtgroen achtergrond bij hover of actief */
+    background-color: #66bb6a; /* Light green for hover/active states */
 }
 
 .content {
     flex: 1;
     padding: 20px;
+    overflow-y: auto; /* Ensure content is scrollable */
 }
 
 .section {
-    background-color: #4e342e; /* Donker bruin achtergrond */
+    background-color: #4e342e; /* Dark brown for sections */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -86,51 +90,78 @@ button {
     padding: 10px;
     border-radius: 4px;
     border: 2px solid #4a4444;
-    background-color: #d6d0d0; /* Neutrale kleur voor invoervelden */
-    color: #080808; /* Tekstkleur */
+    background-color: #d6d0d0; /* Neutral color for inputs */
+    color: #080808; /* Text color */
 }
 
 textarea {
-    resize: none; /* Voorkomt dat gebruikers de grootte van tekstvelden aanpassen */
+    resize: none; /* Disable resizing for text areas */
     height: 80px;
 }
 
 button.btn {
-    background-color: #2e7d32; /* Groen voor knoppen */
+    background-color: #2e7d32; /* Green for buttons */
     color: #fff;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease-in-out;
     margin-top: 10px;
-    width: 200px; /* Vaste breedte voor knoppen */
+    width: 200px; /* Fixed width for buttons */
     border-radius: 4px;
 }
 
 button.btn:hover {
-    background-color: #66bb6a; /* Lichtgroen achtergrond bij hover */
+    background-color: #66bb6a; /* Light green for hover states */
 }
 
-/* Specifieke stijl voor profielafbeelding */
+/* Profile Image Styling */
 img {
     max-width: 100px;
     border-radius: 50%;
     margin-top: 10px;
     border: 2px solid #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-/* Responsiviteit */
+/* Responsiveness */
 @media (max-width: 768px) {
-    .profile-container {
+    .userAccount-container {
         flex-direction: column;
         width: 100%;
         max-width: 100%;
-        border-radius: 0; /* Verwijdert afgeronde hoeken op kleine schermen */
+        border-radius: 0; /* Remove rounded corners for smaller screens */
     }
 
     .sidebar {
         width: 100%;
         margin-bottom: 20px;
-        border-radius: 0; /* Verwijdert afgeronde hoeken */
+        border-radius: 0; /* Remove rounded corners for sidebar */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .content {
+        padding: 15px;
+        max-height: calc(100vh - 80px); /* Adjust height for scrollability */
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+}
+
+@media (max-width: 480px) {
+    .userAccount-container {
+        padding: 10px;
+    }
+
+    .sidebar {
+        padding: 10px;
+        font-size: 14px; /* Smaller text for very narrow screens */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px; /* Smaller font size for inputs on small screens */
+    }
+
+    button.btn {
+        width: 100%; /* Full width buttons on very small screens */
     }
 }
