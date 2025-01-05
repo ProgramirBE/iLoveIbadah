@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <!-- Salutation -->
+  <!-- Salutations -->
   <div class="salutation">
     <h2>Salam Aleykum, {{ username }}</h2>
   </div>
@@ -32,17 +32,16 @@
       <h1>Welcome</h1>
       <p>Explore and enjoy the app!</p>
     </div>
-    <div class="grid-item grid-item-6">
-      <h1>Achievements</h1>
-      <p>Track your progress and rewards.</p>
-    </div>
+    <a class="grid-item grid-item-6" routerLink="/profile">
+      <h1>Profile</h1>
+      <p>Manage your profile and settings.</p>
+    </a>
     <div class="grid-item grid-item-7" routerLink="/login">
       <h1>Login</h1>
       <p>Log in or make an account.</p>
     </div>
   </div>
 
-  <!-- Voeg de afbeelding hier toe -->
   <div class="image-container">
     <img src="assets/images/background.jpg.jpg" alt="Background Image" />
   </div>

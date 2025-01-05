@@ -1,24 +1,22 @@
 <div class="page">
   <div class="content-wrapper">
     <div class="content">
+      <!-- Left Section -->
       <div class="left-section">
+        <!-- Current Date and Time -->
         <div class="date-time">
           <h2>Today: {{ currentDate }} | Current Time: {{ currentTime }}</h2>
           <p>
-            Next Prayer: {{ currentPrayerName }}
+            Next Prayer: {{ nextPrayerName }}
           </p>
         </div>
+
+        <!-- Prayer Question -->
         <div class="prayer-question">
-          <h3>Heb je vandaag {{ currentPrayerName }} gebeden?</h3>
+          <h3>When did you pray?</h3>
           <div class="task-question">
             <div>
-              <label>
-                <input type="radio" name="prayerAnswered" value="yes" (change)="onPrayerAnswered()" />
-                Ja
-              </label>
-            </div>
-            <div>
-              <label for="timeSelect">Kies een tijd:</label>
+              <label for="timeSelect">Select a time:</label>
               <select id="timeSelect" [(ngModel)]="selectedTime">
                 <option *ngFor="let time of prayerTimesForSelection" [value]="time">{{ time }}</option>
               </select>
@@ -26,7 +24,10 @@
           </div>
         </div>
       </div>
+
+      <!-- Right Section -->
       <div class="right-section">
+        <!-- Prayer Times -->
         <div class="prayer">
           <h2>Prayer Times</h2>
           <ul>
@@ -38,11 +39,13 @@
       </div>
     </div>
 
+    <!-- Dua Section -->
     <div class="dua">
       <h2>Dua After Prayer</h2>
       <p>{{ duaAfterPrayer }}</p>
     </div>
 
+    <!-- Refresh Button -->
     <div class="refresh">
       <button (click)="refresh()">Refresh</button>
     </div>
