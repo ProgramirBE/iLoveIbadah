@@ -173,10 +173,12 @@ export class SalatComponent implements OnInit {
   }
 
   generatePrayerTimeOptions(prayerTime: Date): void {
+    const currentTime = new Date().getTime();
+    console.log('Current time:', currentTime);
     const options = [];
-    for (let i = 0; i < 5; i++) {
-      const newTime = new Date(prayerTime);
-      newTime.setMinutes(newTime.getMinutes() + i * 10);
+    let newTime = new Date(prayerTime);
+
+    while (newTime.getTime() <= currentTime) {
       options.push(
         newTime.toLocaleTimeString('en-US', {
           hour: '2-digit',
@@ -184,10 +186,28 @@ export class SalatComponent implements OnInit {
           hour12: true,
         })
       );
+      newTime.setMinutes(newTime.getMinutes() + 10);
     }
-    options.push('Later');
     this.prayerTimesForSelection = options;
   }
+  // generatePrayerTimeOptions(prayerTime: Date): void {
+  //   var currentTime = new Date().getTime();
+  //   console.log('Current time:', currentTime);
+  //   const options = [];
+  //   for (let i = 0; i < 5; i++) {
+  //     const newTime = new Date(prayerTime);
+  //     newTime.setMinutes(newTime.getMinutes() + i * 10);
+  //     options.push(
+  //       newTime.toLocaleTimeString('en-US', {
+  //         hour: '2-digit',
+  //         minute: '2-digit',
+  //         hour12: true,
+  //       })
+  //     );
+  //   }
+  //   options.push('Later');
+  //   this.prayerTimesForSelection = options;
+  // }
 
   setDuaAfterPrayer(): void {
     this.duaAfterPrayer = `اللهم أنت السلام ومنك السلام تباركت يا ذا الجلال والإكرام
@@ -201,5 +221,13 @@ export class SalatComponent implements OnInit {
 
   refresh(): void {
     this.getLocationAndFetchTimes();
+  }
+
+  onSendPrayerPunctuality(): void {
+    const prayerName = this.currentPrayerName;
+    const selectedTime = this.selectedTime;
+    console.log(
+      `Prayer punctuality for ${prayerName} at ${selectedTime} has been sent.`
+    );
   }
 }
