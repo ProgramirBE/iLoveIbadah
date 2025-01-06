@@ -20,7 +20,7 @@
         <p>{{ totalCounter }}</p>
 
         <h2>Total Performed (Online)</h2>
-        <p>{{ onlineTotalCounter }}</p>
+        <p>{{ onlineTotalCounter() }}</p>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
     <div *ngSwitchCase="'dhikr'">
       <h1>{{ currentWord }}</h1>
       <h2>Counter: {{ counter }}</h2>
-      <h2>Online Counter: {{ onlineCounter }}</h2>
+      <h2>Online Counter: {{ onlineCounter() }}</h2>
       <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
       <div *ngIf="buttonDisabled">
         <p>
@@ -44,7 +44,7 @@
       <div *ngSwitchCase="dhikrType.id.toString()">
         <h1>{{ dhikrType.fullName }}</h1>
         <h2>Counter: {{ counter }}</h2>
-        <h2>Online Counter: {{ onlineCounter }}</h2>
+        <h2>Online Counter: {{ onlineCounter() }}</h2>
         <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
       </div>
     </ng-container>

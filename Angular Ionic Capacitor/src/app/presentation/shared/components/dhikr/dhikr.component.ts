@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Signal, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserDhikrActivity } from 'src/app/domain/models/user-dhikr-activity';
 import { UserDhikrActivitiesService } from 'src/app/infrastructure/services/proxies/internal/user-dhikr-activities.service';
@@ -17,8 +17,8 @@ export class DhikrComponent implements OnInit {
   dhikrTypeId: number = 0; // Huidige dhikr type id
   counter: number = 0; // Lokale teller
   totalCounter: number = 0; // Lokale totale teller
-  onlineCounter: number = 0; // Online teller
-  onlineTotalCounter: number = 0; // Online totale teller
+  onlineCounter = signal(0); // Online teller
+  onlineTotalCounter = signal(0); // Online totale teller
   buttonDisabled: boolean = false;
   currentWord: string = '';
   //dhikrType: DhikrType = new DhikrType({});
@@ -87,7 +87,7 @@ export class DhikrComponent implements OnInit {
         next: (dhikrActivity: UserDhikrActivity) => {
           this.userDhikrActivity = dhikrActivity;
           //const activity = UserDhikrActivity.fromApiResponse(response);
-          this.onlineCounter = this.userDhikrActivity.totalPerformed; // Adjust as needed
+          this.onlineCounter.set(this.userDhikrActivity.totalPerformed); // Adjust as needed
         },
         error: (err) => {
           console.error('Error fetching online counters:', err);
@@ -100,7 +100,7 @@ export class DhikrComponent implements OnInit {
       next: (dhikrOverview: UserDhikrOverview) => {
         this.userDhikrOverview = dhikrOverview;
         //const activity = UserDhikrActivity.fromApiResponse(response);
-        this.onlineTotalCounter = this.userDhikrOverview.totalPerformed; // Adjust as needed
+        this.onlineTotalCounter.set(this.userDhikrOverview.totalPerformed); // Adjust as needed
       },
       error: (err) => {
         console.error('Error fetching online counters:', err);
@@ -193,8 +193,11 @@ export class DhikrComponent implements OnInit {
 
   // Methode om terug te navigeren en de pagina te refreshen
   goBack(): void {
-    this.router.navigate(['/dhikr/home']).then(() => {
-      window.location.reload();
+    this.syncOnlineTotalCounter();
+    console.log('onlineTotalCounter: ' + this.onlineTotalCounter);
+    this.router.navigate(['/dhikr/home'])
+      .then(() => {
+      this.syncOnlineTotalCounter();
     });
   }
 }
