@@ -2,7 +2,7 @@
 Use master
 go
 CREATE DATABASE IbadahLoverDB
-GO 
+GO
 USE IbadahLoverDB 
 GO
 CREATE TABLE Blob_File

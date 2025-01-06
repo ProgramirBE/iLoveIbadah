@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SalatService } from './salat.service';
+import { IslamicFinderService } from 'src/app/infrastructure/services/proxies/external/islamic-finder.service';
 
 @Component({
   selector: 'app-salat',
@@ -27,7 +27,7 @@ export class SalatComponent implements OnInit {
     Isha: 0,
   };
 
-  constructor(private salatService: SalatService) {}
+  constructor(private islamicFinderService: IslamicFinderService) {}
 
   ngOnInit(): void {
     this.updateCurrentDateTime();
@@ -70,29 +70,46 @@ export class SalatComponent implements OnInit {
 
   fetchSalatTimes(): void {
     if (this.latitude !== null && this.longitude !== null) {
-      this.salatService.getSalatTimes(this.latitude, this.longitude).subscribe({
-        next: (data) => {
-          console.log('Raw salat times from API:', data.results);
-          if (data.results) {
-            this.salatTimes = data.results;
-            this.filteredPrayers = [
-              { name: 'Fajr', time: this.convertToDate(data.results['Fajr']) },
-              { name: 'Dhuhr', time: this.convertToDate(data.results['Dhuhr']) },
-              { name: 'Asr', time: this.convertToDate(data.results['Asr']) },
-              { name: 'Maghrib', time: this.convertToDate(data.results['Maghrib']) },
-              { name: 'Isha', time: this.convertToDate(data.results['Isha']) },
-            ];
-            console.log('Filtered prayers with Date objects:', this.filteredPrayers);
-            this.determineNextPrayer();
-            this.determineCurrentPrayer();
-          } else {
-            console.error('No prayer times received.');
-          }
-        },
-        error: (error) => {
-          console.error('Error fetching prayer times:', error);
-        },
-      });
+      this.islamicFinderService
+        .getSalatTimes(this.latitude, this.longitude)
+        .subscribe({
+          next: (data) => {
+            console.log('Raw salat times from API:', data.results);
+            if (data.results) {
+              this.salatTimes = data.results;
+              this.filteredPrayers = [
+                {
+                  name: 'Fajr',
+                  time: this.convertToDate(data.results['Fajr']),
+                },
+                {
+                  name: 'Dhuhr',
+                  time: this.convertToDate(data.results['Dhuhr']),
+                },
+                { name: 'Asr', time: this.convertToDate(data.results['Asr']) },
+                {
+                  name: 'Maghrib',
+                  time: this.convertToDate(data.results['Maghrib']),
+                },
+                {
+                  name: 'Isha',
+                  time: this.convertToDate(data.results['Isha']),
+                },
+              ];
+              console.log(
+                'Filtered prayers with Date objects:',
+                this.filteredPrayers
+              );
+              this.determineNextPrayer();
+              this.determineCurrentPrayer();
+            } else {
+              console.error('No prayer times received.');
+            }
+          },
+          error: (error) => {
+            console.error('Error fetching prayer times:', error);
+          },
+        });
     }
   }
 
@@ -103,7 +120,13 @@ export class SalatComponent implements OnInit {
       const isPM = time.toLowerCase().includes('pm');
       const finalHours = isPM && hours < 12 ? hours + 12 : hours;
 
-      const date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), finalHours, minutes);
+      const date = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        finalHours,
+        minutes
+      );
       return date;
     } catch (error) {
       console.error('Error converting time to Date:', time, error);
@@ -116,7 +139,8 @@ export class SalatComponent implements OnInit {
 
     for (let i = 0; i < this.filteredPrayers.length; i++) {
       const currentPrayer = this.filteredPrayers[i];
-      const nextPrayer = this.filteredPrayers[(i + 1) % this.filteredPrayers.length];
+      const nextPrayer =
+        this.filteredPrayers[(i + 1) % this.filteredPrayers.length];
 
       if (now >= currentPrayer.time && now < nextPrayer.time) {
         this.nextPrayerName = nextPrayer.name;
@@ -133,7 +157,8 @@ export class SalatComponent implements OnInit {
 
     for (let i = 0; i < this.filteredPrayers.length; i++) {
       const currentPrayer = this.filteredPrayers[i];
-      const nextPrayer = this.filteredPrayers[(i + 1) % this.filteredPrayers.length];
+      const nextPrayer =
+        this.filteredPrayers[(i + 1) % this.filteredPrayers.length];
 
       if (now >= currentPrayer.time && now < nextPrayer.time) {
         this.currentPrayerName = currentPrayer.name;
@@ -152,14 +177,20 @@ export class SalatComponent implements OnInit {
     for (let i = 0; i < 5; i++) {
       const newTime = new Date(prayerTime);
       newTime.setMinutes(newTime.getMinutes() + i * 10);
-      options.push(newTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }));
+      options.push(
+        newTime.toLocaleTimeString('en-US', {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true,
+        })
+      );
     }
     options.push('Later');
     this.prayerTimesForSelection = options;
   }
 
   setDuaAfterPrayer(): void {
-    this.duaAfterPrayer = `اللهم أنت السلام ومنك السلام تباركت يا ذا الجلال والإكرام 
+    this.duaAfterPrayer = `اللهم أنت السلام ومنك السلام تباركت يا ذا الجلال والإكرام
     Translation: "O Allah, You are peace, and from You comes peace. Blessed are You, O Owner of Majesty and Honor."`;
   }
 
