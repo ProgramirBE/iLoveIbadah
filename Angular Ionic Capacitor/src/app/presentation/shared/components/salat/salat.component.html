@@ -21,6 +21,9 @@
                 <option *ngFor="let time of prayerTimesForSelection" [value]="time">{{ time }}</option>
               </select>
             </div>
+            <div class="refresh">
+              <button (click)="onSendPrayerPunctuality()">Submit</button>
+            </div>
           </div>
         </div>
       </div>

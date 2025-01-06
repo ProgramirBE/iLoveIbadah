@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { LoginComponent } from './presentation/shared/components/login/login.component';
 import { RegisterComponent } from './presentation/shared/components/register/register.component';
@@ -75,5 +76,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }), // Gebruik PreloadAllModules voor betere prestaties
   ],
   exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
 })
 export class AppRoutingModule {}

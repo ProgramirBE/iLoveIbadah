@@ -1,5 +1,6 @@
 import { Component, OnInit, Signal, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { UserDhikrActivity } from 'src/app/domain/models/user-dhikr-activity';
 import { UserDhikrActivitiesService } from 'src/app/infrastructure/services/proxies/internal/user-dhikr-activities.service';
 import { NetworkService } from 'src/app/infrastructure/services/proxies/external/network.service';
@@ -30,6 +31,7 @@ export class DhikrComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private location: Location,
     private userDhikrActivitiesService: UserDhikrActivitiesService,
     private userDhikrOverviewService: UserDhikrOverviewsService,
     private networkService: NetworkService
@@ -193,11 +195,11 @@ export class DhikrComponent implements OnInit {
 
   // Methode om terug te navigeren en de pagina te refreshen
   goBack(): void {
-    this.syncOnlineTotalCounter();
-    console.log('onlineTotalCounter: ' + this.onlineTotalCounter);
-    this.router.navigate(['/dhikr/home'])
-      .then(() => {
-      this.syncOnlineTotalCounter();
-    });
+    console.log('onlineTotalCounter: ' + this.onlineTotalCounter());
+    this.location.replaceState('/dhikr/home');
+    window.location.reload();
+    // this.router.navigate(['/dhikr/home']).then(() => {
+    //   window.location.reload();
+    // });
   }
 }
