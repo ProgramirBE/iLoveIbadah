@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\controllers\\userdhikroverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\controllers\\userdhikroverviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B305BDB0-FB9B-42C6-B496-7A3AED7F20C5}|IbadahLover.Persistence\\IbadahLover.Persistence.csproj|solutionrelative:ibadahlover.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DBADF-B435-49A7-BB69-4A9AC4EF9C1C}|IbadahLover.API\\IbadahLover.API.csproj|solutionrelative:ibadahlover.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED66DFA-E04C-4262-A9FE-DF29D6D74406}|IbadahLover.Application\\IbadahLover.Application.csproj|c:\\users\\am5\\documents\\github\\ibadahlover\\asp.net web core api\\ibadahlover.application\\dtos\\usersalahactivity\\createusersalahactivitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -642,7 +642,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -663,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IUserDhikrOverviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IUserDhikrOverviewRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Contracts\\Persistence\\IUserDhikrOverviewRepository.cs",
@@ -675,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GetUserSalahOverviewByUserAccountDetailsRequestHandler.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahOverviews\\Handlers\\Queries\\GetUserSalahOverviewByUserAccountDetailsRequestHandler.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserSalahOverviews\\Handlers\\Queries\\GetUserSalahOverviewByUserAccountDetailsRequestHandler.cs",
@@ -687,20 +687,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserDhikrOverviewsController.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
               "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
               "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
               "RelativeToolTip": "IbadahLover.API\\Controllers\\UserDhikrOverviewsController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T07:55:13.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserSalahOverviewsController.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
               "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserSalahOverviewsController.cs",
@@ -712,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Requests\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequest.cs",
@@ -724,7 +724,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Program.cs",
+              "RelativeDocumentMoniker": "IbadahLover.API\\Program.cs",
+              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Program.cs",
+              "RelativeToolTip": "IbadahLover.API\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAlwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:46:25.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GetUserDhikrOverviewByUserAccountDetailsRequestHandler.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserDhikrOverviews\\Handlers\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequestHandler.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserDhikrOverviews\\Handlers\\Queries\\GetUserDhikrOverviewByUserAccountDetailsRequestHandler.cs",
@@ -736,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UserDhikrOverviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\UserDhikrOverviewRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Persistence\\Repositories\\UserDhikrOverviewRepository.cs",
@@ -748,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UserSalahOverviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\UserSalahOverviewRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Persistence\\Repositories\\UserSalahOverviewRepository.cs",
@@ -760,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IUserSalahOverviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Contracts\\Persistence\\IUserSalahOverviewRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Contracts\\Persistence\\IUserSalahOverviewRepository.cs",
@@ -772,7 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "GetUserSalahOverviewByUserAccountDetailsRequest.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewByUserAccountDetailsRequest.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserSalahOverviews\\Requests\\Queries\\GetUserSalahOverviewByUserAccountDetailsRequest.cs",
@@ -784,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "UserSalahActivityConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
               "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahActivityConfiguration.cs",
@@ -796,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserSalahOverviewConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
               "RelativeDocumentMoniker": "IbadahLover.Persistence\\Configurations\\Entities\\UserSalahOverviewConfiguration.cs",
@@ -808,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UserSalahActivitiesController.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
               "RelativeDocumentMoniker": "IbadahLover.API\\Controllers\\UserSalahActivitiesController.cs",
@@ -820,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CheckUserSalahActivityPerformedOnExistsRequestHandler.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\Features\\UserSalahActivities\\Handlers\\Queries\\CheckUserSalahActivityPerformedOnExistsRequestHandler.cs",
               "RelativeDocumentMoniker": "IbadahLover.Application\\Features\\UserSalahActivities\\Handlers\\Queries\\CheckUserSalahActivityPerformedOnExistsRequestHandler.cs",
@@ -832,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "IbadahLover.Persistence\\Repositories\\GenericRepository.cs",
@@ -853,18 +866,6 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAvwBwAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T22:09:21.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Program.cs",
-              "RelativeDocumentMoniker": "IbadahLover.API\\Program.cs",
-              "ToolTip": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.API\\Program.cs",
-              "RelativeToolTip": "IbadahLover.API\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAlwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:46:25.81Z"
             },
             {
               "$type": "Document",
