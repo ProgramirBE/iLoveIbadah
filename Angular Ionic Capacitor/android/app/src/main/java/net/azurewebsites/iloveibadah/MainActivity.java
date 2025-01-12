@@ -1,4 +1,4 @@
-package com.Angular_IbadahTracker;
+package net.azurewebsites.iloveibadah;
 
 import com.getcapacitor.BridgeActivity;
 
