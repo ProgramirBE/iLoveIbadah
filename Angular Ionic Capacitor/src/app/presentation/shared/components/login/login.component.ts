@@ -38,7 +38,9 @@ export class LoginComponent {
           },
           complete: () => {
             console.log('Login process completed');
-            this.router.navigate(['/home']);
+            this.router.navigate(['/home']).then(() => {
+              window.location.reload();
+            });
           },
         });
     }

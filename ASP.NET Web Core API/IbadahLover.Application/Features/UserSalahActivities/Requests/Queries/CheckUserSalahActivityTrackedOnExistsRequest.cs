@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IbadahLover.Application.Features.UserSalahActivities.Requests.Queries
 {
-    public class CheckUserSalahActivityPerformedOnExistsRequest : IRequest<bool>
+    public class CheckUserSalahActivityTrackedOnExistsRequest : IRequest<bool>
     {
         public int? UserAccountId { get; set; }
         public int SalahTypeId { get; set; }

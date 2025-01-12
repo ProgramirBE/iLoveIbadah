@@ -30,5 +30,13 @@ namespace IbadahLover.Persistence.Repositories
                 .FirstOrDefaultAsync(Queryable => Queryable.Id == id);
             return dhikrType;
         }
+
+        public async Task<List<DhikrType>> GetDhikrTypesByUserAccountId(int userAccountId)
+        {
+            var dhikrTypes = await _dbContext.DhikrTypes
+                .Where(q => q.CreatedBy == userAccountId)
+                .ToListAsync();
+            return dhikrTypes;
+        }
     }
 }

@@ -6,10 +6,12 @@ import { LoginComponent } from './presentation/shared/components/login/login.com
 import { RegisterComponent } from './presentation/shared/components/register/register.component';
 import { DhikrTypesResolver } from './infrastructure/resolvers/proxies/internal/dhikr-types.resolver';
 import { UserDhikrOverviewsResolver } from './infrastructure/resolvers/proxies/internal/user-dhikr-overviews.resolver';
+import { UserSalahActivitiesResolver } from './infrastructure/resolvers/proxies/internal/user-salah-activities.resolver';
+import { SalahTypesResolver } from './infrastructure/resolvers/proxies/internal/salah-types.resolver';
 
 const routes: Routes = [
   // Standaard route die naar de login-pagina omleidt
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   // Route voor login-component
   { path: 'login', component: LoginComponent },
@@ -30,9 +32,9 @@ const routes: Routes = [
   {
     path: 'leaderboard',
     loadChildren: () =>
-      import('./presentation/shared/components/leaderboard/leaderboard.module').then(
-        (m) => m.LeaderboardPageModule
-      ),
+      import(
+        './presentation/shared/components/leaderboard/leaderboard.module'
+      ).then((m) => m.LeaderboardPageModule),
   },
 
   // Lazy-loaded route voor de 'dhikr'-module
@@ -45,7 +47,7 @@ const routes: Routes = [
     resolve: {
       userDhikrOverview: UserDhikrOverviewsResolver,
       dhikrTypes: DhikrTypesResolver,
-    }
+    },
   },
 
   // Lazy-loaded route voor de 'salat'-module
@@ -55,6 +57,10 @@ const routes: Routes = [
       import('./presentation/shared/components/salat/salat.module').then(
         (m) => m.SalatModule
       ),
+    resolve: {
+      userSalahActivities: UserSalahActivitiesResolver,
+      salahTypes: SalahTypesResolver,
+    },
   },
 
   // Lazy-loaded route voor de 'profile'-module
@@ -66,9 +72,8 @@ const routes: Routes = [
       ),
   },
 
-
   // Fallback voor niet-bestaande routes
-  { path: '**', redirectTo: 'login' },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

@@ -62,15 +62,22 @@ export class UserAccountsService {
     return this.http.post<any>(`${this.apiUrl}/register`, user);
   }
 
-  public isLoggedIn(): Observable<boolean> {
-    const headers = this.authHeaderService.getAuthHeaders();
-    return this.http
-      .get<boolean>(`${this.apiUrl}/isLoggedIn`, { headers })
-      .pipe(
-        catchError((error) => {
-          console.error('Failed to check login status', error);
-          return throwError(() => new Error('Failed to check login status'));
-        })
-      );
-  }
+  public isLoggedIn(): boolean {
+    const token = localStorage.getItem('jwtToken');
+    if (token === null) {
+      return false;
+      };
+    return true;
+    };
+  // public isLoggedIn(): Observable<boolean> {
+  //   const headers = this.authHeaderService.getAuthHeaders();
+  //   return this.http
+  //     .get<boolean>(`${this.apiUrl}/isLoggedIn`, { headers })
+  //     .pipe(
+  //       catchError((error) => {
+  //         console.error('Failed to check login status', error);
+  //         return throwError(() => new Error('Failed to check login status'));
+  //       })
+  //     );
+  // }
 }

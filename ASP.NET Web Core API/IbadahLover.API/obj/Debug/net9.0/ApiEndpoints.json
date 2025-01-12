@@ -90,8 +90,8 @@
         "StatusCode": 200
       }
     ],
-    "Description": "Get A List of all the Dhikr Types",
-    "Summary": "Get all Dhikr Types"
+    "Description": "Get A List of all the Dhikr Types created by useraccountid 1 (admin)",
+    "Summary": "Get all Dhikr Types created by useraccountid 1 (admin)"
   },
   {
     "ContainingType": "IbadahLover.API.Controllers.DhikrTypesController",
@@ -120,6 +120,58 @@
     ],
     "Description": "Get All Details of specific Dhikr Type",
     "Summary": "Get Dhikr Type by Id"
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.DhikrTypesController",
+    "Method": "Create",
+    "RelativePath": "api/DhikrTypes/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dhikrType",
+        "Type": "IbadahLover.Application.DTOs.DhikrType.CreateDhikrTypeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.Responses.BaseCommandResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.DhikrTypesController",
+    "Method": "GetAllByUserAccount",
+    "RelativePath": "api/DhikrTypes/getallbyuseraccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userAccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IbadahLover.Application.DTOs.DhikrType.DhikrTypeByUserAccountListDto, IbadahLover.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "IbadahLover.API.Controllers.PermissionTypesController",
@@ -876,6 +928,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbadahLover.API.Controllers.UserSalahActivitiesController",
+    "Method": "Upsert",
+    "RelativePath": "api/UserSalahActivities/upsert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userSalahActivity",
+        "Type": "IbadahLover.Application.DTOs.UserSalahActivity.UpdateUserSalahActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IbadahLover.Application.Responses.BaseCommandResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "IbadahLover.API.Controllers.UserSalahOverviewsController",

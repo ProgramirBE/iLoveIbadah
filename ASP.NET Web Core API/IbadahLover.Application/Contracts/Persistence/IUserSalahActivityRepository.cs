@@ -12,6 +12,7 @@ namespace IbadahLover.Application.Contracts.Persistence
     public interface IUserSalahActivityRepository : IGenericRepository<UserSalahActivity>
     {
         Task<UserSalahActivity> GetUserSalahActivityWithDetails(int id);
+        Task<UserSalahActivity> GetUserSalahActivityByTrackedOn(int userAccountId, DateTime trackedOn, int salahTypeId);
         Task<List<UserSalahActivity>> GetUserSalahActivitiesWithDetails();
         Task<List<UserSalahActivity>> GetUserSalahActivitiesByTrackedOn(int userAccountId, DateTime trackedOn);
         [DataType(DataType.Date)]

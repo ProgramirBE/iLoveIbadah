@@ -9,8 +9,8 @@
   overflow-y: auto;
 
   .content-wrapper {
-    background-color: #f5f5dc; 
-    width: 100%; 
+    background-color: #f5f5dc;
+    width: 100%;
     max-width: 1500px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -136,6 +136,15 @@
     }
   }
 
+  #timeSelect {
+    background-color: black;
+  }
+
+  .punctuality-overview {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
   .prayer-question {
     margin-top: 20px;
     text-align: left;
@@ -167,7 +176,7 @@
 
         input[type='radio'] {
           margin-right: 5px;
-          accent-color: #66bb6a; 
+          accent-color: #66bb6a;
         }
 
         label {

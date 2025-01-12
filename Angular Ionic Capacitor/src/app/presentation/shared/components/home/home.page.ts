@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  username: string = 'Guest'; 
+  fullName = signal('Guest');
 
   constructor() {}
 
-  setUsername(newUsername: string): void {
-    this.username = newUsername;
+  ngOnInit() {
+    if (localStorage.getItem('fullName')) {
+      this.fullName.set(localStorage.getItem('fullName') ?? 'Guest');
+    }
   }
 }

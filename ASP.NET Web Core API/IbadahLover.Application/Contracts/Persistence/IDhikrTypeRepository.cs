@@ -12,5 +12,6 @@ namespace IbadahLover.Application.Contracts.Persistence
     {
         Task<DhikrType> GetDhikrTypeWithDetails(int id);
         Task<List<DhikrType>> GetDhikrTypesWithDetails();
+        Task<List<DhikrType>> GetDhikrTypesByUserAccountId(int userAccountId);
     }
 }

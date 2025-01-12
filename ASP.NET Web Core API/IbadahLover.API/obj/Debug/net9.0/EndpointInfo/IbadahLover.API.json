@@ -134,8 +134,8 @@
         "tags": [
           "DhikrTypes"
         ],
-        "summary": "Get all Dhikr Types",
-        "description": "Get A List of all the Dhikr Types",
+        "summary": "Get all Dhikr Types created by useraccountid 1 (admin)",
+        "description": "Get A List of all the Dhikr Types created by useraccountid 1 (admin)",
         "responses": {
           "200": {
             "description": "OK",
@@ -161,6 +161,54 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/DhikrTypeListDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DhikrTypes/getallbyuseraccount": {
+      "get": {
+        "tags": [
+          "DhikrTypes"
+        ],
+        "parameters": [
+          {
+            "name": "userAccountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DhikrTypeByUserAccountListDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DhikrTypeByUserAccountListDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DhikrTypeByUserAccountListDto"
                   }
                 }
               }
@@ -204,6 +252,54 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DhikrTypeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DhikrTypes/create": {
+      "post": {
+        "tags": [
+          "DhikrTypes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDhikrTypeDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDhikrTypeDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDhikrTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
                 }
               }
             }
@@ -1440,6 +1536,54 @@
         }
       }
     },
+    "/api/UserSalahActivities/upsert": {
+      "post": {
+        "tags": [
+          "UserSalahActivities"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserSalahActivityDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserSalahActivityDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserSalahActivityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseCommandResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/UserSalahActivities/update": {
       "put": {
         "tags": [
@@ -1782,6 +1926,25 @@
         },
         "additionalProperties": false
       },
+      "CreateDhikrTypeDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "arabicFullName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateUserDhikrActivityDto": {
         "type": "object",
         "properties": {
@@ -1820,6 +1983,29 @@
         },
         "additionalProperties": false
       },
+      "DhikrTypeByUserAccountListDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "arabicFullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DhikrTypeDto": {
         "type": "object",
         "properties": {
@@ -1828,6 +2014,10 @@
             "format": "int32"
           },
           "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "arabicFullName": {
             "type": "string",
             "nullable": true
           },
@@ -1846,6 +2036,10 @@
             "format": "int32"
           },
           "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "arabicFullName": {
             "type": "string",
             "nullable": true
           },
@@ -2135,13 +2329,10 @@
       "UpdateUserSalahActivityDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "userAccountId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "salahTypeId": {
             "type": "integer",

@@ -31,6 +31,8 @@ namespace IbadahLover.Application.Profiles
             CreateMap<BlobFile, CreateBlobFileDto>().ReverseMap();
             CreateMap<DhikrType, DhikrTypeListDto>().ReverseMap();
             CreateMap<DhikrType, DhikrTypeDto>().ReverseMap();
+            CreateMap<DhikrType, CreateDhikrTypeDto>().ReverseMap();
+            CreateMap<DhikrType, DhikrTypeByUserAccountListDto>().ReverseMap();
             CreateMap<SalahType, SalahTypeDto>().ReverseMap();
             CreateMap<SalahType, SalahTypeListDto>().ReverseMap();
             CreateMap<ProfilePictureType, ProfilePictureTypeDto>().ReverseMap();

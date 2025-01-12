@@ -1,5 +1,9 @@
-﻿using IbadahLover.Application.DTOs.DhikrType;
+﻿using IbadahLover.Application.Constants;
+using IbadahLover.Application.DTOs.DhikrType;
+using IbadahLover.Application.Features.DhikrTypes.Requests.Commands;
 using IbadahLover.Application.Features.DhikrTypes.Requests.Queries;
+using IbadahLover.Application.Responses;
+using IbadahLover.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,21 +17,40 @@ namespace IbadahLover.API.Controllers
     public class DhikrTypesController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public DhikrTypesController(IMediator mediator)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public DhikrTypesController(IMediator mediator, IHttpContextAccessor httpContextAccessor)
         {
             _mediator = mediator;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: api/<DhikrTypesController>
         [HttpGet]
-        [EndpointSummary("Get all Dhikr Types")]
-        [EndpointDescription("Get A List of all the Dhikr Types")]
+        [EndpointSummary("Get all Dhikr Types created by useraccountid 1 (admin)")]
+        [EndpointDescription("Get A List of all the Dhikr Types created by useraccountid 1 (admin)")]
         [AllowAnonymous]
         public async Task<ActionResult<List<DhikrTypeListDto>>> GetAll()
         {
-            var dhikrTypes = await _mediator.Send(new GetDhikrTypeListRequest());
-            return dhikrTypes;
+            var dhikrTypes = await _mediator.Send(new GetDhikrTypeByUserAccountListRequest { CreatedBy = 1 });
+            return Ok(dhikrTypes);
         }
+
+        [HttpGet("getallbyuseraccount")]
+        [Authorize]
+        public async Task<ActionResult<List<DhikrTypeByUserAccountListDto>>> GetAllByUserAccount([FromQuery] int userAccountId)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            var dhikrTypes = await _mediator.Send(new GetDhikrTypeByUserAccountListRequest
+            {
+                CreatedBy = int.Parse(userIdClaim)
+            });
+            return Ok(dhikrTypes);
+        }
+
 
         // GET api/<DhikrTypesController>/5
         [HttpGet("{id}")]
@@ -40,11 +63,21 @@ namespace IbadahLover.API.Controllers
             return Ok(dhikrType);
         }
 
-        // POST api/<DhikrTypesController>
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
+        //POST api/<DhikrTypesController>
+        [HttpPost("create")]
+        [Authorize]
+        public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateDhikrTypeDto dhikrType)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            dhikrType.CreatedBy = int.Parse(userIdClaim);
+            var command = new CreateDhikrTypeCommand { DhikrTypeDto = dhikrType };
+            var response = await _mediator.Send(command);
+            return Ok(response);
+        }
 
         // PUT api/<DhikrTypesController>/5
         //[HttpPut("{id}")]

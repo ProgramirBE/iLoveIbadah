@@ -29,7 +29,7 @@ namespace IbadahLover.API.Controllers
 
         // GET: api/<UserSalahActivitiesController>
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<UserSalahActivityListDto>>> GetAll()
         {
             var userSalahActivities = await _mediator.Send(new GetUserSalahActivityListRequest());
@@ -38,7 +38,7 @@ namespace IbadahLover.API.Controllers
 
         // GET api/<UserSalahActivitiesController>/5
         [HttpGet("{id}")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<ActionResult<UserSalahActivityDto>> GetById(int id)
         {
             var userSalahActivity = await _mediator.Send(new GetUserSalahActivityDetailsRequest { Id = id });
@@ -46,7 +46,7 @@ namespace IbadahLover.API.Controllers
         }
 
         [HttpGet("getallbytrackedon")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<ActionResult<UserDhikrActivityByPerformedOnDto>> GetAllByTrackedOn([FromQuery] DateTime trackedOn)
         {
             var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
@@ -63,11 +63,51 @@ namespace IbadahLover.API.Controllers
             return Ok(userDhikrActivity);
         }
 
+        [HttpPost("upsert")]
+        [Authorize]
+        public async Task<ActionResult<BaseCommandResponse>> Upsert([FromBody] UpdateUserSalahActivityDto userSalahActivity)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            userSalahActivity.UserAccountId = int.Parse(userIdClaim);
+            var exists = await _mediator.Send(new CheckUserSalahActivityTrackedOnExistsRequest
+            {
+                UserAccountId = userSalahActivity.UserAccountId,
+                SalahTypeId = userSalahActivity.SalahTypeId,
+                TrackedOn = userSalahActivity.TrackedOn
+            });
+
+            if (exists)
+            {
+                return await Update(userSalahActivity);
+            }
+            else
+            {
+                var createDto = new CreateUserSalahActivityDto
+                {
+                    UserAccountId = userSalahActivity.UserAccountId.Value,
+                    SalahTypeId = userSalahActivity.SalahTypeId,
+                    TrackedOn = userSalahActivity.TrackedOn,
+                    PunctualityPercentage = userSalahActivity.PunctualityPercentage
+                };
+                return await Create(createDto);
+            }
+        }
+
         // POST api/<UserSalahActivitiesController>/5
         [HttpPut("update")]
         [Authorize]
         public async Task<ActionResult> Update([FromBody] UpdateUserSalahActivityDto userSalahActivity)
         {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
+            userSalahActivity.UserAccountId = int.Parse(userIdClaim);
             var command = new UpdateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };
             await _mediator.Send(command);
             return NoContent();
@@ -84,24 +124,6 @@ namespace IbadahLover.API.Controllers
                 return Unauthorized("User ID claim not found.");
             }
             userSalahActivity.UserAccountId = int.Parse(userIdClaim);
-
-            var exists = await _mediator.Send(new CheckUserSalahActivityPerformedOnExistsRequest
-            {
-                UserAccountId = userSalahActivity.UserAccountId,
-                SalahTypeId = userSalahActivity.SalahTypeId,
-                TrackedOn = userSalahActivity.TrackedOn
-            });
-
-            if (exists)
-            {
-                return BadRequest("User Salah Activity already exists for the day.");
-                //var createDto = new UpdateUserSalahActivityDto
-                //{
-                //    UserAccountId = userDhikrActivity.UserAccountId.Value,
-                //    SalahTypeId = userDhikrActivity.DhikrTypeId
-                //};
-                //return await Update(userSalahActivity);
-            }
             var command = new CreateUserSalahActivityCommand { UserSalahActivityDto = userSalahActivity };
             var response = await _mediator.Send(command);
             return Ok(response);
