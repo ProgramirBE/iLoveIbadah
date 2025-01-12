@@ -37,7 +37,7 @@ namespace IbadahLover.Application.Features.UserSalahActivities.Handlers.Commands
                 throw new ValidationException(validationResult);
             }
 
-            var userSalahActivity = await _userSalahActivityRepository.GetById(request.UserSalahActivityDto.Id);
+            var userSalahActivity = await _userSalahActivityRepository.GetUserSalahActivityByTrackedOn(request.UserSalahActivityDto.UserAccountId.Value, request.UserSalahActivityDto.TrackedOn, request.UserSalahActivityDto.SalahTypeId);
 
             _mapper.Map(request.UserSalahActivityDto, userSalahActivity);
 

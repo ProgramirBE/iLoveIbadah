@@ -17,6 +17,7 @@ namespace IbadahLover.Persistence.Configurations.Entities
             builder.Property(e => e.Id).HasColumnName("id");
             builder.Property(e => e.FullName).HasColumnName("full_name");
             builder.Property(e => e.CreatedBy).HasColumnName("created_by");
+            builder.Property(e => e.ArabicFullName).HasColumnName("arabic_full_name");
         }
     }
 }

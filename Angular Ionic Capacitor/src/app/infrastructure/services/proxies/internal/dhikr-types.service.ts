@@ -27,4 +27,50 @@ export class DhikrTypesService {
       })
     );
   }
+
+  public getAllByUserAccount(): Observable<DhikrType[]> {
+    const headers = this.authHeaderService.getAuthHeaders();
+    //I need to pass userAccountId to api but it gets replaced with the id extracted from the token! that's why I'm passing 0
+    return this.http
+      .get<DhikrType[]>(`${this.apiUrl}/getallbyuseraccount?userAccountId=0`, {
+        headers,
+      })
+      .pipe(
+        map((response) => {
+          return response.map((dhikrType) =>
+            DhikrType.fromApiResponse(dhikrType)
+          );
+        }),
+        catchError((error) => {
+          console.error('Error fetching DhikrTypes:', error);
+          return throwError(() => new Error('Error fetching DhikrTypes'));
+        })
+      );
+  }
+
+  public create(
+    fullName: string,
+    arabicFullName?: string
+  ): Observable<DhikrType> {
+    const headers = this.authHeaderService.getAuthHeaders();
+    const requestBody = {
+      fullName: fullName,
+      createdBy: 0,
+      arabicFullName: '',
+    };
+    if (arabicFullName) {
+      requestBody.arabicFullName = arabicFullName;
+    }
+    return this.http
+      .post<DhikrType>(`${this.apiUrl}/create`, requestBody, {
+        headers,
+      })
+      .pipe(
+        map((response) => DhikrType.fromApiResponse(response)),
+        catchError((error) => {
+          console.error('Error creating DhikrType:', error);
+          return throwError(() => new Error('Error creating DhikrType'));
+        })
+      );
+  }
 }

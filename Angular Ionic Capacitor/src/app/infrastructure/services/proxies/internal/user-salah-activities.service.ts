@@ -5,6 +5,7 @@ import { catchError, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment.prod';
 import { AuthHeaderService } from './shared/auth-header.service';
 import { UserSalahOverview } from 'src/app/domain/models/user-salah-overview';
+import { UserSalahActivity } from 'src/app/domain/models/user-salah-activity';
 // import { response } from 'express'; // Remove this line if not needed
 
 @Injectable({
@@ -34,26 +35,33 @@ export class UserSalahActivitiesService {
   //     );
   // }
 
-  public upsert(salahTypeId: number): Observable<any> {
+  public upsert(salahTypeId: number, punctualityPercentage: number): Observable<any> {
     const headers = this.authHeaderService.getAuthHeaders();
     const requestBody = {
       userAccountId: null,
       salahTypeId: salahTypeId,
-      performedOn: new Date().toISOString().split('T')[0], // Format to YYYY-MM-DD
-      lastPerformedAt: new Date(),
+      trackedOn: new Date().toISOString().split('T')[0], // Format to YYYY-MM-DD
+      punctualityPercentage: punctualityPercentage,
     };
     return this.http.post<any>(`${this.apiUrl}/upsert`, requestBody, {
       headers,
     });
   }
 
-  public getbyperformedon(
-    performedOn: Date,
-    salahTypeId: number
-  ): Observable<any> {
+  public getTrackedOn(trackedOn: string): Observable<UserSalahActivity[]> {
     const headers = this.authHeaderService.getAuthHeaders();
-    const formattedDate = performedOn.toISOString().split('T')[0]; // Format to YYYY-MM-DD
-    const url = `${this.apiUrl}/getbyperformedon?performedOn=${formattedDate}&dhikrTypeId=${salahTypeId}`;
-    return this.http.get<any>(url, { headers });
+    const formattedDate = trackedOn.toString().split('T')[0]; // Format to YYYY-MM-DD
+    const url = `${this.apiUrl}/getallbytrackedon?trackedOn=${formattedDate}`;
+    return this.http.get<UserSalahActivity[]>(url, { headers }).pipe(
+      map((response) => {
+        return response.map((userSalahActivity) =>
+          UserSalahActivity.fromApiResponse(userSalahActivity)
+        );
+      }),
+      catchError((error) => {
+        console.error('Error fetching SalahActivities:', error);
+        return throwError(() => new Error('Error fetching SalahActivities'));
+      })
+    );
   }
 }

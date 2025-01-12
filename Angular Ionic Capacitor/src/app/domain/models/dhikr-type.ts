@@ -1,6 +1,7 @@
 export class DhikrType {
   id!: number;
   fullName!: string;
+  arabicFullName!: string;
   createdBy!: number;
 
   // Add other user properties as needed

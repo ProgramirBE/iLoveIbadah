@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IbadahLover.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d190d120cb89c8dae8993679302a44ddc3f322a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adf5e0c2f26b245b6c037e6a90354ea79a7626a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("IbadahLover.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IbadahLover.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -275,14 +275,18 @@ CREATE TABLE
    Dhikr_Type (
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       full_name NVARCHAR (255) NOT NULL, --Allahu Akbar, Subhan Allah, Alhamdullillah, Astaghfirullah etc...
+	  arabic_full_name NVARCHAR (255) NOT NULL, 
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
       created_by INT NOT NULL, -- So user can create his own personal dhirk types just for him
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
       --CONSTRAINT FK_Dhikr_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
       --CONSTRAINT FK_Dhikr_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
-      CONSTRAINT UQ_Dhikr_Type_full_name UNIQUE (full_name) -- Ensures a unique record per dhikr type.
+      CONSTRAINT UQ_Dhikr_Type_created_by_full_name UNIQUE (created_by, full_name), -- Ensures a unique record per dhikr type.
+	  CONSTRAINT UQ_Dhikr_Type_created_by_arabic_full_name UNIQUE (created_by, arabic_full_name)
    );
+   --ALTER TABLE Dhikr_Type
+   --ADD arabic_full_name NVARCHAR(255) NOT NULL DEFAULT '';
 
 GO
 CREATE TABLE

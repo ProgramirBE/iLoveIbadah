@@ -1,56 +1,91 @@
-<div class="page">
-  <div class="content-wrapper">
-    <div class="content">
-      <!-- Left Section -->
-      <div class="left-section">
-        <!-- Current Date and Time -->
-        <div class="date-time">
-          <h2>Today: {{ currentDate }} | Current Time: {{ currentTime }}</h2>
-          <p>
-            Next Prayer: {{ nextPrayerName }}
-          </p>
+<ion-content>
+  <div class="page">
+    <div class="content-wrapper">
+      <div class="content">
+        <!-- Left Section -->
+        <div class="left-section">
+          <!-- Current Date and Time -->
+          <div class="date-time">
+            <h2>Today: {{ currentDate }} | Current Time: {{ currentTime }}</h2>
+            <p>
+              Next Prayer: {{ nextPrayerName }}
+            </p>
+          </div>
+
+          <!-- Prayer Question -->
+          <form *ngIf="isLoggedIn" (ngSubmit)="onTrackPrayerPunctuality()" [formGroup]="trackPrayerPunctualityForm" class="prayer-question">
+            <h3>When did you pray? Approximately</h3>
+            <div class="task-question">
+              <div>
+                <label for="timeSelect">Select a time:</label>
+                <select id="timeSelect" formControlName="prayerTimeOption" [(ngModel)]="selectedTime">
+                  <option id="prayerTimeOption" *ngFor="let time of prayerTimesForSelection" [value]="time" required>{{ time }}</option>
+                </select>
+              </div>
+              <div class="refresh">
+                <ion-button type="submit">track</ion-button>
+              </div>
+            </div>
+          </form>
+          <div *ngIf="!isLoggedIn" class="prayer-question">
+            <h3>Log in to track Prayer Punctuality %</h3>
+          </div>
+          <div class="prayer-question">
+            <h3>Overview of Today's Punctuality %</h3>
+            <ul class="punctuality-overview">
+              <li>Sobh</li>
+              <li>Dhor</li>
+              <li>Asr</li>
+              <li>Maghreb</li>
+              <li>Isha</li>
+            </ul>
+            <ul *ngIf="isLoggedIn" class="punctuality-overview">
+              <li *ngFor="let data of mappedSalahData">
+                {{ data.punctualityPercentage >= 0 ? data.punctualityPercentage + '%' : '??' }}
+              </li>
+            </ul>
+            <ul *ngIf="!isLoggedIn" class="punctuality-overview">
+              <li *ngFor="let i of [0, 1, 2, 3, 4]">
+                <img src="assets/images/6351930_eye_password_see_view_icon.svg" alt="Hidden eye icon for non logged in users">
+              </li>
+            </ul>
+            <!-- <ul *ngFor="let userSalahActivity of userSalahActivities" class="punctuality-overview">
+              <li>{{ userSalahActivity.punctualityPercentage }}%</li>
+            </ul> -->
+            <!-- <ul class="punctuality-overview">
+            <li id="sobhPunctualityPercentage">??.?? %</li>
+            <li id="dohrPunctualityPercentage">??.?? %</li>
+            <li id="asrPunctualityPercentage">??.?? %</li>
+            <li id="maghrebPunctualityPercentage">??.?? %</li>
+            <li id="ishaPunctualityPercentage">??.?? %</li>
+          </ul> -->
+          </div>
         </div>
 
-        <!-- Prayer Question -->
-        <div class="prayer-question">
-          <h3>When did you pray?</h3>
-          <div class="task-question">
-            <div>
-              <label for="timeSelect">Select a time:</label>
-              <select id="timeSelect" [(ngModel)]="selectedTime">
-                <option *ngFor="let time of prayerTimesForSelection" [value]="time">{{ time }}</option>
-              </select>
-            </div>
-            <div class="refresh">
-              <button (click)="onSendPrayerPunctuality()">Submit</button>
-            </div>
+        <!-- Right Section -->
+        <div class="right-section">
+          <!-- Prayer Times -->
+          <div class="prayer">
+            <h2>Prayer Times</h2>
+            <ul>
+              <li *ngFor="let prayer of filteredPrayers">
+                {{ prayer.name }}: {{ prayer.time }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- Right Section -->
-      <div class="right-section">
-        <!-- Prayer Times -->
-        <div class="prayer">
-          <h2>Prayer Times</h2>
-          <ul>
-            <li *ngFor="let prayer of filteredPrayers">
-              {{ prayer.name }}: {{ prayer.time }}
-            </li>
-          </ul>
-        </div>
+      <!-- Dua Section -->
+      <div class="dua">
+        <h2>Dua After Prayer</h2>
+        <p>{{ duaAfterPrayer }}</p>
+      </div>
+
+      <!-- Refresh Button -->
+      <div class="refresh">
+        <button (click)="refresh()">Refresh</button>
       </div>
     </div>
-
-    <!-- Dua Section -->
-    <div class="dua">
-      <h2>Dua After Prayer</h2>
-      <p>{{ duaAfterPrayer }}</p>
-    </div>
-
-    <!-- Refresh Button -->
-    <div class="refresh">
-      <button (click)="refresh()">Refresh</button>
-    </div>
   </div>
-</div>
+</ion-content>

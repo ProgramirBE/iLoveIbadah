@@ -1,52 +1,14 @@
-<div class="container">
+<ion-content>
+<div class="container" (click)="onButtonClick()">
   <!-- Terugknop alleen zichtbaar voor andere secties dan 'home' -->
-  <ion-button *ngIf="section !== 'home'" fill="solid" color="success" (click)="goBack()">
+  <ion-button fill="solid" color="success" (click)="goBack($event)">
     <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
   </ion-button>
 
-  <!-- Dynamische inhoud gebaseerd op de actieve sectie -->
-  <ng-container [ngSwitch]="section">
-    <!-- Home sectie -->
-    <div *ngSwitchCase="'home'">
-      <h1>Dhikr Home</h1>
-      <div class="grid-container">
-        <a *ngFor="let dhikrType of dhikrTypes" class="grid-item" [routerLink]="'/dhikr/' + dhikrType.id">
-          <h2>{{ dhikrType.fullName }}</h2>
-          <p>{{ dhikrType.fullName }}</p>
-        </a>
-      </div>
-      <div class="total-container">
-        <h2>Total Performed (Local)</h2>
-        <p>{{ totalCounter }}</p>
-
-        <h2>Total Performed (Online)</h2>
-        <p>{{ onlineTotalCounter() }}</p>
-      </div>
-    </div>
-
-    <!-- Algemene Dhikr -->
-    <div *ngSwitchCase="'dhikr'">
-      <h1>{{ currentWord }}</h1>
-      <h2>Counter: {{ counter }}</h2>
-      <h2>Online Counter: {{ onlineCounter() }}</h2>
-      <button [disabled]="buttonDisabled" ion-button color="primary" (click)="onButtonClick()">+</button>
-      <div *ngIf="buttonDisabled">
-        <p>
-          Lè ilèhè illa Al-lahoe oe-ahdahoe lè shèrika lèhoe,
-          Lèhoel molkoe oe-è lèhoel hamdoe, oe-è hoewa ‘âla koel-li sjee‘in Qadier.
-        </p>
-        <ion-checkbox (ionChange)="onCheckboxToggle()">Click to reactivate</ion-checkbox>
-      </div>
-    </div>
-
-    <!-- Specifieke Dhikr-secties -->
-    <ng-container *ngFor="let dhikrType of dhikrTypes">
-      <div *ngSwitchCase="dhikrType.id.toString()">
-        <h1>{{ dhikrType.fullName }}</h1>
-        <h2>Counter: {{ counter }}</h2>
+      <div>
+        <h1>{{ dhikrFullName() }}</h1>
+        <h2>Counter: {{ counter() }}</h2>
         <h2>Online Counter: {{ onlineCounter() }}</h2>
-        <ion-button color="primary" (click)="onButtonClick()">+</ion-button>
       </div>
-    </ng-container>
-    </ng-container>
 </div>
+</ion-content>

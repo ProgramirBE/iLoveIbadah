@@ -13,6 +13,7 @@ namespace IbadahLover.Domain
     {
         public int Id { get; set; }
         public string FullName { get; set; }
+        public string? ArabicFullName { get; set; }
         [ForeignKey("CreatedByUserAccount")]
         public int CreatedBy { get; set; }
         public UserAccount CreatedByUserAccount { get; set; } // Navigation property

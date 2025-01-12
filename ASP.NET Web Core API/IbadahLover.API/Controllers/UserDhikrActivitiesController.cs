@@ -108,8 +108,8 @@ namespace IbadahLover.API.Controllers
             }
         }
 
-            // POST api/<UserDhikrActivitiesController>
-            [HttpPost]
+        // POST api/<UserDhikrActivitiesController>
+        [HttpPost]
         [Authorize]
         public async Task<ActionResult<BaseCommandResponse>> Create([FromBody] CreateUserDhikrActivityDto userDhikrActivity)
         {

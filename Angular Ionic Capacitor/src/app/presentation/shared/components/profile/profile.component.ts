@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAccount } from 'src/app/domain/models/user-account';
 import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/user-accounts.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -33,7 +34,8 @@ export class ProfileComponent implements OnInit {
   };
 
   constructor(
-    private userAccountService: UserAccountsService
+    private userAccountService: UserAccountsService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -144,5 +146,16 @@ export class ProfileComponent implements OnInit {
     //   };
     //   reader.readAsDataURL(file);
     // }
+  }
+
+  logout(): void {
+    localStorage.removeItem('jwtToken');
+    localStorage.removeItem('email');
+    localStorage.removeItem('fullName');
+    localStorage.removeItem('uniqueId');
+    localStorage.removeItem('userId');
+    this.router.navigate(['/home']).then(() => {
+      window.location.reload();
+    });
   }
 }

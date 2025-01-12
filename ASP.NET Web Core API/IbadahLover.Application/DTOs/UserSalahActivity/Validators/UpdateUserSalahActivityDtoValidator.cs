@@ -21,10 +21,12 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity.Validators
             _salahTypeRepository = salahTypeRepository;
 
             RuleFor(p => p.UserAccountId)
+                .Must(id => true) // Always valid since it's set by the server
+                .WithMessage("UserAccountId is not validated directly.")
                 .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {
-                    var userAccountExists = await _userAccountRepository.Exists(id);
+                    var userAccountExists = await _userAccountRepository.Exists(id.Value);
                     return userAccountExists;
                 })
                 .WithMessage("{PropertyName} does not exist.");
@@ -42,10 +44,14 @@ namespace IbadahLover.Application.DTOs.UserSalahActivity.Validators
                 .LessThanOrEqualTo(DateTime.Now)
                 .MustAsync(async (dto, trackedOn, token) =>
                 {
-                    var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId, trackedOn, dto.SalahTypeId);
+                    var userSalahActivityTrackedOnExists = await _userSalahActivityRepository.TrackedOnExists(dto.UserAccountId.Value, trackedOn, dto.SalahTypeId);
                     return userSalahActivityTrackedOnExists; // il doit! exister un activity pour cette journée pour cette utilisateur pour ce salahtype, sinon juste create allowed
                 })
                 .WithMessage("{PropertyName} should exist in order to update, else create for this date.");
+
+            RuleFor(p => p.PunctualityPercentage)
+                .InclusiveBetween(0, 100)
+                .WithMessage("{PropertyName} must be between 0 and 100.");
         }
     }
 }

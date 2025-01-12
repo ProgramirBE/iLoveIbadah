@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="DTOs\BanType\Validators\" />
-    <Folder Include="DTOs\DhikrType\Validators\" />
     <Folder Include="DTOs\PermissionType\Validators\" />
     <Folder Include="DTOs\ProfilePictureType\Validators\" />
     <Folder Include="DTOs\RoleTypePermissionTypeMapping\Validators\" />
@@ -27,8 +26,6 @@
     <Folder Include="DTOs\UserAccountRoleTypeMapping\Validators\" />
     <Folder Include="Features\BanTypes\Handlers\Commands\" />
     <Folder Include="Features\BanTypes\Requests\Commands\" />
-    <Folder Include="Features\DhikrTypes\Handlers\Commands\" />
-    <Folder Include="Features\DhikrTypes\Requests\Commands\" />
     <Folder Include="Features\PermissionTypes\Handlers\Commands\" />
     <Folder Include="Features\PermissionTypes\Requests\Commands\" />
     <Folder Include="Features\ProfilePictureTypes\Handlers\Commands\" />

@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="container">
+    <h1>Dhikr Home</h1>
+    <div class="grid-container">
+      <a *ngFor="let dhikrType of dhikrTypes" class="grid-item" (click)="navigateToDhikr(dhikrType.id)">
+        <h2>{{ dhikrType.fullName }}</h2>
+        <h2>{{ dhikrType.arabicFullName }}</h2>
+      </a>
+      <form *ngIf="isLoggedIn" (ngSubmit)="onCreateDhikrType()" [formGroup]="createDhikrTypeForm">
+        <a class="grid-item">
+          <input id="fullName" formControlName="fullName" placeholder="Enter Dhikr" type="text" required />
+          <input id="arabicFullName" formControlName="arabicFullName" placeholder="OPTIONAL in Arabic" type="text" />
+          <button type="submit">+</button>
+        </a>
+      </form>
+    </div>
+    <div class="total-container">
+      <h2>Total Performed (Local)</h2>
+      <p>{{ totalCounter() }}</p>
+
+      <h2>Total Performed (Online)</h2>
+      <p>{{ onlineTotalCounter() }}</p>
+    </div>
+  </div>
+</ion-content>

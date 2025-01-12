@@ -42,6 +42,18 @@ namespace IbadahLover.API.Controllers
             return Ok(await _authenticationService.Register(request));
         }
 
+        //[HttpGet("isLoggedIn")]
+        //[AllowAnonymous]
+        //public async Task<ActionResult<bool>> IsLoggedIn()
+        //{
+        //    var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+        //    if (userIdClaim == null)
+        //    {
+        //        return Unauthorized("User ID claim not found.");
+        //    }
+        //    return Ok(true);
+        //}
+
         // GET: api/<UserAccountsController>
         [HttpGet]
         [Authorize(Roles = "Admin")]

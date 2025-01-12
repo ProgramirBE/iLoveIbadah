@@ -1,3 +1,4 @@
+<ion-content>
 <div class="userAccount-wrapper">
   <div class="userAccount-container">
     <!-- Sidebar Navigation -->
@@ -9,6 +10,7 @@
         <li (click)="navigateToSection('account')" [class.active]="currentSection === 'account'">
           Account
         </li>
+        <li (click)="logout()">logout</li>
       </ul>
     </aside>
 
@@ -125,3 +127,4 @@
     </section>
   </div>
 </div>
+</ion-content>

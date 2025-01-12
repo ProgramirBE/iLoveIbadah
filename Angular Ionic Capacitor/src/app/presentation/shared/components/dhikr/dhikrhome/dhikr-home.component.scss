@@ -1,0 +1,217 @@
+/* Algemene reset voor marges en padding */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Stijl voor de container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //height: 100vh;
+  //max-height: 150vh;
+  background-color: #f5f5dc;
+  color: white;
+  text-align: center;
+}
+
+/* Specifieke stijl voor de DhikrHome sectie */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Twee kolommen */
+  gap: 10px;
+  /* Ruimte tussen de items */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  /* Subtiele schaduw */
+  border-radius: 3rem;
+  border: 10px solid #8d7c78;
+  /* Heldere groene rand */
+}
+
+.grid-item {
+  background: linear-gradient(135deg, #262323, #4e342e);
+  color: white;
+  /* Witte tekstkleur */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  /* Geen onderstreping */
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Subtiele schaduw */
+}
+
+.grid-item input {
+  padding: 8px;
+}
+
+.grid-container h2 {
+  background: linear-gradient(to right, #d7ccc8, #d7ccc8, #d7ccc8);
+  /* Groene gradiënt */
+  -webkit-background-clip: text;
+  /* Alleen tekst krijgt de achtergrondkleur */
+  -webkit-text-fill-color: transparent;
+  /* Maak de tekst transparant voor de achtergrondkleur */
+  text-align: center;
+  /* Tekst in het midden */
+}
+
+.grid-container p {
+  background: white;
+  -webkit-background-clip: text;
+  /* Alleen tekst krijgt de achtergrondkleur */
+  -webkit-text-fill-color: transparent;
+  /* Maak de tekst transparant voor de achtergrondkleur */
+  text-align: center;
+  /* Tekst in het midden */
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  /* Verplaats iets omhoog */
+  box-shadow: 0 6px 20px rgba(131, 81, 81, 0.7);
+  /* Neongroene schaduw bij hover */
+}
+
+.grid-item p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #d9fdd3;
+  /* Lichte groene kleur voor tekst */
+}
+
+.total-container {
+  margin-top: 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4e342e;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4e342e;
+  }
+}
+
+.noti p {
+  color: #4e342e;
+}
+
+.noti div {
+  color: #4e342e;
+}
+
+/* Stijl voor de dhikr-text */
+.dhikr-text {
+  color: #4e342e;
+  /* Bruine kleur */
+}
+
+/* Stijl voor de afbeelding-container */
+.image-container {
+  margin-top: 2rem;
+  /* Ruimte boven de afbeelding */
+  text-align: center;
+  /* Centreer de afbeelding horizontaal */
+}
+
+/* Stijl voor de afbeelding */
+.image-container img {
+  max-width: 100%;
+  /* Zorg ervoor dat de afbeelding niet breder is dan de container */
+  height: 200px;
+  /* Stel een specifieke hoogte in */
+  object-fit: cover;
+  /* Zorg ervoor dat de afbeelding proportioneel wordt bijgesneden indien nodig */
+  border-radius: 10px;
+  /* Optioneel: afgeronde hoeken */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  /* Subtiele schaduw onder de afbeelding */
+}
+
+/* Algemene stijlen voor andere Dhikr-secties */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4e342e;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #4e342e;
+}
+
+input {
+  background-color: black;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  /* Groene kleur voor de knop */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c;
+  /* Donkergroene kleur bij hover */
+  transform: scale(1.1);
+  /* Iets groter bij hover */
+}
+
+button:disabled {
+  background-color: #888;
+  /* Grijze kleur voor disabled knoppen */
+  cursor: not-allowed;
+}
+
+ion-checkbox {
+  margin-top: 1rem;
+}
+
+/* Responsiveness voor mobiele apparaten */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    /* Eén kolom op kleinere schermen */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
