@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.Angular_IbadahTracker',
-  appName: 'Angular_IbadahTracker',
+  appId: 'net.azurewebsites.iloveibadah',
+  appName: 'i love ibadah',
   webDir: 'www'
 };
 

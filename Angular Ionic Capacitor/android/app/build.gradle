@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.Angular_IbadahTracker"
+    namespace "net.azurewebsites.iloveibadah"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.Angular_IbadahTracker"
+        applicationId "net.azurewebsites.iloveibadah"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

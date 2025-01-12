@@ -25,6 +25,7 @@
     "@capacitor/angular": "^2.0.3",
     "@capacitor/app": "6.0.2",
     "@capacitor/core": "6.2.0",
+    "@capacitor/geolocation": "^6.1.0",
     "@capacitor/haptics": "6.0.2",
     "@capacitor/keyboard": "6.0.3",
     "@capacitor/network": "^6.0.3",

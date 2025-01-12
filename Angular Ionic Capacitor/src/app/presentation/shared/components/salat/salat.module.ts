@@ -10,6 +10,8 @@ import { SalahTypesService } from 'src/app/infrastructure/services/proxies/inter
 import { NetworkService } from 'src/app/infrastructure/services/proxies/external/network.service';
 import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/user-accounts.service';
 import { IslamicFinderService } from 'src/app/infrastructure/services/proxies/external/islamic-finder.service';
+//import { Geolocation} from '@ionic-native/geolocation/ngx';
+//import { Geolocation} from '@capacitor/geolocation';
 
 @NgModule({
   declarations: [SalatComponent],

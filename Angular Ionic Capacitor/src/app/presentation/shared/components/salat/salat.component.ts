@@ -8,6 +8,8 @@ import { SalahType } from 'src/app/domain/models/salah-type';
 import { UserSalahActivitiesService } from 'src/app/infrastructure/services/proxies/internal/user-salah-activities.service';
 import { UserAccountsService } from 'src/app/infrastructure/services/proxies/internal/user-accounts.service';
 import { SalahTypesService } from 'src/app/infrastructure/services/proxies/internal/salah-types.service';
+import { Geolocation } from '@capacitor/geolocation';
+import { Capacitor } from '@capacitor/core';
 
 @Component({
   selector: 'app-salat',
@@ -15,6 +17,8 @@ import { SalahTypesService } from 'src/app/infrastructure/services/proxies/inter
   styleUrls: ['./salat.component.scss'],
 })
 export class SalatComponent implements OnInit {
+  geoEnabled = signal(false);
+  geoDisabled = signal(true);
   salatTimes: any = null;
   location: string = '';
   latitude: number | null = null;
@@ -44,6 +48,7 @@ export class SalatComponent implements OnInit {
   trackPrayerPunctualityForm: FormGroup;
 
   constructor(
+    //private geolocation: Geolocation,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
@@ -59,6 +64,21 @@ export class SalatComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const askPermission = async () => {
+      // vraag voor de location permission
+      const perm = await Geolocation.requestPermissions({
+        permissions: ['location'],
+      });
+      console.log('permission :');
+      console.log(perm);
+      if (perm.location == 'granted') {
+        this.geoDisabled.set(false);
+        this.geoEnabled.set(true);
+      } else {
+        console.error('Location permission denied');
+      }
+    };
+
     this.isLoggedIn = this.userAccountsService.isLoggedIn();
     this.salahTypes = this.route.snapshot.data['salahTypes'] || [];
     if (!this.salahTypes) {
@@ -74,7 +94,7 @@ export class SalatComponent implements OnInit {
         'Failed to load user salah activities, retry to fetch from api'
       );
     }
-    
+
     this.mapSalahData();
     // this.mappedSalahData = this.salahTypes.map((id) => {
     //   const activity = this.userSalahActivities.find(
@@ -90,6 +110,7 @@ export class SalatComponent implements OnInit {
 
     this.updateCurrentDateTime();
     this.getLocationAndFetchTimes();
+    this.fetchSalatTimes();
     this.setDuaAfterPrayer();
 
     setInterval(() => {
@@ -121,8 +142,33 @@ export class SalatComponent implements OnInit {
     this.currentTime = new Date();
   }
 
-  getLocationAndFetchTimes(): void {
-    if (navigator.geolocation) {
+  async getLocationAndFetchTimes(): Promise<void> {
+    if (Capacitor.isNativePlatform()) {
+      try {
+        const position = await Geolocation.getCurrentPosition({
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 0,
+        });
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+        console.log(
+          'capacitor geolocation latitude:',
+          position.coords.latitude
+        );
+        console.log(
+          'capacitor geolocation longitude:',
+          position.coords.longitude
+        );
+
+        localStorage.setItem('latitude', position.coords.latitude.toString());
+        localStorage.setItem('longitude', position.coords.longitude.toString());
+
+        this.fetchSalatTimes();
+      } catch (error) {
+        console.error('Error getting location:', error);
+      }
+    } else if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           this.latitude = position.coords.latitude;
@@ -133,12 +179,18 @@ export class SalatComponent implements OnInit {
           console.error('Location error:', error);
         }
       );
-    } else {
-      console.error('Geolocation is not supported by this browser.');
     }
   }
 
   fetchSalatTimes(): void {
+    const storedLatitude = localStorage.getItem('latitude');
+    const storedLongitude = localStorage.getItem('longitude');
+
+    if (storedLatitude && storedLongitude) {
+      this.latitude = parseFloat(storedLatitude);
+      this.longitude = parseFloat(storedLongitude);
+    }
+
     if (this.latitude !== null && this.longitude !== null) {
       this.islamicFinderService
         .getSalatTimes(this.latitude, this.longitude)
@@ -310,7 +362,7 @@ export class SalatComponent implements OnInit {
         if (
           (now >= currentPrayer.time && now < nextPrayer.time) ||
           (currentPrayer.name === 'Isha' &&
-            nextPrayer.name === 'Sobh' &&
+            nextPrayer.name === 'Fajr' &&
             now >= currentPrayer.time)
         ) {
           this.currentPrayerName = currentPrayer.name;
@@ -358,7 +410,7 @@ export class SalatComponent implements OnInit {
   refreshUserSalahActivities(): void {
     const date = new Date();
     const formattedDate = date.toISOString().split('T')[0];
-    
+
     this.userSalahActivitiesService.getTrackedOn(formattedDate).subscribe({
       next: (data) => {
         this.userSalahActivities = data; // Assign the received data to the array
@@ -421,20 +473,23 @@ export class SalatComponent implements OnInit {
     );
   }
 
-  upsertSalahActivity(salahTypeId: any, punctualityPercentage: any): Promise<any> {
+  upsertSalahActivity(
+    salahTypeId: any,
+    punctualityPercentage: any
+  ): Promise<any> {
     return new Promise((resolve, reject) => {
-    this.userSalahActivitiesService
-      .upsert(salahTypeId, punctualityPercentage)
-      .subscribe({
-        next: (response) => {
-          console.log('Salah activity upserted successfully', response);
-          resolve(response);
-        },
-        error: (error) => {
-          console.error('Error upserting salah activity', error);
-          reject(error);
-        },
-      });
-  });
-}
+      this.userSalahActivitiesService
+        .upsert(salahTypeId, punctualityPercentage)
+        .subscribe({
+          next: (response) => {
+            console.log('Salah activity upserted successfully', response);
+            resolve(response);
+          },
+          error: (error) => {
+            console.error('Error upserting salah activity', error);
+            reject(error);
+          },
+        });
+    });
+  }
 }
