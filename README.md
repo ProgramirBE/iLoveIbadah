@@ -58,3 +58,5 @@ At first it aimed to be for Dhikr Tracking (dhikr is a form of islamic worship t
 The Dhikr Tracker Module is greatly inspired by Zikr app!
 The Dua Tracker Module Idea (not yet implemented) is greatly inspired by Zikr app!
 
+## Extra info
+Ook is dit een Project van 2 Studenten in Odisee Bachelor Toegepaste Informatica 2de Jaar voor keuze traject Web & Mobile.
