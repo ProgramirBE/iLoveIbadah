@@ -1,17 +1,60 @@
-## What is Ibadah Lover Project?
+https://iloveibadah.azurewebsites.net/
 
-It is a project that aims to build a webapp + mobile app targeted for Muslim's community to improve Muslim's with their Ibadah (Islammic term for worship) by tracking the amount of Ibadah Done.
+## Important to Know:
+This project has absolutly no copyright at all! You are free of using everything as freely as you wish, even the idea of the app, the design, the code everything! It is sadaqah
+Please do so, I would like my work to benefit you in any way shape or form!
 
-## What technology to build Ibadah Lover?
+## WHy I Love Ibadah Project?
 
-planning to use:
+It is a project that aims to build a webapp + mobile app targeted for Muslim's community to improve Muslim's with their Ibadah (Islamic term for worship) by tracking the amount of Ibadah Done.
+
+
+## What does I Loveh Ibadah Project serve for?
+
+So as mentioned before it is a tracker, and instead on focusing on tracking 1 ibadah type (dhikr for exemple), it aims to tracks many different ibadah types
+
+**Current** Ibadah Type Supported for tracking (Modules):
+1. Dhikr
+Lets you click on the screen to increment dhikr count per dhikr types (Allahu Akbar, Alhamdulillah, Subhan Allah...)
+if connected with account, can create own dhikr types, synced count on all devices (needs internet connection)
+if not connected with account (guest mode), cannot create own dhikr type (for the time being), not synced count
+
+2. Salah
+Our way of tracking Salah is unique, the app doensn't track whether or not you prayed. All muslims are supposed to pray 5 time (I understand people that are strugling need that type of tracking but I would redirect to other apps for that).
+So You get your prayer times based on Location and you can submit a form on an approximation of when you prayed the current prayer. The app then calculates the Punctuality percentage (the closer you prayed on time, the higher the score).
+
+
+**Planning** to Implement Following Ibadah Type for tracking (Modules):
+1. Mosque
+Tracks all the different mosques you went to and how many times per mosque!
+
+2. Quran
+Tracks last time you recited chapter of quran, to help with quran memorization and recite quran chapters we didn't recite for a long time preventing us from forgetting it!
+
+3. Dua
+Morning & Eneving Dua would be great!
+
+
+**Community** Functionality:
+Currently planning to implement Leaderboards, seperate leaderboards per Ibadah Tracker! Insha Allah
+
+
+## What technology to build I Love Ibadah?
+
 Angular for front end
 Ionic & Capacitor for mobile version
 ASP.NET Web Core Api for backend
-Sql Server Management Studio as Database
-Azure to Host website
+Azure Sql Server as Database
+Azure App Service to Host website
 
 
-## Why Ibadah Lover as name?
+## Why I Love Ibadah as name?
 
-At first it aimed to be for Dhikr Tracking (dhikr is a form of islamic worship that consist to thank Allah, ask for forgivenes, Glorify Allah and so on.) so it was Dhikr Count, but then idea of developing Salah Tracking made it rename to After Salah (afetr prayer, because dhikr is often done after prayer and it englobes the 2 purposes of the app). But then Idea of Implementing Quran tracking (to help with memorization and goals) made it rename to Ibadah Tracker. But then I didn't like tracker to be in it's name, even though it is a tracker. So when thinking about what to put after Ibadah I thought of Lover because I belief Love is one of the strongest Attributes so Ibadah Lover is end result.
+At first it aimed to be for Dhikr Tracking (dhikr is a form of islamic worship that consist to thank Allah, ask for forgivenes, Glorify Allah and so on.) so it was Dhikr Count, but then idea of developing Salah Tracking made it rename to After Salah (afetr prayer, because dhikr is often done after prayer and it englobes the 2 purposes of the app). But then Idea of Implementing Quran tracking (to help with memorization and goals) made it rename to Ibadah Tracker. But then I didn't like tracker to be in it's name, even though it is a tracker. So when thinking about what to put after Ibadah I thought of Lover because I belief Love is one of the strongest Attributes so Ibadah Lover is end result. Till it again changed to finally be I Love Ibadah! Inspired by other projects name like ilovepdf.com and iloveallah.org, when you read the project name it feels more personal, as if you are saying that you love ibadah, what a boost, playing on psychologie to get you do ibadah.
+
+
+## Inspiration
+
+The Dhikr Tracker Module is greatly inspired by Zikr app!
+The Dua Tracker Module Idea (not yet implemented) is greatly inspired by Zikr app!
+
