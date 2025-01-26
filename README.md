@@ -47,6 +47,10 @@ ASP.NET Web Core Api for backend
 Azure Sql Server as Database
 Azure App Service to Host website
 
+Big change in technologie usage:
+Planning to rebuild front end in flutter for native mobile advantages!
+So Keep Angular for the web version but planning to no more use ionic capacitor for mobile version.
+
 
 ## Why I Love Ibadah as name?
 
@@ -60,3 +64,4 @@ The Dua Tracker Module Idea (not yet implemented) is greatly inspired by Zikr ap
 
 ## Extra info
 Ook is dit een Project van 2 Studenten in Odisee Bachelor Toegepaste Informatica 2de Jaar voor keuze traject Web & Mobile.
+Mijn broeder (in islam we geloven dat alle muslims broeders zijn) heeft heel goed anguler front gedaan tot voor school project deadline, het is al klaar en hij contribueert niet meer aan mijn project. Daarom praat ik altijd in Ike vorm en niet wij. 
