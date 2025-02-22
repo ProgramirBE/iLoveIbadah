@@ -1,8 +1,7 @@
 https://iloveibadah.azurewebsites.net/
 
 ## Important to Know:
-This project has absolutly no copyright at all! You are free of using everything as freely as you wish, even the idea of the app, the design, the code everything! It is sadaqah
-Please do so, I would like my work to benefit you in any way shape or form!
+I plan on putting MIT open source license so you are free of using everything as freely as you wish, even the idea of the app, the design, the code everything! Please do so, I would like my work to benefit you in any way shape or form!
 
 ## WHy I Love Ibadah Project?
 
