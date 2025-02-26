@@ -1,4 +1,9 @@
-https://iloveibadah.azurewebsites.net/
+<div align="center">
+  
+[![Star History Chart](https://api.star-history.com/svg?repos=programirbe/iloveibadah&type=Date)](https://star-history.com/#programirbe/iloveibadah&Date)
+
+</div>
+
 
 ## Important to Know:
 MIT License!
