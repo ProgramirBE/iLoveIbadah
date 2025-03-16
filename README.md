@@ -38,6 +38,11 @@ Tracks last time you recited chapter of quran, to help with quran memorization a
 3. Dua
 Morning & Eneving Dua would be great!
 
+4. Hadith
+Daily Authentic Hadith insha ALlah (God Willing)
+
+5. Repository
+Links to other islamic projects
 
 **Community** Functionality:
 Currently planning to implement Leaderboards, seperate leaderboards per Ibadah Tracker! Insha Allah
